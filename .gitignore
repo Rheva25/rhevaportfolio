@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Firebase Credentials
+*firebase-adminsdk*.json
+*-firebase-adminsdk-*.json
+rhevaportfolio-*.json

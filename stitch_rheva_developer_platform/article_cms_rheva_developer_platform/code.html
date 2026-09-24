@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span>Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span>Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="inquiries" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span>Inquiries &amp; Inbound</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span><span>Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="configuration-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span>View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"/><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-1.5 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline-variant">/</span><span class="text-on-surface font-medium">dashboard</span></div><div class="h-3.5 w-px bg-border-light"></div><div class="flex items-center gap-1.5 font-technical-micro text-technical-micro text-outline"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span>FIRESTORE: CONNECTED</span></div></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline pointer-events-none">search</span><input class="h-8 w-56 pl-8 pr-12 rounded bg-surface-container-low text-on-surface font-body-sm text-xs placeholder:text-outline border border-border-light focus:outline-none focus:border-primary-container transition-colors" placeholder="Quick search..." type="text"/><kbd class="absolute right-2 font-technical-micro text-[10px] text-outline px-1.5 py-0.5 rounded border border-border-light bg-surface-container-lowest shadow-sm pointer-events-none">⌘K</kbd></div><button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"/><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full font-body text-on-surface">
+<!-- Interactive State Harness Bar (Technical Control Bar) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-3 shadow-sm mb-6 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 overflow-x-auto py-0.5">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline px-2">Harness State:</span>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-dark text-on-primary transition-colors flex items-center gap-1.5 shadow-sm" id="btn-state-active" onclick="setHarnessState('active')" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Active (8)</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" id="btn-state-selected" onclick="setHarnessState('selected')" type="button">
+<span class="material-symbols-outlined text-[14px]">check_box</span>
+<span>Selected (1)</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" id="btn-state-drawer" onclick="toggleDrawer(true)" type="button">
+<span class="material-symbols-outlined text-[14px]">dock_to_right</span>
+<span>Quick Preview Drawer</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" onclick="openModal('schedule-modal')" type="button">
+<span class="material-symbols-outlined text-[14px]">event</span>
+<span>Schedule Dialog</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" onclick="openModal('archive-modal')" type="button">
+<span class="material-symbols-outlined text-[14px]">archive</span>
+<span>Archive Dialog</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" onclick="openModal('delete-modal')" type="button">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span>Delete Modal</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" id="btn-state-skeleton" onclick="setHarnessState('skeleton')" type="button">
+<span class="material-symbols-outlined text-[14px]">motion_photos_paused</span>
+<span>Skeleton Loading</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5" id="btn-state-empty" onclick="setHarnessState('empty')" type="button">
+<span>Empty State (0)</span>
+</button>
+<button class="harness-pill px-3 py-1 rounded-full font-technical-tag text-technical-tag bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors flex items-center gap-1.5 text-error" id="btn-state-error" onclick="setHarnessState('error')" type="button">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Error State</span>
+</button>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-technical-micro text-technical-micro text-outline bg-surface-container px-2 py-1 rounded">DEBUG RUNNER</span>
+</div>
+</div>
+<!-- Page Header Area -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant uppercase tracking-wider font-medium">ARTICLES // FIRESTORE: ARTICLES</span>
+<span class="text-outline text-technical-micro">•</span>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+          SYNC: 8 VERIFIED DOCS
+        </span>
+</div>
+<h1 class="font-h2 text-h2 text-on-surface tracking-tight font-bold">Articles &amp; Technical Notes</h1>
+<p class="font-body text-body text-secondary max-w-2xl">
+        Manage technical articles, architecture monographs, and development notes published on the platform.
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-technical-code text-technical-code transition-colors flex items-center gap-1.5 shadow-sm" onclick="triggerCatalogExport()" type="button">
+<span class="material-symbols-outlined text-[17px] text-outline">file_download</span>
+<span>Export Catalog (JSON)</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-technical-code text-technical-code transition-colors flex items-center gap-1.5 shadow-sm" onclick="revalidateCache(this)" type="button">
+<span class="material-symbols-outlined text-[17px] text-outline">sync</span>
+<span>Revalidate ISR Cache</span>
+</button>
+<a class="h-9 px-4 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm text-body-sm font-semibold transition-colors flex items-center gap-2 shadow-sm" href="/admin/articles/new">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New Article</span>
+</a>
+</div>
+</div>
+<!-- Telemetry & Collection Stats (4 Metric Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">TOTAL ARTICLES</span>
+<span class="material-symbols-outlined text-[18px] text-outline">description</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-bold text-on-surface">8</span>
+<span class="font-technical-tag text-technical-tag text-status-success">100% indexed</span>
+</div>
+<div class="flex items-center justify-between text-outline font-technical-micro text-technical-micro pt-1">
+<span>Target route</span>
+<span class="font-technical-code text-on-surface-variant font-medium">/articles</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-low">
+<div class="h-full bg-primary-container w-full"></div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">PUBLICATION VISIBILITY</span>
+<span class="material-symbols-outlined text-[18px] text-outline">public</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-bold text-on-surface">6</span>
+<span class="font-technical-tag text-technical-tag text-on-surface-variant">Published</span>
+</div>
+<div class="flex items-center justify-between text-outline font-technical-micro text-technical-micro pt-1">
+<span>Pipeline</span>
+<span class="text-on-surface-variant font-medium">1 Draft • 1 Scheduled</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-low">
+<div class="h-full bg-status-success w-3/4"></div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">EDITORIAL STATUS</span>
+<span class="material-symbols-outlined text-[18px] text-outline">menu_book</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-bold text-on-surface">5</span>
+<span class="font-technical-tag text-technical-tag text-on-surface-variant">Monographs</span>
+</div>
+<div class="flex items-center justify-between text-outline font-technical-micro text-technical-micro pt-1">
+<span>Complementary</span>
+<span class="text-on-surface-variant font-medium">3 Dev Notes</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-low">
+<div class="h-full bg-tertiary-container w-[62%]"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between mb-3">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">CURATED FEATURED</span>
+<span class="material-symbols-outlined text-[18px] text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-bold text-on-surface">2</span>
+<span class="font-technical-tag text-technical-tag text-on-surface-variant">Featured</span>
+</div>
+<div class="flex items-center justify-between text-outline font-technical-micro text-technical-micro pt-1">
+<span>Placement</span>
+<span class="text-on-surface-variant font-medium">Hero Pinned • Home Top</span>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-surface-container-low">
+<div class="h-full bg-status-warning w-1/4"></div>
+</div>
+</div>
+</div>
+<!-- Management Filter Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm mb-4 space-y-3">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline pointer-events-none">search</span>
+<input class="h-10 w-full pl-9 pr-14 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" id="article-search" oninput="handleSearch(this.value)" placeholder="Search articles by title, slug, category, or tags..." type="text"/>
+<kbd class="absolute right-2.5 top-2.5 font-technical-micro text-[10px] text-outline px-1.5 py-0.5 rounded bg-surface-container shadow-sm pointer-events-none">⌘K</kbd>
+</div>
+<!-- Filters & Selectors -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Status Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-code text-technical-code cursor-pointer appearance-none focus:outline-none" id="filter-status" onchange="applyFilters()">
+<option value="all">Status: All (8)</option>
+<option value="published">Published (6)</option>
+<option value="scheduled">Scheduled (1)</option>
+<option value="draft">Draft (1)</option>
+<option value="archived">Archived (0)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Category Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-code text-technical-code cursor-pointer appearance-none focus:outline-none" id="filter-category" onchange="applyFilters()">
+<option value="all">Category: All Categories</option>
+<option value="Software Architecture">Software Architecture</option>
+<option value="Firebase">Firebase</option>
+<option value="Web Development">Web Development</option>
+<option value="Next.js">Next.js</option>
+<option value="Digital Administration">Digital Administration</option>
+<option value="UI/UX">UI/UX</option>
+<option value="Development Notes">Development Notes</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Featured Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-code text-technical-code cursor-pointer appearance-none focus:outline-none" id="filter-featured" onchange="applyFilters()">
+<option value="all">Featured: All</option>
+<option value="featured">Featured Only (2)</option>
+<option value="regular">Standard Only (6)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Sort Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-code text-technical-code cursor-pointer appearance-none focus:outline-none" id="sort-order">
+<option value="updated_desc">Sort: Recently Updated</option>
+<option value="published_desc">Sort: Recently Published</option>
+<option value="title_asc">Sort: Title (A-Z)</option>
+<option value="reading_time">Sort: Reading Time</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-[18px] text-outline pointer-events-none">swap_vert</span>
+</div>
+<!-- View and Refresh Switches -->
+<div class="flex items-center gap-1 pl-1">
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface shadow-xs" title="Table View" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface" title="Card Grid View" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="refreshTable()" title="Refresh records" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Multi-Selection Floating Action Header (Shown when 1 or more checked) -->
+<div class="hidden items-center justify-between bg-primary text-on-primary px-4 py-2 rounded-lg transition-all" id="selection-bar">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold" id="selected-count-label">1 article selected</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-on-primary/10 hover:bg-on-primary/20 text-on-primary font-technical-tag text-technical-tag transition-colors flex items-center gap-1" onclick="bulkPublish()" type="button">
+<span class="material-symbols-outlined text-[14px]">public</span>
+<span>Publish Selected</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-on-primary/10 hover:bg-on-primary/20 text-on-primary font-technical-tag text-technical-tag transition-colors flex items-center gap-1" onclick="bulkArchive()" type="button">
+<span class="material-symbols-outlined text-[14px]">archive</span>
+<span>Archive</span>
+</button>
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-technical-tag text-technical-tag hover:opacity-90 transition-opacity flex items-center gap-1" onclick="openModal('delete-modal')" type="button">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span>Delete Batch</span>
+</button>
+<button class="p-1 hover:bg-on-primary/10 rounded ml-2" onclick="clearSelection()" title="Clear selection" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Article Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Active Table View -->
+<div class="overflow-x-auto" id="view-active-table">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-technical-micro text-technical-micro uppercase tracking-wider select-none">
+<th class="w-10 px-4 py-3 text-center">
+<input class="rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" id="check-all" onchange="toggleSelectAll(this)" type="checkbox"/>
+</th>
+<th class="px-4 py-3 min-w-[380px]">Article Details</th>
+<th class="px-4 py-3 min-w-[150px]">Category</th>
+<th class="px-4 py-3 min-w-[130px]">Status</th>
+<th class="px-4 py-3 text-center min-w-[80px]">Featured</th>
+<th class="px-4 py-3 min-w-[170px]">Author</th>
+<th class="px-4 py-3 min-w-[110px]">Published</th>
+<th class="px-4 py-3 min-w-[110px]">Updated</th>
+<th class="px-4 py-3 text-right min-w-[80px]">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm" id="article-table-body">
+<!-- Record 1: Offline Civil Service Dossier -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-1" onclick="handleRowClick(event, 'art_offline_dossier')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="Technical architectural diagram of an offline first civil service application running locally on a desktop browser with data streams flowing into an encrypted local database." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOEACvW23kifUfEgNCcNHqJvvYOOemtsetZd8iWObpR0rF-WaEP_RVNAQKVCftpVuimaiZSF33VlqXCFOHNqHROCGVSEebtyXFdYGy6wd5oMi9M7wgdzZGI5k4OETKp3O0UzsREckVtjk-RrgoAenoSf0J-fmvaEAJb-Xq6UkA0Rnd3zahhkZ7gUVXMKoD6kTz0TXWUrgpxQVdVA1RyvAbDGUOZXOmQHfmTZNnjsPUut0taUhnaUJ1aA"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Architecting Offline-Tolerant Civil Service Dossier Verification with Next.js 14 &amp; Firestore
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/architecting-offline-tolerant-civil-service-dossier-verification</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">14 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Next.js 14</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Firestore</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">WebCrypto</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">IndexedDB</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                Software Architecture
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="font-medium">Published</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-status-warning hover:opacity-80 transition-opacity" onclick="toggleFeatured(this)" title="Curated Hero Article" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7kSQdusEWEGa9cAJjz5R0gLdasxZg8_tgNDxRRmQ7nC6hgNfvqIyP2WwdfsLd0niDv-3Ye7-TTZicalJYJNO0tAEUPmp4lTp-cI8rKkU3duItvlWZE9gr4DKIEaQxFyOEMs4SjlhXT8GncbuB4Us7WRH8f5BoOfL8YdrZzSwCo0OB3ZeBZO8IW1IEJlk6ca9sKNV8jSH2jd8gKxOJxyLZgUkzq4uXo9GkjDkKJ7DNKcUg-BYIjvnjNAN6PQ63wiMhzjQ"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-on-surface-variant">
+              Oct 14, 2024
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Nov 12, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-1')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-1">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="/admin/articles/edit/art_offline_dossier">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="inspectArticle('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span> Quick Preview
+                  </button>
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="/articles/architecting-offline-tolerant-civil-service-dossier-verification" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span> View Live ↗
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="duplicateArticle('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">content_copy</span> Duplicate
+                  </button>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="unpublishArticle('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">unpublished</span> Revert to Draft
+                  </button>
+<div class="h-px bg-surface-container-low my-1"></div>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="openArchiveModal('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">archive</span> Archive
+                  </button>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-error hover:bg-error-container/30 font-body-sm text-xs" onclick="openDeleteModal('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[16px] text-error">delete</span> Delete
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Record 2: Reducing Firestore Read Cascades -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-2" onclick="handleRowClick(event, 'art_firestore_cache')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="Technical telemetry screen displaying latency improvements, document read charts dropping substantially over time, clean monospace system UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEpZVR-Fen1NXSTGZnx6IR3L8bmA0TvJi7hSxONHVR0BZbbcmlFg-o_Pzw8M_H0nahQJ3000XOfJUnjJFKj_4QKQvxVpa7iB5GPJdEIQ9MD6BpjwV1rhxLgzD3OPZMzD4y5CUbFeLvTIDj_anDWJ4aFvXPD-offOkLSoMPJau9n7MeSJaKLBgrfO09IEvUnS4VW4V7e5U6djFtt303vOFP-mu7ccG8cR_gF6Q1pXlTsjt2lXTEwULtdQ"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Reducing Firestore Read Cascades by 42% Using Deterministic Client-Side Caching &amp; LocalStorage Projection
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/reducing-firestore-read-cascades-by-42-percent</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">9 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Firestore</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Caching</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Performance</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">TypeScript</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                Firebase
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="font-medium">Published</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-status-warning hover:opacity-80 transition-opacity" onclick="toggleFeatured(this)" title="Curated Hero Article" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqMibZMhzTCpnGokfN1cA7t5xs3sEwy2QnwnDlH_Qit2-liUvp6yEoSaNcWW-pKZgyPE3Mc1Ng2x_dGSHcHkmtVkfUqf_rOpP4MnjDmw89_wOls5eQh32z0jv09IC2WTS3wnnCpxO7gsOee6AlL2_-eULtMrIHsmigQ_mchL9lAzsS7gt2SRNUkdLvwJFmai6qa2kLYQzIZ6nOAqhNi4WOJF8COqzMdD16vZJjCc1hCTxF0CNYDojbXbuVK32-YE7YwZE"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-on-surface-variant">
+              Sep 28, 2024
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Oct 20, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-2')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-2">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="inspectArticle('art_firestore_cache')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span> Quick Preview
+                  </button>
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">open_in_new</span> View Live ↗
+                  </a>
+</div>
+</div>
+</td>
+</tr>
+<!-- Record 3: Real-Time Geofenced Biometrics -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-3" onclick="handleRowClick(event, 'art_biometrics')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="High precision municipal GIS boundary map layered with biometric attendance data indicators on dark surface mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjA3B8eq24UlGNN_Wr28dlmpJGJwd1_nVIAI1opyWr23NqTf8ld97ahmkisbNOVcy-pLf31Mlr6EJ1sw2IJa9R4uFOSBkUGkdbntUeM583Ig5ZWxT0fLWWu_sjd6_7hI_VAgy4JozWRs8hi0OA7YVFgZwHRH045gpPlORiOVnv5X1GDWF2l1rZKxVzVRXeL6wW12F8ITQuAytJulOZCMEkiaqLgliwdo6EGwU3LJoT4XejJnrUHr_oBQ"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Engineering Real-Time Geofenced Biometric Attendance for Municipal High Schools with PWA &amp; Web Workers
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/engineering-real-time-geofenced-biometric-attendance</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">11 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">PWA</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Web Workers</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Geolocation</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Tailwind</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                Web Development
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="font-medium">Published</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-outline hover:text-status-warning transition-colors" onclick="toggleFeatured(this)" title="Toggle Featured" type="button">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMG9yi1auGs9RLACBmEVhYTQgz8_v0qPB041_y_lj658l_g4V2DOuM9EixwyuA0JAHJ4GZvFRmtMPParUQtt4gRA2uncWvAHzSKLUtvUla3TFSGt7UogOfqLmq8fZs87PBp2Sw2s8guqX76ia6ut8XPFHdyTeeAHX74JPYbzSPYTime1bOAFjlocC6iscdlhaoU5U4pQ-xqi58ROJJSB2VyiITmadu036yEStzSIPoOV2igmQLzRLuwDkz_8meJsdOd9I"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-on-surface-variant">
+              Sep 10, 2024
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Oct 05, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-3')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-3">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="inspectArticle('art_biometrics')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span> Quick Preview
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Record 4: Abandoning Relational ORMs (Scheduled) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-4" onclick="handleRowClick(event, 'art_zod_orms')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="Abstract functional code architecture schema comparing declarative typescript types with complex database schemas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsh6Nc6L7Z1DMakLFfv-OHZphpte1qWjZWdGIYFKgiprCNrka8Gkx3ujv7I4Sdm6XbgiWvn0BEYCEAAMz8jedG2e_4Xph4dEpAQMRnDB9fptcOtzbBK7R79vgbZqIKewYcAFsDJuDflprA89_j58QraSvo-y5qqjlhNnQ2bN95ziwhkdBENMKJ8tFNF4fCvWVa98OZx__FQXwQJZD83iTOh0j23f3T-sbzyPTuBZaaXbfs1u1uGfo2mA"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Why We Abandoned Heavy Relational ORMs for Pure Functional Zod Schemas in Server Actions
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/abandoning-heavy-orms-for-functional-zod-schemas</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">7 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Zod</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Server Actions</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Architecture</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">TypeScript</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                Next.js
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface" title="Release: Nov 25, 2024 at 09:00 UTC">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span class="font-medium">Scheduled (Nov 25)</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-outline hover:text-status-warning transition-colors" onclick="toggleFeatured(this)" title="Toggle Featured" type="button">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpFKg9R-P1AZ5Q01buwjMnrb6AEcfnC8j8uiSDPSsw2LRzSw4xPLOtyrfNOjgBfVkeNzcSvB61NTB57ld7F116ppEjOC6p6l4whDRYZlijxvK5mG49X2nOGU66SvPwzxrG1W3TBl5nAbxjOcpqSaXUjjOxdD1sQ7JXbkswobaKBnARgrqmTzbWDYBWTSo6Hw9yQWLRBjSQWssnJZ3BLUMSMPD3aaGwl8pUb_V9rwHBj0gD8IVvhy4vA2F47gNTx8IagS0"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Scheduled (Nov 25)
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Nov 14, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-4')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-4">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="openModal('schedule-modal')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span> Reschedule
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Record 5: Building Resilient Intranet State (Draft) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-5" onclick="handleRowClick(event, 'art_intranet_state')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="Map outline of archipelago islands with peer-to-peer network nodes linked via synchronized mesh network lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6cKR_fVAAovmiEaNuTZFOakC5oM1nbx48K0Jqz1qODQUuXzt5nRMGE92V2VpY3nHcfiykcrH9r_1oDVV6VebYOrnGAVmPyzmaEJZZYAXdjSblrKnsAk4q9xfPM9RRB7WMuw8_qFoG_bgIo9SC-fGQszKYcnJ3pSX6gjOKdfpC6SzeFMWrx7-Ua0lwhBZDOPu4r6i_P-rhtCVfyizZGt9ciMtwwhXEain5Z91dxs8uMKuzdlhi_prSLw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Building Resilient Intranet State Synchronization for Island-Wide Regional Government Campuses
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/resilient-intranet-state-synchronization</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">12 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Intranet</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Offline-First</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Protocols</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                Digital Administration
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-medium">Draft</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-outline hover:text-status-warning transition-colors" onclick="toggleFeatured(this)" title="Toggle Featured" type="button">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN9VkjVH3PFi8b9eMcd9TZudy3mM1rng3g0GY1lJX7QN9HMDFIIiI1e-nmW1E0Xl10tDlXTlPvlrpipsN0fFUVUfNDpBvdSFtJrDkyoLMOvVr0AIvRS5wB2sZCw2gK1CCZYmJ9toCAvd3OWXp9fsnZyy7gKP7wzpqtkiogW1ag_iClrTlfdJsUVo4p9Dif7ZP6F8oIRUkVAes23lL97D2t1IalD2jg-YndxfHFMuzMJh8K05rQvVGNAyhIQFxh_rjqz7w"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              —
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Nov 02, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-5')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-5">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="inspectArticle('art_intranet_state')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span> Quick Preview
+                  </button>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-primary font-medium hover:bg-surface-container-low font-body-sm text-xs" type="button">
+<span class="material-symbols-outlined text-[16px]">publish</span> Publish Now
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+<!-- Record 6: Designing High-Density Information Displays -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group cursor-pointer" id="row-art-6" onclick="handleRowClick(event, 'art_ui_density')">
+<td class="px-4 py-3.5 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" onchange="handleCheckboxChange()" type="checkbox"/>
+</td>
+<td class="px-4 py-3.5">
+<div class="flex items-start gap-3">
+<div class="w-14 h-11 rounded-lg bg-surface-container overflow-hidden shrink-0 relative mt-0.5">
+<img class="w-full h-full object-cover" data-alt="Monochrome design system components layout showing typography hierarchy and compact data tables with subtle borders." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbBJUVbL_E0eVvMZcOqWjXf4_C6TTeQm4PaIo456U_2S3lKRb9P4E8goSB4jYxr6atvJ9m1IzrtCiIe5AD1gAW5X2nmbs8LvkJkTmoyXSgupRgKSCpHCA8Bmf8q-AnZkKrO_uHW6o3I7DLD5xBtHwT5HKWZpQlU58FSWMYUo829-3dR--YO-qYPSjxzewCfNrEpTEZB_i7u-ZQVS5paGkwsLespB0KP32V4x7iQOuY-YWEVGQZ3ugopA"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface hover:text-primary-container transition-colors truncate">
+                      Designing High-Density Information Displays for Civil Servants Without Sacrificing Visual Calm
+                    </span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-technical-code text-[11px] text-outline truncate max-w-xs">/articles/designing-high-density-information-displays</span>
+<span class="font-technical-micro text-[11px] text-outline-variant">•</span>
+<span class="font-technical-micro text-[11px] text-outline shrink-0">8 min read</span>
+</div>
+<div class="flex flex-wrap gap-1 mt-1.5">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Design Systems</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Data Density</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Typography</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-medium">Figma</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-medium">
+                UI/UX
+              </span>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="font-medium">Published</span>
+</span>
+</td>
+<td class="px-4 py-3.5 text-center whitespace-nowrap" onclick="event.stopPropagation()">
+<button class="text-outline hover:text-status-warning transition-colors" onclick="toggleFeatured(this)" title="Toggle Featured" type="button">
+<span class="material-symbols-outlined text-[20px]">star</span>
+</button>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap">
+<div class="flex items-center gap-2">
+<img alt="Rheva Iqbal Abdillah" class="w-6 h-6 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5E_hF1ODkb-ERIdBz7fxy8BP-V6LRUNebAfXVvD5u1FQ6iXos09i-8lwA8RBPwvWkL4Ckto_k7Uke7PhzxWNSLCzEDB2SFxERdWa4BJcXmLmUt6ik906rXaDdSaKZ2x3T_6y8IVi2SKaRYKYOwwB8SPr_LRY27CDC8wxNAx9BpuTedi9bQpPxKX7r8JtuUJ3YSiTkZTtOYe-739GIEy8VHcMA01bWGWZX-JcA5dkefOtcRqHlEnD8tP-DP7NgSniMl1A"/>
+<span class="font-body-sm text-xs font-medium text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-on-surface-variant">
+              Aug 18, 2024
+            </td>
+<td class="px-4 py-3.5 whitespace-nowrap font-technical-code text-technical-code text-outline">
+              Sep 01, 2024
+            </td>
+<td class="px-4 py-3.5 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" onclick="toggleDropdown('dropdown-6')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-xl bg-surface-container-lowest shadow-xl z-30 py-1.5 text-left" id="dropdown-6">
+<a class="flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" href="#">
+<span class="material-symbols-outlined text-[16px] text-outline">edit</span> Edit Article
+                  </a>
+<button class="w-full flex items-center gap-2 px-3 py-1.5 text-on-surface hover:bg-surface-container-low font-body-sm text-xs" onclick="inspectArticle('art_ui_density')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span> Quick Preview
+                  </button>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Skeleton Loading Harness State -->
+<div class="hidden p-6 space-y-4" id="view-skeleton-table">
+<div class="animate-pulse flex items-center justify-between pb-3 border-b border-surface-container-low">
+<div class="h-4 bg-surface-container-low rounded w-1/4"></div>
+<div class="h-4 bg-surface-container-low rounded w-1/6"></div>
+</div>
+<div class="space-y-4 animate-pulse">
+<div class="flex items-center gap-4">
+<div class="w-14 h-10 bg-surface-container rounded-lg"></div>
+<div class="flex-1 space-y-2">
+<div class="h-4 bg-surface-container rounded w-3/4"></div>
+<div class="h-3 bg-surface-container-low rounded w-1/2"></div>
+</div>
+<div class="w-24 h-6 bg-surface-container-low rounded-full"></div>
+<div class="w-20 h-6 bg-surface-container-low rounded-full"></div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-10 bg-surface-container rounded-lg"></div>
+<div class="flex-1 space-y-2">
+<div class="h-4 bg-surface-container rounded w-2/3"></div>
+<div class="h-3 bg-surface-container-low rounded w-1/3"></div>
+</div>
+<div class="w-24 h-6 bg-surface-container-low rounded-full"></div>
+<div class="w-20 h-6 bg-surface-container-low rounded-full"></div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-14 h-10 bg-surface-container rounded-lg"></div>
+<div class="flex-1 space-y-2">
+<div class="h-4 bg-surface-container rounded w-5/6"></div>
+<div class="h-3 bg-surface-container-low rounded w-2/5"></div>
+</div>
+<div class="w-24 h-6 bg-surface-container-low rounded-full"></div>
+<div class="w-20 h-6 bg-surface-container-low rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Empty State Harness -->
+<div class="hidden py-16 px-4 text-center flex-col items-center justify-center" id="view-empty-table">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[28px]">article</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface font-semibold mb-1">No articles found</h3>
+<p class="font-body text-body-sm text-secondary max-w-sm mb-5">
+        There are no technical articles matching the selected filters or search terms.
+      </p>
+<button class="h-9 px-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-technical-code text-technical-code transition-colors" onclick="resetFilters()" type="button">
+        Reset All Filters
+      </button>
+</div>
+<!-- Error State Harness -->
+<div class="hidden py-14 px-4 text-center flex-col items-center justify-center" id="view-error-table">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[28px]">cloud_off</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface font-semibold mb-1">Firestore Connection Timeout</h3>
+<p class="font-body text-body-sm text-secondary max-w-md mb-5">
+        Unable to sync collection <span class="font-technical-code text-xs bg-surface-container px-1.5 py-0.5 rounded">/articles</span> from Google Cloud Firestore. Check security rules or credentials.
+      </p>
+<button class="h-9 px-4 rounded-lg bg-surface-dark text-on-primary font-technical-code text-technical-code hover:bg-black transition-colors flex items-center gap-2" onclick="setHarnessState('active')" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Retry Firestore Connection</span>
+</button>
+</div>
+<!-- Table Footer / Pagination Controls -->
+<div class="px-5 py-3.5 bg-surface-container-lowest border-t border-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-3 select-none">
+<div class="flex items-center gap-3 font-technical-micro text-technical-micro text-outline">
+<span id="footer-count">Showing 1 to 6 of 8 article records</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span>hydrated 1.2s ago via Firebase Admin SDK</span>
+</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 font-technical-micro text-technical-micro text-outline">
+<span>Rows per page:</span>
+<select class="bg-surface-container-low text-on-surface font-technical-code text-xs px-2 py-1 rounded cursor-pointer focus:outline-none">
+<option selected="" value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded bg-surface-container-low text-outline opacity-40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-technical-code text-xs font-semibold">1</span>
+<button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Preview Slide-Over Drawer (Docked Right Inspector) -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 transition-opacity hidden" id="preview-drawer-backdrop" onclick="toggleDrawer(false)"></div>
+<div class="fixed top-0 right-0 h-screen w-full max-w-lg bg-surface-container-lowest shadow-2xl z-50 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out" id="preview-drawer">
+<!-- Drawer Header -->
+<div class="h-16 px-6 border-b border-surface-container-low flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant uppercase font-medium">Article Telemetry</span>
+<span class="font-technical-code text-technical-code text-outline font-medium">// DOC_ID: art_offline_dossier</span>
+</div>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleDrawer(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Content Scrollable Area -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Thumbnail Preview Card -->
+<div class="rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<div class="h-44 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Technical architectural diagram of an offline first civil service application running locally on a desktop browser with data streams flowing into an encrypted local database." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB61VnWfLx07b5HogWSf5PYkTPhD2QRNqwzP9YlDB2U0_jI__pyzfP6e78tbggd88gfgQ6v2KviVWEDrYO3zRQc2ptpIx8mwM4lf6K71TWt1yR6sxsUl_DTKaW97yqsGo3v4mNmCmmiwLJeVw3WL8sKFLooUTiQN6Pk0aS7P_b2bxYDfypip6lh_-CG91eVs8GQDX6k-Vrk6RxsEzPhw0BAnaSpNwgQE_f4KIbsmqWULOQ5vhTmDyYqFg"/>
+<span class="absolute top-3 right-3 font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-dark/80 backdrop-blur text-on-primary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Published</span>
+</span>
+<span class="absolute bottom-3 left-3 font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-dark/80 backdrop-blur text-status-warning font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Curated Featured</span>
+</span>
+</div>
+</div>
+<!-- Title & Excerpt -->
+<div class="space-y-2">
+<div class="font-technical-tag text-technical-tag text-primary-container font-semibold">SOFTWARE ARCHITECTURE</div>
+<h2 class="font-h3 text-h3 text-on-surface font-bold leading-tight">
+          Architecting Offline-Tolerant Civil Service Dossier Verification with Next.js 14 &amp; Firestore
+        </h2>
+<div class="font-technical-code text-technical-code text-outline bg-surface-container-low p-2 rounded-lg break-all">
+          /articles/architecting-offline-tolerant-civil-service-dossier-verification
+        </div>
+<p class="font-body text-body-sm text-secondary leading-relaxed pt-1">
+          A blueprint for implementing optimistic mutations, client-side cryptographic hashing via WebCrypto, and background synchronization queues to verify sensitive regional government dossiers without reliable satellite connectivity.
+        </p>
+</div>
+<!-- Document Metadata Grid -->
+<div class="grid grid-cols-2 gap-3 p-4 rounded-xl bg-surface-container-low font-technical-micro text-technical-micro">
+<div>
+<span class="text-outline uppercase block mb-1">Author Identity</span>
+<div class="flex items-center gap-1.5">
+<img alt="Rheva" class="w-5 h-5 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDICUhMQaEl5yweehc-8hsM-RlLiyW_mUbQ5g4CJshtBgyWXe9a_fgWiFAZIq9kSALEB2c3VWWyETMBwLcpc2_5Jgy-Y3ZO891jv5KCZHtd2avYz7oJUatncs6NaYedLRxh76u6iaF-WfeYg5UWcPTnu605tPnwerm1VpVDld9mu0xlZdTKgsbzQrn4jR0MzejsVU0yjxeA9BcYzVoBNZXWh-ek5Klhps5laG1pUmCETKlBTo1FXEJC5A3AqbbQe25ztv0"/>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Rheva Iqbal Abdillah</span>
+</div>
+</div>
+<div>
+<span class="text-outline uppercase block mb-1">Reading Duration</span>
+<span class="font-technical-code text-xs text-on-surface font-semibold">14 min read (3,420 words)</span>
+</div>
+<div>
+<span class="text-outline uppercase block mb-1">Original Publish Date</span>
+<span class="font-technical-code text-xs text-on-surface font-semibold">Oct 14, 2024 • 10:24 AM</span>
+</div>
+<div>
+<span class="text-outline uppercase block mb-1">Last Timestamp / Rev</span>
+<span class="font-technical-code text-xs text-on-surface font-semibold">Nov 12, 2024 (rev_v4.2)</span>
+</div>
+</div>
+<!-- Assigned Tags -->
+<div class="space-y-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Indexable Taxonomy &amp; Tags</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-medium">Next.js 14</span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-medium">Firestore</span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-medium">WebCrypto</span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-medium">IndexedDB</span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface font-medium">Public Sector</span>
+</div>
+</div>
+<!-- Cache Diagnostics -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-high space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag text-on-surface font-semibold">Edge ISR Status</span>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+            HIT (Cloudflare Edge CDN)
+          </span>
+</div>
+<p class="font-technical-micro text-technical-micro text-outline">
+          Cache-Control: s-maxage=86400, stale-while-revalidate=43200. Tag: <span class="font-technical-code">article-offline-civil-service</span>.
+        </p>
+</div>
+</div>
+<!-- Drawer Action Toolbar -->
+<div class="p-4 border-t border-surface-container-low bg-surface-container-lowest flex flex-col gap-2 shrink-0">
+<div class="grid grid-cols-2 gap-2">
+<a class="h-10 rounded-lg bg-surface-dark hover:bg-black text-on-primary font-body-sm text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-sm" href="/admin/articles/edit/art_offline_dossier">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span>Edit Article</span>
+</a>
+<a class="h-10 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-xs font-semibold transition-colors flex items-center justify-center gap-1.5" href="/articles/architecting-offline-tolerant-civil-service-dossier-verification" target="_blank">
+<span>View Live Article</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="font-technical-tag text-technical-tag text-outline hover:text-on-surface transition-colors flex items-center gap-1" onclick="unpublishArticle('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[15px]">unpublished</span>
+<span>Unpublish to Draft</span>
+</button>
+<button class="font-technical-tag text-technical-tag text-error hover:opacity-80 transition-opacity flex items-center gap-1" onclick="openArchiveModal('art_offline_dossier')" type="button">
+<span class="material-symbols-outlined text-[15px]">archive</span>
+<span>Archive Record</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Schedule Dialog Modal -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="schedule-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full shadow-2xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[22px]">calendar_clock</span>
+<h3 class="font-h3 text-base font-bold text-on-surface">Schedule Publication</h3>
+</div>
+<button class="p-1 rounded text-outline hover:text-on-surface" onclick="closeModal('schedule-modal')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body text-body-sm text-secondary">
+        Select target publication release date and UTC timestamp for automated edge deployment.
+      </p>
+<div class="space-y-3">
+<div>
+<label class="block font-technical-micro text-technical-micro uppercase text-outline mb-1">Target Date</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-technical-code text-technical-code focus:outline-none" type="date" value="2024-11-25"/>
+</div>
+<div>
+<label class="block font-technical-micro text-technical-micro uppercase text-outline mb-1">Target UTC Time</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-technical-code text-technical-code focus:outline-none" type="time" value="09:00"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs text-on-surface font-medium" onclick="closeModal('schedule-modal')" type="button">Cancel</button>
+<button class="h-9 px-4 rounded-lg bg-primary-container hover:bg-primary font-body-sm text-xs text-on-primary font-semibold" onclick="confirmSchedule()" type="button">Confirm Schedule</button>
+</div>
+</div>
+</div>
+<!-- Archive Dialog Modal -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="archive-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full shadow-2xl p-6 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</div>
+<div>
+<h3 class="font-h3 text-base font-bold text-on-surface">Archive Article?</h3>
+<p class="font-technical-micro text-technical-micro text-outline">Document will be delisted from public index</p>
+</div>
+</div>
+<p class="font-body text-body-sm text-secondary">
+        Archiving unpublishes the article and returns HTTP 410 (Gone) to edge spiders. The full monograph content will remain accessible in Firestore CMS archives.
+      </p>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs text-on-surface font-medium" onclick="closeModal('archive-modal')" type="button">Cancel</button>
+<button class="h-9 px-4 rounded-lg bg-surface-dark hover:bg-black font-body-sm text-xs text-on-primary font-semibold" onclick="closeModal('archive-modal')" type="button">Confirm Archive</button>
+</div>
+</div>
+</div>
+<!-- Delete Modal Dialog -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4" id="delete-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full shadow-2xl p-6 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<h3 class="font-h3 text-base font-bold text-on-surface">Permanent Deletion</h3>
+<p class="font-technical-micro text-technical-micro text-error font-medium">FIRESTORE PURGE // IRREVERSIBLE</p>
+</div>
+</div>
+<p class="font-body text-body-sm text-secondary leading-relaxed">
+        Are you sure you want to permanently delete this record? This will instantly remove the Firestore document, associated cached ISR routes, and CDN assets.
+      </p>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs text-on-surface font-medium" onclick="closeModal('delete-modal')" type="button">Cancel</button>
+<button class="h-9 px-4 rounded-lg bg-error hover:opacity-90 font-body-sm text-xs text-on-error font-semibold" onclick="confirmDelete()" type="button">Permanently Delete</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<script>
+    // State Harness Runner logic
+    function setHarnessState(state) {
+      document.querySelectorAll('.harness-pill').forEach(btn => {
+        btn.classList.remove('bg-surface-dark', 'text-on-primary');
+        btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+
+      const activeBtn = document.getElementById('btn-state-' + state);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        activeBtn.classList.add('bg-surface-dark', 'text-on-primary');
+      }
+
+      const activeView = document.getElementById('view-active-table');
+      const skeletonView = document.getElementById('view-skeleton-table');
+      const emptyView = document.getElementById('view-empty-table');
+      const errorView = document.getElementById('view-error-table');
+
+      // Reset all views
+      activeView.classList.add('hidden');
+      skeletonView.classList.add('hidden');
+      emptyView.classList.add('hidden');
+      emptyView.classList.remove('flex');
+      errorView.classList.add('hidden');
+      errorView.classList.remove('flex');
+
+      if (state === 'active') {
+        activeView.classList.remove('hidden');
+        clearSelection();
+      } else if (state === 'selected') {
+        activeView.classList.remove('hidden');
+        const firstCheckbox = document.querySelector('.row-checkbox');
+        if (firstCheckbox) {
+          firstCheckbox.checked = true;
+          handleCheckboxChange();
+        }
+      } else if (state === 'skeleton') {
+        skeletonView.classList.remove('hidden');
+      } else if (state === 'empty') {
+        emptyView.classList.remove('hidden');
+        emptyView.classList.add('flex');
+      } else if (state === 'error') {
+        errorView.classList.remove('hidden');
+        errorView.classList.add('flex');
+      }
+    }
+
+    // Drawer management
+    function toggleDrawer(show) {
+      const drawer = document.getElementById('preview-drawer');
+      const backdrop = document.getElementById('preview-drawer-backdrop');
+      if (show) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+      } else {
+        drawer.classList.add('translate-x-full');
+        setTimeout(() => backdrop.classList.add('hidden'), 200);
+      }
+    }
+
+    function inspectArticle(docId) {
+      toggleDrawer(true);
+    }
+
+    function handleRowClick(e, docId) {
+      // If clicking directly on text or row, preview it
+      inspectArticle(docId);
+    }
+
+    // Checkbox selection & batch actions
+    function handleCheckboxChange() {
+      const checkedBoxes = document.querySelectorAll('.row-checkbox:checked');
+      const count = checkedBoxes.length;
+      const selectionBar = document.getElementById('selection-bar');
+      const label = document.getElementById('selected-count-label');
+
+      if (count > 0) {
+        selectionBar.classList.remove('hidden');
+        selectionBar.classList.add('flex');
+        label.textContent = count + (count === 1 ? ' article selected' : ' articles selected');
+      } else {
+        selectionBar.classList.add('hidden');
+        selectionBar.classList.remove('flex');
+        document.getElementById('check-all').checked = false;
+      }
+    }
+
+    function toggleSelectAll(master) {
+      document.querySelectorAll('.row-checkbox').forEach(cb => {
+        cb.checked = master.checked;
+      });
+      handleCheckboxChange();
+    }
+
+    function clearSelection() {
+      document.querySelectorAll('.row-checkbox').forEach(cb => cb.checked = false);
+      const master = document.getElementById('check-all');
+      if (master) master.checked = false;
+      handleCheckboxChange();
+    }
+
+    // Star Toggle
+    function toggleFeatured(button) {
+      const icon = button.querySelector('.material-symbols-outlined');
+      const isFilled = button.classList.contains('text-status-warning');
+      if (isFilled) {
+        button.classList.remove('text-status-warning');
+        button.classList.add('text-outline');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        showToast('Article removed from curated featured list.');
+      } else {
+        button.classList.remove('text-outline');
+        button.classList.add('text-status-warning');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        showToast('Article pinned as curated featured hero.');
+      }
+    }
+
+    // Modal helpers
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function openArchiveModal(docId) {
+      openModal('archive-modal');
+    }
+
+    function openDeleteModal(docId) {
+      openModal('delete-modal');
+    }
+
+    function confirmDelete() {
+      closeModal('delete-modal');
+      showToast('Document removed permanently from Firestore collection.', 'error');
+    }
+
+    function confirmSchedule() {
+      closeModal('schedule-modal');
+      showToast('Publication scheduled for Nov 25, 2024 at 09:00 UTC.');
+    }
+
+    // Dropdown toggles
+    function toggleDropdown(id) {
+      // Close other dropdowns
+      document.querySelectorAll('[id^="dropdown-"]').forEach(d => {
+        if (d.id !== id) d.classList.add('hidden');
+      });
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('[id^="dropdown-"]') && !e.target.closest('button[onclick*="toggleDropdown"]')) {
+        document.querySelectorAll('[id^="dropdown-"]').forEach(d => d.classList.add('hidden'));
+      }
+    });
+
+    // Revalidate ISR
+    function revalidateCache(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+        showToast('Edge ISR Cache successfully purged and revalidated (8 routes).');
+      }, 900);
+    }
+
+    // Export Catalog
+    function triggerCatalogExport() {
+      showToast('Exporting 8 verified documents as articles-catalog.json...');
+    }
+
+    // Quick Toast feedback
+    function showToast(message, type = 'normal') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'pointer-events-auto px-4 py-2.5 rounded-lg font-technical-code text-technical-code flex items-center gap-2 shadow-xl border border-surface-container-high transition-all duration-300 ' + 
+        (type === 'error' ? 'bg-surface-dark text-error' : 'bg-surface-dark text-on-primary');
+      toast.innerHTML = `<span class="material-symbols-outlined text-[16px]">${type === 'error' ? 'error' : 'check_circle'}</span><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    // Live search filter
+    function handleSearch(query) {
+      const rows = document.querySelectorAll('#article-table-body tr');
+      let visibleCount = 0;
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        if (text.includes(query.toLowerCase())) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+      document.getElementById('footer-count').innerText = `Showing ${visibleCount} of 8 article records`;
+    }
+
+    function applyFilters() {
+      const cat = document.getElementById('filter-category').value;
+      const status = document.getElementById('filter-status').value;
+      const rows = document.querySelectorAll('#article-table-body tr');
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        let match = true;
+        const text = row.innerText;
+        if (cat !== 'all' && !text.includes(cat)) match = false;
+        if (status !== 'all' && !text.toLowerCase().includes(status)) match = false;
+
+        if (match) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+      document.getElementById('footer-count').innerText = `Showing ${visibleCount} of 8 article records`;
+    }
+
+    function resetFilters() {
+      document.getElementById('article-search').value = '';
+      document.getElementById('filter-status').value = 'all';
+      document.getElementById('filter-category').value = 'all';
+      document.getElementById('filter-featured').value = 'all';
+      setHarnessState('active');
+      const rows = document.querySelectorAll('#article-table-body tr');
+      rows.forEach(row => row.style.display = '');
+      document.getElementById('footer-count').innerText = 'Showing 1 to 6 of 8 article records';
+    }
+
+    function refreshTable() {
+      showToast('Collection synced with Firestore live replica.');
+    }
+  </script>
+</div></div></main></div></body></html>

@@ -1,0 +1,722 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"status-success":"#10B981","surface-bright":"#f8f9fa","primary":"#004ac6","primary-fixed":"#dbe1ff","on-surface":"#191c1d","accent-dark":"#3B82F6","border-light":"#E5E7EB","on-secondary-fixed":"#1c1b1b","tertiary-fixed-dim":"#c0c7d6","on-tertiary":"#ffffff","inverse-primary":"#b4c5ff","tertiary-fixed":"#dce2f3","surface-light":"#FFFFFF","surface-dark":"#111111","text-primary-dark":"#F5F5F5","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","secondary-fixed":"#e5e2e1","secondary-fixed-dim":"#c8c6c5","inverse-surface":"#2e3132","outline-variant":"#c3c6d7","on-error-container":"#93000a","surface-container":"#edeeef","surface":"#f8f9fa","on-secondary-container":"#656464","primary-container":"#2563eb","border-dark":"#27272A","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","outline":"#737686","on-secondary":"#ffffff","secondary-container":"#e5e2e1","on-secondary-fixed-variant":"#474646","surface-container-high":"#e7e8e9","status-warning":"#F59E0B","on-tertiary-container":"#eaf0ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#666d7b","on-tertiary-fixed-variant":"#404754","bg-dark":"#0A0A0A","on-surface-variant":"#434655","on-tertiary-fixed":"#151c27","surface-dim":"#d9dadb","on-background":"#191c1d","error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-tint":"#0053db","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e3e4","inverse-on-surface":"#f0f1f2","on-primary":"#ffffff","secondary":"#5f5e5e","on-error":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","surface-container-low":"#f3f4f5","surface-variant":"#e1e3e4","status-error":"#EF4444"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem",margin:"2rem","gutter-mobile":"1rem","space-lg":"1.5rem",gutter:"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem"},fontFamily:{"h1-mobile":["Geist"],h3:["Geist"],"h2-mobile":["Geist"],"technical-tag":["JetBrains Mono"],"display-mobile":["Geist"],"technical-code":["JetBrains Mono"],body:["Inter"],"body-sm":["Inter"],display:["Geist"],h2:["Geist"],"technical-micro":["JetBrains Mono"],"body-large":["Inter"],h1:["Geist"]},fontSize:{"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body text-body text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></a></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-surface-container-high text-on-surface font-technical-code"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-technical-code" data-path="apps" href="#">Apps</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="articles" href="#">Articles</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2 rounded-xl bg-primary-container text-on-primary font-technical-code text-technical-code shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-colors" data-path="contact" href="#">Let's Talk</a><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Telemetry & Breadcrumb Strip -->
+<div class="w-full bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin py-3 flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+<div class="flex items-center gap-2 font-technical-code text-technical-code text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" data-path="home" href="#">home</a>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">about</span>
+</div>
+<div class="flex items-center gap-3 overflow-x-auto max-w-full">
+<span class="inline-flex items-center gap-1.5 font-technical-micro text-technical-micro px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+          STATUS: AVAILABLE FOR SELECTED WORK
+        </span>
+<span class="hidden lg:inline-block font-technical-micro text-technical-micro text-outline whitespace-nowrap">
+          FIRESTORE_COLLECTION: profile // UPDATED: Q1 2025 // LOC: BANDUNG_ID
+        </span>
+</div>
+</div>
+</div>
+<!-- Main Container -->
+<div class="max-w-7xl mx-auto px-margin w-full py-16 flex flex-col gap-24">
+<!-- Section 1: Hero & Profile Spec -->
+<section class="flex flex-col gap-8">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">01 // PROFILE &amp; PRACTICE</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left: Statement & Actions -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight leading-tight">
+            Software Engineer Building Practical Systems for Real Operational Realities.
+          </h1>
+<p class="font-body-large text-body-large text-on-surface-variant leading-relaxed">
+            Rheva Iqbal Abdillah is a technology practitioner bridging full-stack software engineering, UI/UX systems design, and institutional workflow automation. Dedicated to building reliable, sovereign tools that eliminate administrative drag and withstand daily operational friction.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="font-technical-tag text-technical-tag px-3 py-1 rounded-full bg-surface-container text-on-surface">Full-Stack Engineering</span>
+<span class="font-technical-tag text-technical-tag px-3 py-1 rounded-full bg-surface-container text-on-surface">UI/UX Architecture</span>
+<span class="font-technical-tag text-technical-tag px-3 py-1 rounded-full bg-surface-container text-on-surface">Public-Sector Digital Systems</span>
+<span class="font-technical-tag text-technical-tag px-3 py-1 rounded-full bg-surface-container text-on-surface">Data Workflows</span>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary-container text-on-primary font-technical-code text-technical-code shadow-sm hover:bg-primary transition-colors" data-path="projects" href="#">
+<span class="">View Projects</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-surface-container-low text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors" data-path="contact" href="#">
+<span class="">Get in Touch</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-2 text-on-surface-variant hover:text-primary font-technical-code text-technical-code transition-colors" data-path="articles" href="#">
+<span class="">Read Architecture Essays</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+<!-- Right: Practitioner Specification Card -->
+<div class="lg:col-span-5 w-full bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
+<div class="relative w-full h-72 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover object-center" alt="Portrait of Rheva Iqbal Abdillah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ2PII5NTXdbOHTYePCcGrh64xkMBQlYLCFLRxpDmkN-jisECQKoSI61WggFThjH3l3pMf6tYumo9srUwog4fuercpq5oLKozk-OKyl0UeJerqBNqJVXoWDUFqni6QmIjzkX51mYNK1MY0epSlnNGIugnwTUYuPXeiUJ3-W1NKXXCQkTqjeer5KYdyrGgVfOh4Ixww11mSEFXsjDysoMr225rf0FxjPhUjMzOdt-rm_AYTdGyz1j_FJLQdYHURzu3dC08">
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-md bg-surface-dark/80 backdrop-blur-md text-text-primary-dark font-technical-micro text-technical-micro"><span class="">RHEVA IQBAL ABDILLAH // SOFTWARE PRACTITIONER &amp; SYSTEMS ARCHITECT</span><span class="text-text-secondary-dark">BANTEN, ID (UTC+7)</span></div>
+</div>
+<div class="p-6 flex flex-col gap-5 bg-surface-container-lowest">
+<div class="flex items-center justify-between pb-3">
+<span class="font-technical-tag text-technical-tag text-on-surface-variant">OPERATIONAL STATUS</span>
+<span class="inline-flex items-center gap-1.5 font-technical-code text-technical-code text-status-success">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+                Active Consulting &amp; Turnkey Apps
+              </span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-1">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Core Experience</span>
+<span class="font-h3 text-h3 text-on-surface tracking-tight">4+ Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Production Systems</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Key Deployments</span>
+<span class="font-h3 text-h3 text-on-surface tracking-tight">18+ Tools</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Institutional &amp; SaaS</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 font-technical-code text-technical-code text-on-surface-variant">
+<div class="flex justify-between items-center py-1">
+<span class="">Primary Runtime</span>
+<span class="text-on-surface font-semibold">Next.js 14 / TypeScript / Go</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="">Data Layer</span>
+<span class="text-on-surface font-semibold">Postgres / Firestore / Redis</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="">Licensing Delivery</span>
+<span class="text-on-surface font-semibold">Self-Hosted Single-Tenant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Professional Narrative (Editorial & Marginalia) -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">02 // PROFESSIONAL BACKGROUND</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">
+            From Internal Workflows to Resilient Software Architecture.
+          </h2>
+<div class="flex flex-col gap-5 font-body text-body text-on-surface-variant leading-relaxed">
+<p class="">
+              My path in engineering didn’t begin with isolated theoretical exercises, but in the trenches of administrative reality. Working inside regional educational and public sector environments, I observed firsthand how essential institutions are continually weighed down by invisible friction: recursive approval cycles lost in paper chains, fragmented spreadsheets with zero referential integrity, and staff spending over 60% of their day manually reconciling duplicate attendance logs.
+            </p>
+<p class="">
+              These systemic bottlenecks were rarely caused by an absence of effort, but by a lack of purposeful tooling. Commercial off-the-shelf software often proved either completely decoupled from local bureaucratic regulations or dangerously brittle when internet connectivity fluctuated. Real institutional operations demand deterministic behavior, granular role hierarchy, and interfaces so intuitive that civil service staff can adopt them without week-long retraining.
+            </p>
+<p class="">
+              What started as crafting pragmatic internal scripts evolved into architecting production-grade software platforms. Today, my practice centers on engineering robust, decoupled web applications, turnkey self-hosted products, and verifiable data pipelines. I focus on deterministic data structures, offline-first resiliency, and software sovereignty—giving organizations permanent ownership over their operational data with zero recurring vendor lock-in.
+            </p>
+</div>
+</div>
+<!-- Marginalia / Focus Block -->
+<div class="lg:col-span-4 flex flex-col gap-6 p-6 rounded-xl bg-surface-container-low shadow-sm"><div class="w-full overflow-hidden rounded-lg bg-surface-container-lowest shadow-sm flex flex-col"><div class="relative w-full h-64 overflow-hidden bg-surface-container-high"><img class="w-full h-full object-cover object-center" alt="Rheva Iqbal Abdillah in field environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF022eir095sZrYWxoNErCsSkG9LIx-2mLiVM4sHOI4Gz6rdwUeuliE5JnMfYIWCNLbjMJ7xmZc5DTdoV10mafFT1I4YYhYcVYBeB9QJ15bWPBM6Pqy_6bjGifj2j45BIJvRQfd0pXjqy_677x0TWRAhSC9yEHU9ChQAJwkacCcsNA8S_CfuWL8CHBdnUl0F2tF8_oLD27a52a28T05S2GpMvWzt29mCO5HQk7DX2wKn3pRrLdYazlJCrjPuaFUfRsf6o"><div class="absolute bottom-2 left-2 right-2 flex items-center justify-between px-2.5 py-1 rounded bg-surface-dark/80 backdrop-blur-md text-text-primary-dark font-technical-micro text-technical-micro"><span class="">FIELD PERSPECTIVE</span><span class="text-text-secondary-dark">DAYLIGHT SURVEY</span></div></div><div class="p-3 bg-surface-container-lowest border-t border-surface-container"><p class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider leading-relaxed">FIELD PERSPECTIVE // PRACTICAL SYSTEMS BUILT FOR OPERATIONAL ENVIRONMENTS</p></div></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">architecture</span>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface font-semibold">Core Focus Areas</span>
+</div>
+<div class="flex flex-col gap-4 font-body-sm text-body-sm">
+<div class="flex flex-col gap-1">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Institutional Workflow Digitisation</span>
+<p class="text-on-surface-variant">Transforming manual civil-service paper protocols into auditable, digital state machines.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Decoupled Next.js &amp; Firestore Architecture</span>
+<p class="text-on-surface-variant">Serverless and edge-optimized frontends paired with resilient, schema-validated NoSQL backends.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Strict Data Contracts &amp; Schema Integrity</span>
+<p class="text-on-surface-variant">Zero-tolerance for untyped mutations using Zod, TypeScript, and immutable transactional logging.</p>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Software Sovereignty &amp; Docker Packages</span>
+<p class="text-on-surface-variant">Shipping deployable, single-tenant products that organizations host within their private boundaries.</p>
+</div>
+</div>
+<div class="pt-2">
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between text-on-surface">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">ARCHITECTURE PRINCIPLE</span>
+<span class="font-technical-code text-technical-code text-primary">Sovereign • Deterministic</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: What I Do (Capabilities) -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">03 // CORE CAPABILITIES</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">Disciplines Engineered for Daily Reliability.</h2>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          A balanced capability matrix combining high-velocity application development, resilient data modeling, and rigorous product delivery.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Capability 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Full-Stack Web Applications</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Production architectures using Next.js 14 App Router, React Server Components, TypeScript strict mode, and fine-grained data hydration for peak responsiveness.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Next.js 14</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TypeScript</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Server Actions</span>
+</div>
+</div>
+<!-- Capability 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">token</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">UI/UX &amp; Design Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Systematic design token foundations, headless accessibility primitives with Radix UI, Tailwind CSS utilities, and zero visual drift between design and code.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tailwind CSS</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">shadcn/ui</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Radix UI</span>
+</div>
+</div>
+<!-- Capability 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Data &amp; Information Systems</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Normalized relational schemas (Postgres) alongside optimized NoSQL collections (Firestore). Batch data migrations, query cost optimization, and audit logging.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PostgreSQL</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Firestore</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Zod Schemas</span>
+</div>
+</div>
+<!-- Capability 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">flowsheet</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Internal Tools &amp; Administration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Bureaucratic workflow engines, employee dossier lifecycle management, granular role-based access controls (RBAC), and civil-service appraisal calculations.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">SIMPEG Tools</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Audit Trails</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">RBAC Security</span>
+</div>
+</div>
+<!-- Capability 5 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Packaged Software Products</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Turnkey software delivered as pre-configured single-tenant packages. Easy Docker container deployment with transparent licenses and guaranteed source sovereignty.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Docker</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Self-Hosted</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Single-Tenant</span>
+</div>
+</div>
+<!-- Capability 6 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">troubleshoot</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Technical Problem Solving</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Untangling messy legacy codebases, reverse-engineering unverified data formats, optimizing slow SQL queries, and zero-downtime database migrations.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Data Cutovers</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Refactoring</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Performance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Working Philosophy (Editorial Tenets) -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">04 // WORKING PHILOSOPHY</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">Principles That Govern Every Line of Code.</h2>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          Software engineering is an operational responsibility, not merely an aesthetic choice. These guiding tenets ensure longevity and stability.
+        </p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Tenet 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-5 max-w-3xl">
+<span class="font-technical-tag text-technical-tag text-primary font-bold pt-1">01</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-h3 text-h3 text-on-surface">Understand the Workflow Before Writing Code</h3>
+<p class="font-body text-body text-on-surface-variant">
+                Software must reflect actual institutional dynamics, human relationships, and physical bottlenecks—not speculative, idealized abstractions.
+              </p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider whitespace-nowrap">Workflow Grounded</span>
+</div>
+<!-- Tenet 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-5 max-w-3xl">
+<span class="font-technical-tag text-technical-tag text-primary font-bold pt-1">02</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-h3 text-h3 text-on-surface">Prioritize Operational Utility Over Complexity</h3>
+<p class="font-body text-body text-on-surface-variant">
+                Avoid bloated microservice overhead and unnecessary third-party SaaS dependencies. Select the leanest, most reliable stack that completely solves the operational challenge.
+              </p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider whitespace-nowrap">Lean &amp; Resilient</span>
+</div>
+<!-- Tenet 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-5 max-w-3xl">
+<span class="font-technical-tag text-technical-tag text-primary font-bold pt-1">03</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-h3 text-h3 text-on-surface">Design for Maintainability &amp; Sovereignty</h3>
+<p class="font-body text-body text-on-surface-variant">
+                Deliver clean, rigorously documented codebases and database models that client organizations can own, self-host, and inspect without perpetual vendor rent.
+              </p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider whitespace-nowrap">Data Sovereignty</span>
+</div>
+<!-- Tenet 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-5 max-w-3xl">
+<span class="font-technical-tag text-technical-tag text-primary font-bold pt-1">04</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-h3 text-h3 text-on-surface">Deterministic Data &amp; Cryptographic Traceability</h3>
+<p class="font-body text-body text-on-surface-variant">
+                Implement comprehensive audit trails, immutable change records, and strict schema validation layers to prevent dispute, corruption, and bureaucratic compliance drift.
+              </p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider whitespace-nowrap">Audit Integrity</span>
+</div>
+<!-- Tenet 5 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-5 max-w-3xl">
+<span class="font-technical-tag text-technical-tag text-primary font-bold pt-1">05</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-h3 text-h3 text-on-surface">Pragmatic Iteration on Real Operator Feedback</h3>
+<p class="font-body text-body text-on-surface-variant">
+                Continuous software improvement anchored in the concrete frustrations of day-to-day operators rather than boardroom hypotheticals or trend-chasing feature lists.
+              </p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider whitespace-nowrap">Operator Centric</span>
+</div>
+</div>
+</section>
+<!-- Section 5: Technical Toolchain & Stack -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">05 // TECHNICAL TOOLCHAIN</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">Production Stack &amp; Technologies.</h2>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          Curated tools selected for runtime speed, strict type safety, predictable operational budgets, and multi-year longevity.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Category 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold">01 // Frontend</span>
+<span class="material-symbols-outlined text-outline text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Next.js 14 (App Router)</span>
+<span class="text-on-surface-variant">SSR, Edge Runtime &amp; Server Actions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">React 18 &amp; TypeScript</span>
+<span class="text-on-surface-variant">Strict type system &amp; composability</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Tailwind CSS &amp; Radix UI</span>
+<span class="text-on-surface-variant">Accessible headless token systems</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">shadcn/ui Primitives</span>
+<span class="text-on-surface-variant">Owned component source code</span>
+</div>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold">02 // Backend</span>
+<span class="material-symbols-outlined text-outline text-[18px]">dns</span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Firebase Firestore</span>
+<span class="text-on-surface-variant">Realtime state &amp; edge data sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Node.js &amp; Go</span>
+<span class="text-on-surface-variant">High-concurrency backend services</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">PostgreSQL &amp; Redis</span>
+<span class="text-on-surface-variant">ACID relational store &amp; caching</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Zod &amp; Valibot</span>
+<span class="text-on-surface-variant">Runtime boundary schema safety</span>
+</div>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold">03 // Design</span>
+<span class="material-symbols-outlined text-outline text-[18px]">palette</span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Figma &amp; Tokens Studio</span>
+<span class="text-on-surface-variant">Design token sync pipeline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">WCAG 2.1 AA Standards</span>
+<span class="text-on-surface-variant">High-contrast accessibility</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Typography Hierarchy</span>
+<span class="text-on-surface-variant">Geist Sans &amp; JetBrains Mono</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Micro-Interactions</span>
+<span class="text-on-surface-variant">State feedback &amp; latency disguise</span>
+</div>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold">04 // DevOps</span>
+<span class="material-symbols-outlined text-outline text-[18px]">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Docker Containers</span>
+<span class="text-on-surface-variant">Portable, reproducible deployment</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Vercel &amp; Edge Network</span>
+<span class="text-on-surface-variant">Global low-latency delivery</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">GitHub Actions CI/CD</span>
+<span class="text-on-surface-variant">Automated testing &amp; build runs</span>
+</div>
+<div class="flex flex-col">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Cloud Object Storage</span>
+<span class="text-on-surface-variant">S3 / GCS dossier preservation</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Professional Experience (Career Timeline) -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">06 // CAREER TIMELINE</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">Professional Experience &amp; Roles.</h2>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          Chronological progression across software architecture, high-concurrency systems, and digital civil administration.
+        </p>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Entry 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row lg:items-start justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-3">
+<span class="font-technical-code text-technical-code px-2.5 py-0.5 rounded bg-primary-fixed text-primary font-semibold">2023 — Present</span>
+<span class="font-technical-tag text-technical-tag text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Current
+              </span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Lead Systems Engineer &amp; Independent Consultant</h3>
+<span class="font-body-sm text-body-sm text-primary font-medium">Independent Practice // Institutional Systems</span>
+<p class="font-body text-body text-on-surface-variant pt-1 leading-relaxed">
+              Architecting and shipping specialized administrative and attendance verification infrastructure for regional educational institutions and public sector agencies. Engineered customized biometric geofencing portals, document archival pipelines, and self-hosted turnkey administrative software with strict regulatory compliance.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-2 shrink-0">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Key Stack</span>
+<div class="flex flex-wrap lg:justify-end gap-1.5">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Next.js 14</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Firestore</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Docker</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PostgreSQL</span>
+</div>
+</div>
+</div>
+<!-- Entry 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row lg:items-start justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-3">
+<span class="font-technical-code text-technical-code px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">2022 — 2023</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">Enterprise Services</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Full-Stack Software Engineer</h3>
+<span class="font-body-sm text-body-sm text-primary font-medium">Digital Systems Group // Production Engineering</span>
+<p class="font-body text-body text-on-surface-variant pt-1 leading-relaxed">
+              Built high-concurrency internal web portals, Next.js applications, and database synchronization pipelines. Spearheaded complete data model redesigns on Firebase Firestore, resolving collection read cascades and reducing cloud query billing by 40% while maintaining sub-second query latency under peak load.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-2 shrink-0">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Key Stack</span>
+<div class="flex flex-wrap lg:justify-end gap-1.5">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">React / Next.js</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Firebase</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Node.js</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TypeScript</span>
+</div>
+</div>
+</div>
+<!-- Entry 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row lg:items-start justify-between gap-6 hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col gap-2 max-w-3xl">
+<div class="flex items-center gap-3">
+<span class="font-technical-code text-technical-code px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">2021 — 2022</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">UI Architecture</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Frontend &amp; UI Systems Developer</h3>
+<span class="font-body-sm text-body-sm text-primary font-medium">Software Development Lab</span>
+<p class="font-body text-body text-on-surface-variant pt-1 leading-relaxed">
+              Engineered standardized component design libraries, accessible web interfaces, and responsive administrative dashboards using Tailwind CSS, React, and TypeScript. Codified typography systems, consistent elevation hierarchies, and reduced bundle weights across client portals.
+            </p>
+</div>
+<div class="flex flex-col lg:items-end gap-2 shrink-0">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Key Stack</span>
+<div class="flex flex-wrap lg:justify-end gap-1.5">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tailwind CSS</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">React</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Figma Tokens</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PHP</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Selected Problem Spaces & Domain Expertise -->
+<section class="flex flex-col gap-8 pt-6">
+<div class="flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">07 // DOMAIN EXPERTISE</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">Problem Spaces &amp; Systems Built.</h2>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          Concrete institutional workflows where custom software engineering replaced manual drag with verifiable automation.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Space 1 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">school</span>
+<span class="">EdTech &amp; Campus Operations</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Integrated curriculum scheduling, academic credit engines, relief teacher duty reassignment, and institutional report generation.
+          </p>
+</div>
+<!-- Space 2 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="">SIMPEG (Personnel Systems)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Civil service rank promotions, digital personnel dossiers, structured leave tracking, and state administrative record synchronization.
+          </p>
+</div>
+<!-- Space 3 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+<span class="">Geofenced Biometric Attendance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-accuracy GPS polygon boundaries, radius tolerance, selfie anti-spoof checks, and real-time attendance validation engines.
+          </p>
+</div>
+<!-- Space 4 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="">Civil Service Credit (PAK) Calculators</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Automated formula evaluation for educator credit points, publication weighting, verification workflows, and dossier compilation.
+          </p>
+</div>
+<!-- Space 5 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">file_download_off</span>
+<span class="">Document Archival &amp; Watermarking</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Dynamic cryptographic QR stamp integration, tamper-evident archival storage, and automated institutional letterhead generation.
+          </p>
+</div>
+<!-- Space 6 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-technical-code text-technical-code">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span class="">E-Kinerja Appraisal Systems</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Daily activity evidence logging, supervisor evaluation signoffs, performance rating calculations, and national format exports.
+          </p>
+</div>
+</div>
+</section>
+<!-- Section 8: Personal Developer Platform Mission -->
+<section class="p-8 md:p-10 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">08 // PLATFORM MISSION</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 flex flex-col gap-4">
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">The Architecture Behind Rheva.com</h2>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            This platform is intentionally engineered not as a static visual portfolio, but as an active software engineering laboratory. It serves four distinct operational roles:
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 font-body-sm text-body-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] pt-0.5">folder</span>
+<div>
+<strong class="text-on-surface">Case Studies (/projects)</strong>
+<p class="text-on-surface-variant">Deep-dive technical reviews detailing architectural decisions, schema tradeoffs, and real impact.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] pt-0.5">apps</span>
+<div>
+<strong class="text-on-surface">Deployable Apps (/apps)</strong>
+<p class="text-on-surface-variant">Packaged, self-hosted software products delivered with single-tenant sovereign licensing.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] pt-0.5">article</span>
+<div>
+<strong class="text-on-surface">Technical Articles (/articles)</strong>
+<p class="text-on-surface-variant">Essays on UI design token contracts, Firestore performance tuning, and institutional digitisation.</p>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] pt-0.5">handshake</span>
+<div>
+<strong class="text-on-surface">Engineering Services (/services)</strong>
+<p class="text-on-surface-variant">Direct engagements for bespoke institutional systems, workflow audits, and custom architecture.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 p-6 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Platform Blueprint</span>
+<div class="flex flex-col gap-2 font-technical-code text-technical-code text-on-surface">
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Engine</span>
+<span class="">Next.js 14 App Router</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Persistence</span>
+<span class="">Firebase Firestore</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Styling</span>
+<span class="">Tailwind Design Tokens</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-on-surface-variant">Infrastructure</span>
+<span class="">Vercel Edge • 100% SLA</span>
+</div>
+</div>
+<div class="pt-2">
+<a class="w-full inline-flex items-center justify-center gap-2 py-2 rounded-lg bg-surface-container text-on-surface font-technical-code text-technical-code hover:bg-surface-container-high transition-colors" data-path="admin-portal" href="#">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="">Admin Management Portal</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Direct Collaboration CTA -->
+<section class="p-8 md:p-12 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col items-center text-center gap-6">
+<span class="font-technical-tag text-technical-tag text-primary font-medium tracking-wide">09 // INITIATE DIALOGUE</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight max-w-3xl">
+        Have a System, Workflow, or Operational Bottleneck to Solve?
+      </h2>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl leading-relaxed">
+        Whether you need a custom administrative web platform, an auditable workflow engine, or want to deploy one of my packaged digital products—let's examine your requirements directly.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-primary-container text-on-primary font-technical-code text-technical-code shadow-md hover:bg-primary transition-colors" data-path="contact" href="#">
+<span class="">Start Consultation</span>
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-low text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors" data-path="apps" href="#">
+<span class="">Explore Packaged Apps</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-low text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors" data-path="projects" href="#">
+<span class="">Browse Case Studies</span>
+</a>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-6 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+          Typical turnaround: 24 hours
+        </span>
+<span class="hidden sm:inline">•</span>
+<span class="">Single-tenant &amp; sovereign deployment options</span>
+<span class="hidden sm:inline">•</span>
+<span class="">Direct engineer consultation</span>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rheva Iqbal Abdillah, Software Engineer building practical digital systems, production architectures, and developer-first applications.</p></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Platform Routes</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Apps Catalog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Engineering Services</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="articles" href="#">Technical Articles</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About &amp; Experience</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Architecture &amp; Stack</span><div class="flex flex-col gap-space-xs font-technical-code text-technical-code text-on-surface-variant"><span class="hover:text-on-surface">TypeScript / Go runtime</span><span class="hover:text-on-surface">PostgreSQL &amp; Redis storage</span><span class="hover:text-on-surface">Distributed microservices</span><span class="hover:text-on-surface">Tailwind / Headless design</span><span class="hover:text-on-surface">CI/CD verified deployments</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Connect &amp; Links</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Start Consultation</a><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Source Repository</span><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Professional Profile</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-status-success"></div><span class="font-technical-micro text-technical-micro text-on-surface-variant">Systems Operational • Verified Deployment</span></div><p class="font-technical-micro text-technical-micro text-on-surface-variant">© 2025 Rheva Iqbal Abdillah. All rights reserved.</p></div></div></footer>
+
+</body></html>

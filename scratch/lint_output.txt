@@ -1,0 +1,159 @@
+
+> temp-next@0.1.0 lint
+> eslint
+
+
+/Users/user/Documents/webonly/rhevaportfolio/scratch/translate_all.js
+  236:36  error  Parsing error: Invalid character
+
+/Users/user/Documents/webonly/rhevaportfolio/scratch/translate_hero.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/apps/_components/AppForm.tsx
+  101:18  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/apps/_components/AppForm.tsx:101:18
+   99 |
+  100 |   const generateSlug = () => {
+> 101 |     const name = watch("name");
+      |                  ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  102 |     if (name && (!initialData || confirm("Warning: Changing a published slug can break links. Continue?"))) {
+  103 |       const newSlug = (name as {id?: string})?.id?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  104 |       setValue("slug", newSlug || "", { shouldDirty: true, shouldValidate: true });  react-hooks/incompatible-library
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/articles/_components/ArticleForm.tsx
+   4:19  warning  'useFieldArray' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  39:5   warning  'control' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  82:19  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/articles/_components/ArticleForm.tsx:82:19
+  80 |
+  81 |   const generateSlug = () => {
+> 82 |     const title = watch("title");
+     |                   ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  83 |     if (title && (!initialData || confirm("Warning: Changing a published slug can break links. Continue?"))) {
+  84 |       const newSlug = (title as {id?: string})?.id?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  85 |       setValue("slug", newSlug || "", { shouldDirty: true, shouldValidate: true });  react-hooks/incompatible-library
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/inquiries/_components/InquiryForm.tsx
+  126:31  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/inquiries/_components/InquiryForm.tsx:126:31
+  124 |               <div className="space-y-2">
+  125 |                 <Label>Inquiry Type</Label>
+> 126 |                 <Input value={watch("inquiryType")} readOnly className="bg-zinc-900/50" />
+      |                               ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  127 |               </div>
+  128 |
+  129 |               <div className="space-y-2">  react-hooks/incompatible-library
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/inquiries/_components/InquiryList.tsx
+  6:8  warning  'Link' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/projects/_components/ProjectForm.tsx
+   77:19  warning  'featureFields' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   77:42  warning  'appendFeature' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   77:65  warning  'removeFeature' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   82:19  warning  'processFields' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   82:42  warning  'appendProcess' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  112:19  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/projects/_components/ProjectForm.tsx:112:19
+  110 |
+  111 |   const generateSlug = () => {
+> 112 |     const title = watch("title");
+      |                   ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  113 |     if (title && (!initialData || confirm("Warning: Changing a published slug can break links. Continue?"))) {
+  114 |       const newSlug = (title as {id?: string})?.id?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  115 |       setValue("slug", newSlug || "", { shouldDirty: true, shouldValidate: true });  react-hooks/incompatible-library
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/settings/_components/SettingsForm.tsx
+   14:91  warning  'GripVertical' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  406:38  warning  Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(admin)/admin/(protected)/settings/_components/SettingsForm.tsx:406:38
+  404 |                           <Label className="text-xs text-muted-foreground">Visible</Label>
+  405 |                           <Switch 
+> 406 |                             checked={watch(`publicSite.navigation.${index}.visible`)} 
+      |                                      ^^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  407 |                             onCheckedChange={(c: boolean) => setValue(`publicSite.navigation.${index}.visible`, c, { shouldDirty: true })} 
+  408 |                           />
+  409 |                         </div>  react-hooks/incompatible-library
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/about/page.tsx
+  2:68  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+  2:81  warning  'Zap' is defined but never used          @typescript-eslint/no-unused-vars
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/apps/[slug]/page.tsx
+    2:35  warning  'ShieldAlert' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    2:48  warning  'ArrowRight' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+    2:74  warning  'Terminal' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    2:84  warning  'Server' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    2:92  warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   97:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  167:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/apps/page.tsx
+    2:32  warning  'Calendar' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    2:42  warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    2:50  warning  'Bell' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+    2:56  warning  'Key' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+    5:10  warning  'Locale' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   45:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   90:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  135:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/articles/[slug]/page.tsx
+  77:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/articles/page.tsx
+    2:39  warning  'Terminal' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+    6:10  warning  'Locale' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  105:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/contact/page.tsx
+   4:36  warning  'Info' is defined but never used             @typescript-eslint/no-unused-vars
+  10:10  warning  'InquiryFormData' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/projects/[slug]/page.tsx
+    2:21  warning  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+    2:35  warning  'AlertTriangle' is defined but never used                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+    2:50  warning  'ShieldAlert' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    2:63  warning  'ArrowRight' is defined but never used                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   82:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  174:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/app/(public)/[locale]/projects/page.tsx
+    2:22  warning  'MapPin' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    2:30  warning  'CheckCircle2' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+    2:44  warning  'ShieldCheck' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+    2:75  warning  'Check' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+    5:10  warning  'Locale' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   82:28  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  130:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/components/home/Contact.tsx
+  7:9  warning  'dict' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/user/Documents/webonly/rhevaportfolio/src/components/home/Projects.tsx
+  94:24  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/user/Documents/webonly/rhevaportfolio/src/components/home/Services.tsx
+  7:9  warning  'dict' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/user/Documents/webonly/rhevaportfolio/src/lib/repositories/settingsAdmin.ts
+  2:46  warning  'SiteSettingsSchema' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 57 problems (3 errors, 54 warnings)
+

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Rheva — Systems &amp; Product Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"bg-dark":"#0A0A0A","primary-fixed-dim":"#b4c5ff","on-primary-fixed-variant":"#003ea8","surface-container-low":"#f3f4f5","surface-variant":"#e1e3e4","on-secondary-fixed-variant":"#474646","status-error":"#EF4444","on-secondary-container":"#656464","error-container":"#ffdad6","inverse-surface":"#2e3132","on-primary":"#ffffff","inverse-primary":"#b4c5ff","secondary-fixed-dim":"#c8c6c5","primary-fixed":"#dbe1ff","outline":"#737686","secondary":"#5f5e5e","on-primary-container":"#eeefff","background":"#f8f9fa","primary-container":"#2563eb","surface-container-high":"#e7e8e9","on-secondary-fixed":"#1c1b1b","on-tertiary-fixed":"#151c27","surface-dim":"#d9dadb","tertiary":"#4e5562","text-primary-dark":"#F5F5F5","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","tertiary-fixed":"#dce2f3","secondary-container":"#e5e2e1","tertiary-container":"#666d7b","status-success":"#10B981","secondary-fixed":"#e5e2e1","surface-tint":"#0053db","tertiary-fixed-dim":"#c0c7d6","inverse-on-surface":"#f0f1f2","on-primary-fixed":"#00174b","on-surface-variant":"#434655","surface-bright":"#f8f9fa","accent-dark":"#3B82F6","surface-container-highest":"#e1e3e4","on-background":"#191c1d","surface-light":"#FFFFFF","on-tertiary":"#ffffff","on-surface":"#191c1d","border-dark":"#27272A","primary":"#004ac6","outline-variant":"#c3c6d7","on-tertiary-container":"#eaf0ff","surface-container-lowest":"#ffffff","surface":"#f8f9fa","surface-dark":"#111111","surface-container":"#edeeef","on-error-container":"#93000a","status-warning":"#F59E0B","border-light":"#E5E7EB","on-secondary":"#ffffff","on-error":"#ffffff","on-tertiary-fixed-variant":"#404754"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"2rem","gutter":"1.5rem","margin":"2rem","space-md":"1rem","margin-mobile":"1rem"},"fontFamily":{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"body-large":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],"h1":["Geist"],"body":["Inter"],"body-sm":["Inter"],"h1-mobile":["Geist"],"h3":["Geist"],"display":["Geist"],"h2-mobile":["Geist"],"h2":["Geist"]},"fontSize":{"technical-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"display-mobile":["44px",{"lineHeight":"52px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-large":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"technical-tag":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"technical-code":["13px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"500"}],"h1":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"600"}],"body":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"h1-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"h3":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display":["72px",{"lineHeight":"80px","letterSpacing":"-0.03em","fontWeight":"600"}],"h2-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"h2":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body text-body text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1280px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="font-h3 text-h3 tracking-tight font-bold text-on-surface group-hover:text-primary transition-colors">RHEVA</span></a><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-low rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider">v1.0.0 / System Spec</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 bg-surface-container-low rounded-lg" data-active-classes="bg-surface-container-high text-on-surface font-medium rounded-lg"><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="home" href="#">Home</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="projects" href="#">Projects</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="apps" href="#">Apps</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">Services</a><a aria-current="page" class="px-3 py-1.5 transition-colors bg-surface-container-high text-on-surface font-medium rounded-lg" data-path="articles" href="#">Articles</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-md h-9 rounded-lg bg-on-surface text-on-primary font-body-sm text-body-sm hover:bg-primary transition-colors" data-path="contact" href="#">Let's Talk</a><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"/></div></div></div></header><main class="flex-1 w-full pt-16 bg-background max-w-[1280px] mx-auto px-gutter"><div class="flex flex-col w-full">
+<!-- Reading Progress Bar (Fixed top below shell header) -->
+<div class="fixed top-16 left-0 right-0 z-40 h-0.5 bg-surface-container-high pointer-events-none">
+<div class="h-full bg-primary-container transition-all duration-75 w-0" id="readingProgressBar"></div>
+</div>
+<!-- ARTICLE CONTAINER -->
+<div class="w-full max-w-[1240px] mx-auto py-space-lg flex flex-col gap-space-xl">
+<!-- 1. Operational Telemetry & Breadcrumbs Header -->
+<header class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-y-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<a class="inline-flex items-center gap-1.5 text-primary hover:underline font-medium" data-path="articles" href="#">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+<span>Back to Curated Technical Notes</span>
+</a>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-technical-code text-technical-micro text-secondary">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>
+            SYS: VERIFIED_DOC
+          </span>
+<span>COLLECTION: <span class="text-on-surface">articles</span></span>
+<span>DOC_ID: <span class="text-on-surface">art_09f2a4</span></span>
+<span class="hidden md:inline">SPEC: RFC-8259</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-on-surface-variant overflow-x-auto whitespace-nowrap">
+<span class="text-secondary">INDEX //</span>
+<a class="hover:text-primary transition-colors" data-path="home" href="#">home</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" data-path="articles" href="#">articles</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">architecting-offline-tolerant-civil-service-dossier-verification</span>
+</div>
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant uppercase tracking-wider font-semibold">SCHEMA v2.4.1-STRICT</span>
+<span class="text-status-success font-medium">SYNCED</span>
+</div>
+</div>
+</header>
+<!-- 2. Editorial Master Header -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-technical-tag text-technical-tag px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold">
+          Architecture &amp; Cloud Systems
+        </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+          12 min read • Published Oct 14, 2024 • Last Audit: Dec 02, 2024
+        </span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface font-bold tracking-tight max-w-[1080px]">
+        Architecting Offline-Tolerant Civil Service Dossier Verification with Next.js 14 &amp; Firestore
+      </h1>
+<p class="font-body-large text-body-large text-secondary max-w-[960px]">
+        A deep architectural retrospective on replacing paper-heavy bureaucratic sign-offs with deterministic state machines, cryptographic SHA-256 verification timestamps, and strict Zod runtime contracts in high-friction administrative environments.
+      </p>
+<!-- Author Pill & Reading Utilities Bar -->
+<div class="mt-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Author Profile -->
+<div class="flex items-center gap-space-sm">
+<img alt="Rheva Iqbal Abdillah" class="w-11 h-11 rounded-full object-cover shadow-sm ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgz2oPdek-_uXmHeINiYzj2TXVeT4_mBnPk0D68Ko-i1tZup5SecUEZxleAFP_Cd4rAxVB-RZHcv6DGIWN5FG-7y0ag-Gw5PzZqwiE1wOGEMLnHGZhmdQUBtn3TJnzn7FrypcjaDmm4m4D38cVpfQtxmBlzKXtUswEwLiEnYrDgfv1JaaBic6P6Ey1NNWkf2sOfrpZ3Y7P-IgtPgL_NO5Q2-ei09pbwIAFIxkCkWqUESq9SzDmgPiwLxCXqyKyxLJ10I"/>
+<div class="flex flex-col">
+<span class="font-body text-body font-semibold text-on-surface leading-tight">Rheva Iqbal Abdillah</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">Lead Systems Architect • Public Sector &amp; EdTech Platforms</span>
+</div>
+</div>
+<!-- Action Tools (Share, Font Toggle, Bookmark) -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 text-technical-tag font-technical-tag rounded text-on-surface bg-surface-container-lowest shadow-xs font-semibold" id="fontToggleNormal">Default</button>
+<button class="px-2.5 py-1 text-technical-tag font-technical-tag rounded text-on-surface-variant hover:text-on-surface transition-colors" id="fontToggleLarge">Large Text</button>
+</div>
+<div class="h-5 w-px bg-surface-container-high hidden sm:block"></div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-technical-tag text-technical-tag transition-colors" id="copyArticleLinkBtn">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span id="copyLinkText">Copy Link</span>
+</button>
+<a class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://twitter.com/intent/tweet?text=Architecting%20Offline-Tolerant%20Civil%20Service%20Dossier%20Verification&amp;url=https%3A%2F%2Frheva.os%2Farticles%2Foffline-tolerant-civil-service" rel="noopener noreferrer" target="_blank" title="Share on X">
+<span class="font-technical-micro text-technical-micro font-bold">X</span>
+</a>
+<a class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frheva.os%2Farticles%2Foffline-tolerant-civil-service" rel="noopener noreferrer" target="_blank" title="Share on LinkedIn">
+<span class="font-technical-micro text-technical-micro font-bold">in</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Main Reading Canvas (Prose + Sticky Sidebar) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left / Main Reading Column (Col 1-8) -->
+<main class="lg:col-span-8 flex flex-col gap-space-xl max-w-[760px] text-on-surface" id="articleContentBody">
+<!-- Section 1 -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-1">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>01</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Institutional Bottlenecks</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            The Operational Challenge in Public-Sector Workflows
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            In national civil service structures and state polytechnic administrative registries across developing regions, physical dossiers dominate tenure, credentialing, and promotion workflows. A typical lecturer rank promotion (known colloquially as <em class="text-on-surface font-medium">Penetapan Angka Kredit</em> or PAK) traverses a labyrinth of validation checkpoints: department heads, peer review senates, faculty deans, and ministry verifiers.
+          </p>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            When institutions attempted digitizing these pipelines with standard modern SaaS architectures, they repeatedly collapsed under two catastrophic operational realities:
+          </p>
+<ul class="flex flex-col gap-space-sm pl-space-md list-disc text-body text-on-surface">
+<li>
+<strong>Unreliable Edge WAN Infrastructure:</strong> Campus data networks in regional state institutes frequently suffer transient 30-to-90-second packet dropouts. A verifier mid-way through a 140-page portfolio validation would trigger partial network writes, leaving document graphs corrupted in database tables.
+            </li>
+<li>
+<strong>The Flaw of "Optimistic UI":</strong> Traditional single-page applications optimistically advance UI buttons before authoritative database confirmations. In bureaucratic civil service jurisdictions, a prematurely marked "VERIFIED" dossier that subsequently fails a backend validation audit constitutes administrative liability and legal vulnerability.
+            </li>
+</ul>
+<!-- Architecture Callout: Architectural Constraints -->
+<div class="p-space-lg bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 font-technical-code text-technical-tag font-semibold text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>[NOTE // ARCHITECTURAL CONSTRAINTS]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              In sovereign administrative workflows, client browsers must be treated as untrusted, intermittently air-gapped runtimes. State mutations cannot rely on live roundtrips; instead, state validation must execute deterministically inside the client sandbox, recorded in local append-only journals, and reconciled monotonically upon link restoration.
+            </p>
+</div>
+</article>
+<!-- Section 2 -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-2">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>02</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Formal Verification</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            The Deterministic State Machine Model
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            To eliminate ambiguous intermediate states, we modeled the dossier verification lifecycle as a strictly finite, unidirectional state machine. Arbitrary database updates (<code class="font-technical-code text-technical-code bg-surface-container px-1.5 py-0.5 rounded text-primary">UPDATE dossiers SET status = ?</code>) were strictly banished.
+          </p>
+<!-- 5 Discrete States Visual Steps -->
+<div class="grid grid-cols-1 sm:grid-cols-5 gap-2 my-space-sm">
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">STEP 01</span>
+<span class="font-technical-code text-technical-code font-bold text-on-surface">DRAFT</span>
+<span class="font-technical-micro text-[10px] text-secondary">Local IndexedDB sandbox edits</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">STEP 02</span>
+<span class="font-technical-code text-technical-code font-bold text-on-surface">SUBMITTED</span>
+<span class="font-technical-micro text-[10px] text-secondary">Locked against further mutation</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">STEP 03</span>
+<span class="font-technical-code text-technical-code font-bold text-primary">CHECKSUM</span>
+<span class="font-technical-micro text-[10px] text-secondary">SHA-256 tree verified client-side</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">STEP 04</span>
+<span class="font-technical-code text-technical-code font-bold text-on-surface">RATIFIED</span>
+<span class="font-technical-micro text-[10px] text-secondary">Cryptographic PGP authority stamp</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">STEP 05</span>
+<span class="font-technical-code text-technical-code font-bold text-status-success">SEALED</span>
+<span class="font-technical-micro text-[10px] text-secondary">Read-only cold storage immutable</span>
+</div>
+</div>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            Transitioning between any state requires a strict cryptographic signature and a deterministic validation assertion. If an operator attempts to mark a dossier as <code class="font-technical-code text-technical-code bg-surface-container px-1 py-0.5 rounded">RECTOR_RATIFIED</code> while evidence documents lack a valid SHA-256 manifest, the state machine halts synchronously before network dispatch.
+          </p>
+</article>
+<!-- Section 3: Comparison Table -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-3">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>03</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Comparative Analysis</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            Pipeline Architecture Comparison
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            Why avoid standard out-of-the-box cloud SDK listeners? Here is how a traditional cloud Firestore implementation collapses versus Rheva's deterministic verification engine:
+          </p>
+<div class="overflow-x-auto my-space-xs rounded-xl shadow-xs bg-surface-container-lowest">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container font-technical-code text-technical-micro text-on-surface uppercase">
+<tr>
+<th class="p-3.5">Architectural Vector</th>
+<th class="p-3.5 text-on-secondary-container">Standard Firestore Sync</th>
+<th class="p-3.5 text-primary">Rheva Deterministic Engine</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-semibold">Offline Verification</td>
+<td class="p-3.5 text-secondary">Fails on multi-document joins; blocked by unresolved remote rules.</td>
+<td class="p-3.5 text-on-surface font-medium">Zero-downtime client worker computes tree verification locally.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-semibold">Conflict Resolution</td>
+<td class="p-3.5 text-secondary">Last-write-wins (dangerous silently overwriting review decisions).</td>
+<td class="p-3.5 text-on-surface font-medium">Monotonic event journaling with deterministic vector clocks.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-semibold">Document Signatures</td>
+<td class="p-3.5 text-secondary">External PDF generator called via synchronous API gateway.</td>
+<td class="p-3.5 text-on-surface font-medium">In-browser WebCrypto SHA-256 byte hashing before packet transmission.</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3.5 font-semibold">Audit Integrity</td>
+<td class="p-3.5 text-secondary">Vulnerable to out-of-order writes during reconnection bursts.</td>
+<td class="p-3.5 text-on-surface font-medium">Idempotent write batches with immutable hash chains.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+<!-- Section 4: Implementation Code -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-4">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>04</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Executable Specification</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            Verification Code Implementation
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            The core module resides in <code class="font-technical-code text-technical-code bg-surface-container px-1 py-0.5 rounded">lib/dossier/atomic-verifier.ts</code>. Notice how the runtime strictly relies on the Web Crypto API, guarantees type integrity via Zod, and seals mutations with cryptographic nonces before dispatching to Firestore write batches:
+          </p>
+<!-- Syntax-Highlighted Code Card -->
+<div class="rounded-xl overflow-hidden shadow-sm bg-surface-dark text-text-primary-dark">
+<!-- Code Bar Header -->
+<div class="px-4 py-2.5 bg-bg-dark flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-status-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-warning inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-success inline-block"></span>
+<span class="ml-2 font-technical-code text-technical-micro text-text-secondary-dark font-medium">lib/dossier/atomic-verifier.ts</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-technical-micro text-technical-micro text-text-secondary-dark uppercase">TypeScript • Strict</span>
+<button class="px-2 py-1 rounded bg-surface-dark hover:bg-border-dark text-text-primary-dark font-technical-micro text-technical-micro transition-colors flex items-center gap-1" id="copyCodeButton">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span id="copyCodeLabel">Copy</span>
+</button>
+</div>
+</div>
+<!-- Code Body -->
+<div class="p-4 overflow-x-auto font-technical-code text-technical-code leading-relaxed text-sm">
+<pre><code><span class="text-[#f472b6]">import</span> { z } <span class="text-[#f472b6]">from</span> <span class="text-[#a5b4fc]">"zod"</span>;
+<span class="text-[#f472b6]">import</span> { writeBatch, doc, getFirestore } <span class="text-[#f472b6]">from</span> <span class="text-[#a5b4fc]">"firebase/firestore"</span>;
+
+<span class="text-[#64748b]">// 1. Deterministic Dossier Assertion Schema</span>
+<span class="text-[#f472b6]">export const</span> <span class="text-[#38bdf8]">DossierSealSchema</span> = z.object({
+  dossierId: z.string().uuid(),
+  assessorNip: z.string().regex(<span class="text-[#f59e0b]">/^\d{18}$/</span>, <span class="text-[#a5b4fc]">"Invalid NIP format"</span>),
+  computedKreditTotal: z.number().nonnegative(),
+  manifestChecksum: z.string().length(<span class="text-[#f59e0b]">64</span>),
+  signatureNonce: z.string().min(<span class="text-[#f59e0b]">16</span>),
+  timestampUtc: z.string().datetime(),
+});
+
+<span class="text-[#f472b6]">export type</span> <span class="text-[#38bdf8]">DossierSeal</span> = z.infer&lt;<span class="text-[#f472b6]">typeof</span> <span class="text-[#38bdf8]">DossierSealSchema</span>&gt;;
+
+<span class="text-[#64748b]">// 2. Deterministic In-Browser SHA-256 Attestation</span>
+<span class="text-[#f472b6]">export async function</span> <span class="text-[#60a5fa]">computeAuditManifestHash</span>(
+  payload: Record&lt;<span class="text-[#f472b6]">string</span>, <span class="text-[#f472b6]">unknown</span>&gt;
+): Promise&lt;<span class="text-[#f472b6]">string</span>&gt; {
+  <span class="text-[#64748b]">// Canonical alphabetical key sorting to guarantee hash repeatability</span>
+  <span class="text-[#f472b6]">const</span> canonicalJson = JSON.stringify(payload, Object.keys(payload).sort());
+  <span class="text-[#f472b6]">const</span> buffer = <span class="text-[#f472b6]">new</span> TextEncoder().encode(canonicalJson);
+  <span class="text-[#f472b6]">const</span> digestBuffer = <span class="text-[#f472b6]">await</span> crypto.subtle.digest(<span class="text-[#a5b4fc]">"SHA-256"</span>, buffer);
+  
+  <span class="text-[#f472b6]">return</span> Array.from(<span class="text-[#f472b6]">new</span> Uint8Array(digestBuffer))
+    .map(b =&gt; b.toString(<span class="text-[#f59e0b]">16</span>).padStart(<span class="text-[#f59e0b]">2</span>, <span class="text-[#a5b4fc]">"0"</span>))
+    .join(<span class="text-[#a5b4fc]">""</span>);
+}
+
+<span class="text-[#64748b]">// 3. Atomic Reconciler with Idempotency Lock</span>
+<span class="text-[#f472b6]">export async function</span> <span class="text-[#60a5fa]">reconcileDossierAttestation</span>(seal: <span class="text-[#38bdf8]">DossierSeal</span>) {
+  <span class="text-[#f472b6]">const</span> verified = <span class="text-[#38bdf8]">DossierSealSchema</span>.parse(seal);
+  <span class="text-[#f472b6]">const</span> db = getFirestore();
+  <span class="text-[#f472b6]">const</span> batch = writeBatch(db);
+
+  <span class="text-[#f472b6]">const</span> dossierRef = doc(db, <span class="text-[#a5b4fc]">"dossiers"</span>, verified.dossierId);
+  <span class="text-[#f472b6]">const</span> journalRef = doc(db, <span class="text-[#a5b4fc]">"audit_journals"</span>, <span class="text-[#a5b4fc]">`${verified.dossierId}_${verified.signatureNonce}`</span>);
+
+  <span class="text-[#64748b]">// Atomically transition state and write immutable journal ledger</span>
+  batch.update(dossierRef, {
+    state: <span class="text-[#a5b4fc]">"CHECKSUM_VALIDATED"</span>,
+    lastVerifiedChecksum: verified.manifestChecksum,
+    totalVerifiedKredit: verified.computedKreditTotal,
+    updatedAtUtc: verified.timestampUtc
+  });
+
+  batch.set(journalRef, {
+    ...verified,
+    reconciledAt: <span class="text-[#f472b6]">new</span> Date().toISOString(),
+    workerHost: <span class="text-[#a5b4fc]">"client-edge-pwa"</span>
+  });
+
+  <span class="text-[#f472b6]">await</span> batch.commit();
+}</code></pre>
+</div>
+</div>
+</article>
+<!-- Section 5: IndexedDB Mutation Journaling & Graphic -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-5">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>05</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Distributed Sync</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            IndexedDB Mutation Journaling Under High WAN Packet Loss
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            When civil service evaluators conduct on-site accreditation audits, campus Wi-Fi periodically drops completely. Rather than halting work or showing an aggressive "You are offline" modal, all interactions are written to a localized, append-only IndexedDB storage schema named <code class="font-technical-code text-technical-code bg-surface-container px-1 py-0.5 rounded">journal_mutation_queue</code>.
+          </p>
+<!-- Rich Dark Architectural Schematic Graphic (Inline SVG) -->
+<div class="p-space-lg rounded-xl bg-surface-dark text-text-primary-dark shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between font-technical-micro text-technical-micro">
+<span class="flex items-center gap-2 text-status-success font-semibold">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+                TELEMETRY DIAGRAM // PIPELINE RECONCILIATION
+              </span>
+<span class="text-text-secondary-dark">FIG 2.1 DETERMINISTIC SYNC</span>
+</div>
+<!-- SVG Architecture Graphic -->
+<div class="w-full overflow-x-auto py-2">
+<svg class="w-full min-w-[620px] text-text-primary-dark font-mono text-xs" fill="none" viewbox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Node 1: Client UI -->
+<rect fill="#18181B" height="150" rx="8" stroke="#27272A" stroke-width="1.5" width="160" x="20" y="30"></rect>
+<text fill="#3B82F6" font-size="11" font-weight="bold" x="35" y="55">CLIENT RUNTIME</text>
+<text fill="#A1A1AA" font-size="10" x="35" y="75">Browser Worker</text>
+<rect fill="#27272A" height="30" rx="4" width="130" x="35" y="90"></rect>
+<text fill="#F5F5F5" font-size="10" x="45" y="110">IndexedDB Queue</text>
+<rect fill="#004AC6" height="30" rx="4" width="130" x="35" y="130"></rect>
+<text fill="#FFFFFF" font-size="10" x="45" y="150">WebCrypto Worker</text>
+<!-- Connector 1 -> 2 -->
+<path d="M180 105 L260 105" stroke="#3B82F6" stroke-dasharray="4 4" stroke-width="2"></path>
+<circle cx="220" cy="105" fill="#3B82F6" r="4"></circle>
+<text fill="#A1A1AA" font-size="9" x="195" y="95">Backoff Retry</text>
+<!-- Node 2: Deterministic State Engine -->
+<rect fill="#18181B" height="150" rx="8" stroke="#27272A" stroke-width="1.5" width="170" x="260" y="30"></rect>
+<text fill="#10B981" font-size="11" font-weight="bold" x="275" y="55">ATOMIC VERIFIER</text>
+<text fill="#A1A1AA" font-size="10" x="275" y="75">State Reconciliation</text>
+<rect fill="#27272A" height="30" rx="4" width="140" x="275" y="90"></rect>
+<text fill="#F5F5F5" font-size="10" x="285" y="110">Zod Schema Guard</text>
+<rect fill="#27272A" height="30" rx="4" width="140" x="275" y="130"></rect>
+<text fill="#F5F5F5" font-size="10" x="285" y="150">SHA-256 Merkle Leaf</text>
+<!-- Connector 2 -> 3 -->
+<path d="M430 105 L510 105" stroke="#10B981" stroke-width="2"></path>
+<polygon fill="#10B981" points="510,105 502,100 502,110"></polygon>
+<text fill="#10B981" font-size="9" x="440" y="95">Batch Commit</text>
+<!-- Node 3: Cloud Firestore -->
+<rect fill="#18181B" height="150" rx="8" stroke="#27272A" stroke-width="1.5" width="170" x="510" y="30"></rect>
+<text fill="#F59E0B" font-size="11" font-weight="bold" x="525" y="55">CLOUD PERSISTENCE</text>
+<text fill="#A1A1AA" font-size="10" x="525" y="75">Firestore Cluster</text>
+<rect fill="#27272A" height="30" rx="4" width="140" x="525" y="90"></rect>
+<text fill="#F5F5F5" font-size="10" x="535" y="110">/dossiers (State)</text>
+<rect fill="#27272A" height="30" rx="4" width="140" x="525" y="130"></rect>
+<text fill="#F5F5F5" font-size="10" x="535" y="150">/audit_journals (Cold)</text>
+</svg>
+</div>
+<div class="font-technical-micro text-technical-micro text-text-secondary-dark border-t border-border-dark pt-3 flex flex-wrap justify-between gap-2">
+<span>MUTATION REPLAY: EXPONENTIAL BACKOFF + JITTER</span>
+<span>NETWORK BOUNDARY: RESILIENT TO 100% WAN PACKET LOSS</span>
+</div>
+</div>
+<!-- Tip & Warning Callouts -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-technical-code text-technical-micro font-bold text-status-success">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>[TIP // RUNTIME INTEGRITY]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Avoid native IEEE-754 floating-point arithmetic when computing promotion credit points (<em class="text-on-surface">Angka Kredit</em>). Parse credit fractions as integer centi-units (e.g. <code>12.50 pts -&gt; 1250</code>) to prevent silent assertion failures across differing browser JS engines.
+              </p>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-1.5">
+<div class="flex items-center gap-2 font-technical-code text-technical-micro font-bold text-status-warning">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>[WARNING // MUTATION DRIFT]</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Never utilize Firestore's <code>serverTimestamp()</code> as part of signed cryptographic payload hashes. The server timestamp is resolved post-network write, which invalidates the client-computed SHA-256 seal. Always inject verified ISO-8601 UTC strings client-side.
+              </p>
+</div>
+</div>
+</article>
+<!-- Section 6: Cryptographic Watermarking & Quote -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-6">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>06</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Document Attestation</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            Cryptographic Watermarking &amp; Instant Attestation
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            Once a promotion dossier achieves the <code class="font-technical-code text-technical-code bg-surface-container px-1 py-0.5 rounded">RECTOR_RATIFIED</code> checkpoint, the web client invokes an in-memory PDF manipulation pipeline (using <code class="font-technical-code text-technical-code bg-surface-container px-1 py-0.5 rounded">pdf-lib</code>). It calculates the Merkle Root of all uploaded PDF attachments, embeds a high-density 2D Aztec barcode at the footer margin, and flattens all form layers.
+          </p>
+<!-- Big Bold Blockquote -->
+<blockquote class="p-space-lg bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-2 my-space-xs">
+<span class="font-display text-h1 text-primary-container leading-none select-none">“</span>
+<p class="font-h3 text-h3 font-semibold text-on-surface tracking-tight leading-snug">
+              In government and university administration, latency is annoying, but non-deterministic state is a bureaucratic catastrophe. An engineer's primary job is proving an event happened exactly as signed.
+            </p>
+<cite class="font-technical-micro text-technical-micro text-secondary not-italic uppercase tracking-wider mt-2">
+              — Rheva Iqbal Abdillah, Technical Post-Mortem 2024
+            </cite>
+</blockquote>
+</article>
+<!-- Section 7: Telemetry & Outcomes -->
+<article class="flex flex-col gap-space-md scroll-mt-24" id="sec-7">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-primary">
+<span>07</span>
+<span class="w-4 h-px bg-primary"></span>
+<span class="uppercase tracking-widest font-semibold">Production Outcomes</span>
+</div>
+<h2 class="font-h2 text-h2 font-bold text-on-surface tracking-tight">
+            Production Telemetry &amp; Field Metric Outcomes
+          </h2>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            Over a continuous 8-month deployment across state polytechnic faculty committees, this architecture delivered empirical performance metrics that silenced bureaucratic skepticism:
+          </p>
+<!-- Metric Telemetry Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md my-space-xs">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col">
+<span class="font-technical-micro text-technical-micro text-secondary uppercase font-semibold">DATA LOSS INCIDENTS</span>
+<span class="font-h1 text-h1 font-bold text-status-success mt-1">0.00%</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant mt-1">Zero dropped transactions across 4,120 dossier evaluations.</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col">
+<span class="font-technical-micro text-technical-micro text-secondary uppercase font-semibold">TURNAROUND VELOCITY</span>
+<span class="font-h1 text-h1 font-bold text-primary mt-1">3.2 <span class="text-h3 font-normal">days</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant mt-1">Down dramatically from 22.4 days average paper ledger duration.</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col">
+<span class="font-technical-micro text-technical-micro text-secondary uppercase font-semibold">OFFLINE QUEUE SYNC</span>
+<span class="font-h1 text-h1 font-bold text-on-surface mt-1">&lt; 1.4s</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant mt-1">Average reconciliation duration once uplink was re-established.</span>
+</div>
+</div>
+<p class="font-body text-body text-on-surface leading-relaxed">
+            By shifting from passive cloud synchronizers to active, deterministic client-side engines, high-stakes institutional software achieves the same impervious reliability expected of industrial hardware.
+          </p>
+</article>
+</main>
+<!-- Right Sticky Reading Telemetry Sidebar (Col 9-12 / 280px) -->
+<aside class="lg:col-span-4 flex flex-col gap-space-lg lg:sticky lg:top-24">
+<!-- Table of Contents Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag text-on-surface font-semibold uppercase tracking-wider">
+              Table of Contents
+            </span>
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+</div>
+<nav class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant" id="tableOfContents">
+<a class="toc-link px-2.5 py-1.5 rounded-lg text-primary bg-surface-container font-medium hover:text-on-surface transition-colors" href="#sec-1">
+              1. The Institutional Bottleneck
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-2">
+              2. Deterministic State Machines
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-3">
+              3. Pipeline Comparison Table
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-4">
+              4. Verification Code Implementation
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-5">
+              5. Mutation Journaling Architecture
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-6">
+              6. Cryptographic Attestation
+            </a>
+<a class="toc-link px-2.5 py-1.5 rounded-lg hover:bg-surface-container-low hover:text-on-surface transition-colors" href="#sec-7">
+              7. Production Telemetry &amp; Lessons
+            </a>
+</nav>
+</div>
+<!-- Article Telemetry Card -->
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-space-sm">
+<span class="font-technical-tag text-technical-tag text-on-surface font-semibold uppercase tracking-wider">
+            System Spec // Metadata
+          </span>
+<div class="flex flex-col gap-2 font-technical-code text-technical-micro text-on-surface-variant">
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded shadow-xs">
+<span class="text-secondary">FRAMEWORK</span>
+<span class="text-on-surface font-semibold">Next.js 14 App Router</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded shadow-xs">
+<span class="text-secondary">PERSISTENCE</span>
+<span class="text-on-surface font-semibold">Cloud Firestore + IDB</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded shadow-xs">
+<span class="text-secondary">VALIDATION</span>
+<span class="text-on-surface font-semibold">Zod 3.22 (Runtime)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded shadow-xs">
+<span class="text-secondary">CRYPTOGRAPHY</span>
+<span class="text-on-surface font-semibold">WebCrypto SHA-256</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2 rounded shadow-xs">
+<span class="text-secondary">TARGET ENV</span>
+<span class="text-on-surface font-semibold">State Higher-Ed Intranet</span>
+</div>
+</div>
+<!-- Sidebar Quick Action Buttons -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-technical-tag text-technical-tag shadow-xs transition-colors" id="downloadSummaryBtn">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Download PDF Summary</span>
+</button>
+<button class="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-technical-tag text-technical-tag shadow-xs transition-colors" id="copyCitationBtn">
+<span class="material-symbols-outlined text-[16px]">format_quote</span>
+<span id="citationBtnText">Copy BibTeX Citation</span>
+</button>
+</div>
+</div>
+<!-- Need Custom Architecture Help Pill Card -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-2">
+<span class="font-technical-tag text-technical-tag text-primary font-bold uppercase">CONSULTING BRIEF</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+            Need high-reliability architecture for your institutional or enterprise platform?
+          </p>
+<a class="mt-1 inline-flex items-center justify-between text-technical-code text-technical-micro text-primary hover:underline font-semibold" data-path="contact" href="#">
+<span>Schedule Architecture Review</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</aside>
+</div>
+<!-- 4. Post-Article Author & Platform Attribution -->
+<section class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row items-center gap-space-lg mt-space-md">
+<img alt="Rheva Iqbal Abdillah" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover shadow-sm ring-4 ring-surface-container-low shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2SD-_2-xUcuHFaRapZDdN-JboHXVoQcenjjkwuAmAQRHr4RVGIneGpgWvGkE2EOgTElFXSAioy1Q3gPhEtjc8f21EmEOtYbe_-QFaJdk8T2UHY94r_eLcqpPREwlMcVLec0eoL7L-Coa6nKah5ID-ATzzG-mCNbLrqgZPyw7LfAtreNx9pRzp57SVwE72R7p-pmnjhSoprUhW7TR43rFbxer9xtJZb6n9X0M-jb5mEODeVxkVZ1eR2TAdi7GtwXIz-CU"/>
+<div class="flex flex-col gap-space-xs text-center md:text-left">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+<span class="font-h3 text-h3 font-bold text-on-surface">Rheva Iqbal Abdillah</span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-semibold">
+            LEAD SYSTEMS ARCHITECT
+          </span>
+</div>
+<p class="font-body text-body text-secondary max-w-2xl">
+          Rheva designs and builds resilient software systems, institutional workflows, and developer platforms. Former Lead Engineer across regional educational platforms and government administrative systems, prioritizing verifiable software guarantees over optimistic assumptions.
+        </p>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-space-md pt-2">
+<a class="font-body-sm text-body-sm font-semibold text-primary hover:underline inline-flex items-center gap-1" data-path="about" href="#">
+<span>Read Full Practice &amp; Engineering Pedigree</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="text-surface-container-high hidden sm:inline">•</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">
+            Advisory Engagements
+          </a>
+</div>
+</div>
+</section>
+<!-- 5. Dual Pagination Navigation -->
+<nav class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<a class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low rounded-xl shadow-sm transition-colors flex flex-col gap-1 group" data-path="articles" href="#">
+<span class="font-technical-micro text-technical-micro text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>PREVIOUS TECHNICAL MEMO</span>
+</span>
+<span class="font-body text-body font-semibold text-on-surface group-hover:text-primary transition-colors">
+          Deterministic Angka Kredit (PAK) Engines: Handling Edge Rules Without Floating-Point Drift
+        </span>
+</a>
+<a class="p-space-md bg-surface-container-lowest hover:bg-surface-container-low rounded-xl shadow-sm transition-colors flex flex-col gap-1 text-right group" data-path="articles" href="#">
+<span class="font-technical-micro text-technical-micro text-secondary flex items-center justify-end gap-1">
+<span>NEXT TECHNICAL MEMO</span>
+<span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</span>
+<span class="font-body text-body font-semibold text-on-surface group-hover:text-primary transition-colors">
+          Building Unencumbered Single-Tenant Docker Deployments for Educational Intranets
+        </span>
+</a>
+</nav>
+<!-- 6. Related Technical Articles -->
+<section class="flex flex-col gap-space-md pt-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-technical-tag text-technical-tag text-on-surface uppercase font-bold tracking-wider">
+            Related Technical Essays // Architectural Continuity
+          </span>
+</div>
+<a class="font-technical-micro text-technical-micro text-primary hover:underline font-semibold" data-path="articles" href="#">
+          View Full Archive (24 Essays) →
+        </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Article Card 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">Cloud Data</span>
+<span>•</span>
+<span>7 min read</span>
+</div>
+<h3 class="font-h3 text-h3 font-bold text-on-surface hover:text-primary transition-colors">
+<a data-path="articles" href="#">Reducing Firestore Read Cascades by 40% in High-Concurrency Campus Web Portals</a>
+</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Strategic subcollection segregation and in-memory cache priming techniques to suppress read amplifications during university exam grade releases.
+            </p>
+</div>
+<div class="flex items-center justify-between font-technical-micro text-technical-micro text-on-surface-variant pt-2">
+<span>Oct 28, 2024</span>
+<span class="text-primary font-semibold">Read Technical Note →</span>
+</div>
+</div>
+<!-- Article Card 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">Next.js &amp; Security</span>
+<span>•</span>
+<span>10 min read</span>
+</div>
+<h3 class="font-h3 text-h3 font-bold text-on-surface hover:text-primary transition-colors">
+<a data-path="articles" href="#">Strict Schema Boundaries: Why We Treat Every External Form Input as Adversarial</a>
+</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Deconstructing zero-trust state handling in server actions, validating deeply nested payloads before reaching the persistence tier.
+            </p>
+</div>
+<div class="flex items-center justify-between font-technical-micro text-technical-micro text-on-surface-variant pt-2">
+<span>Sep 19, 2024</span>
+<span class="text-primary font-semibold">Read Technical Note →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CMS State Simulator Drawer (Data-Driven Reliability Proof) -->
+<section class="p-space-md bg-surface-container-low rounded-xl shadow-xs flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2 font-technical-code text-technical-micro">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-bold">CMS TEST HARNESS</span>
+<span class="text-secondary">Simulate Dynamic Article Engine Telemetry States</span>
+</div>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success inline-block"></span>
+          STATE: HYDRATED_ACTIVE
+        </span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-technical-code text-technical-micro shadow-xs font-semibold hover:bg-surface-container transition-colors" id="cmsBtnHydrated">
+          [Active Hydrated]
+        </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant font-technical-code text-technical-micro hover:text-on-surface transition-colors" id="cmsBtnSkeleton">
+          [Simulate Skeleton Loading]
+        </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant font-technical-code text-technical-micro hover:text-on-surface transition-colors" id="cmsBtn404">
+          [Simulate 404 Route]
+        </button>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface-variant font-technical-code text-technical-micro hover:text-on-surface transition-colors" id="cmsBtnError">
+          [Simulate Boundary Crash]
+        </button>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg font-technical-code text-technical-micro text-on-surface-variant" id="cmsSimulatorDisplay">
+<span>FIRESTORE RESPONSE // Document payload fully verified with SHA-256 hash match. Edge cache TTL: 86400s.</span>
+</div>
+</section>
+<!-- 8. Strategic Platform CTA -->
+<section class="p-space-xl bg-surface-dark text-text-primary-dark rounded-2xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg my-space-sm">
+<div class="flex flex-col gap-2 max-w-xl text-center lg:text-left">
+<span class="font-technical-tag text-technical-tag text-accent-dark font-bold uppercase tracking-wider">
+          SYSTEM ARCHITECTURE CONSULTATION
+        </span>
+<h2 class="font-h2 text-h2 font-bold text-text-primary-dark tracking-tight leading-tight">
+          Facing High-Stakes Institutional Workflows or Complex Reliability?
+        </h2>
+<p class="font-body text-body text-text-secondary-dark">
+          Engage Rheva Iqbal Abdillah for sovereign public sector architectures, offline-tolerant Next.js platforms, or zero-trust data pipeline reviews.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold text-center hover:bg-surface-tint transition-colors shadow-sm" data-path="contact" href="#">
+          Schedule Architecture Consultation
+        </a>
+<a class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-surface-container-high/10 text-text-primary-dark hover:bg-surface-container-high/20 font-body-sm text-body-sm font-semibold text-center transition-colors" data-path="apps" href="#">
+          Explore Turnkey Products
+        </a>
+</div>
+</section>
+</div>
+<!-- Toast Notification Modal (Floating Feedback) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-200 pointer-events-none p-space-md bg-surface-dark text-text-primary-dark rounded-lg shadow-xl flex items-center gap-2 font-technical-code text-technical-code" id="statusToast">
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+<span id="statusToastText">Action executed successfully.</span>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    (function initArticleDetailEngine() {
+      // 1. Reading Progress Bar & Scroll Spy
+      const progressBar = document.getElementById('readingProgressBar');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      const sections = ['sec-1', 'sec-2', 'sec-3', 'sec-4', 'sec-5', 'sec-6', 'sec-7'].map(id => document.getElementById(id));
+
+      function updateScrollProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        if (progressBar) progressBar.style.width = progress + '%';
+
+        // Update active TOC item
+        let currentSectionId = 'sec-1';
+        sections.forEach(sec => {
+          if (sec) {
+            const top = sec.getBoundingClientRect().top;
+            if (top <= 140) {
+              currentSectionId = sec.id;
+            }
+          }
+        });
+
+        tocLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === '#' + currentSectionId) {
+            link.classList.add('bg-surface-container', 'text-primary', 'font-medium');
+            link.classList.remove('text-on-surface-variant');
+          } else {
+            link.classList.remove('bg-surface-container', 'text-primary', 'font-medium');
+            link.classList.add('text-on-surface-variant');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      updateScrollProgress();
+
+      // 2. Toast feedback helper
+      const toast = document.getElementById('statusToast');
+      const toastText = document.getElementById('statusToastText');
+      let toastTimer = null;
+
+      function showToast(msg) {
+        if (!toast || !toastText) return;
+        toastText.textContent = msg;
+        toast.classList.remove('translate-y-16', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('translate-y-16', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 2400);
+      }
+
+      // 3. Share / Copy Link
+      const copyBtn = document.getElementById('copyArticleLinkBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(window.location.href).catch(() => {});
+          const label = document.getElementById('copyLinkText');
+          if (label) label.textContent = 'Copied!';
+          setTimeout(() => { if (label) label.textContent = 'Copy Link'; }, 2000);
+          showToast('Article canonical link copied to clipboard.');
+        });
+      }
+
+      // 4. Code Block Copy Button
+      const copyCodeBtn = document.getElementById('copyCodeButton');
+      if (copyCodeBtn) {
+        copyCodeBtn.addEventListener('click', () => {
+          const codeEl = document.querySelector('#sec-4 pre code');
+          if (codeEl) {
+            navigator.clipboard.writeText(codeEl.innerText).catch(() => {});
+          }
+          const lbl = document.getElementById('copyCodeLabel');
+          if (lbl) lbl.textContent = 'Copied!';
+          setTimeout(() => { if (lbl) lbl.textContent = 'Copy'; }, 2000);
+          showToast('TypeScript verification module copied to clipboard.');
+        });
+      }
+
+      // 5. BibTeX Citation Copy Button
+      const copyCitationBtn = document.getElementById('copyCitationBtn');
+      if (copyCitationBtn) {
+        copyCitationBtn.addEventListener('click', () => {
+          const bibtex = `@article{abdillah2024offline,\n  title={Architecting Offline-Tolerant Civil Service Dossier Verification},\n  author={Abdillah, Rheva Iqbal},\n  journal={Rheva Platform Monographs},\n  year={2024},\n  url={https://rheva.os/articles/offline-tolerant-civil-service}\n}`;
+          navigator.clipboard.writeText(bibtex).catch(() => {});
+          showToast('BibTeX citation copied to clipboard.');
+        });
+      }
+
+      // 6. Download Summary Button
+      const downloadSummaryBtn = document.getElementById('downloadSummaryBtn');
+      if (downloadSummaryBtn) {
+        downloadSummaryBtn.addEventListener('click', () => {
+          showToast('Generating signed PDF telemetry summary manifest...');
+        });
+      }
+
+      // 7. Font Size Toggle (Default vs Large)
+      const fontNormal = document.getElementById('fontToggleNormal');
+      const fontLarge = document.getElementById('fontToggleLarge');
+      const bodyContainer = document.getElementById('articleContentBody');
+
+      if (fontNormal && fontLarge && bodyContainer) {
+        fontNormal.addEventListener('click', () => {
+          fontNormal.classList.add('bg-surface-container-lowest', 'shadow-xs', 'text-on-surface', 'font-semibold');
+          fontNormal.classList.remove('text-on-surface-variant');
+          fontLarge.classList.remove('bg-surface-container-lowest', 'shadow-xs', 'text-on-surface', 'font-semibold');
+          fontLarge.classList.add('text-on-surface-variant');
+
+          bodyContainer.querySelectorAll('p').forEach(p => {
+            p.classList.remove('text-body-large');
+            p.classList.add('text-body');
+          });
+          showToast('Reading font scaled to default.');
+        });
+
+        fontLarge.addEventListener('click', () => {
+          fontLarge.classList.add('bg-surface-container-lowest', 'shadow-xs', 'text-on-surface', 'font-semibold');
+          fontLarge.classList.remove('text-on-surface-variant');
+          fontNormal.classList.remove('bg-surface-container-lowest', 'shadow-xs', 'text-on-surface', 'font-semibold');
+          fontNormal.classList.add('text-on-surface-variant');
+
+          bodyContainer.querySelectorAll('p').forEach(p => {
+            p.classList.remove('text-body');
+            p.classList.add('text-body-large');
+          });
+          showToast('Reading font scaled to large.');
+        });
+      }
+
+      // 8. CMS Simulator Harness
+      const cmsDisplay = document.getElementById('cmsSimulatorDisplay');
+      const btnHydrated = document.getElementById('cmsBtnHydrated');
+      const btnSkeleton = document.getElementById('cmsBtnSkeleton');
+      const btn404 = document.getElementById('cmsBtn404');
+      const btnError = document.getElementById('cmsBtnError');
+
+      if (btnHydrated && cmsDisplay) {
+        btnHydrated.addEventListener('click', () => {
+          cmsDisplay.innerHTML = '<span class="text-status-success font-semibold">[STATE: HYDRATED]</span> Firestore Document id: art_09f2a4. Verification hash matching production release. Dynamic SSG TTL fresh.';
+          showToast('CMS harness: Switched to Hydrated State.');
+        });
+      }
+
+      if (btnSkeleton && cmsDisplay) {
+        btnSkeleton.addEventListener('click', () => {
+          cmsDisplay.innerHTML = '<span class="text-status-warning font-semibold">[STATE: SKELETON SUSPENDED]</span> React 18 Suspense boundary active. Streaming chunks across Edge WAN.';
+          showToast('CMS harness: Skeleton stream active.');
+        });
+      }
+
+      if (btn404 && cmsDisplay) {
+        btn404.addEventListener('click', () => {
+          cmsDisplay.innerHTML = '<span class="text-status-error font-semibold">[STATE: NOT FOUND]</span> Document "art_09f2a4" does not exist in collection. Graceful fallback redirect armed.';
+          showToast('CMS harness: Simulation 404 trigger.');
+        });
+      }
+
+      if (btnError && cmsDisplay) {
+        btnError.addEventListener('click', () => {
+          cmsDisplay.innerHTML = '<span class="text-status-error font-semibold">[STATE: ERROR BOUNDARY]</span> Zod schema validation rejected corrupted manifest. Isolated to error boundary.';
+          showToast('CMS harness: Simulation Error boundary.');
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-[1280px] mx-auto px-gutter py-space-xl flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-h3 text-h3 font-bold text-on-surface">RHEVA</span><span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">DEV.PLATFORM</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Rheva Iqbal Abdillah — Software Engineer and product system architect crafting high-reliability enterprise platforms, verifiable software toolchains, and distributed runtime environments.</p></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Platform Routes</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Verified Systems &amp; Case Studies</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/projects</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Shipped Software &amp; Tools</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/apps</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Engineering Engagements</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/services</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="articles" href="#">Technical Monographs &amp; Research</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/articles</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">Operator Bio &amp; Pedigree</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/about</span></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Stack Architecture</div><div class="flex flex-col gap-space-xs font-technical-code text-technical-code text-on-surface-variant"><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">CORE_KERNEL</span><span>TypeScript / Rust / Go</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">UI_SYNTAX</span><span>Next.js / Tailwind CSS</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">PERSISTENCE</span><span>PostgreSQL / Redis</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">ORCHESTRATION</span><span>Cloudflare Edge / AWS</span></div></div></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Connect &amp; Telemetry</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center justify-between"><span class="text-on-surface-variant">Engineering Inquiries</span><a class="font-technical-code text-technical-code text-primary hover:underline" data-path="contact" href="#">contact@rheva.dev</a></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">PGP Public Fingerprint</span><span class="font-technical-micro text-technical-micro text-on-surface-variant">0x7E9A·28BC·4D1F</span></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">Code Repositories</span><span class="font-technical-code text-technical-code text-on-surface-variant">github.com/rheva</span></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">Professional Record</span><span class="font-technical-code text-technical-code text-on-surface-variant">linkedin.com/in/rheva</span></li></ul></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-technical-micro text-technical-micro text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-success"></span>STABLE RELEASE 2024</span><span>UTF-8 SPECIFICATION</span><span>COMPLIANT BUILD 24.12</span><span>LATENCY &lt;18MS</span></div><div class="flex items-center gap-space-sm"><span>© 2024 Rheva Iqbal Abdillah. All systems operational.</span></div></div></div></footer></body></html>

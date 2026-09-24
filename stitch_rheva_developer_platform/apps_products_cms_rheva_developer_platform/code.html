@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="">Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="">Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span class="">Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="">Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="inquiries" href="/admin/inquiries"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span class="">Inquiries &amp; Inbound</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span><span class="">Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="configuration-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="">Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span class="">View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-1.5 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline-variant">/</span><span class="text-on-surface font-medium">dashboard</span></div></div><div class="flex items-center gap-4"><button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full">
+<!-- Interactive State Simulation Harness Bar -->
+
+<!-- Operational Telemetry Header -->
+<section class="mb-8 flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="space-y-1.5 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container-low text-primary-container font-semibold">
+          CATALOG // FIRESTORE: APPS
+        </span>
+<span class="font-technical-micro text-technical-micro text-outline">•</span>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+          COLLECTION_SYNC: ACTIVE
+        </span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight">Apps &amp; Software Products</h1>
+<p class="font-body text-body text-secondary">
+        Manage software products, deployment-ready turnkey applications, and tools currently in active engineering lifecycle.
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-2.5 shrink-0 pt-1">
+<button class="h-9 px-3.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">file_download</span>
+<span class="">Export Manifest (JSON)</span>
+</button>
+<button class="h-9 px-3.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">sync</span>
+<span class="">Sync Schema</span>
+</button>
+<a class="h-9 px-4 rounded bg-primary-container text-on-primary hover:bg-primary font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors shadow-sm" href="#new-product">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="">New Product</span>
+</a>
+</div>
+</section>
+<!-- Grounded KPI Summary Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<!-- Card 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider font-semibold">Total Products</span>
+<span class="material-symbols-outlined text-[18px] text-outline">inventory_2</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-semibold text-on-surface leading-none">4</span>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium">100% indexed</span>
+</div>
+<p class="font-body-sm text-xs text-secondary mt-2">Firestore docs in <code class="font-technical-code text-technical-code bg-surface-container-low px-1 rounded">/apps</code></p>
+</div>
+<!-- Card 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider font-semibold">Public Visibility</span>
+<span class="material-symbols-outlined text-[18px] text-outline">visibility</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-semibold text-on-surface leading-none">3</span>
+<span class="font-body-sm text-xs text-secondary">Live on storefront</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center gap-1 font-technical-micro text-technical-micro text-status-success">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 3 Live
+        </span>
+<span class="text-outline font-technical-micro text-technical-micro">•</span>
+<span class="inline-flex items-center gap-1 font-technical-micro text-technical-micro text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-highest"></span> 1 Draft
+        </span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider font-semibold">Deployment Status</span>
+<span class="material-symbols-outlined text-[18px] text-outline">rocket_launch</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-semibold text-on-surface leading-none">2</span>
+<span class="font-body-sm text-xs text-status-success font-medium">Ready for deployment</span>
+</div>
+<div class="flex items-center gap-1.5 mt-2 font-technical-micro text-technical-micro text-secondary truncate">
+<span class="">1 Custom</span>
+<span class="text-outline">•</span>
+<span class="">1 In Dev</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider font-semibold">Curated Featured</span>
+<span class="material-symbols-outlined text-[18px] text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-h2 text-h2 font-semibold text-on-surface leading-none">2</span>
+<span class="font-body-sm text-xs text-secondary">Hero slots occupied</span>
+</div>
+<p class="font-body-sm text-xs text-secondary mt-2">Active on public landing index</p>
+</div>
+</section>
+<!-- Product Management Toolbar -->
+<section class="p-4 rounded-xl bg-surface-container-lowest shadow-sm mb-4">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+<!-- Search -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="h-10 w-full pl-9 pr-14 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" id="product-search-input" placeholder="Search products by name, slug, technology, or category..." type="text">
+<kbd class="absolute right-3 top-1/2 -translate-y-1/2 font-technical-micro text-[10px] text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest shadow-sm pointer-events-none">⌘K</kbd>
+</div>
+<!-- Filters & Toggles -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Status Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm text-xs font-medium focus:outline-none appearance-none cursor-pointer hover:bg-surface-container transition-colors">
+<option>Status: All (4)</option>
+<option>Available</option>
+<option>Custom Deployment</option>
+<option>In Development</option>
+<option>Coming Soon</option>
+<option>Archived</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Visibility Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm text-xs font-medium focus:outline-none appearance-none cursor-pointer hover:bg-surface-container transition-colors">
+<option>Visibility: All (4)</option>
+<option>Published (3)</option>
+<option>Draft (1)</option>
+<option>Archived (0)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Access Model -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm text-xs font-medium focus:outline-none appearance-none cursor-pointer hover:bg-surface-container transition-colors">
+<option>Access Model: All</option>
+<option>Request Pricing</option>
+<option>Custom Deployment</option>
+<option>Request Access</option>
+<option>Free / Open</option>
+<option>Fixed Price</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Category -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded bg-surface-container-low text-on-surface font-body-sm text-xs font-medium focus:outline-none appearance-none cursor-pointer hover:bg-surface-container transition-colors">
+<option>Category: All Categories</option>
+<option>HR / Personnel</option>
+<option>Attendance &amp; Verification</option>
+<option>Document Management</option>
+<option>Education &amp; Operations</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- View Mode Switcher -->
+<div class="flex items-center p-0.5 rounded bg-surface-container-low">
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface shadow-sm" title="Table View" type="button">
+<span class="material-symbols-outlined text-[16px]">view_list</span>
+</button>
+<button class="p-1.5 rounded text-outline hover:text-on-surface transition-colors" title="Grid View" type="button">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+</button>
+</div>
+<!-- Refresh -->
+<button class="p-2 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Refresh Collection" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Batch Selection Bar (shown when selected) -->
+<div class="hidden mt-3 pt-3 flex items-center justify-between bg-surface-container-low p-2.5 rounded" id="batch-bar">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag bg-primary-container text-on-primary px-2 py-0.5 rounded-full font-bold">1 SELECTED</span>
+<span class="font-body-sm text-xs text-on-surface">Batch actions for marked product documents</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-technical-micro text-technical-micro font-medium transition-colors" type="button">Bulk Visibility</button>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-technical-micro text-technical-micro font-medium transition-colors" type="button">Export Docs</button>
+<button class="h-7 px-2.5 rounded bg-error-container text-on-error-container hover:opacity-90 font-technical-micro text-technical-micro font-semibold transition-opacity" type="button">Delete Selected</button>
+</div>
+</div>
+</section>
+<!-- Primary Content Area (Switchable by State Harness) -->
+<div class="relative w-full">
+<!-- STATE: Default Table View -->
+<div class="overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm" id="view-table">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-technical-micro text-technical-micro uppercase tracking-wider">
+<th class="w-10 px-4 py-3 text-center">
+<input class="rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</th>
+<th class="px-4 py-3 font-medium">Product &amp; Slug</th>
+<th class="px-4 py-3 font-medium">Category</th>
+<th class="px-4 py-3 font-medium">Status</th>
+<th class="px-4 py-3 font-medium">Visibility</th>
+<th class="px-4 py-3 font-medium">Access / Deployment Model</th>
+<th class="px-4 py-3 font-medium text-center">Featured</th>
+<th class="px-4 py-3 font-medium">Updated</th>
+<th class="px-4 py-3 font-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1: SIMPEG Core (Interactive trigger for inspection) -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group" id="row-simpeg">
+<td class="px-4 py-3 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" id="check-simpeg" type="checkbox">
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary-container transition-colors">SIMPEG Core</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">Web / Self-Hosted</span>
+</div>
+<div class="flex items-center gap-1 font-technical-code text-xs text-outline">
+<span class="">/apps/simpeg-core</span>
+<span class="material-symbols-outlined text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  HR / Personnel
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Available
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Published
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Request Pricing
+                </span>
+</td>
+<td class="px-4 py-3 text-center" onclick="openDrawer('simpeg')">
+<span class="material-symbols-outlined text-[18px] text-status-warning" style="font-variation-settings: 'FILL' 1;" title="Curated on storefront">star</span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('simpeg')">
+<div class="font-technical-micro text-technical-micro text-secondary">
+<div class="">Nov 12, 2024</div>
+<div class="text-outline">Rheva</div>
+</div>
+</td>
+<td class="px-4 py-3 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Record" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Presensi PPPK Engine -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group" id="row-presensi">
+<td class="px-4 py-3 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary-container transition-colors">Presensi PPPK Engine</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">PWA / Mobile Web</span>
+</div>
+<div class="flex items-center gap-1 font-technical-code text-xs text-outline">
+<span class="">/apps/presensi-pppk</span>
+<span class="material-symbols-outlined text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Attendance &amp; Verification
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Custom Deployment
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Published
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Custom Deployment
+                </span>
+</td>
+<td class="px-4 py-3 text-center" onclick="openDrawer('presensi')">
+<span class="material-symbols-outlined text-[18px] text-status-warning" style="font-variation-settings: 'FILL' 1;" title="Curated on storefront">star</span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('presensi')">
+<div class="font-technical-micro text-technical-micro text-secondary">
+<div class="">Oct 28, 2024</div>
+<div class="text-outline">Rheva</div>
+</div>
+</td>
+<td class="px-4 py-3 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Record" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: E-Kinsal Dossier Engine -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group" id="row-kinsal">
+<td class="px-4 py-3 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary-container transition-colors">E-Kinsal Dossier Engine</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">Internal Intranet</span>
+</div>
+<div class="flex items-center gap-1 font-technical-code text-xs text-outline">
+<span class="">/apps/e-kinsal</span>
+<span class="material-symbols-outlined text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Document Management
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  In Development
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container-low text-outline font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Draft
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Request Access
+                </span>
+</td>
+<td class="px-4 py-3 text-center" onclick="openDrawer('kinsal')">
+<span class="material-symbols-outlined text-[18px] text-surface-container-highest" title="Not Featured">star</span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('kinsal')">
+<div class="font-technical-micro text-technical-micro text-secondary">
+<div class="">Oct 15, 2024</div>
+<div class="text-outline">Rheva</div>
+</div>
+</td>
+<td class="px-4 py-3 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Record" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Piket Guru Smart Scheduler -->
+<tr class="hover:bg-surface-container-low/70 transition-colors cursor-pointer group" id="row-piket">
+<td class="px-4 py-3 text-center" onclick="event.stopPropagation()">
+<input class="row-checkbox rounded w-4 h-4 text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface group-hover:text-primary-container transition-colors">Piket Guru Smart Scheduler</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-medium">Web App</span>
+</div>
+<div class="flex items-center gap-1 font-technical-code text-xs text-outline">
+<span class="">/apps/piket-guru</span>
+<span class="material-symbols-outlined text-[12px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Education &amp; Operations
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Available
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<span class="inline-flex items-center gap-1 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Published
+                </span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-medium">
+                  Free / Open
+                </span>
+</td>
+<td class="px-4 py-3 text-center" onclick="openDrawer('piket')">
+<span class="material-symbols-outlined text-[18px] text-surface-container-highest" title="Not Featured">star</span>
+</td>
+<td class="px-4 py-3" onclick="openDrawer('piket')">
+<div class="font-technical-micro text-technical-micro text-secondary">
+<div class="">Sep 22, 2024</div>
+<div class="text-outline">Rheva</div>
+</div>
+</td>
+<td class="px-4 py-3 text-right" onclick="event.stopPropagation()">
+<div class="relative inline-block text-left">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Manage Record" type="button">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Collection Telemetry Footer -->
+<div class="p-4 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-3 font-technical-micro text-technical-micro text-secondary">
+<div class="flex items-center gap-3">
+<span class="text-on-surface font-medium">Showing 1 to 4 of 4 product records</span>
+<span class="text-outline">•</span>
+<span class="text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">database</span>
+            hydrated 1.8s ago via Firebase Admin SDK
+          </span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="">Rows:</span>
+<span class="font-semibold text-on-surface">10</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline opacity-40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-bold">1</span>
+<button class="p-1 rounded text-outline opacity-40 cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- STATE: Skeleton Loading Simulation -->
+<div class="hidden overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm p-4 space-y-4" id="view-skeleton">
+<div class="flex items-center justify-between">
+<div class="h-4 w-48 bg-surface-container rounded animate-pulse"></div>
+<div class="h-4 w-24 bg-surface-container rounded animate-pulse"></div>
+</div>
+<div class="space-y-3">
+<div class="h-12 w-full bg-surface-container-low rounded-lg animate-pulse"></div>
+<div class="h-12 w-full bg-surface-container-low rounded-lg animate-pulse"></div>
+<div class="h-12 w-full bg-surface-container-low rounded-lg animate-pulse"></div>
+<div class="h-12 w-full bg-surface-container-low rounded-lg animate-pulse"></div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="h-3 w-40 bg-surface-container rounded animate-pulse"></div>
+<div class="h-3 w-20 bg-surface-container rounded animate-pulse"></div>
+</div>
+</div>
+<!-- STATE: Empty Catalog -->
+<div class="hidden rounded-xl bg-surface-container-lowest shadow-sm p-12 text-center" id="view-empty">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mx-auto mb-4 text-outline">
+<span class="material-symbols-outlined text-[24px]">widgets</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2">No Products in Catalog</h3>
+<p class="font-body-sm text-body-sm text-secondary max-w-md mx-auto mb-6">
+        No software applications or products are currently registered in the Firestore <code class="font-technical-code text-technical-code bg-surface-container px-1 rounded">apps</code> collection.
+      </p>
+<button class="h-9 px-4 rounded bg-primary-container text-on-primary font-body-sm text-body-sm font-medium inline-flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="">Register First Product</span>
+</button>
+</div>
+<!-- STATE: Error State -->
+<div class="hidden rounded-xl bg-error-container/20 p-8 text-center" id="view-error">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-1">Firestore Stream Disconnected</h3>
+<p class="font-body-sm text-body-sm text-secondary max-w-md mx-auto mb-4 font-technical-code text-xs">
+        PERMISSION_DENIED: The caller does not have permission to execute query on collection path 'apps'.
+      </p>
+<button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+<span class="">Retry Handshake</span>
+</button>
+</div>
+</div>
+<!-- Slide-Over Inspection Drawer (Contextual telemetry for selected product) -->
+<div class="fixed inset-y-0 right-0 w-full max-w-xl bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col" id="slide-drawer">
+<!-- Drawer Header -->
+<div class="h-16 px-6 bg-surface-container-low flex items-center justify-between shrink-0">
+<div class="flex items-center gap-2">
+<span class="font-technical-tag text-technical-tag text-primary-container font-semibold">
+          PRODUCT TELEMETRY
+        </span>
+<span class="text-outline font-technical-micro text-technical-micro">//</span>
+<span class="font-technical-code text-xs text-on-surface-variant font-medium">DOC_ID: app_simpeg_core</span>
+</div>
+<div class="flex items-center gap-2">
+<a class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" href="#preview" title="Open Public Page">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="closeDrawer()" title="Close Panel" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Drawer Content Scrollable -->
+<div class="p-6 flex-1 overflow-y-auto space-y-6">
+<!-- Identity card -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h2 class="font-h3 text-h3 text-on-surface truncate">SIMPEG Core</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">v2.4.0</span>
+</div>
+<p class="font-technical-code text-xs text-primary-container mt-0.5">/apps/simpeg-core</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Web / Self-Hosted</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">HR / Personnel</span>
+</div>
+</div>
+</div>
+<!-- Description narrative -->
+<div class="space-y-1.5">
+<label class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Description</label>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed p-3 rounded-lg bg-surface-container-low">
+          Enterprise employee and civil service personnel management platform with verifiable audit trails, dynamic hierarchy orchestration, and cryptographically verified employment records.
+        </p>
+</div>
+<!-- Architecture & Feature Highlights Chips -->
+<div class="space-y-2">
+<label class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Engine Capabilities &amp; Architecture</label>
+<div class="flex flex-wrap gap-2">
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded bg-surface-container text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-status-success">verified</span>
+            Zod Schema Validation
+          </span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded bg-surface-container text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-status-success">verified</span>
+            Firestore Batch Writes
+          </span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded bg-surface-container text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-status-success">verified</span>
+            Offline IDB Staging
+          </span>
+<span class="font-technical-tag text-technical-tag px-2.5 py-1 rounded bg-surface-container text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-status-success">verified</span>
+            Cryptographic Watermark
+          </span>
+</div>
+</div>
+<!-- Operational Status Configuration Controls -->
+<div class="space-y-4 p-4 rounded-xl bg-surface-container-low">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold block">State Management</span>
+<!-- Visibility Toggle -->
+<div class="flex items-center justify-between">
+<div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Storefront Visibility</div>
+<div class="font-technical-micro text-technical-micro text-secondary">Rendered on public /apps catalog</div>
+</div>
+<button class="w-11 h-6 bg-status-success rounded-full p-0.5 transition-colors relative" title="Toggle Visibility" type="button">
+<span class="w-5 h-5 bg-surface-container-lowest rounded-full block shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+<!-- Featured Toggle -->
+<div class="flex items-center justify-between">
+<div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Curated Showcase</div>
+<div class="font-technical-micro text-technical-micro text-secondary">Featured flag for homepage banner</div>
+</div>
+<button class="w-11 h-6 bg-status-success rounded-full p-0.5 transition-colors relative" title="Toggle Showcase" type="button">
+<span class="w-5 h-5 bg-surface-container-lowest rounded-full block shadow transform translate-x-5 transition-transform"></span>
+</button>
+</div>
+<!-- Product Lifecycle Selector -->
+<div class="space-y-1">
+<label class="font-technical-micro text-technical-micro text-secondary">Lifecycle Status</label>
+<select class="w-full h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-xs focus:outline-none">
+<option selected="">Available (Production Ready)</option>
+<option>Custom Deployment</option>
+<option>In Development</option>
+<option>Coming Soon</option>
+<option>Archived</option>
+</select>
+</div>
+<!-- Access / Pricing Model -->
+<div class="space-y-1">
+<label class="font-technical-micro text-technical-micro text-secondary">Access / Deployment Model</label>
+<select class="w-full h-9 px-3 rounded bg-surface-container-lowest text-on-surface font-body-sm text-xs focus:outline-none">
+<option selected="">Request Pricing</option>
+<option>Fixed Enterprise License</option>
+<option>Custom Deployment</option>
+<option>Request Access / Beta</option>
+<option>Free / Open Source</option>
+</select>
+</div>
+</div>
+<!-- System Metadata -->
+<div class="space-y-1 p-3 rounded-lg bg-surface-container-low font-technical-micro text-technical-micro text-outline">
+<div class="flex justify-between"><span class="">Created At:</span> <span class="text-on-surface">2024-03-12T08:14:22Z</span></div>
+<div class="flex justify-between"><span class="">Last Modified:</span> <span class="text-on-surface">2024-11-12T14:39:01Z</span></div>
+<div class="flex justify-between"><span class="">Publisher UID:</span> <span class="text-on-surface">rheva_superadmin_01</span></div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-4 bg-surface-container-low shrink-0 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-xs font-medium transition-colors" onclick="openArchiveModal()" type="button">
+          Archive
+        </button>
+<button class="h-9 px-3 rounded bg-error-container text-on-error-container hover:opacity-90 font-body-sm text-xs font-medium transition-opacity" onclick="openDeleteModal()" type="button">
+          Delete
+        </button>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container font-body-sm text-xs font-medium transition-colors" onclick="closeDrawer()" type="button">
+          Cancel
+        </button>
+<button class="h-9 px-4 rounded bg-surface-dark text-on-primary hover:bg-black font-body-sm text-xs font-medium transition-colors" type="button">
+          Save Changes
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 hidden transition-opacity" id="modal-backdrop" onclick="closeAllModals()"></div>
+<!-- Confirmation Dialog: Archive Product -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-surface-container-lowest rounded-xl shadow-2xl z-50 hidden p-6 space-y-4" id="dialog-archive">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[20px]">archive</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-on-surface">Archive Product</h3>
+<p class="font-technical-micro text-technical-micro text-outline">DOC_ID: app_simpeg_core</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+      Are you sure you want to archive <strong class="text-on-surface font-semibold">SIMPEG Core</strong>? It will immediately be unlisted from the public storefront catalog while keeping all deployment telemetry preserved.
+    </p>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="h-9 px-3.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-body-sm text-xs font-medium transition-colors" onclick="closeAllModals()" type="button">
+        Cancel
+      </button>
+<button class="h-9 px-4 rounded bg-surface-dark text-on-primary hover:bg-black font-body-sm text-xs font-medium transition-colors" onclick="closeAllModals()" type="button">
+        Confirm Archive
+      </button>
+</div>
+</div>
+<!-- Confirmation Dialog: Delete Product -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md bg-surface-container-lowest rounded-xl shadow-2xl z-50 hidden p-6 space-y-4" id="dialog-delete">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">delete_forever</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-error">Delete Product Document</h3>
+<p class="font-technical-micro text-technical-micro text-outline">CRITICAL IRREVERSIBLE OPERATION</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+      This will permanently purge <strong class="text-on-surface font-semibold">SIMPEG Core</strong> (<code class="font-technical-code text-xs bg-surface-container px-1 rounded">/apps/simpeg-core</code>) and its associated Firestore schema references.
+    </p>
+<div class="p-2.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-outline">
+      Type <strong class="text-on-surface select-all">simpeg-core</strong> to confirm deletion.
+    </div>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="h-9 px-3.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-body-sm text-xs font-medium transition-colors" onclick="closeAllModals()" type="button">
+        Cancel
+      </button>
+<button class="h-9 px-4 rounded bg-error text-on-error hover:opacity-90 font-body-sm text-xs font-medium transition-opacity" onclick="closeAllModals()" type="button">
+        Delete Document
+      </button>
+</div>
+</div>
+<!-- Client-side Interactive Logic -->
+<script>
+    function openDrawer(appId) {
+      const drawer = document.getElementById('slide-drawer');
+      if (drawer) {
+        drawer.classList.remove('translate-x-full');
+      }
+    }
+
+    function closeDrawer() {
+      const drawer = document.getElementById('slide-drawer');
+      if (drawer) {
+        drawer.classList.add('translate-x-full');
+      }
+    }
+
+    function openArchiveModal() {
+      document.getElementById('modal-backdrop').classList.remove('hidden');
+      document.getElementById('dialog-archive').classList.remove('hidden');
+    }
+
+    function openDeleteModal() {
+      document.getElementById('modal-backdrop').classList.remove('hidden');
+      document.getElementById('dialog-delete').classList.remove('hidden');
+    }
+
+    function closeAllModals() {
+      document.getElementById('modal-backdrop').classList.add('hidden');
+      document.getElementById('dialog-archive').classList.add('hidden');
+      document.getElementById('dialog-delete').classList.add('hidden');
+    }
+
+    // State harness simulation handler
+    const harnessButtons = document.querySelectorAll('.harness-btn');
+    const viewTable = document.getElementById('view-table');
+    const viewSkeleton = document.getElementById('view-skeleton');
+    const viewEmpty = document.getElementById('view-empty');
+    const viewError = document.getElementById('view-error');
+    const batchBar = document.getElementById('batch-bar');
+    const checkSimpeg = document.getElementById('check-simpeg');
+
+    harnessButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        harnessButtons.forEach(b => {
+          b.classList.remove('bg-surface-dark', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-dark', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+
+        const state = btn.dataset.state;
+
+        // Reset views
+        viewTable.classList.add('hidden');
+        viewSkeleton.classList.add('hidden');
+        viewEmpty.classList.add('hidden');
+        viewError.classList.add('hidden');
+        batchBar.classList.add('hidden');
+        closeDrawer();
+        closeAllModals();
+
+        if (state === 'default') {
+          viewTable.classList.remove('hidden');
+          if (checkSimpeg) checkSimpeg.checked = false;
+        } else if (state === 'selected') {
+          viewTable.classList.remove('hidden');
+          batchBar.classList.remove('hidden');
+          if (checkSimpeg) checkSimpeg.checked = true;
+        } else if (state === 'drawer') {
+          viewTable.classList.remove('hidden');
+          openDrawer('simpeg');
+        } else if (state === 'archive-modal') {
+          viewTable.classList.remove('hidden');
+          openArchiveModal();
+        } else if (state === 'delete-modal') {
+          viewTable.classList.remove('hidden');
+          openDeleteModal();
+        } else if (state === 'skeleton') {
+          viewSkeleton.classList.remove('hidden');
+        } else if (state === 'empty') {
+          viewEmpty.classList.remove('hidden');
+        } else if (state === 'error') {
+          viewError.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Checkbox batch toggle handler
+    const checkboxes = document.querySelectorAll('.row-checkbox');
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        const anyChecked = Array.from(checkboxes).some(c => c.checked);
+        if (anyChecked) {
+          batchBar.classList.remove('hidden');
+        } else {
+          batchBar.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</div></div></main></div>
+
+</body></html>

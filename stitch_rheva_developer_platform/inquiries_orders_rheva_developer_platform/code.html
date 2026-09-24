@@ -1,0 +1,840 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="dashboard" href="/admin/dashboard"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="">Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="">Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span class="">Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="">Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="inquiries" href="/admin/inquiries"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span class="">Inquiries</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span><span class="">Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="configuration-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="">Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span class="">View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"></div><div class="flex items-center gap-4"><button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Harness Bar -->
+
+<!-- Workspace Header & Meta Telemetry -->
+<section class="w-full flex flex-col gap-4 mb-6">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"><div class="flex flex-col gap-1 min-w-0"><div class="flex items-center gap-2 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline">/</span><span class="text-on-surface font-semibold">inquiries</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface uppercase">RESTRICTED // ROOT</span></div><h1 class="font-h2 text-h2 text-on-surface tracking-tight leading-none mt-1">Inquiries</h1><p class="font-body text-body-sm text-on-surface-variant max-w-3xl">Review and manage inbound project inquiries and digital deployment requests</p></div><div class="flex items-center gap-2 shrink-0"><button class="h-9 px-3.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-xs font-medium hover:bg-surface-container-low transition-colors shadow-sm flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">file_download</span><span class="">Export JSON</span></button><button class="h-9 px-3.5 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors shadow-sm flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">sync</span><span class="">Refresh Inquiries</span></button></div></div>
+<!-- Telemetry Cards Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3"><div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between"><span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Total Inquiries</span><div class="flex items-baseline justify-between mt-2"><span class="font-technical-code text-h3 font-semibold text-on-surface">5</span><span class="font-technical-micro text-[11px] text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">All Records</span></div></div><div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between"><div class="flex items-center justify-between"><span class="font-technical-micro text-technical-micro uppercase tracking-wider text-primary-container font-semibold">New</span><span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span></div><div class="flex items-baseline justify-between mt-2"><span class="font-technical-code text-h3 font-semibold text-primary-container">2</span><span class="font-technical-micro text-[11px] text-primary-container bg-primary-fixed px-1.5 py-0.5 rounded font-medium">Needs Attention</span></div></div><div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between"><span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">In Discussion</span><div class="flex items-baseline justify-between mt-2"><span class="font-technical-code text-h3 font-semibold text-status-warning">2</span><span class="font-technical-micro text-[11px] text-on-surface-variant bg-surface-container-low px-1.5 py-0.5 rounded">Tech Spec Phase</span></div></div><div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col justify-between"><span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Converted</span><div class="flex items-baseline justify-between mt-2"><span class="font-technical-code text-h3 font-semibold text-status-success">1</span><span class="font-technical-micro text-[11px] text-status-success bg-status-success/10 px-1.5 py-0.5 rounded font-medium">Active Engagement</span></div></div></div>
+</section>
+<!-- Management Toolbar -->
+<section class="w-full bg-surface-container-lowest p-3 rounded-xl shadow-sm mb-4 flex flex-col gap-3">
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full h-9 pl-9 pr-14 rounded bg-surface-container-low text-on-surface font-body-sm text-xs placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" id="filter-search" placeholder="Search by name, email, organization, system name, or keywords... (⌘K)" type="text">
+<kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 font-technical-micro text-[10px] text-outline px-1.5 py-0.5 rounded bg-surface-container shadow-xs pointer-events-none">⌘K</kbd>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<div class="flex items-center bg-surface-container-low p-0.5 rounded">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-technical-micro text-technical-micro font-medium shadow-xs flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span class="">Table</span>
+</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-technical-micro text-technical-micro transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">splitscreen</span>
+<span class="">Split Preview</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter Strip -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded"><span class="font-technical-micro text-technical-micro text-outline uppercase font-medium">Status:</span><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs" type="button">All (5)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-primary-container font-medium hover:bg-surface-container-lowest" type="button">New (2)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-on-surface-variant hover:text-on-surface" type="button">Reviewing (0)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-on-surface-variant hover:text-on-surface" type="button">Contacted (0)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-status-warning font-medium hover:bg-surface-container-lowest" type="button">In Discussion (2)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-status-success font-medium hover:bg-surface-container-lowest" type="button">Converted (1)</button><button class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded text-outline hover:text-on-surface" type="button">Closed (0)</button></div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-medium">Type:</span>
+<select class="bg-transparent text-on-surface font-technical-micro text-technical-micro focus:outline-none cursor-pointer">
+<option>All Types</option>
+<option>Software Deployment</option>
+<option>Custom Software</option>
+<option>Product Access</option>
+<option>System Modernization</option>
+<option>General Inquiry</option>
+</select>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-medium">Source:</span>
+<select class="bg-transparent text-on-surface font-technical-micro text-technical-micro focus:outline-none cursor-pointer">
+<option>All Sources</option>
+<option>/apps/simpeg-core</option>
+<option>/contact</option>
+<option>/services</option>
+<option>/projects/presensi-provinsi</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-medium">Sort:</span>
+<select class="bg-surface-container-low text-on-surface font-technical-micro text-technical-micro px-2 py-1 rounded focus:outline-none cursor-pointer">
+<option>Newest First</option>
+<option>Oldest First</option>
+<option>Recently Updated</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Primary Workspace Content Container (With optional slide drawer) -->
+<div class="relative w-full flex items-start gap-4">
+<!-- Main Data Table Panel -->
+<div class="flex-1 min-w-0 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="table-container">
+<!-- Empty State View (hidden by default) -->
+<div class="hidden p-16 flex flex-col items-center justify-center text-center" id="view-empty-state">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[24px]">inbox</span>
+</div>
+<p class="font-technical-code text-technical-code font-semibold text-on-surface">No Inbound Inquiries Found</p>
+<p class="font-body-sm text-body-sm text-outline max-w-sm mt-1">There are no inquiries matching your active filter criteria or the real-time stream is unpopulated.</p>
+<button class="mt-4 px-3 py-1.5 rounded bg-surface-dark text-on-primary font-technical-micro text-technical-micro font-medium hover:bg-black transition-colors" type="button">
+          Reset Filter Parameters
+        </button>
+</div>
+<!-- Error State View (hidden by default) -->
+<div class="hidden p-16 flex flex-col items-center justify-center text-center bg-status-error/5" id="view-error-state">
+<div class="w-12 h-12 rounded-full bg-status-error/10 flex items-center justify-center text-status-error mb-3">
+<span class="material-symbols-outlined text-[24px]">cloud_off</span>
+</div>
+<p class="font-technical-code text-technical-code font-semibold text-status-error">Firestore Stream Interrupted [Code 503]</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-1">Failed to establish WebSocket handshake with Firestore listener at `inquiries`. Attempting exponential backoff reconnection.</p>
+<button class="mt-4 px-3 py-1.5 rounded bg-surface-dark text-on-primary font-technical-micro text-technical-micro font-medium hover:bg-black transition-colors" type="button">
+          Force Resync Stream
+        </button>
+</div>
+<!-- Skeleton Loading View (hidden by default) -->
+<div class="hidden p-4 space-y-3 animate-pulse" id="view-skeleton-state">
+<div class="h-8 bg-surface-container rounded w-full"></div>
+<div class="h-12 bg-surface-container-low rounded w-full"></div>
+<div class="h-12 bg-surface-container-low rounded w-full"></div>
+<div class="h-12 bg-surface-container-low rounded w-full"></div>
+<div class="h-12 bg-surface-container-low rounded w-full"></div>
+<div class="h-12 bg-surface-container-low rounded w-full"></div>
+</div>
+<!-- Active Table View -->
+<div class="overflow-x-auto" id="view-active-table">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-technical-micro text-technical-micro text-outline uppercase tracking-wider">
+<th class="py-3 px-4 w-10 text-center">
+<input class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</th>
+<th class="py-3 px-4 font-medium">Contact / Institution</th>
+<th class="py-3 px-4 font-medium">Inquiry Type</th>
+<th class="py-3 px-4 font-medium">Subject &amp; Target System</th>
+<th class="py-3 px-4 font-medium">Source Route</th>
+<th class="py-3 px-4 font-medium">Timeline &amp; Budget</th>
+<th class="py-3 px-4 font-medium">Status</th>
+<th class="py-3 px-4 font-medium">Submitted</th>
+<th class="py-3 px-4 font-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-xs">
+<!-- Row 1 (Selected Row - BKPSDM SIMPEG) -->
+<tr class="bg-surface-container-low/60 hover:bg-surface-container-low transition-colors cursor-pointer" id="row-inq-1" onclick="openDrawer('inq_simpeg_deployment_09')">
+<td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+<input checked="" class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Dr. Ir. H. Bambang Sujarwo</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container" title="Unreviewed"></span>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline truncate max-w-[190px]">bambang.sujarwo@jatimprov.go.id</span>
+<div class="mt-1">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium">
+                      BKPSDM Jawa Timur
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+                  Software Deployment
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col max-w-[240px]">
+<span class="font-medium text-on-surface truncate">SIMPEG Core Enterprise Deployment</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate">On-prem airgap deployment for 4,800 civil personnel</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-code text-technical-code text-on-surface-variant hover:text-primary-container underline underline-offset-2">
+                  /apps/simpeg-core
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-technical-code text-[11px] text-on-surface font-semibold">Q1 2025</span>
+<span class="font-technical-micro text-technical-micro text-outline">APBD FY2025 Tier 3</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-primary-fixed text-primary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                  New
+                </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-medium">2024-11-20</span>
+<span class="text-outline">10:42 WIB (2h ago)</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="openDrawer('inq_simpeg_deployment_09')" title="View Detail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-warning hover:bg-surface-container transition-colors" onclick="openStatusModal('inq_simpeg_deployment_09')" title="Quick Status" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-error hover:bg-surface-container transition-colors" onclick="openDeleteModal('inq_simpeg_deployment_09')" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 (New - Dinas Kominfo) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('inq_presensi_08')">
+<td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+<input class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">Arya Pratama, S.Kom</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container" title="Unreviewed"></span>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline truncate max-w-[190px]">a.pratama@diskominfo.go.id</span>
+<div class="mt-1">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium">
+                      Diskominfo Jawa Timur
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+                  Custom Software
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col max-w-[240px]">
+<span class="font-medium text-on-surface truncate">BKPSDM Provincial Attendance Engine</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate">Geo-fencing algorithm &amp; biometric validation cluster</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-code text-technical-code text-on-surface-variant hover:text-primary-container underline underline-offset-2">
+                  /services/custom-dev
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-technical-code text-[11px] text-on-surface font-semibold">Immediate</span>
+<span class="font-technical-micro text-technical-micro text-outline">Custom Engineering</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-primary-fixed text-primary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                  New
+                </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-medium">2024-11-19</span>
+<span class="text-outline">16:15 WIB</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="View Detail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-warning hover:bg-surface-container transition-colors" title="Quick Status" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-error hover:bg-surface-container transition-colors" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 (In Discussion - PT Sinergi Medika) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('inq_kinsal_07')">
+<td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+<input class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Nadya Ramadhani</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate max-w-[190px]">nadya@sinergimedika.id</span>
+<div class="mt-1">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium">
+                      PT Sinergi Medika Nusantara
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+                  Product Access
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col max-w-[240px]">
+<span class="font-medium text-on-surface truncate">E-Kinsal Custom Integration</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate">HL7/FHIR API connectors &amp; clinical auditing bridge</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-code text-technical-code text-on-surface-variant hover:text-primary-container underline underline-offset-2">
+                  /apps/e-kinsal
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-technical-code text-[11px] text-on-surface font-semibold">Q2 2025</span>
+<span class="font-technical-micro text-technical-micro text-outline">Private SaaS License</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-status-warning/15 text-status-warning font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  In Discussion
+                </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-medium">2024-11-17</span>
+<span class="text-outline">09:12 WIB</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="View Detail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-warning hover:bg-surface-container transition-colors" title="Quick Status" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-error hover:bg-surface-container transition-colors" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 (In Discussion - Universitas Brawijaya) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('inq_ub_06')">
+<td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+<input class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Prof. Dr. Hendro Wicaksono</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate max-w-[190px]">hendro.w@ub.ac.id</span>
+<div class="mt-1">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium">
+                      FILKOM Universitas Brawijaya
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+                  System Modernization
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col max-w-[240px]">
+<span class="font-medium text-on-surface truncate">Academic Portal Distributed Cache</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate">Redis cluster &amp; event-driven message bus overhaul</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-code text-technical-code text-on-surface-variant hover:text-primary-container underline underline-offset-2">
+                  /contact
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-technical-code text-[11px] text-on-surface font-semibold">Dec 2024</span>
+<span class="font-technical-micro text-technical-micro text-outline">Architecture Review</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-status-warning/15 text-status-warning font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                  In Discussion
+                </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-medium">2024-11-14</span>
+<span class="text-outline">14:20 WIB</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="View Detail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-warning hover:bg-surface-container transition-colors" title="Quick Status" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-error hover:bg-surface-container transition-colors" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Converted - BKD Surabaya) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer" onclick="openDrawer('inq_bkd_sby_05')">
+<td class="py-3 px-4 text-center" onclick="event.stopPropagation()">
+<input class="rounded bg-surface-container-lowest text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Teguh Wicaksono, M.AP</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate max-w-[190px]">teguh@surabaya.go.id</span>
+<div class="mt-1">
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface font-medium">
+                      BKD Kota Surabaya
+                    </span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+                  Software Deployment
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col max-w-[240px]">
+<span class="font-medium text-on-surface truncate">E-Kinerja Municipal Deployment</span>
+<span class="font-technical-micro text-technical-micro text-outline truncate">Production instance handed over, pilot active</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="font-technical-code text-technical-code text-on-surface-variant hover:text-primary-container underline underline-offset-2">
+                  /apps/e-kinerja
+                </span>
+</td>
+<td class="py-3 px-4">
+<div class="flex flex-col">
+<span class="font-technical-code text-[11px] text-on-surface font-semibold">Completed</span>
+<span class="font-technical-micro text-technical-micro text-outline">Perpetual Gov License</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-status-success/15 text-status-success font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                  Converted
+                </span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-medium">2024-10-28</span>
+<span class="text-outline">11:05 WIB</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="View Detail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-warning hover:bg-surface-container transition-colors" title="Quick Status" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-status-error hover:bg-surface-container transition-colors" title="Delete" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Telemetry Bar -->
+<div class="px-4 py-3 bg-surface-container-lowest flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-3 font-technical-micro text-technical-micro text-outline"><div class="flex items-center gap-3 font-technical-micro text-technical-micro text-outline"><span class="">Showing 5 of 5 records</span></div></div>
+<div class="flex items-center gap-1 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="">Page 1 of 1</span>
+</div>
+</div>
+</div>
+<!-- High-Fidelity Slide-Over Detail Drawer -->
+<aside class="w-[460px] shrink-0 bg-surface-container-lowest rounded-xl shadow-md p-5 flex flex-col gap-5 sticky top-20 max-h-[calc(100vh-100px)] overflow-y-auto" id="inquiry-drawer">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between gap-2 pb-3 bg-surface-container-lowest"><div class="flex flex-col gap-0.5"><span class="font-technical-micro text-technical-micro text-outline uppercase font-semibold">INQUIRY DETAILS</span><span class="font-technical-code text-technical-code text-on-surface font-semibold">DOC_ID: inq_simpeg_deployment_09</span></div><button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-colors" id="btn-close-drawer" type="button"><span class="material-symbols-outlined text-[20px]">close</span></button></div>
+<!-- Status Bar & Transition Dropdown -->
+<div class="bg-surface-container-low p-3 rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-technical-micro text-[10px] text-outline uppercase">Current Lifecycle</span>
+<span class="font-technical-code text-xs font-semibold text-primary-container">NEW / UNREVIEWED</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<select class="bg-surface-container-lowest text-on-surface font-technical-micro text-technical-micro px-2 py-1.5 rounded focus:outline-none cursor-pointer shadow-xs" id="select-status-inline" onchange="triggerStatusSyncToast()">
+<option selected="">New</option>
+<option>Reviewing</option>
+<option>Contacted</option>
+<option>In Discussion</option>
+<option>Converted</option>
+<option>Closed</option>
+</select>
+</div>
+</div>
+<!-- Requester Identity Card -->
+<div class="bg-surface p-3.5 rounded-lg flex flex-col gap-2.5">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Institutional Requester</span>
+<div class="flex flex-col">
+<h2 class="font-h3 text-base text-on-surface font-bold tracking-tight">
+            Dr. Ir. H. Bambang Sujarwo, M.T.
+          </h2>
+<span class="font-body-sm text-xs text-on-surface-variant">Kepala Biro Kepegawaian &amp; TI (Head of Bureau of Civil Service &amp; IT)</span>
+</div>
+<div class="pt-2 flex flex-col gap-1.5 font-technical-micro text-technical-micro">
+<div class="flex items-center justify-between">
+<span class="text-outline">Organization:</span>
+<span class="text-on-surface font-medium text-right">BKPSDM Regional Jawa Timur</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Institutional Domain:</span>
+<span class="text-primary-container font-medium hover:underline cursor-pointer">bambang.sujarwo@jatimprov.go.id</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Phone / WhatsApp:</span>
+<span class="text-on-surface font-medium">+62 812-3344-9821</span>
+</div>
+</div>
+</div>
+<!-- Inquiry Technical Intent -->
+<div class="flex flex-col gap-2">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Technical Scope &amp; Deployment Intent</span>
+<div class="bg-surface p-3.5 rounded-lg flex flex-col gap-2 font-technical-micro text-technical-micro">
+<div class="flex items-center justify-between">
+<span class="text-outline">Referenced Product:</span>
+<span class="text-on-surface font-semibold">SIMPEG Core v2.4 Enterprise</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Deployment Architecture:</span>
+<span class="text-on-surface font-medium">On-Premise Air-Gapped + PG15 Cluster</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Target Rollout:</span>
+<span class="text-on-surface font-medium">Q1 2025 (~4,800 active civil servants)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Fiscal Budget Source:</span>
+<span class="text-on-surface font-medium">APBD FY2025 Bureau Tech Allocation</span>
+</div>
+</div>
+</div>
+<!-- Full Message / Specification Quotation -->
+<div class="flex flex-col gap-1.5">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Raw Inquiry Specification</span>
+<div class="bg-surface-container-low p-3.5 rounded-lg text-on-surface font-body-sm text-xs leading-relaxed">
+          “Selamat pagi Tim Rheva. Kami dari Biro Kepegawaian &amp; TI BKPSDM Jatim bermaksud melakukan peremajaan total terhadap sistem SIMPEG daerah kami yang saat ini berbasis PHP legacy. Kami melihat modul SIMPEG Core yang Anda bangun memiliki audit trail mutasi dan sinkronisasi BKN yang tepat. Kami membutuhkan sesi demo internal serta penandatanganan NDA instansi sebelum melanjutkan ke tahap pengadaan resmi Q1 2025. Mohon jadwal koordinasi teknis via Zoom/luring di Surabaya.”
+        </div>
+</div>
+<!-- Attached Documentation / Procurement Specs -->
+<div class="flex flex-col gap-1.5">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Attachments (Storage gs://)</span>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded bg-status-error/10 text-status-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-xs font-semibold text-on-surface truncate group-hover:text-primary-container">Tor_Pengadaan_Sistem_Kepegawaian_2025.pdf</span>
+<span class="font-technical-micro text-[10px] text-outline">PDF Document · 2.4 MB · SHA-256 Verified</span>
+</div>
+</div>
+<button class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container shrink-0" title="Download Specification" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Internal Admin Notes (Private Superadmin) -->
+<div class="flex flex-col gap-2 pt-2 bg-surface-container-lowest">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Private Internal Notes</span>
+<span class="font-technical-micro text-[10px] text-status-warning bg-status-warning/10 px-1.5 py-0.2 rounded font-medium">SUPERADMIN ONLY</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded font-technical-code text-technical-code text-xs text-on-surface-variant">
+<div class="flex items-center justify-between text-outline font-technical-micro text-[10px] mb-1">
+<span class="">2024-11-20 11:00 WIB</span>
+<span class="">Rheva Iqbal</span>
+</div>
+          Initial technical briefing scheduled with Head of Infrastructure. Shared SIMPEG architecture case study (/projects/simpeg-core). Sent standard institutional NDA draft.
+        </div>
+<div class="relative mt-1">
+<textarea class="w-full p-2.5 rounded bg-surface text-on-surface font-body-sm text-xs placeholder:text-outline focus:outline-none focus:bg-surface-container-low transition-colors" placeholder="Add confidential operational note (never exposed to public site or API endpoints)..." rows="2"></textarea>
+<div class="flex items-center justify-between mt-1">
+<span class="font-technical-micro text-[10px] text-outline">Private superadmin note — Firestore rule locked</span>
+<button class="px-2 py-1 rounded bg-surface-dark text-on-primary font-technical-micro text-technical-micro font-medium hover:bg-black transition-colors" type="button">
+              + Add Note
+            </button>
+</div>
+</div>
+</div>
+<!-- Drawer Action Footer -->
+<div class="pt-3 flex flex-col gap-2 bg-surface-container-lowest">
+<div class="grid grid-cols-2 gap-2">
+<a class="h-9 px-3 rounded bg-primary-container text-on-primary font-body-sm text-xs font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-1.5" href="mailto:bambang.sujarwo@jatimprov.go.id">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span class="">Send Email Reply ↗</span>
+</a>
+<button class="h-9 px-3 rounded bg-surface-container-low text-on-surface font-body-sm text-xs font-medium hover:bg-surface-container transition-colors flex items-center justify-center gap-1.5" onclick="triggerStatusSyncToast('In Discussion')" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span class="">Move: In Discussion</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-outline hover:text-on-surface font-technical-micro text-technical-micro transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">archive</span>
+<span class="">Archive Record</span>
+</button>
+<button class="text-status-error hover:text-status-error/80 font-technical-micro text-technical-micro font-medium transition-colors flex items-center gap-1" onclick="openDeleteModal('inq_simpeg_deployment_09')" type="button">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span class="">Delete Permanently</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Delete Confirmation Modal (Hidden by default, triggered by simulator or actions) -->
+<div class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4" id="modal-delete-inquiry">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl p-5 shadow-xl flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-status-error/10 text-status-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-h3 text-base text-on-surface font-semibold">Delete Inquiry Record?</h3>
+<span class="font-technical-micro text-technical-micro text-outline">DOC_ID: inq_simpeg_deployment_09</span>
+</div>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+        This action is irreversible. The inquiry document will be purged permanently from the <code class="font-technical-code text-on-surface bg-surface-container-low px-1 py-0.5 rounded">inquiries</code> Firestore collection and all associated PDF attachments will be unlinked and purged from Firebase Storage.
+      </p>
+<div class="flex items-center justify-end gap-2 pt-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-low text-on-surface font-technical-micro text-technical-micro font-medium hover:bg-surface-container transition-colors" onclick="closeDeleteModal()" type="button">
+          Cancel
+        </button>
+<button class="px-3.5 py-1.5 rounded bg-status-error text-on-primary font-technical-micro text-technical-micro font-semibold hover:bg-status-error/90 transition-colors flex items-center gap-1" onclick="confirmDelete()" type="button">
+<span class="material-symbols-outlined text-[14px]">delete_forever</span>
+<span class="">Confirm Permanent Deletion</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Status Transition Dialog (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4" id="modal-status-inquiry">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl p-5 shadow-xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">swap_horiz</span>
+<h3 class="font-h3 text-base text-on-surface font-semibold">Update Lifecycle Status</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="closeStatusModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-semibold">Select New State for DOC_ID: inq_simpeg_deployment_09</span>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-2 rounded bg-primary-fixed text-primary-container font-technical-micro text-technical-micro font-semibold text-left" onclick="setStatusFromModal('New')" type="button">
+            ● New / Unreviewed
+          </button>
+<button class="p-2 rounded bg-surface-container-low text-on-surface font-technical-micro text-technical-micro font-medium text-left hover:bg-surface-container" onclick="setStatusFromModal('Reviewing')" type="button">
+            ○ Reviewing Spec
+          </button>
+<button class="p-2 rounded bg-surface-container-low text-on-surface font-technical-micro text-technical-micro font-medium text-left hover:bg-surface-container" onclick="setStatusFromModal('Contacted')" type="button">
+            ○ Contacted Client
+          </button>
+<button class="p-2 rounded bg-surface-container-low text-status-warning font-technical-micro text-technical-micro font-medium text-left hover:bg-surface-container" onclick="setStatusFromModal('In Discussion')" type="button">
+            ○ In Discussion (Tech)
+          </button>
+<button class="p-2 rounded bg-surface-container-low text-status-success font-technical-micro text-technical-micro font-medium text-left hover:bg-surface-container" onclick="setStatusFromModal('Converted')" type="button">
+            ○ Converted / Contract
+          </button>
+<button class="p-2 rounded bg-surface-container-low text-outline font-technical-micro text-technical-micro font-medium text-left hover:bg-surface-container" onclick="setStatusFromModal('Closed')" type="button">
+            ○ Closed / Archived
+          </button>
+</div>
+</div>
+<div class="pt-2 flex justify-end">
+<button class="px-3 py-1.5 rounded bg-surface-container-low text-on-surface font-technical-micro text-technical-micro font-medium" onclick="closeStatusModal()" type="button">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- Realtime Sync Feedback Toast -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-status-sync">
+<div class="bg-surface-dark text-on-primary px-4 py-2.5 rounded-lg shadow-xl flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-status-success animate-ping"></span>
+<div class="flex flex-col">
+<span class="font-body-sm text-xs font-medium" id="toast-message">Status updated to 'In Discussion'</span>
+<span class="font-technical-micro text-[10px] text-text-secondary-dark">Firestore doc synced in 14ms · ID: inq_simpeg_deployment_09</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Slide Drawer Toggles
+  function openDrawer(docId) {
+    const drawer = document.getElementById('inquiry-drawer');
+    if (drawer) {
+      drawer.classList.remove('hidden');
+    }
+  }
+
+  function closeDrawer() {
+    const drawer = document.getElementById('inquiry-drawer');
+    if (drawer) {
+      drawer.classList.add('hidden');
+    }
+  }
+
+  const btnCloseDrawer = document.getElementById('btn-close-drawer');
+  if (btnCloseDrawer) {
+    btnCloseDrawer.addEventListener('click', closeDrawer);
+  }
+
+  // Simulator Buttons Handlers
+  const btnToggleDrawer = document.getElementById('btn-toggle-drawer');
+  if (btnToggleDrawer) {
+    btnToggleDrawer.addEventListener('click', () => {
+      const drawer = document.getElementById('inquiry-drawer');
+      if (drawer) drawer.classList.toggle('hidden');
+    });
+  }
+
+  const btnStateActive = document.getElementById('btn-state-active');
+  const btnStateSelected = document.getElementById('btn-state-selected');
+  const btnStateSkeleton = document.getElementById('btn-state-skeleton');
+  const btnStateEmpty = document.getElementById('btn-state-empty');
+  const btnStateError = document.getElementById('btn-state-error');
+
+  const viewActiveTable = document.getElementById('view-active-table');
+  const viewSkeleton = document.getElementById('view-skeleton-state');
+  const viewEmpty = document.getElementById('view-empty-state');
+  const viewError = document.getElementById('view-error-state');
+
+  function resetAllViews() {
+    viewActiveTable.classList.add('hidden');
+    viewSkeleton.classList.add('hidden');
+    viewEmpty.classList.add('hidden');
+    viewError.classList.add('hidden');
+  }
+
+  if (btnStateActive) {
+    btnStateActive.addEventListener('click', () => {
+      resetAllViews();
+      viewActiveTable.classList.remove('hidden');
+    });
+  }
+
+  if (btnStateSelected) {
+    btnStateSelected.addEventListener('click', () => {
+      resetAllViews();
+      viewActiveTable.classList.remove('hidden');
+      openDrawer('inq_simpeg_deployment_09');
+    });
+  }
+
+  if (btnStateSkeleton) {
+    btnStateSkeleton.addEventListener('click', () => {
+      resetAllViews();
+      viewSkeleton.classList.remove('hidden');
+    });
+  }
+
+  if (btnStateEmpty) {
+    btnStateEmpty.addEventListener('click', () => {
+      resetAllViews();
+      viewEmpty.classList.remove('hidden');
+    });
+  }
+
+  if (btnStateError) {
+    btnStateError.addEventListener('click', () => {
+      resetAllViews();
+      viewError.classList.remove('hidden');
+    });
+  }
+
+  // Modal Dialogs Handlers
+  function openDeleteModal(docId) {
+    const modal = document.getElementById('modal-delete-inquiry');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeDeleteModal() {
+    const modal = document.getElementById('modal-delete-inquiry');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function confirmDelete() {
+    closeDeleteModal();
+    triggerStatusSyncToast('Inquiry Purged from Firestore');
+  }
+
+  function openStatusModal(docId) {
+    const modal = document.getElementById('modal-status-inquiry');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeStatusModal() {
+    const modal = document.getElementById('modal-status-inquiry');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function setStatusFromModal(newStatus) {
+    closeStatusModal();
+    triggerStatusSyncToast(newStatus);
+  }
+
+  const btnTriggerStatusModal = document.getElementById('btn-trigger-status-modal');
+  if (btnTriggerStatusModal) {
+    btnTriggerStatusModal.addEventListener('click', () => openStatusModal());
+  }
+
+  const btnTriggerDeleteModal = document.getElementById('btn-trigger-delete-modal');
+  if (btnTriggerDeleteModal) {
+    btnTriggerDeleteModal.addEventListener('click', () => openDeleteModal());
+  }
+
+  // Realtime Toast Simulation
+  function triggerStatusSyncToast(statusText) {
+    const toast = document.getElementById('toast-status-sync');
+    const msg = document.getElementById('toast-message');
+    if (statusText && msg) {
+      msg.textContent = `Status updated to '${statusText}'`;
+    }
+    if (toast) {
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+  }
+
+  // Keyboard shortcut listener (Cmd+K / Ctrl+K focus search)
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      const search = document.getElementById('filter-search');
+      if (search) {
+        e.preventDefault();
+        search.focus();
+      }
+    }
+    if (e.key === 'Escape') {
+      closeDrawer();
+      closeDeleteModal();
+      closeStatusModal();
+    }
+  });
+</script></div></main></div>
+
+</body></html>

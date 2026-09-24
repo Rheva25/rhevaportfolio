@@ -1,0 +1,988 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"status-success":"#10B981","surface-bright":"#f8f9fa","primary":"#004ac6","primary-fixed":"#dbe1ff","on-surface":"#191c1d","accent-dark":"#3B82F6","border-light":"#E5E7EB","on-secondary-fixed":"#1c1b1b","tertiary-fixed-dim":"#c0c7d6","on-tertiary":"#ffffff","inverse-primary":"#b4c5ff","tertiary-fixed":"#dce2f3","surface-light":"#FFFFFF","surface-dark":"#111111","text-primary-dark":"#F5F5F5","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","secondary-fixed":"#e5e2e1","secondary-fixed-dim":"#c8c6c5","inverse-surface":"#2e3132","outline-variant":"#c3c6d7","on-error-container":"#93000a","surface-container":"#edeeef","surface":"#f8f9fa","on-secondary-container":"#656464","primary-container":"#2563eb","border-dark":"#27272A","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","outline":"#737686","on-secondary":"#ffffff","secondary-container":"#e5e2e1","on-secondary-fixed-variant":"#474646","surface-container-high":"#e7e8e9","status-warning":"#F59E0B","on-tertiary-container":"#eaf0ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#666d7b","on-tertiary-fixed-variant":"#404754","bg-dark":"#0A0A0A","on-surface-variant":"#434655","on-tertiary-fixed":"#151c27","surface-dim":"#d9dadb","on-background":"#191c1d","error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-tint":"#0053db","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e3e4","inverse-on-surface":"#f0f1f2","on-primary":"#ffffff","secondary":"#5f5e5e","on-error":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","surface-container-low":"#f3f4f5","surface-variant":"#e1e3e4","status-error":"#EF4444"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem",margin:"2rem","gutter-mobile":"1rem","space-lg":"1.5rem",gutter:"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem"},fontFamily:{"h1-mobile":["Geist"],h3:["Geist"],"h2-mobile":["Geist"],"technical-tag":["JetBrains Mono"],"display-mobile":["Geist"],"technical-code":["JetBrains Mono"],body:["Inter"],"body-sm":["Inter"],display:["Geist"],h2:["Geist"],"technical-micro":["JetBrains Mono"],"body-large":["Inter"],h1:["Geist"]},fontSize:{"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body text-body text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></a></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-surface-container-high text-on-surface font-technical-code"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-technical-code" data-path="apps" href="#">Apps</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="articles" href="#">Articles</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2 rounded-xl bg-primary-container text-on-primary font-technical-code text-technical-code shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-colors" data-path="contact" href="#">Let's Talk</a><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- 1. Breadcrumb & Meta Strip -->
+<section class="w-full bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin py-space-sm flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm">
+<nav class="flex items-center gap-space-xs font-technical-code text-technical-code text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" data-path="home" href="#">home</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-on-surface transition-colors" data-path="apps" href="#">apps</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface">simpeg-core</span>
+</nav>
+<div class="flex flex-wrap items-center gap-space-xs font-technical-micro text-technical-micro">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase">
+          Catalog: Packaged Software
+        </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase">Deployment: Self-Hosted &amp; On-Premise</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-technical-tag text-technical-tag">
+<span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>
+          Available for Licensing
+        </span>
+</div>
+</div>
+</section>
+<!-- 2. Product Hero -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Enterprise Workforce &amp; Personnel Software</span>
+<span class="text-outline-variant">•</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">v2.4.1 Production</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight">SIMPEG Core</h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl leading-relaxed">
+            Institutional faculty workforce management, civil service credential records, and automated tenure credit audit platform engineered for regional educational networks, polytechnics, and vocational institutions.
+          </p>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-technical-code text-technical-code text-on-surface">
+<span class="w-2 h-2 rounded-full bg-status-success inline-block"></span>
+              Ready for Managed or Self-Hosted Deployment
+            </span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm">
+<a class="inline-flex items-center justify-center px-space-lg py-2.5 rounded-xl bg-primary-container text-on-primary font-technical-code text-technical-code shadow-sm hover:bg-primary transition-colors" href="#licensing">Contact for Deployment</a>
+<a class="inline-flex items-center justify-center px-space-lg py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors shadow-sm" href="#contact-inquiry">
+            Schedule Architecture Walkthrough
+          </a>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-technical-code text-technical-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+<a class="text-primary hover:underline" href="#specifications">Explore Documentation &amp; Schema Specs ↗</a>
+<span class="text-outline-variant">•</span>
+<span class="">Checksum: <code class="text-on-surface">sha256:d8a9e4f2</code></span>
+</div>
+<!-- High Density Product Hero Interface Preview -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-md overflow-hidden">
+<!-- Top window bar -->
+<div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-status-error/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-warning/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-status-success/80 inline-block"></span>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant px-2 py-0.5 rounded bg-surface-container-lowest">https://simpeg.polytek.internal</span>
+</div>
+<div class="flex items-center gap-space-md font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="">Campus: <strong class="text-on-surface">Politeknik Negeri Jakarta</strong></span>
+<span class="">Role: <strong class="text-on-surface">Super-Admin / Kepegawaian</strong></span>
+<span class="px-2 py-0.5 rounded bg-status-success/10 text-status-success font-technical-code">Live Node 01</span>
+</div>
+</div>
+<!-- Inside Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+<!-- Left Mini-Nav -->
+<div class="lg:col-span-2 bg-surface-container-low p-space-sm flex flex-col justify-between">
+<div class="flex flex-col gap-1">
+<div class="px-3 py-2 text-xs font-technical-tag uppercase text-on-surface-variant">Core Modules</div>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-technical-code text-technical-code" href="javascript:void(0)">
+<span class="material-symbols-outlined text-[18px]">folder_shared</span>
+<span class="">Dossiers</span>
+</a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-technical-code text-technical-code transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+<span class="">Credit Points (PAK)</span>
+</a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-technical-code text-technical-code transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="">SK Credential Matrix</span>
+</a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-technical-code text-technical-code transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span class="">Audit Logs</span>
+</a>
+<a class="flex items-center gap-2 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-technical-code text-technical-code transition-colors" href="javascript:void(0)">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span class="">Export &amp; BKN Synchro</span>
+</a>
+</div>
+<div class="p-3 bg-surface-container rounded-lg flex flex-col gap-1 text-xs">
+<span class="font-technical-tag uppercase text-on-surface-variant">DB Status</span>
+<span class="font-technical-code text-technical-code text-on-surface">Firestore Cluster 01</span>
+<span class="text-on-surface-variant">Latency: 18ms</span>
+</div>
+</div>
+<!-- Main Queue Table View -->
+<div class="lg:col-span-7 p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface">Faculty Credential Verification Queue</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reviewing pending civil service promotion submissions (Batch Semester Ganjil 2024/2025)</p>
+</div>
+<span class="font-technical-code text-technical-code px-2.5 py-1 rounded bg-surface-container text-on-surface">3 Action Items</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-technical-tag uppercase">
+<th class="py-2.5 px-3">NIP / Identity</th>
+<th class="py-2.5 px-3">Faculty Name</th>
+<th class="py-2.5 px-3">Rank / Golongan</th>
+<th class="py-2.5 px-3">Digital Records</th>
+<th class="py-2.5 px-3">Status</th>
+<th class="py-2.5 px-3 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-technical-code text-technical-code">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3 text-on-surface">198403152008121002</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-semibold">Dr. Ir. Hendra Prasetyo, M.T.</td>
+<td class="py-3 px-3 text-on-surface">IV/a (Pembina)</td>
+<td class="py-3 px-3 text-on-surface-variant">14 Proof Files</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-status-success/15 text-status-success font-technical-micro">Verified</span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">View Dossier</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3 text-on-surface">199108222019032014</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-semibold">Siti Nurhaliza, S.Kom., M.Cs.</td>
+<td class="py-3 px-3 text-on-surface">III/c (Penata)</td>
+<td class="py-3 px-3 text-on-surface-variant">9 Proof Files</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-status-warning/15 text-status-warning font-technical-micro">Pending Review</span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary hover:bg-primary-container transition-colors">Audit &amp; Sign</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3 text-on-surface">198711042014041001</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface font-semibold">Bambang Wicaksono, M.Eng.</td>
+<td class="py-3 px-3 text-on-surface">III/d (Penata Tk. I)</td>
+<td class="py-3 px-3 text-on-surface-variant">6 Proof Files</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded-full bg-status-error/15 text-status-error font-technical-micro">Revision Flagged</span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Review Note</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Metrics Footer Bar -->
+<div class="mt-auto pt-space-sm grid grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded-xl"><div><span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Enrolled Dossiers</span><p class="font-h3 text-h3 text-on-surface">1,482</p></div><div><span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Active Batch Queue</span><p class="font-h3 text-h3 text-on-surface">3 Submissions</p></div><div><span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Validation State</span><p class="font-h3 text-h3 text-status-success">Audit Synced</p></div></div>
+</div>
+<!-- Right Telemetry Card -->
+<div class="lg:col-span-3 bg-surface-container p-space-md flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Engine Telemetry</span>
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1.5 shadow-sm">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Calculation Rule</span>
+<span class="font-technical-code text-technical-code font-semibold text-on-surface">PermenPAN-RB No. 1 / 2023</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero Calculation Drift. Deterministic float round precision algorithm locked.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1.5 shadow-sm">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Integrity Ledger</span>
+<span class="font-technical-code text-technical-code font-semibold text-on-surface">Cryptographic Hash Verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every SK modification hashes previous state snapshot into tamper-evident log.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex flex-col gap-1.5 shadow-sm">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Backend Stack</span>
+<span class="font-technical-code text-technical-code font-semibold text-on-surface">Node.js + Cloud Firestore</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Native real-time subscriptions, sub-millisecond document query caching.</p>
+</div>
+</div>
+<div class="pt-space-sm">
+<div class="flex items-center justify-between text-xs font-technical-code text-on-surface-variant">
+<span class="">Memory Allocation</span>
+<span class="">214 MB / 1024 MB</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1.5">
+<div class="bg-primary h-full w-[21%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Product Overview & Who It Is For -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Architecture Baseline</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Engineered for Academic Bureaucracy at Scale</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<span class="font-technical-tag text-technical-tag uppercase text-primary">What It Is</span>
+<h3 class="font-h3 text-h3 text-on-surface">Turnkey Self-Hosted Personnel Engine</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            A specialized, self-hosted web application for managing institutional faculty dossiers, civil service rank mutations, and credit point (Angka Kredit) calculations without bloated general ERP overhead.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Who It Is Designed For</span>
+<h3 class="font-h3 text-h3 text-on-surface">Vocational &amp; State Institutions</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Vocational polytechnics, regional universities, state institute registrars, and faculty administration departments burdened with manual paper-driven approvals and multi-committee validations.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">sync_problem</span>
+</div>
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Core Problem Solved</span>
+<h3 class="font-h3 text-h3 text-on-surface">Eliminates Spreadsheet Drift</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Eliminates multi-campus spreadsheet de-synchronization, untracked dossier revisions, and months-long calculation backlogs prior to strict civil service certification deadlines.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Key Practical Benefits -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Operational Advantage</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Built Around Real Institutional Realities</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Designed specifically to prevent institutional lock-in while preserving deterministic regulatory compliance.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-technical-code text-technical-code text-primary font-semibold">01. Code Sovereignty</span>
+<h3 class="font-h3 text-h3 text-on-surface">Zero Vendor Lock-in</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Delivered with complete TypeScript source code, strict Dockerfile deployment blueprints, and direct database access. No runtime phone-home licenses.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant uppercase pt-space-xs">
+            Full source code handover
+          </div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-technical-code text-technical-code text-primary font-semibold">02. Calculation Engine</span>
+<h3 class="font-h3 text-h3 text-on-surface">Deterministic Credit Point (PAK)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Algorithmic point evaluation rules built directly to national educational ministry standards, eliminating manual rounding disputes and submission rejections.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant uppercase pt-space-xs">
+            Ministry-spec calculation rules
+          </div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-technical-code text-technical-code text-primary font-semibold">03. Tenant Isolation</span>
+<h3 class="font-h3 text-h3 text-on-surface">Campus Isolation Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Independent campus department registries with consolidated regional oversight. Department verifiers only access dossiers within their designated operational scope.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant uppercase pt-space-xs">
+            Multi-department scoping
+          </div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-technical-code text-technical-code text-primary font-semibold">04. Audit Trails</span>
+<h3 class="font-h3 text-h3 text-on-surface">Cryptographic Traceability</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every credential submission, signature mutation, and promotion approval is cryptographically logged for civil inspector and national board audits.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant uppercase pt-space-xs">
+            Tamper-evident event logs
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Core Product Capabilities & Features -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">System Capabilities</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Engineered for Verifiable Personnel Governance</h2>
+<p class="font-body text-body text-on-surface-variant mt-2">Every feature is designed around verified civil records and multi-stakeholder operational compliance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<span class="font-technical-micro text-technical-micro uppercase text-on-surface-variant px-2.5 py-1 rounded-full bg-surface-container">Module 01</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Automated Digital Dossier Verification</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Multi-tier approval pipeline with instant high-resolution PDF preview, automated institutional watermark stamps, and file integrity SHA-256 checksums to guarantee zero tampering.
+          </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-1.5 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Side-by-side verification review interface
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Automated institutional watermark rendering
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Client &amp; server MIME-type validation
+            </li>
+</ul>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<span class="font-technical-micro text-technical-micro uppercase text-on-surface-variant px-2.5 py-1 rounded-full bg-surface-container">Module 02</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Tenure &amp; Angka Kredit (PAK) Engine</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Real-time credit score accumulation tracking teaching (Tridharma), research publications, patents, and community service milestones with instant threshold alerts.
+          </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-1.5 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Configurable sub-element weighting matrix
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Automatic cap and ceiling limit checks
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              One-click Angka Kredit summary certification sheet
+            </li>
+</ul>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">badge</span>
+</div>
+<span class="font-technical-micro text-technical-micro uppercase text-on-surface-variant px-2.5 py-1 rounded-full bg-surface-container">Module 03</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Civil Service (SK) Rank Mutation Registry</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Structured lifecycle tracking of official promotion decrees (Surat Keputusan), salary grade increments, functional title advancements, and periodic periodic rank notifications.
+          </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-1.5 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Automated TMT (Terhitung Mulai Tanggal) alert triggers
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Historical decree versioning &amp; superseded record archives
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              BKN / SIASN compliant data export formats
+            </li>
+</ul>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">admin_panel_settings</span>
+</div>
+<span class="font-technical-micro text-technical-micro uppercase text-on-surface-variant px-2.5 py-1 rounded-full bg-surface-container">Module 04</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Granular Role-Based Access Control (RBAC)</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Independent operator consoles for campus verifiers, department chairs, deans, senate review boards, and central institutional kepegawaian auditors.
+          </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-1.5 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Strict departmental data segregation rules
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Immutable cryptographic audit logs for every state change
+            </li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+              Delegated assessment privilege with time locks
+            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Interface Showcase / Application Flow -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Interface Architecture</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Designed for High-Volume Data Processing</h2>
+</div>
+<div class="flex p-1 bg-surface-container-high rounded-xl font-technical-code text-technical-code" id="interface-tabs">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-semibold transition-all" data-tab="tab-dossier">
+            Review Console
+          </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-tab="tab-pak">
+            Credit Projection
+          </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-tab="tab-audit">
+            Audit Trail
+          </button>
+</div>
+</div>
+<!-- Tab 1: Faculty Dossier Review Console -->
+<div class="tab-panel flex flex-col gap-space-md" id="tab-dossier-content">
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="font-technical-code text-technical-code text-on-surface font-semibold">Dossier: SK-LEKTOR-KEP-2024-089.pdf</span>
+<span class="px-2 py-0.5 rounded bg-status-success/15 text-status-success font-technical-micro">MIME Verified</span>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">Operator: Hendra Pratama (Verifier Jurusan TI)</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md min-h-[380px]">
+<!-- Split Pane 1: Document View -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-md flex flex-col items-center justify-center text-center relative overflow-hidden">
+<div class="w-full h-full p-space-lg flex flex-col items-center justify-center bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[48px] text-primary">description</span>
+<span class="font-technical-code text-technical-code font-semibold text-on-surface mt-space-xs">KEPUTUSAN MENTERI PENDIDIKAN, KEBUDAYAAN, RISET, DAN TEKNOLOGI</span>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant max-w-sm mt-1">
+                  Nomor: 08129/D3/KP.07.00/2024 Tentang Kenaikan Jabatan Akademik Dosen Lektor Kepala ke Guru Besar
+                </p>
+<div class="mt-space-md flex items-center gap-space-sm font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="">SHA-256: 7f83b165...</span>
+<span class="text-status-success font-semibold">• Watermark: Verified POLITEKNIK NEGERI JAKARTA</span>
+</div>
+</div>
+</div>
+<!-- Split Pane 2: Review Checklist Form -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-sm bg-surface-container-low p-space-md rounded-xl">
+<div class="flex flex-col gap-space-sm">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Validation Checklist</span>
+<label class="flex items-start gap-space-xs text-xs font-body-sm text-body-sm text-on-surface">
+<input checked="" class="mt-1 rounded text-primary" disabled="" type="checkbox">
+<span class="">Validitas NIP &amp; Nama Lengkap sesuai PDDikti &amp; BKN Master Ledger</span>
+</label>
+<label class="flex items-start gap-space-xs text-xs font-body-sm text-body-sm text-on-surface">
+<input checked="" class="mt-1 rounded text-primary" disabled="" type="checkbox">
+<span class="">Kesesuaian TMT Jabatan Fungsional Terakhir (≥ 2 Tahun Pengabdian)</span>
+</label>
+<label class="flex items-start gap-space-xs text-xs font-body-sm text-body-sm text-on-surface">
+<input checked="" class="mt-1 rounded text-primary" disabled="" type="checkbox">
+<span class="">Pemenuhan Angka Kredit Khusus (Jurnal Terakreditasi SINTA 2 / Scopus)</span>
+</label>
+<label class="flex items-start gap-space-xs text-xs font-body-sm text-body-sm text-on-surface">
+<input checked="" class="mt-1 rounded text-primary" disabled="" type="checkbox">
+<span class="">Surat Rekomendasi Senat Akademik Politeknik Tersedia &amp; Sah</span>
+</label>
+<div class="mt-space-xs">
+<span class="font-technical-micro text-technical-micro uppercase text-on-surface-variant block mb-1">Verifier Comment &amp; Endorsement</span>
+<div class="p-2.5 rounded bg-surface-container-lowest font-technical-code text-technical-code text-on-surface text-xs">
+                    "Semua berkas bukti fisik publikasi ilmiah telah diverifikasi silang dengan portal SINTA dan database Scopus ID 572019482. Direkomendasikan persetujuan."
+                  </div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 py-2 px-3 rounded-lg bg-status-success text-on-primary font-technical-code text-technical-code text-xs font-semibold">
+                  Approve &amp; Sign Verification
+                </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-technical-code text-technical-code text-xs">
+                  Flag Revisions
+                </button>
+</div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Dual-Pane Review Workflow:</strong> Operators inspect submitted institutional certificates alongside structured verification checklist rules with real-time hash stamping.
+        </p>
+</div>
+<!-- Tab 2: Tenure Credit Projection Dashboard -->
+<div class="tab-panel hidden flex flex-col gap-space-md" id="tab-pak-content">
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden p-space-md flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-sm">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Pendidikan (Bidang A)</span>
+<span class="font-h3 text-h3 text-on-surface">142.5 / 150.0</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-primary h-full w-[95%]"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Penelitian (Bidang B)</span>
+<span class="font-h3 text-h3 text-on-surface">210.0 / 200.0</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-status-success h-full w-[100%]"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Pengabdian (Bidang C)</span>
+<span class="font-h3 text-h3 text-on-surface">35.0 / 30.0</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-status-success h-full w-[100%]"></div>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Penunjang (Bidang D)</span>
+<span class="font-h3 text-h3 text-on-surface">24.0 / 20.0</span>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-status-success h-full w-[100%]"></div>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Tenure Threshold Status</span>
+<span class="font-technical-code text-technical-code text-status-success font-semibold">Promotion Eligible: Lektor Kepala (400 AK Baseline)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Accumulated Total: <strong class="text-on-surface">411.5 Angka Kredit</strong>. Exceeds statutory threshold for Golongan IV/a. Next promotion window open for Senat review.
+            </p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Interactive Category Breakdown:</strong> Instant visual monitoring of Tridharma credit points relative to national statutory baselines.
+        </p>
+</div>
+<!-- Tab 3: Institutional Audit & Mutation Trail -->
+<div class="tab-panel hidden flex flex-col gap-space-md" id="tab-audit-content">
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between font-technical-tag text-technical-tag text-on-surface-variant uppercase pb-space-xs">
+<span class="">Chronological Mutation Ledger</span>
+<span class="">Tamper Check: Passed (Zero drift)</span>
+</div>
+<div class="flex flex-col gap-2 font-technical-code text-technical-code text-xs">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-semibold">2025-02-14 09:41:22</span>
+<span class="text-on-surface">MUTATION_APPROVED</span>
+<span class="text-on-surface-variant">NIP: 198403152008121002 → Golongan IV/a</span>
+</div>
+<span class="text-on-surface-variant">IP: 10.20.1.44 [Session: k8_s991]</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-semibold">2025-02-14 08:15:09</span>
+<span class="text-on-surface">DOCUMENT_VERIFIED</span>
+<span class="text-on-surface-variant">SK Jabatan Fungsional Guru Besar</span>
+</div>
+<span class="text-on-surface-variant">IP: 10.20.1.18 [Session: a3_m120]</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-semibold">2025-02-13 16:22:40</span>
+<span class="text-on-surface">CREDIT_REEVALUATED</span>
+<span class="text-on-surface-variant">Bidang B added +15.0 AK (Scopus Q1 Paper)</span>
+</div>
+<span class="text-on-surface-variant">IP: 10.20.2.91 [Session: p9_x443]</span>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong>Immutable Audit Trail:</strong> Real-time chronological audit trail capturing actor signatures, network origin IPs, and state differentials.
+        </p>
+</div>
+</div>
+</section>
+<!-- 7. How It Works (Standard 4-Step Operational Flow) -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Operational Lifecycle</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Deployment to Certified Audit in 4 Steps</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-technical-code text-technical-code font-bold flex items-center justify-center">
+            01
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface">Tenant Setup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Deploy via Docker container or connect to managed Firestore instances. Seed institutional departments, academic ranks, and operator access profiles.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-technical-code text-technical-code font-bold flex items-center justify-center">
+            02
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface">Roster Ingestion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Batch-import civil personnel rosters via validated CSV/JSON pipelines. Seed historical decrees, current functional titles, and baseline credit scores.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-technical-code text-technical-code font-bold flex items-center justify-center">
+            03
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface">Verification Review</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Faculty members upload physical proofs via mobile or desktop. Designated campus verifiers review against ministry standards using structured checklist tools.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary font-technical-code text-technical-code font-bold flex items-center justify-center">
+            04
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface">Certified Export</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Generate compliant summary dossiers, promotion nomination sheets, and official BKN / SIASN integration data packages with cryptographic verification stamps.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Technical & Deployment Specifications -->
+<section class="w-full bg-surface py-space-xl" id="specifications">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">System Engineering Specs</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Production Architecture Matrix</h2>
+<p class="font-body text-body text-on-surface-variant mt-2">Zero bloated third-party runtimes. Pure standards-based JavaScript and containerized execution.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs font-technical-code text-technical-code text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+<span class="">Execution &amp; Infrastructure Runtime</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface">
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Deployment Models</strong>
+<span class="">Self-Hosted Docker / Node.js 18+ LTS runtime, or Fully Managed Cloud Deployment on Vercel + Google Cloud Platform.</span>
+</div>
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Database Compatibility</strong>
+<span class="">Google Cloud Firestore (native real-time subscription engine) or relational PostgreSQL schema via provided Prisma ORM adapter.</span>
+</div>
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Application Architecture</strong>
+<span class="">Next.js 14 App Router, TypeScript, Tailwind CSS, shadcn/ui components, strict end-to-end typed API routes.</span>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs font-technical-code text-technical-code text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+<span class="">Security &amp; Institutional Governance</span>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface">
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Telemetry &amp; Tracking</strong>
+<span class="">Zero external tracking scripts, zero advertising tags, zero third-party phone-home telemetry. 100% sovereign network footprint.</span>
+</div>
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Integrity Verification</strong>
+<span class="">SHA-256 asset checksum calculation, strict client and server MIME inspection, automated digital watermark injection.</span>
+</div>
+<div>
+<strong class="font-technical-tag uppercase text-on-surface-variant block mb-0.5">Institutional Requirements</strong>
+<span class="">HTTPS custom domain, standard SMTP gateway (optional for notifications), standard modern web browser (Chrome, Edge, Safari, Firefox).</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Product Licensing & Access Tiers -->
+<section class="w-full bg-surface-container-lowest py-space-xl" id="licensing">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Licensing &amp; Access</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Product Access &amp; Deployment Model</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Full source access, containerized on-premise infrastructure, and dedicated deployment support for educational institutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Tier 1: Single Campus Perpetual License -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Standard License</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-micro">Self-Hosted</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Direct Institutional Deployment</h3>
+<div class="flex items-baseline gap-1 mt-space-xs">
+<span class="font-h1 text-h1 text-on-surface">$499</span>
+<span class="font-technical-code text-technical-code text-on-surface-variant">Single Institution</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Complete source code ownership for a single polytechnic or higher education campus deployment.
+            </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-2 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Full TypeScript Next.js source code
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Production Dockerfile &amp; migration scripts
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Single institutional deployment rights
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                12 months critical security patch updates
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 rounded-xl bg-primary-container text-on-primary text-center font-technical-code text-technical-code hover:bg-primary transition-colors" href="#contact-inquiry">Request Access</a>
+</div>
+<!-- Tier 2: Multi-Campus Consortium Deployment -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Enterprise Network</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-technical-micro">Consortium</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Custom Multi-Campus Scope</h3>
+<div class="flex items-baseline gap-1 mt-space-xs">
+<span class="font-h1 text-h1 text-on-surface">Custom</span>
+<span class="font-technical-code text-technical-code text-on-surface-variant">Scope-Based</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Tailored for university networks, regional polytechnic consortiums, or regional ministry directorates.
+            </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-2 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Multi-tenant campus federation setup
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Custom schema &amp; BKN integration adaptation
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                On-site engineering team walkthrough
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Custom SLA &amp; dedicated technical guidance
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 rounded-xl bg-on-surface text-surface text-center font-technical-code text-technical-code hover:opacity-90 transition-opacity" href="#contact-inquiry">Contact for Deployment</a>
+</div>
+<!-- Tier 3: Managed Institutional Cloud -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Fully Hosted</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-micro">SaaS Managed</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Managed Cloud Deployment</h3>
+<div class="flex items-baseline gap-1 mt-space-xs">
+<span class="font-h1 text-h1 text-on-surface">Inquire</span>
+<span class="font-technical-code text-technical-code text-on-surface-variant">Annual Service</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Rheva handles infrastructure provisioning, automated encrypted backups, and version maintenance.
+            </p>
+<ul class="font-technical-code text-technical-code text-on-surface-variant flex flex-col gap-2 pt-space-xs">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                High-availability GCP/Firestore hosting
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Automated daily off-site snapshot backups
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                99.9% uptime institutional SLA
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-success">check</span>
+                Continuous version &amp; regulatory updates
+              </li>
+</ul>
+</div>
+<a class="w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest text-on-surface text-center font-technical-code text-technical-code hover:bg-surface-container transition-colors shadow-sm" href="#contact-inquiry">Request Access</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Product Frequently Asked Questions (FAQ) -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="max-w-2xl">
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Procurement &amp; Technical Questions</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Frequently Asked Questions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">What exactly is delivered upon purchasing a commercial license?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            You receive the complete, readable Next.js 14 and TypeScript codebase, database seed and schema migration scripts, a ready-to-run Dockerfile configuration, comprehensive architecture documentation, and 12 months of critical patch releases.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Can our internal IT team modify and extend the application?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. You have full code ownership of your deployed instance. There are zero obfuscated binaries, proprietary compile steps, or phone-home telemetry locks. Your developers can tailor fields and approval steps directly.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Does SIMPEG Core require an active internet connection?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            No. It can run in air-gapped institutional intranet topologies with a localized PostgreSQL database or within private institutional cloud instances behind strict VPN perimeters.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">How are data migrations handled from legacy spreadsheets?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The software ships with an automated CLI utility that parses, normalizes, and ingests standard Excel and CSV personnel records into structured collections with instant schema validation reports.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Is technical onboarding or staff training included?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            The single campus license includes complete written administrative guides and architectural schematics. Bespoke staff training workshops or assisted data migration can be scheduled as part of a custom deployment contract.
+          </p>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xs">
+<h3 class="font-h3 text-h3 text-on-surface">How does licensing work for state polytechnics with procurement rules?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            We regularly accommodate formal institutional procurement processes, including official commercial invoices, tax documentation (Faktur Pajak via authorized entity), and formal software delivery sign-offs.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. Related Packaged Applications -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Related Software Products</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Complementary Packaged Applications</h2>
+</div>
+<a class="font-technical-code text-technical-code text-primary hover:underline" data-path="apps" href="#">
+          View All Software Catalog ↗
+        </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Workforce • Mobile</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-micro">Custom Deployment</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Presensi PPPK Portal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Geofenced mobile web check-in portal with biometric audit logging engineered for civil contract personnel and off-site vocational instructors.
+            </p>
+</div>
+<a class="font-technical-code text-technical-code text-primary hover:underline" data-path="apps" href="#">View Product Details →</a>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Infrastructure • Web</span>
+<span class="px-2 py-0.5 rounded-full bg-status-success/15 text-status-success font-technical-micro">Available ($249)</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Pulse CMS Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Headless content engine with instant edge cache invalidation, Markdown pipelines, and Git-backed media management.
+            </p>
+</div>
+<a class="font-technical-code text-technical-code text-primary hover:underline" data-path="apps" href="#">View Product Details →</a>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase">Academic • Scheduling</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-micro">In Development</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">EduSchedule Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Algorithmic timetable constraint solver handling classroom collisions, faculty preferences, and laboratory room allocations.
+            </p>
+</div>
+<a class="font-technical-code text-technical-code text-primary hover:underline" data-path="apps" href="#">Join Notification List →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Final Conversion Call-to-Action -->
+<section class="w-full bg-surface py-space-xl" id="contact-inquiry">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="p-space-xl rounded-3xl bg-surface-container-lowest shadow-md flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<span class="font-technical-tag text-technical-tag uppercase text-primary">Institutional Procurement</span>
+<h2 class="font-h2 text-h2 text-on-surface">Deploy SIMPEG Core in Your Educational Institution</h2>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            Have specific campus integration requirements, legacy records to migrate, or procurement questions? Let's discuss a deployment plan tailored to your operational timeline.
+          </p>
+<div class="flex items-center gap-space-xs pt-space-xs text-xs font-technical-micro text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="">Direct consultation with lead engineer • Response guaranteed within 24 hours</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm w-full md:w-auto">
+<a class="inline-flex items-center justify-center px-space-lg py-3 rounded-xl bg-primary-container text-on-primary font-technical-code text-technical-code shadow-sm hover:bg-primary transition-colors text-center" data-path="contact" href="#">Contact for Deployment</a>
+<a class="inline-flex items-center justify-center px-space-lg py-3 rounded-xl bg-surface-container-low text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors text-center" data-path="contact" href="#">Request Access</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('#interface-tabs button');
+    const panels = {
+      'tab-dossier': document.getElementById('tab-dossier-content'),
+      'tab-pak': document.getElementById('tab-pak-content'),
+      'tab-audit': document.getElementById('tab-audit-content')
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+
+        tabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+          t.classList.add('text-on-surface-variant');
+        });
+
+        tab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm', 'font-semibold');
+        tab.classList.remove('text-on-surface-variant');
+
+        Object.keys(panels).forEach(key => {
+          if (panels[key]) {
+            if (key === target) {
+              panels[key].classList.remove('hidden');
+            } else {
+              panels[key].classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rheva Iqbal Abdillah, Software Engineer building practical digital systems, production architectures, and developer-first applications.</p></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Platform Routes</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Apps Catalog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Engineering Services</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="articles" href="#">Technical Articles</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About &amp; Experience</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Architecture &amp; Stack</span><div class="flex flex-col gap-space-xs font-technical-code text-technical-code text-on-surface-variant"><span class="hover:text-on-surface">TypeScript / Go runtime</span><span class="hover:text-on-surface">PostgreSQL &amp; Redis storage</span><span class="hover:text-on-surface">Distributed microservices</span><span class="hover:text-on-surface">Tailwind / Headless design</span><span class="hover:text-on-surface">CI/CD verified deployments</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Connect &amp; Links</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Start Consultation</a><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Source Repository</span><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Professional Profile</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-status-success"></div><span class="font-technical-micro text-technical-micro text-on-surface-variant">Systems Operational • Verified Deployment</span></div><p class="font-technical-micro text-technical-micro text-on-surface-variant">© 2025 Rheva Iqbal Abdillah. All rights reserved.</p></div></div></footer>
+
+</body></html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"status-success":"#10B981","surface-bright":"#f8f9fa","primary":"#004ac6","primary-fixed":"#dbe1ff","on-surface":"#191c1d","accent-dark":"#3B82F6","border-light":"#E5E7EB","on-secondary-fixed":"#1c1b1b","tertiary-fixed-dim":"#c0c7d6","on-tertiary":"#ffffff","inverse-primary":"#b4c5ff","tertiary-fixed":"#dce2f3","surface-light":"#FFFFFF","surface-dark":"#111111","text-primary-dark":"#F5F5F5","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","secondary-fixed":"#e5e2e1","secondary-fixed-dim":"#c8c6c5","inverse-surface":"#2e3132","outline-variant":"#c3c6d7","on-error-container":"#93000a","surface-container":"#edeeef","surface":"#f8f9fa","on-secondary-container":"#656464","primary-container":"#2563eb","border-dark":"#27272A","primary-fixed-dim":"#b4c5ff","on-primary-container":"#eeefff","outline":"#737686","on-secondary":"#ffffff","secondary-container":"#e5e2e1","on-secondary-fixed-variant":"#474646","surface-container-high":"#e7e8e9","status-warning":"#F59E0B","on-tertiary-container":"#eaf0ff","on-primary-fixed-variant":"#003ea8","tertiary-container":"#666d7b","on-tertiary-fixed-variant":"#404754","bg-dark":"#0A0A0A","on-surface-variant":"#434655","on-tertiary-fixed":"#151c27","surface-dim":"#d9dadb","on-background":"#191c1d","error-container":"#ffdad6","on-primary-fixed":"#00174b","surface-tint":"#0053db","surface-container-lowest":"#ffffff","surface-container-highest":"#e1e3e4","inverse-on-surface":"#f0f1f2","on-primary":"#ffffff","secondary":"#5f5e5e","on-error":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","surface-container-low":"#f3f4f5","surface-variant":"#e1e3e4","status-error":"#EF4444"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"margin-mobile":"1rem","space-xs":"0.25rem",margin:"2rem","gutter-mobile":"1rem","space-lg":"1.5rem",gutter:"1.5rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem"},fontFamily:{"h1-mobile":["Geist"],h3:["Geist"],"h2-mobile":["Geist"],"technical-tag":["JetBrains Mono"],"display-mobile":["Geist"],"technical-code":["JetBrains Mono"],body:["Inter"],"body-sm":["Inter"],display:["Geist"],h2:["Geist"],"technical-micro":["JetBrains Mono"],"body-large":["Inter"],h1:["Geist"]},fontSize:{"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body text-body text-on-surface antialiased min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin h-16 flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></a></div><nav class="hidden md:flex items-center gap-space-xs p-1 rounded-xl bg-surface-container-low" data-active-classes="bg-surface-container-high text-on-surface font-technical-code"><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a aria-current="page" class="px-space-md py-1.5 rounded-lg transition-colors bg-surface-container-high text-on-surface font-technical-code" data-path="apps" href="#">Apps</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="articles" href="#">Articles</a><a class="px-space-md py-1.5 rounded-lg text-on-surface-variant font-technical-code text-technical-code hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-2 rounded-xl bg-primary-container text-on-primary font-technical-code text-technical-code shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-primary transition-colors" data-path="contact" href="#">Let's Talk</a><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-background min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Top Section: Technical Metadata & Breadcrumb Header -->
+<section class="w-full bg-surface-container-lowest border-b border-border-light py-space-md">
+<div class="max-w-7xl mx-auto px-margin flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-technical-code text-technical-code text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="home" href="#">home</a>
+<span class="">/</span>
+<span class="text-on-surface font-semibold">apps</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-technical-micro text-technical-micro">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+          CATALOG: VERIFIED DIGITAL PRODUCTS
+        </span>
+<span class="text-outline hidden sm:inline">•</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-code">
+          FIRESTORE_COLLECTION: apps
+        </span>
+<span class="text-outline hidden sm:inline">•</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-technical-code">
+          STATUS: DEPLOYMENT READY
+        </span>
+</div>
+</div>
+</section>
+<!-- Section: Page Positioning & Global Overview -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter pb-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold tracking-wider">DIGITAL PRODUCTS &amp; DEPLOYABLE SOFTWARE</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight">
+            Packaged Software Products Built for Real Operational Workflows.
+          </h1>
+<p class="font-body-large text-body-large text-on-surface-variant leading-relaxed">
+            Stand-alone web applications, internal enterprise platforms, and developer tooling engineered for self-hosted or managed deployment. Each product is built with Next.js, strict TypeScript, and modular Firebase architectures.
+          </p>
+</div>
+
+</div>
+<!-- Functional Filter & Search Bar -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-lowest border border-border-light shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<!-- Category Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs" id="category-filters">
+<button class="filter-category-btn px-3 py-1.5 rounded-lg font-technical-code text-technical-code bg-on-surface text-surface-bright transition-colors" data-category="all">
+              All Products (5)
+            </button>
+<button class="filter-category-btn px-3 py-1.5 rounded-lg font-technical-code text-technical-code bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="admin">
+              Administration &amp; ERP (2)
+            </button>
+<button class="filter-category-btn px-3 py-1.5 rounded-lg font-technical-code text-technical-code bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="education">
+              Education &amp; Campus (1)
+            </button>
+<button class="filter-category-btn px-3 py-1.5 rounded-lg font-technical-code text-technical-code bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="devtools">
+              Developer Tools &amp; CMS (1)
+            </button>
+<button class="filter-category-btn px-3 py-1.5 rounded-lg font-technical-code text-technical-code bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors" data-category="custom">
+              Custom Systems (1)
+            </button>
+</div>
+<!-- Search Input -->
+<div class="relative min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low border border-border-light rounded-lg font-technical-code text-technical-code text-on-surface focus:outline-none focus:border-primary-container focus:bg-surface-light transition-all" id="catalog-search" placeholder="Filter products by name, capability, or stack..." type="text">
+</div>
+</div>
+<!-- Status Filter Line -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs border-t border-border-light text-on-surface-variant font-technical-micro text-technical-micro">
+<span class="font-semibold uppercase tracking-wider text-on-surface">Lifecycle:</span>
+<button class="filter-status-btn px-2 py-0.5 rounded text-on-surface bg-surface-container font-semibold" data-status="all">All Statuses</button>
+<button class="filter-status-btn px-2 py-0.5 rounded hover:bg-surface-container" data-status="available">Available</button>
+<button class="filter-status-btn px-2 py-0.5 rounded hover:bg-surface-container" data-status="development">In Development</button>
+<button class="filter-status-btn px-2 py-0.5 rounded hover:bg-surface-container" data-status="upcoming">Coming Soon</button>
+<button class="filter-status-btn px-2 py-0.5 rounded hover:bg-surface-container" data-status="custom">Custom Deployment</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Flagship Featured Product Hero (SIMPEG Core) -->
+<section class="w-full bg-surface-container-low py-space-xl border-y border-border-light">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="bg-surface-light rounded-xl border border-border-light shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Flagship Info -->
+<div class="p-space-lg lg:p-space-xl lg:col-span-7 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border-light">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-technical-tag text-technical-tag font-semibold">
+                FLAGSHIP ENTERPRISE PRODUCT
+              </span>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-success/10 text-status-success font-technical-tag text-technical-tag font-medium"><span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+                Available for Deployment</span>
+</div>
+<div>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">
+                SIMPEG Core — Enterprise Faculty &amp; Personnel System
+              </h2>
+<p class="font-body text-body text-on-surface-variant mt-1 leading-relaxed">
+                Complete institutional workforce, civil servant credential management, and tenure audit platform built explicitly for polytechnics, universities, and regional educational networks.
+              </p>
+</div>
+<!-- Key Specs List -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<div class="flex items-start gap-2 text-on-surface text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px] mt-0.5">verified</span>
+<span class="">Multi-campus tenant isolation with verified civil service dossiers</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px] mt-0.5">verified</span>
+<span class="">Automated tenure credit point (Angka Kredit) calculation engine</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px] mt-0.5">verified</span>
+<span class="">Immutable audit trail &amp; cryptographic mutation logging</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-status-success text-[18px] mt-0.5">verified</span>
+<span class="">Next.js 14 App Router + Cloud Firestore batching architecture</span>
+</div>
+</div>
+</div>
+<!-- License Specs & Action Row -->
+<div class="mt-space-lg pt-space-md border-t border-border-light flex flex-col sm:flex-row sm:items-center justify-between gap-space-md"><div>
+<div class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Deployment &amp; Provisioning</div>
+<div class="flex items-baseline gap-2">
+<span class="font-h3 text-h3 text-on-surface font-bold">Request Pricing</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">/ Institution or Managed Cloud</span>
+</div>
+<span class="font-technical-micro text-technical-micro text-status-success block">Includes verified Next.js source distribution, schema migrations &amp; onboarding setup</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="min-h-[44px] px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-technical-code text-technical-code hover:bg-primary-container transition-colors inline-flex items-center gap-1.5 shadow-sm" data-path="contact" href="#">
+<span class="">Request Access</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="min-h-[44px] px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-technical-code text-technical-code hover:bg-surface-container-high transition-colors inline-flex items-center gap-1" data-path="contact" href="#">
+<span class="">Specs</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div></div>
+</div>
+<!-- Terminal Console Preview -->
+<div class="p-space-lg lg:p-space-xl lg:col-span-5 bg-surface-container-highest flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-xs">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-technical-code">
+                simpeg_core_v2.1_dist.tar.gz // INSTANCE READY
+              </span>
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-border-light"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-border-light"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-success"></span>
+</div>
+</div>
+<!-- Technical Specification Table -->
+<div class="flex flex-col gap-2 font-technical-micro text-technical-micro">
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Deployment Target</span>
+<span class="text-on-surface font-semibold">Vercel / Node.js 18+ / Docker</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Database Engine</span>
+<span class="text-on-surface font-semibold">Firebase Firestore / PostgreSQL</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Tenant Partitioning</span>
+<span class="text-on-surface font-semibold">Isolated per campus prefix</span>
+</div>
+<div class="flex justify-between py-1 border-b border-outline-variant/20">
+<span class="text-on-surface-variant">Civil Service Standard</span>
+<span class="text-on-surface font-semibold">BKN &amp; Kemendikbud Compliant</span>
+</div>
+</div>
+<!-- Monospace Code Terminal Block -->
+<div class="p-space-sm rounded-lg bg-surface-dark text-text-primary-dark font-technical-code text-technical-code mt-space-xs space-y-1 overflow-x-auto shadow-inner">
+<div class="text-text-secondary-dark flex items-center gap-1.5">
+<span class="text-accent-dark">$</span> npx @rheva/simpeg-deploy --tenant=poltek-demo --db=firestore
+              </div>
+<div class="text-text-secondary-dark">&gt; Provisioning security rules... <span class="text-status-success">[DONE]</span></div>
+<div class="text-text-secondary-dark">&gt; Initializing RBAC schema... <span class="text-status-success">[DONE - 4 default roles]</span></div>
+<div class="text-status-success flex items-center gap-1">
+<span class="">&gt; Console live at</span>
+<span class="underline">https://simpeg.poltek.internal</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-right">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">Package checksum verified: sha256:d8a4f91e...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Complete Catalog Grid Section -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm pb-space-lg">
+<div>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant font-medium">Standard Packaged Software</span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight mt-0.5">Commercial Software Library</h2>
+</div>
+
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="products-container">
+<!-- Product 1: Pulse CMS Engine -->
+<article class="product-item bg-surface-light rounded-xl border border-border-light p-space-lg flex flex-col justify-between hover:border-on-surface transition-all duration-200" data-category="devtools" data-status="available" data-title="Pulse CMS Engine Next.js Markdown Edge Headless">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-success/10 text-status-success font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                Available
+              </span>
+</div>
+<div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase font-semibold">Developer Tools &amp; CMS</span>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight mt-0.5">Pulse CMS Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Headless content engine with instantaneous edge cache invalidation, custom field generators, and multi-tenant security profiles.
+              </p>
+</div>
+<!-- Stack & Specs -->
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container">Next.js 14 Edge</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Firestore REST</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">bolt</span>
+<span class="">Zero Server Cold Starts</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">shield</span>
+<span class="">Zod Form Validations</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">code</span>
+<span class="">Direct Markdown Exporter</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-light flex items-center justify-between"><div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">Deployment Model</div>
+<span class="font-h3 text-h3 text-on-surface font-semibold text-[18px]">Request Pricing</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="min-h-[44px] px-3 py-2.5 rounded-lg bg-surface-dark text-text-primary-dark font-technical-code text-technical-code hover:bg-on-surface transition-colors inline-flex items-center justify-center" data-path="contact" href="#">
+                Request Access
+              </a>
+<a class="min-h-[44px] min-w-[44px] p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-colors inline-flex items-center justify-center" data-path="articles" href="#" title="View documentation">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div></div>
+</article>
+<!-- Product 2: EduSchedule Matrix -->
+<article class="product-item bg-surface-light rounded-xl border border-border-light p-space-lg flex flex-col justify-between hover:border-on-surface transition-all duration-200" data-category="education" data-status="development" data-title="EduSchedule Matrix Vocational Solver Timetable">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-warning/10 text-status-warning font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+                In Development
+              </span>
+</div>
+<div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase font-semibold">Education &amp; Campus</span>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight mt-0.5">EduSchedule Matrix</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Algorithmic timetable constraint solver engineered for high-density vocational schools with 60+ simultaneous parallel modules and zero conflict overlap.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container">Next.js 14</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Web Workers</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">CSP Engine</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">speed</span>
+<span class="">Sub-second Room Allocation</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">tune</span>
+<span class="">Teacher Availability Heuristics</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">splitscreen</span>
+<span class="">Zero-Overlap Matrix Checking</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-light flex items-center justify-between">
+<div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">Access Model</div>
+<span class="font-body font-semibold text-on-surface">Annual Institutional</span>
+</div>
+<a class="min-h-[44px] px-3 py-2.5 rounded-lg border border-border-light text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors inline-flex items-center justify-center" data-path="contact" href="#">
+              Join Early Pilot
+            </a>
+</div>
+</article>
+<!-- Product 3: Presensi PPPK Portal -->
+<article class="product-item bg-surface-light rounded-xl border border-border-light p-space-lg flex flex-col justify-between hover:border-on-surface transition-all duration-200" data-category="admin" data-status="custom" data-title="Presensi PPPK Portal Geofence Attendance Payroll">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">share_location</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Custom Deployment
+              </span>
+</div>
+<div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase font-semibold">Administration &amp; ERP</span>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight mt-0.5">Presensi PPPK Portal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Anti-spoofing geofenced mobile web check-in portal with automated monthly payroll timesheet reconciliation and regional audit logging.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container">Next.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Geolocation API</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Firebase Storage</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">lock</span>
+<span class="">Hardware Anti-Mocking Engine</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">picture_as_pdf</span>
+<span class="">Automated PDF Timesheet Compiler</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">radar</span>
+<span class="">Sub-meter Radius Accuracy</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-light flex items-center justify-between">
+<div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">Deployment Tier</div>
+<span class="font-body font-semibold text-on-surface">Custom Scope</span>
+</div>
+<a class="min-h-[44px] px-3 py-2.5 rounded-lg bg-surface-dark text-text-primary-dark font-technical-code text-technical-code hover:bg-on-surface transition-colors inline-flex items-center justify-center" data-path="contact" href="#">
+              Contact for Deployment
+            </a>
+</div>
+</article>
+<!-- Product 4: Piket Guru — Dispatch Engine -->
+<article class="product-item bg-surface-light rounded-xl border border-border-light p-space-lg flex flex-col justify-between hover:border-on-surface transition-all duration-200" data-category="education" data-status="available" data-title="Piket Guru Dispatch Engine Substitute Teacher Alert">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-status-success/10 text-status-success font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                Available
+              </span>
+</div>
+<div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase font-semibold">Education &amp; Campus</span>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight mt-0.5">Piket Guru — Dispatch Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Automated faculty duty assignment, sudden absence substitute relief allocation, and automated SMS/WhatsApp alert dispatch for secondary educators.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container">React 18</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Firestore Triggers</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">WhatsApp API</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">swap_horiz</span>
+<span class="">One-Click Substitute Matching</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">send</span>
+<span class="">Immediate WhatsApp Notification</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">monitoring</span>
+<span class="">Daily Duty Telemetry &amp; Logs</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-light flex items-center justify-between"><div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">Deployment Tier</div>
+<span class="font-h3 text-h3 text-on-surface font-semibold text-[18px]">Request Pricing</span>
+</div>
+<a class="min-h-[44px] px-3 py-2.5 rounded-lg bg-surface-dark text-text-primary-dark font-technical-code text-technical-code hover:bg-on-surface transition-colors inline-flex items-center justify-center" data-path="contact" href="#">
+              Request Access
+            </a></div>
+</article>
+<!-- Product 5: Veritas Identity Broker -->
+<article class="product-item bg-surface-light rounded-xl border border-border-light p-space-lg flex flex-col justify-between hover:border-on-surface transition-all duration-200" data-category="custom" data-status="upcoming" data-title="Veritas Identity Broker OIDC OAuth2 Auth Firebase">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">vpn_key</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-technical-micro text-technical-micro font-medium inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Coming Soon (Q2 2025)
+              </span>
+</div>
+<div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase font-semibold">Custom Systems</span>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight mt-0.5">Veritas Identity Broker</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                Lightweight OAuth2 / OIDC proxy layer bridging legacy educational portals with modern Firebase Authentication tokens and federated role claims.
+              </p>
+</div>
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">JWT Bearer</span>
+<span class="px-2 py-0.5 rounded bg-surface-container">Redis Cache</span>
+</div>
+<div class="p-space-xs rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">sync</span>
+<span class="">Zero-Downtime Session Migration</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">badge</span>
+<span class="">Federated Institutional Claims</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px]">security</span>
+<span class="">PKCE Flow Enforcement</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-border-light flex items-center justify-between">
+<div>
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">Distribution</div>
+<span class="font-body font-semibold text-on-surface">Open Core</span>
+</div>
+<a class="min-h-[44px] px-3 py-2.5 rounded-lg border border-border-light text-on-surface font-technical-code text-technical-code hover:bg-surface-container transition-colors inline-flex items-center justify-center" data-path="contact" href="#">
+              Notify Release
+            </a>
+</div>
+</article>
+</div>
+<!-- Empty State Filter Feedback -->
+<div class="hidden p-space-xl text-center rounded-xl bg-surface-container-low border border-border-light my-space-md" id="no-products-msg">
+<span class="material-symbols-outlined text-outline text-[36px] mb-2">search_off</span>
+<div class="font-h3 text-h3 text-on-surface font-medium">No software matched your query</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mx-auto mt-1">
+          Try clearing your search term or selecting "All Products" to browse the full commercial catalog.
+        </p>
+</div>
+</div>
+</section>
+<!-- Product Engineering Philosophy -->
+<section class="w-full bg-surface-container-lowest py-space-xl border-t border-border-light">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="flex flex-col gap-space-xs max-w-3xl mb-space-lg">
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold tracking-wider">
+          02 // PRODUCT ENGINEERING PHILOSOPHY
+        </span>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">
+          Software Designed for Real Operational Durability.
+        </h2>
+<p class="font-body-large text-body-large text-on-surface-variant leading-relaxed">
+          No bloated microservice overhead, no vendor lock-in traps. Every product delivers production reliability with deterministic logic and unencumbered deployment rights.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg rounded-xl bg-surface border border-border-light flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-technical-code font-bold">
+            01
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight text-[20px]">Self-Hosted Sovereignty</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            You own the deployment. Delivered as clean Next.js and Docker codebases that run cleanly in your own cloud infrastructure without opaque black boxes.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface border border-border-light flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-technical-code font-bold">
+            02
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight text-[20px]">Zero Bloat &amp; Tight Stack</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Built strictly on native Web standards, React 18, and Tailwind CSS. Avoids fragile mega-frameworks that break on regular node patch cycles.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface border border-border-light flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-technical-code font-bold">
+            03
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight text-[20px]">Schema Resilience</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Powered by strict TypeScript contracts, Zod discriminators, and atomic database mutations field-tested in regional enterprise environments.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface border border-border-light flex flex-col gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-technical-code font-bold">
+            04
+          </div>
+<h3 class="font-h3 text-h3 text-on-surface tracking-tight text-[20px]">Direct Developer Support</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Straightforward access agreements and managed deployment tiers with direct author support for architecture walk-throughs and onboarding.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bespoke System CTA / Services Convergence -->
+<section class="w-full bg-surface py-space-xl border-t border-border-light">
+<div class="max-w-7xl mx-auto px-margin">
+<div class="p-space-lg lg:p-space-xl rounded-xl bg-surface-container-lowest border border-border-light shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-gutter">
+<div class="max-w-2xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-technical-tag text-technical-tag uppercase text-primary font-semibold">Custom Platform Engineering</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight">
+            Need a bespoke system tailored to your specific organizational workflow?
+          </h2>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+            If your organization, vocational campus, or enterprise requires custom digital architectures, automated verification pipelines, or complex administrative tooling not covered by these packaged products, we can engineer it from scratch.
+          </p>
+<div class="pt-space-xs font-technical-micro text-technical-micro text-on-surface-variant flex flex-wrap items-center gap-space-xs">
+<span class="">Typical bespoke lead time: 3–6 weeks</span>
+<span class="">•</span>
+<span class="">Fixed-scope milestones</span>
+<span class="">•</span>
+<span class="">Direct engineering partnership</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-xs min-w-[240px]">
+<a class="px-space-md py-3 rounded-lg bg-primary text-on-primary font-technical-code text-technical-code text-center hover:bg-primary-container transition-colors shadow-sm inline-flex items-center justify-center gap-2" data-path="contact" href="#">
+<span class="">Discuss a Custom Solution</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="px-space-md py-3 rounded-lg border border-border-light text-on-surface font-technical-code text-technical-code text-center hover:bg-surface-container transition-colors inline-flex items-center justify-center gap-1.5" data-path="services" href="#">
+<span class="">Review Engineering Services</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-Side Search & Filter Micro-interactions Script -->
+<script>
+    (function() {
+      const searchInput = document.getElementById('catalog-search');
+      const categoryBtns = document.querySelectorAll('.filter-category-btn');
+      const statusBtns = document.querySelectorAll('.filter-status-btn');
+      const productItems = document.querySelectorAll('.product-item');
+      const noProductsMsg = document.getElementById('no-products-msg');
+      const visibleCountElem = document.getElementById('visible-count');
+
+      let currentCategory = 'all';
+      let currentStatus = 'all';
+      let currentQuery = '';
+
+      function filterCatalog() {
+        let visibleCount = 0;
+
+        productItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          const status = item.getAttribute('data-status');
+          const searchData = (item.getAttribute('data-title') || '').toLowerCase();
+
+          const matchCategory = (currentCategory === 'all' || category === currentCategory);
+          const matchStatus = (currentStatus === 'all' || status === currentStatus);
+          const matchQuery = !currentQuery || searchData.includes(currentQuery);
+
+          if (matchCategory && matchStatus && matchQuery) {
+            item.style.display = 'flex';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (visibleCountElem) {
+          visibleCountElem.textContent = visibleCount.toString();
+        }
+
+        if (noProductsMsg) {
+          if (visibleCount === 0) {
+            noProductsMsg.classList.remove('hidden');
+          } else {
+            noProductsMsg.classList.add('hidden');
+          }
+        }
+      }
+
+      // Category filter listener
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryBtns.forEach(b => {
+            b.classList.remove('bg-on-surface', 'text-surface-bright');
+            b.classList.add('bg-surface-container', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          btn.classList.add('bg-on-surface', 'text-surface-bright');
+
+          currentCategory = btn.getAttribute('data-category') || 'all';
+          filterCatalog();
+        });
+      });
+
+      // Status filter listener
+      statusBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          statusBtns.forEach(b => {
+            b.classList.remove('bg-surface-container', 'font-semibold', 'text-on-surface');
+          });
+          btn.classList.add('bg-surface-container', 'font-semibold', 'text-on-surface');
+
+          currentStatus = btn.getAttribute('data-status') || 'all';
+          filterCatalog();
+        });
+      });
+
+      // Search input listener
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.toLowerCase().trim();
+          filterCatalog();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-7xl mx-auto px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-xs"><span class="font-h3 text-h3 tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">v1.0.0</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rheva Iqbal Abdillah, Software Engineer building practical digital systems, production architectures, and developer-first applications.</p></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Platform Routes</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Projects</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Apps Catalog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Engineering Services</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="articles" href="#">Technical Articles</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About &amp; Experience</a></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Architecture &amp; Stack</span><div class="flex flex-col gap-space-xs font-technical-code text-technical-code text-on-surface-variant"><span class="hover:text-on-surface">TypeScript / Go runtime</span><span class="hover:text-on-surface">PostgreSQL &amp; Redis storage</span><span class="hover:text-on-surface">Distributed microservices</span><span class="hover:text-on-surface">Tailwind / Headless design</span><span class="hover:text-on-surface">CI/CD verified deployments</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant">Connect &amp; Links</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-portal" href="#">Admin Portal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Start Consultation</a><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Source Repository</span><span class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Professional Profile</span></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-status-success"></div><span class="font-technical-micro text-technical-micro text-on-surface-variant">Systems Operational • Verified Deployment</span></div><p class="font-technical-micro text-technical-micro text-on-surface-variant">© 2025 Rheva Iqbal Abdillah. All rights reserved.</p></div></div></footer>
+
+</body></html>

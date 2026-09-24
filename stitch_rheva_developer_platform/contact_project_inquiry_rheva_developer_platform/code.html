@@ -1,0 +1,500 @@
+<!DOCTYPE html><html class="h-full" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Rheva — Systems &amp; Product Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"bg-dark":"#0A0A0A","primary-fixed-dim":"#b4c5ff","on-primary-fixed-variant":"#003ea8","surface-container-low":"#f3f4f5","surface-variant":"#e1e3e4","on-secondary-fixed-variant":"#474646","status-error":"#EF4444","on-secondary-container":"#656464","error-container":"#ffdad6","inverse-surface":"#2e3132","on-primary":"#ffffff","inverse-primary":"#b4c5ff","secondary-fixed-dim":"#c8c6c5","primary-fixed":"#dbe1ff","outline":"#737686","secondary":"#5f5e5e","on-primary-container":"#eeefff","background":"#f8f9fa","primary-container":"#2563eb","surface-container-high":"#e7e8e9","on-secondary-fixed":"#1c1b1b","on-tertiary-fixed":"#151c27","surface-dim":"#d9dadb","tertiary":"#4e5562","text-primary-dark":"#F5F5F5","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","tertiary-fixed":"#dce2f3","secondary-container":"#e5e2e1","tertiary-container":"#666d7b","status-success":"#10B981","secondary-fixed":"#e5e2e1","surface-tint":"#0053db","tertiary-fixed-dim":"#c0c7d6","inverse-on-surface":"#f0f1f2","on-primary-fixed":"#00174b","on-surface-variant":"#434655","surface-bright":"#f8f9fa","accent-dark":"#3B82F6","surface-container-highest":"#e1e3e4","on-background":"#191c1d","surface-light":"#FFFFFF","on-tertiary":"#ffffff","on-surface":"#191c1d","border-dark":"#27272A","primary":"#004ac6","outline-variant":"#c3c6d7","on-tertiary-container":"#eaf0ff","surface-container-lowest":"#ffffff","surface":"#f8f9fa","surface-dark":"#111111","surface-container":"#edeeef","on-error-container":"#93000a","status-warning":"#F59E0B","border-light":"#E5E7EB","on-secondary":"#ffffff","on-error":"#ffffff","on-tertiary-fixed-variant":"#404754"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"gutter-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"2rem","gutter":"1.5rem","margin":"2rem","space-md":"1rem","margin-mobile":"1rem"},"fontFamily":{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"body-large":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],"h1":["Geist"],"body":["Inter"],"body-sm":["Inter"],"h1-mobile":["Geist"],"h3":["Geist"],"display":["Geist"],"h2-mobile":["Geist"],"h2":["Geist"]},"fontSize":{"technical-micro":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"400"}],"display-mobile":["44px",{"lineHeight":"52px","letterSpacing":"-0.025em","fontWeight":"600"}],"body-large":["18px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"400"}],"technical-tag":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"technical-code":["13px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"500"}],"h1":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"600"}],"body":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"h1-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}],"h3":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display":["72px",{"lineHeight":"80px","letterSpacing":"-0.03em","fontWeight":"600"}],"h2-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"h2":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"600"}]}}}};</script></head><body class="bg-background font-body text-body text-on-surface antialiased min-h-full flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-[1280px] mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><span class="font-h3 text-h3 tracking-tight font-bold text-on-surface group-hover:text-primary transition-colors">RHEVA</span></a><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-low rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span class="font-technical-micro text-technical-micro text-on-surface-variant uppercase tracking-wider">v1.0.0 / System Spec</span></div></div><nav class="hidden lg:flex items-center gap-space-xs p-1 bg-surface-container-low rounded-lg" data-active-classes="bg-surface-container-high text-on-surface font-medium rounded-lg"><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="home" href="#">Home</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="projects" href="#">Projects</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="apps" href="#">Apps</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">Services</a><a aria-current="page" class="px-3 py-1.5 transition-colors bg-surface-container-high text-on-surface font-medium rounded-lg" data-path="articles" href="#">Articles</a><a class="px-3 py-1.5 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center justify-center px-space-md h-9 rounded-lg bg-on-surface text-on-primary font-body-sm text-body-sm hover:bg-primary transition-colors" data-path="contact" href="#">Let's Talk</a><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"></div></div></div></header><main class="flex-1 w-full pt-16 bg-background max-w-[1280px] mx-auto px-gutter"><div class="flex flex-col w-full">
+<!-- Telemetry Bar -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mb-space-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="px-2 py-0.5 rounded-full bg-surface-light text-on-surface font-semibold">rheva.os / contact</span>
+<span class="text-secondary-fixed-dim">|</span>
+<span class="">COMMUNICATION_LAYER: ACTIVE // FIRESTORE: inquiries</span>
+<span class="text-secondary-fixed-dim">|</span>
+<span class="hidden sm:inline">DIRECT_PRACTITIONER_CHANNEL</span>
+<span class="text-secondary-fixed-dim hidden sm:inline">|</span>
+<span class="hidden lg:inline">ENCRYPTION: TLS_1.3</span>
+</div>
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span class="font-medium text-on-surface">DIRECT ACCESS // RESPONSE: 24-48H (BUS. DAYS)</span>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="mb-space-xl flex flex-col gap-space-md">
+<div class="font-technical-tag text-technical-tag text-primary font-semibold tracking-wider">
+      01 // PROJECT INQUIRY &amp; TECHNICAL COLLABORATION
+    </div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight mb-space-sm">
+          Let's Build Something Useful.
+        </h1>
+<p class="font-body-large text-body-large text-on-surface-variant leading-relaxed">
+          Whether you have a legacy administrative system needing modernization, an institutional workflow bottleneck requiring deterministic automation, or an inquiry regarding deploying one of our packaged software products—describe your problem below. Every inquiry is reviewed directly by Rheva Iqbal Abdillah.
+        </p>
+</div>
+<div class="flex flex-wrap gap-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<div class="px-3 py-1.5 rounded-full bg-surface-light shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="">Direct Software Architect Review</span>
+</div>
+<div class="px-3 py-1.5 rounded-full bg-surface-light shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">shield_person</span>
+<span class="">Zero Middlemen / Agency Overhead</span>
+</div>
+<div class="px-3 py-1.5 rounded-full bg-surface-light shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">terminal</span>
+<span class="">Transparent Technical Scoping</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start mb-space-xl">
+<!-- LEFT COLUMN (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Direct Practitioner Profile -->
+<div class="bg-surface-light rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img alt="Rheva Iqbal Abdillah" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o">
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-status-success rounded-full ring-2 ring-surface-light"></span>
+</div>
+<div>
+<h2 class="font-h3 text-h3 text-on-surface">Rheva Iqbal Abdillah</h2>
+<p class="font-technical-tag text-technical-tag text-primary">Principal Software Architect</p>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          No account managers, no automated sales funnels. Code, data schemas, and system architecture are crafted directly by the principal practitioner.
+        </p>
+</div>
+<!-- Direct Communication Channels -->
+<div class="bg-surface-light rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="font-technical-tag text-technical-tag text-on-surface uppercase font-semibold">Direct Communication Channels</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">mail</span>
+<a class="text-on-surface font-medium hover:underline" href="mailto:contact@rheva.dev">revaiqbal@gmail.com</a>
+</div>
+<button class="font-technical-micro text-technical-micro px-2 py-1 rounded bg-surface-light text-on-surface-variant hover:text-on-surface shadow-xs" onclick="navigator.clipboard.writeText('contact@rheva.dev'); alert('Copied to clipboard');">
+              COPY
+            </button>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">code</span>
+<span class="text-on-surface font-medium">github.com/rheva25</span>
+</div>
+<a class="font-technical-micro text-technical-micro px-2 py-1 rounded bg-surface-light text-primary hover:underline shadow-xs" href="https://github.com/rheva" rel="noreferrer" target="_blank">
+              VISIT ↗
+            </a>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">work</span>
+<span class="text-on-surface font-medium">linkedin.com/in/raden_rheva</span>
+</div>
+<a class="font-technical-micro text-technical-micro px-2 py-1 rounded bg-surface-light text-primary hover:underline shadow-xs" href="https://linkedin.com/in/rheva" rel="noreferrer" target="_blank">
+              VISIT ↗
+            </a>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<span class="text-on-surface">Serang, Banten - Indonesia<br>Sragen, Central Java - Indonesia</span>
+</div>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">UTC+7</span>
+</div>
+</div>
+</div>
+<!-- Scoping Checklist -->
+<div class="bg-surface-light rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="font-technical-tag text-technical-tag text-on-surface uppercase font-semibold">What to Include in Your Inquiry</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          To receive high-context architectural feasibility notes and direct scoping feedback in our initial reply, please highlight:
+        </p>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="font-technical-micro text-technical-micro text-primary mt-1">01.</span>
+<span class="">The specific operational bottleneck or institutional problem you need solved</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-technical-micro text-technical-micro text-primary mt-1">02.</span>
+<span class="">Key user personas (e.g. administrative staff, faculty, field auditors, public)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-technical-micro text-technical-micro text-primary mt-1">03.</span>
+<span class="">Current workflows (paper forms, fragmented Excel sheets, legacy PHP/MySQL portals)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-technical-micro text-technical-micro text-primary mt-1">04.</span>
+<span class="">Deployment topology (Cloudflare/AWS, institutional on-premise servers, air-gapped)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="font-technical-micro text-technical-micro text-primary mt-1">05.</span>
+<span class="">Target timeline requirements and anticipated budget allocation</span>
+</li>
+</ul>
+</div>
+<!-- Alternative Direct Conversation -->
+<div class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm">
+<div class="font-technical-tag text-technical-tag text-on-surface font-semibold uppercase">Prefer Direct Raw Dialogue?</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Have an architectural RFP or prefer unstructured brainstorming first? Skip the form and drop an informal email or schedule a technical discovery call directly.
+        </p>
+<div class="flex flex-col sm:flex-row gap-2 mt-2">
+<a class="px-space-md py-2 rounded-lg bg-surface-light text-on-surface hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium text-center shadow-xs" href="mailto:contact@rheva.dev?subject=Direct%20Architectural%20Inquiry">
+            Send Raw Email →
+          </a>
+<a class="px-space-md py-2 rounded-lg bg-surface-light text-primary hover:bg-surface-container transition-colors font-body-sm text-body-sm font-medium text-center shadow-xs" data-path="services" href="#">
+            Engagement Models →
+          </a>
+</div>
+</div>
+<!-- Related Capabilities -->
+<div class="bg-surface-light rounded-xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="font-technical-tag text-technical-tag text-on-surface uppercase font-semibold">Specialized Capabilities</div>
+<div class="flex flex-wrap gap-1.5 font-technical-micro text-technical-micro">
+<a class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">Custom Web Apps</a>
+<a class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">SIMPEG &amp; Personnel Systems</a>
+<a class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">Legacy Refactoring</a>
+<a class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-path="services" href="#">Design Systems &amp; Tokens</a>
+<a class="px-2.5 py-1 rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" data-path="apps" href="#">Packaged Deployments</a>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Interactive Preview State Bar -->
+<div class="bg-surface-light rounded-xl p-space-sm shadow-sm flex flex-wrap items-center justify-between gap-2">
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-medium px-2">FORM_STATE_SIMULATOR:</span>
+<div class="flex flex-wrap gap-1 font-technical-micro text-technical-micro">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-medium hover:bg-surface-variant" id="btn-state-default" onclick="setFormState('default')">Default</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" id="btn-state-error" onclick="setFormState('error')">Validation Error</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" id="btn-state-submitting" onclick="setFormState('submitting')">Submitting</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" id="btn-state-success" onclick="setFormState('success')">Success View</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" id="btn-state-neterror" onclick="setFormState('neterror')">Network Error</button>
+</div>
+</div>
+<!-- Main Form Wrapper -->
+<div class="bg-surface-light rounded-xl p-space-lg md:p-space-xl shadow-sm flex flex-col gap-space-lg" id="form-container">
+<!-- Technical Schema Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pb-space-sm">
+<div class="font-technical-micro text-technical-micro text-on-surface-variant">
+            SECURE_INQUIRY_TRANSMISSION // SCHEMA: z.infer&lt;typeof InquiryFormSchema&gt;
+          </div>
+<div class="px-2 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-primary">
+            FIRESTORE // VERIFIED_CHANNEL
+          </div>
+</div>
+<!-- Network Error Alert (Hidden by default) -->
+<div class="hidden p-space-md rounded-lg bg-error-container text-on-error-container font-body-sm text-body-sm flex items-start gap-2" id="network-alert">
+<span class="material-symbols-outlined text-[20px] text-error mt-0.5">error</span>
+<div>
+<div class="font-semibold">Transmission Failed</div>
+<p class="font-technical-micro text-technical-micro mt-0.5">Firestore upstream timed out. Your payload is cached locally. You can also email contact@rheva.dev directly.</p>
+</div>
+</div>
+<!-- The Interactive Form -->
+<form class="flex flex-col gap-space-lg" id="inquiry-form" onsubmit="handleFormSubmit(event)">
+<!-- Row 1: Name & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="name">
+<span class="">Full Name <span class="text-error">*</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">IDENTITY</span>
+</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="name" placeholder="e.g. Dr. Hendra Gunawan or Sarah Jenkins" required="" type="text">
+<span class="hidden font-technical-micro text-technical-micro text-error" id="name-error">Name parameter is required</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="email">
+<span class="">Email Address <span class="text-error">*</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">COMM_CHANNEL</span>
+</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="email" placeholder="name@institution.ac.id" required="" type="email">
+<span class="hidden font-technical-micro text-technical-micro text-error" id="email-error">Valid institutional email required</span>
+</div>
+</div>
+<!-- Row 2: Organization & Project Name -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="org">
+<span class="">Organization / Institution</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">OPTIONAL</span>
+</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="org" placeholder="e.g. Politeknik Negeri, Dinas Pendidikan" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="projectName">
+<span class="">System / Product Name</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">OPTIONAL</span>
+</label>
+<input class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="projectName" placeholder="e.g. Portal Akademik 2.0, Dossier Engine" type="text">
+</div>
+</div>
+<!-- Row 3: Inquiry Type & Budget Range -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="inquiryType">
+<span class="">Inquiry Classification <span class="text-error">*</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">CATEGORY</span>
+</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors appearance-none cursor-pointer" id="inquiryType" required="">
+<option value="">Select scope classification...</option>
+<option value="custom">Custom Software Development (Bespoke System)</option>
+<option value="modernization">Existing System Modernization &amp; Refactoring</option>
+<option value="packaged">Software Product Deployment (SIMPEG / Turnkey)</option>
+<option value="design-system">UI/UX &amp; Design System Architecture</option>
+<option value="audit">Technical Architecture Consultation / Audit</option>
+<option value="licensing">Existing App Licensing Inquiry</option>
+<option value="other">Other Operational Inquiries</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between" for="budget">
+<span class="">Budget Context &amp; Investment</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">ESTIMATED</span>
+</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors appearance-none cursor-pointer" id="budget">
+<option value="">Select approximate allocation...</option>
+<option value="discovery">Exploration / Discovery Phase ($500 - $1,500)</option>
+<option value="mvp">Small Institutional Tool / MVP ($1,500 - $4,000)</option>
+<option value="system">Comprehensive Multi-Department System ($4,000 - $10,000+)</option>
+<option value="packaged">Turnkey Product Licensing (Flat / One-time)</option>
+<option value="open">Open for Architectural Recommendation First</option>
+</select>
+</div>
+</div>
+<!-- Target Timeline (Pills) -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-medium text-on-surface flex items-center justify-between">
+<span class="">Target Delivery Window</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">TIMELINE</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+<label class="flex items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface font-technical-micro text-technical-micro cursor-pointer hover:bg-surface-container has-checked:bg-on-surface has-checked:text-on-primary transition-colors text-center">
+<input checked="" class="sr-only" name="timeline" type="radio" value="flexible">
+<span class="">Flexible</span>
+</label>
+<label class="flex items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface font-technical-micro text-technical-micro cursor-pointer hover:bg-surface-container has-checked:bg-on-surface has-checked:text-on-primary transition-colors text-center">
+<input class="sr-only" name="timeline" type="radio" value="1month">
+<span class="">&lt; 1 Month</span>
+</label>
+<label class="flex items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface font-technical-micro text-technical-micro cursor-pointer hover:bg-surface-container has-checked:bg-on-surface has-checked:text-on-primary transition-colors text-center">
+<input class="sr-only" name="timeline" type="radio" value="1-3months">
+<span class="">1–3 Months</span>
+</label>
+<label class="flex items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface font-technical-micro text-technical-micro cursor-pointer hover:bg-surface-container has-checked:bg-on-surface has-checked:text-on-primary transition-colors text-center">
+<input class="sr-only" name="timeline" type="radio" value="3-6months">
+<span class="">3–6 Months</span>
+</label>
+<label class="flex items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface font-technical-micro text-technical-micro cursor-pointer hover:bg-surface-container has-checked:bg-on-surface has-checked:text-on-primary transition-colors text-center col-span-2 sm:col-span-1">
+<input class="sr-only" name="timeline" type="radio" value="undecided">
+<span class="">Undecided</span>
+</label>
+</div>
+</div>
+<!-- Description Textarea -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-body-sm font-medium text-on-surface" for="desc">
+                Project &amp; Operational Description <span class="text-error">*</span>
+</label>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant" id="char-counter">0 / 2000</span>
+</div>
+<textarea class="p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors resize-y" id="desc" oninput="updateCharCount(this)" placeholder="Describe the current problem, friction in existing workflows, key requirements, and what success looks like for this deployment..." required="" rows="5"></textarea>
+<span class="hidden font-technical-micro text-technical-micro text-error" id="desc-error">Please provide a descriptive scope statement</span>
+</div>
+<!-- File Upload UI (Dropzone preview) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-body-sm font-medium text-on-surface">Architectural Specs &amp; Documents</label>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">OPTIONAL (15MB MAX)</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col items-center justify-center text-center gap-2 hover:bg-surface-container transition-colors cursor-pointer" onclick="document.getElementById('file-input').click()">
+<input class="sr-only" id="file-input" onchange="handleFileSelected(this)" type="file">
+<div class="w-8 h-8 rounded-full bg-surface-light flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-medium text-on-surface" id="file-label">Attach RFP, workflow diagram, or technical specification</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">UPLOAD_CHANNEL: FIREBASE_STORAGE // CLIENT_SIDE_PREVIEW</span>
+</div>
+</div>
+</div>
+<!-- Privacy Agreement Checkbox -->
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" id="consent" required="" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="consent">
+              I agree that the details provided will be used exclusively to evaluate and reply to this technical inquiry. No marketing automation, no sales pitches, no data sharing.
+            </label>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-2">
+<div class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1.5 order-2 sm:order-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="">Dispatches securely to Firestore collection: inquiries</span>
+</div>
+<button class="w-full sm:w-auto px-6 h-11 rounded-lg bg-on-surface text-on-primary font-body-sm text-body-sm font-medium hover:bg-primary transition-colors flex items-center justify-center gap-2 order-1 sm:order-2 shadow-sm" id="submit-btn" type="submit">
+<span id="btn-text" class="">Send Project Inquiry</span>
+<span class="material-symbols-outlined text-[18px]" id="btn-icon">send</span>
+<span class="hidden animate-spin material-symbols-outlined text-[18px]" id="btn-spinner">progress_activity</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Success State UI Card (Hidden by default, shown by simulator/submission) -->
+<div class="hidden bg-surface-light rounded-xl p-space-lg md:p-space-xl shadow-sm flex flex-col gap-space-md animate-fade" id="success-view">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-status-success shadow-xs">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div>
+<div class="font-technical-tag text-technical-tag text-status-success font-semibold">TRANSMISSION_ACKNOWLEDGED // 200 OK</div>
+<h2 class="font-h3 text-h3 text-on-surface">Inquiry Dispatched Successfully</h2>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2 font-technical-micro text-technical-micro">
+<div class="flex items-center justify-between text-on-surface">
+<span class="">REFERENCE_ID:</span>
+<span class="font-bold text-primary">INQ-2025-8842</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">TIMESTAMP:</span>
+<span class="">2025-01-14T08:42:19.204Z</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="">COLLECTION:</span>
+<span class="">firestore.rheva.io/v1/inquiries</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<p class="">Thank you for submitting your project specifications. Here is what happens next:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-2">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-primary">STEP 01</span>
+<span class="font-medium text-on-surface">Architect Review</span>
+<span class="font-technical-micro text-technical-micro">Rheva directly reviews your domain requirements</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-primary">STEP 02</span>
+<span class="font-medium text-on-surface">Technical Brief</span>
+<span class="font-technical-micro text-technical-micro">Feasibility estimate and preliminary roadmap generated</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-technical-micro text-technical-micro text-primary">STEP 03</span>
+<span class="font-medium text-on-surface">Direct Reply</span>
+<span class="font-technical-micro text-technical-micro">Comprehensive response within 24-48 business hours</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-sm">
+<button class="font-technical-micro text-technical-micro text-primary hover:underline" onclick="setFormState('default')">
+            ← Send another transmission
+          </button>
+<div class="flex items-center gap-2">
+<a class="px-4 py-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-body-sm text-body-sm font-medium transition-colors" data-path="projects" href="#">
+              Explore Case Studies
+            </a>
+<a class="px-4 py-2 rounded-lg bg-on-surface text-on-primary hover:bg-primary font-body-sm text-body-sm font-medium transition-colors" data-path="home" href="#">
+              Return Home
+            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy Reassurance & Trust Bar -->
+<div class="w-full rounded-xl bg-surface-container-low p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm mb-space-xl">
+<div class="flex items-center gap-2 text-on-surface-variant font-technical-micro text-technical-micro">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span class="">Privacy Notice: Information submitted is treated with strict professional discretion. Data is stored securely in Firebase Firestore and never shared with third-party tracking services or data brokers.</span>
+</div>
+<div class="flex items-center gap-space-md font-technical-micro text-technical-micro text-on-surface-variant whitespace-nowrap">
+<span class="">NO_TRACKING_SCRIPTS</span>
+<span class="">•</span>
+<span class="">STRICT_CONFIDENTIALITY</span>
+</div>
+</div>
+<!-- Vanilla Interaction Script for Simulator & Form -->
+<script>
+    function updateCharCount(textarea) {
+      const counter = document.getElementById('char-counter');
+      if (counter) {
+        counter.innerText = textarea.value.length + ' / 2000';
+      }
+    }
+
+    function handleFileSelected(input) {
+      const label = document.getElementById('file-label');
+      if (input.files && input.files[0]) {
+        label.innerText = 'Attached: ' + input.files[0].name + ' (' + (input.files[0].size / 1024 / 1024).toFixed(2) + ' MB)';
+      }
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      setFormState('submitting');
+      setTimeout(() => {
+        setFormState('success');
+      }, 1200);
+    }
+
+    function setFormState(state) {
+      const formContainer = document.getElementById('form-container');
+      const successView = document.getElementById('success-view');
+      const networkAlert = document.getElementById('network-alert');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const btnSpinner = document.getElementById('btn-spinner');
+      const nameError = document.getElementById('name-error');
+      const emailError = document.getElementById('email-error');
+      const descError = document.getElementById('desc-error');
+
+      // Update simulator buttons styling
+      const states = ['default', 'error', 'submitting', 'success', 'neterror'];
+      states.forEach(s => {
+        const btn = document.getElementById('btn-state-' + s);
+        if (btn) {
+          if (s === state) {
+            btn.className = "px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-medium";
+          } else {
+            btn.className = "px-2.5 py-1 rounded bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high";
+          }
+        }
+      });
+
+      // Reset standard views
+      formContainer.classList.remove('hidden');
+      successView.classList.add('hidden');
+      networkAlert.classList.add('hidden');
+      nameError.classList.add('hidden');
+      emailError.classList.add('hidden');
+      descError.classList.add('hidden');
+      submitBtn.disabled = false;
+      btnText.innerText = 'Send Project Inquiry';
+      btnIcon.classList.remove('hidden');
+      btnSpinner.classList.add('hidden');
+
+      if (state === 'error') {
+        nameError.classList.remove('hidden');
+        emailError.classList.remove('hidden');
+        descError.classList.remove('hidden');
+        document.getElementById('name').focus();
+      } else if (state === 'submitting') {
+        submitBtn.disabled = true;
+        btnText.innerText = 'Dispatching to Firestore...';
+        btnIcon.classList.add('hidden');
+        btnSpinner.classList.remove('hidden');
+      } else if (state === 'success') {
+        formContainer.classList.add('hidden');
+        successView.classList.remove('hidden');
+      } else if (state === 'neterror') {
+        networkAlert.classList.remove('hidden');
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl"><div class="max-w-[1280px] mx-auto px-gutter py-space-xl flex flex-col gap-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><span class="font-h3 text-h3 font-bold text-on-surface">RHEVA</span><span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">DEV.PLATFORM</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Rheva Iqbal Abdillah — Software Engineer and product system architect crafting high-reliability enterprise platforms, verifiable software toolchains, and distributed runtime environments.</p></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Platform Routes</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#">Verified Systems &amp; Case Studies</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/projects</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="apps" href="#">Shipped Software &amp; Tools</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/apps</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Engineering Engagements</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/services</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="articles" href="#">Technical Monographs &amp; Research</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/articles</span></li><li class="flex items-center justify-between"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">Operator Bio &amp; Pedigree</a><span class="font-technical-micro text-technical-micro text-on-surface-variant">/about</span></li></ul></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Stack Architecture</div><div class="flex flex-col gap-space-xs font-technical-code text-technical-code text-on-surface-variant"><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">CORE_KERNEL</span><span class="">TypeScript / Rust / Go</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">UI_SYNTAX</span><span class="">Next.js / Tailwind CSS</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">PERSISTENCE</span><span class="">PostgreSQL / Redis</span></div><div class="flex items-center justify-between py-1 bg-surface-container-high px-2 rounded"><span class="text-on-surface">ORCHESTRATION</span><span class="">Cloudflare Edge / AWS</span></div></div></div><div class="flex flex-col gap-space-sm"><div class="font-technical-tag text-technical-tag text-on-surface uppercase tracking-wider font-semibold">Connect &amp; Telemetry</div><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="flex items-center justify-between"><span class="text-on-surface-variant">Engineering Inquiries</span><a class="font-technical-code text-technical-code text-primary hover:underline" data-path="contact" href="#">contact@rheva.dev</a></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">PGP Public Fingerprint</span><span class="font-technical-micro text-technical-micro text-on-surface-variant">0x7E9A·28BC·4D1F</span></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">Code Repositories</span><span class="font-technical-code text-technical-code text-on-surface-variant">github.com/rheva</span></li><li class="flex items-center justify-between"><span class="text-on-surface-variant">Professional Record</span><span class="font-technical-code text-technical-code text-on-surface-variant">linkedin.com/in/rheva</span></li></ul></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-technical-micro text-technical-micro text-on-surface-variant"><div class="flex flex-wrap items-center gap-space-md"><span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-status-success"></span>STABLE RELEASE 2024</span><span class="">UTF-8 SPECIFICATION</span><span class="">COMPLIANT BUILD 24.12</span><span class="">LATENCY &lt;18MS</span></div><div class="flex items-center gap-space-sm"><span class="">© 2024 Rheva Iqbal Abdillah. All systems operational.</span></div></div></div></footer>
+
+</body></html>

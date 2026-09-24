@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span>Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span>Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span>Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="inquiries" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span>Inquiries &amp; Inbound</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span><span>Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="configuration-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span>Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span>View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"/><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-1.5 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline-variant">/</span><span class="text-on-surface font-medium">dashboard</span></div><div class="h-3.5 w-px bg-border-light"></div><div class="flex items-center gap-1.5 font-technical-micro text-technical-micro text-outline"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span>FIRESTORE: CONNECTED</span></div></div><div class="flex items-center gap-4"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[18px] text-outline pointer-events-none">search</span><input class="h-8 w-56 pl-8 pr-12 rounded bg-surface-container-low text-on-surface font-body-sm text-xs placeholder:text-outline border border-border-light focus:outline-none focus:border-primary-container transition-colors" placeholder="Quick search..." type="text"/><kbd class="absolute right-2 font-technical-micro text-[10px] text-outline px-1.5 py-0.5 rounded border border-border-light bg-surface-container-lowest shadow-sm pointer-events-none">⌘K</kbd></div><button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"/><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full">
+<!-- Interactive View State Controller / Mode Switcher Toolbar -->
+<div class="mb-6 px-4 py-3 rounded-lg bg-surface-container-lowest shadow-sm flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 min-w-0">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded bg-primary-container/10 text-primary-container">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</span>
+<span class="font-technical-tag text-technical-tag uppercase text-on-surface-variant font-semibold tracking-wider">Editor Harness Preview:</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface text-xs" id="activeModeLabel">Editing proj_simpeg_core</span>
+</div>
+<!-- Mode Selector Pills -->
+<div class="flex flex-wrap items-center gap-1.5 p-1 rounded-lg bg-surface-container-low">
+<button class="px-2.5 py-1 rounded text-xs font-technical-tag font-semibold transition-all bg-surface-container-lowest text-on-surface shadow-xs flex items-center gap-1.5" id="btn-mode-edit" onclick="setEditorMode('edit')" type="button">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span>Edit Mode (SIMPEG Core)</span>
+</button>
+<button class="px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 flex items-center gap-1.5" id="btn-mode-create" onclick="setEditorMode('create')" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Create Blank (/new)</span>
+</button>
+<button class="px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 flex items-center gap-1" onclick="openModal('modal-unsaved')" type="button">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+<span>Unsaved Dialog</span>
+</button>
+<button class="px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 flex items-center gap-1 text-primary-container" onclick="openModal('modal-publish')" type="button">
+<span class="material-symbols-outlined text-[14px]">cloud_upload</span>
+<span>Publish Modal</span>
+</button>
+<button class="px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-error hover:bg-error-container/40 flex items-center gap-1" onclick="openModal('modal-delete')" type="button">
+<span class="material-symbols-outlined text-[14px]">delete</span>
+<span>Delete Dialog</span>
+</button>
+</div>
+</div>
+<!-- Sticky Header Bar -->
+<header class="sticky top-16 z-30 mb-8 -mx-8 px-8 py-4 bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-outline">
+<a class="hover:text-on-surface transition-colors" href="#">admin</a>
+<span>/</span>
+<a class="hover:text-on-surface transition-colors" href="#">projects</a>
+<span>/</span>
+<span class="text-on-surface-variant" id="breadcrumb-action">edit</span>
+<span>/</span>
+<span class="font-technical-code text-on-surface font-semibold" id="breadcrumb-id">simpeg-core</span>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<h1 class="font-h2 text-2xl font-bold tracking-tight text-on-surface truncate" id="header-title">Edit Project — SIMPEG Core</h1>
+<span class="font-technical-code text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase tracking-wider font-semibold" id="doc-badge">
+          DOC_ID: proj_simpeg_core
+        </span>
+<div class="flex items-center gap-1.5 font-technical-micro text-technical-micro text-status-success">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+<span id="save-status-indicator">All changes saved to Firestore</span>
+</div>
+</div>
+</div>
+<!-- Header Action Controls -->
+<div class="flex items-center flex-wrap gap-2.5 shrink-0">
+<button class="h-9 px-3.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-body-sm text-xs font-medium transition-all shadow-xs flex items-center gap-1.5" onclick="simulateSaveDraft()" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Draft</span>
+</button>
+<a class="h-9 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-body-sm text-xs font-medium transition-all shadow-xs flex items-center gap-1.5" href="#" id="btn-preview-link" target="_blank">
+<span>Preview Case Study</span>
+<span class="material-symbols-outlined text-[15px] text-outline">arrow_outward</span>
+</a>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-body-sm text-xs font-semibold transition-all shadow-sm flex items-center gap-1.5" onclick="openModal('modal-publish')" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span id="btn-primary-action">Update &amp; Publish</span>
+</button>
+<!-- Overflow Dropdown Trigger -->
+<div class="relative">
+<button class="h-9 w-9 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleMenu('header-actions-menu')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1.5 w-48 rounded-xl bg-surface-container-lowest shadow-xl p-1.5 z-50 flex flex-col gap-0.5" id="header-actions-menu">
+<button class="w-full px-3 py-2 text-left font-body-sm text-xs rounded-lg hover:bg-surface-container-low text-on-surface flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">content_copy</span>
+<span>Duplicate Project</span>
+</button>
+<button class="w-full px-3 py-2 text-left font-body-sm text-xs rounded-lg hover:bg-surface-container-low text-on-surface flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">archive</span>
+<span>Archive Document</span>
+</button>
+<button class="w-full px-3 py-2 text-left font-body-sm text-xs rounded-lg hover:bg-surface-container-low text-on-surface flex items-center gap-2" onclick="openModal('modal-unsaved')" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span>Discard Changes</span>
+</button>
+<div class="my-1 h-px bg-surface-container"></div>
+<button class="w-full px-3 py-2 text-left font-body-sm text-xs rounded-lg hover:bg-error-container text-error flex items-center gap-2" onclick="openModal('modal-delete')" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Delete Permanently</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Two-Column Primary Workspace Grid (~68% Main Content / ~32% Metadata & Ops) -->
+<form class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start" id="project-editor-form" onsubmit="event.preventDefault(); openModal('modal-publish');">
+<!-- MAIN CONTENT COLUMN (8 of 12 cols = 66.7%) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- SECTION A: Basic Information -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm p-6 flex flex-col gap-5">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</span>
+<div>
+<h2 class="font-h3 text-base font-bold text-on-surface">Core Dossier &amp; Identification</h2>
+<p class="font-technical-micro text-technical-micro text-outline">Primary project indexing parameters and public canonical routing</p>
+</div>
+</div>
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded bg-surface-container-low text-outline uppercase">Required Fields</span>
+</div>
+<!-- Project Title Field -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-name">
+              Project Name <span class="text-error">*</span>
+</label>
+<span class="font-technical-micro text-technical-micro text-outline"><span id="title-char-count">64</span> / 100</span>
+</div>
+<input class="w-full h-10 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body text-sm focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-colors" id="project-name" name="projectName" oninput="document.getElementById('title-char-count').innerText = this.value.length; updateSlugPreview(this.value);" placeholder="e.g. SIMPEG Core — Regional Personnel Platform" type="text" value="SIMPEG Core — Regional Personnel &amp; Civil Service Dossier System"/>
+</div>
+<!-- Slug & Canonical URL Preview -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<div class="md:col-span-7 space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface flex items-center gap-1.5" for="project-slug">
+<span>Slug Identifier</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant uppercase">Auto-sync</span>
+</label>
+<div class="flex items-center gap-1 text-status-success font-technical-micro text-technical-micro">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Firestore Unique</span>
+</div>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-technical-code text-xs text-outline pointer-events-none">/</span>
+<input class="w-full h-10 pl-7 pr-10 rounded-lg bg-surface-container-low font-technical-code text-xs text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-colors" id="project-slug" name="projectSlug" type="text" value="simpeg-core"/>
+<button class="absolute right-2 p-1 text-outline hover:text-on-surface transition-colors" onclick="navigator.clipboard.writeText('simpeg-core')" title="Copy Slug" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Public URL Box -->
+<div class="md:col-span-5 space-y-1.5">
+<span class="font-body-sm text-xs font-semibold text-outline block">Public Canonical Route</span>
+<div class="h-10 px-3 rounded-lg bg-surface-container-low flex items-center justify-between font-technical-micro text-technical-micro text-on-surface-variant overflow-hidden">
+<span class="truncate" id="canonical-url-preview">https://rheva.os/projects/simpeg-core</span>
+<a class="text-primary-container hover:underline ml-2 shrink-0 flex items-center" href="#" target="_blank">
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Short Description -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-short-desc">
+              Short Description / Summary Pitch <span class="text-error">*</span>
+</label>
+<span class="font-technical-micro text-technical-micro text-outline">Used in product showcases &amp; cards</span>
+</div>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-colors resize-none" id="project-short-desc" name="shortDesc" placeholder="Concise 1-2 sentence engineering synopsis..." rows="2">High-integrity employee dossier and civil service promotion management system built with offline-tolerant synchronization and verifiable audit trails.</textarea>
+</div>
+<!-- Full Abstract / Executive Briefing -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-abstract">
+              Executive Briefing &amp; Platform Synopsis
+            </label>
+<span class="font-technical-tag text-technical-tag text-outline">Markdown Supported</span>
+</div>
+<div class="rounded-lg bg-surface-container-low overflow-hidden shadow-xs">
+<div class="px-3 py-2 bg-surface-container flex items-center gap-1 text-outline">
+<button class="p-1 hover:text-on-surface rounded transition-colors" title="Bold" type="button"><span class="material-symbols-outlined text-[16px]">format_bold</span></button>
+<button class="p-1 hover:text-on-surface rounded transition-colors" title="Italic" type="button"><span class="material-symbols-outlined text-[16px]">format_italic</span></button>
+<button class="p-1 hover:text-on-surface rounded transition-colors" title="Code" type="button"><span class="material-symbols-outlined text-[16px]">code</span></button>
+<span class="h-3 w-px bg-surface-container-high mx-1"></span>
+<button class="p-1 hover:text-on-surface rounded transition-colors" title="Bullet List" type="button"><span class="material-symbols-outlined text-[16px]">format_list_bulleted</span></button>
+<button class="p-1 hover:text-on-surface rounded transition-colors" title="Quote" type="button"><span class="material-symbols-outlined text-[16px]">format_quote</span></button>
+<span class="h-3 w-px bg-surface-container-high mx-1"></span>
+<span class="font-technical-micro text-[10px] uppercase ml-auto">Live Markdown Mode</span>
+</div>
+<textarea class="w-full p-3.5 bg-surface-container-lowest text-on-surface font-technical-code text-xs leading-relaxed focus:outline-none resize-y" id="project-abstract" name="projectAbstract" placeholder="Provide a thorough technical overview of the system architecture and operational baseline..." rows="4">The SIMPEG platform re-engineers regional government civil-service workflows into a verifiable, deterministic software pipeline. By replacing legacy paper dossiers with client-side cryptographically attested records, the deployment mitigates document forgery across 8 institutional campuses.</textarea>
+</div>
+</div>
+</section>
+<!-- SECTION B: Case Study Architecture (Matches Public Blueprint) -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</span>
+<div>
+<h2 class="font-h3 text-base font-bold text-on-surface">Case Study Architecture</h2>
+<p class="font-technical-micro text-technical-micro text-outline">Rigorous problem-to-outcome engineering blueprint matching public deep-dive</p>
+</div>
+</div>
+<span class="font-technical-tag text-technical-tag px-2.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-medium">Public Format v2.4</span>
+</div>
+<!-- Context & Problem Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>1. Institutional Context &amp; Scope</span>
+</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none" id="case-overview" rows="4">Deployed across 8 regional faculties servicing over 3,400 active civil service personnel, academic professors, and administrative officers under strict state education regulations.</textarea>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+<span>2. Bottleneck &amp; System Failure Points</span>
+</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none" id="case-bottlenecks" rows="4">Paper-heavy bureaucracy, erratic remote campus Wi-Fi drops leading to corrupted submission state, and lack of reproducible point calculations (PAK) producing frequent litigation disputes.</textarea>
+</div>
+</div>
+<!-- Solution & Strategy -->
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>3. Solution Architecture &amp; Strategy</span>
+</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none" id="case-solution" rows="3">Introduced deterministic state machine transition gates, client-side WebCrypto SHA-256 signatures stored in offline IndexedDB, and server-side atomic batch verification against canonical Firestore schemas.</textarea>
+</div>
+<!-- Dynamic Key Features Builder -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-xs font-semibold text-on-surface uppercase tracking-wide">Key Architectural Pillars (3 active)</span>
+<button class="font-technical-tag text-technical-tag text-primary-container hover:underline flex items-center gap-1" onclick="addFeatureCard()" type="button">
+<span class="material-symbols-outlined text-[14px]">add_circle</span>
+<span>Add Pillar</span>
+</button>
+</div>
+<div class="space-y-2.5" id="features-container">
+<!-- Feature Item 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3 group">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5 cursor-grab">drag_indicator</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 flex-1">
+<input class="md:col-span-4 h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-semibold text-on-surface focus:outline-none" placeholder="Feature Title" type="text" value="Offline-Tolerant Dossier Signing"/>
+<input class="md:col-span-8 h-8 px-2.5 rounded bg-surface-container-lowest text-xs text-on-surface-variant focus:outline-none" placeholder="Technical mechanism" type="text" value="Zero-downtime IndexedDB transaction queue with automated cryptographic attestation upon Wi-Fi handshake."/>
+</div>
+<button class="text-outline hover:text-error p-1 transition-colors" onclick="this.closest('.group').remove()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Feature Item 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3 group">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5 cursor-grab">drag_indicator</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 flex-1">
+<input class="md:col-span-4 h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-semibold text-on-surface focus:outline-none" placeholder="Feature Title" type="text" value="Multi-Tenant Civil Hierarchy"/>
+<input class="md:col-span-8 h-8 px-2.5 rounded bg-surface-container-lowest text-xs text-on-surface-variant focus:outline-none" placeholder="Technical mechanism" type="text" value="Granular role-based ACLs for deans, rectors, and auditor committees with immutable audit logging."/>
+</div>
+<button class="text-outline hover:text-error p-1 transition-colors" onclick="this.closest('.group').remove()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Feature Item 3 -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3 group">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5 cursor-grab">drag_indicator</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 flex-1">
+<input class="md:col-span-4 h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-semibold text-on-surface focus:outline-none" placeholder="Feature Title" type="text" value="Deterministic Score Calculator (PAK)"/>
+<input class="md:col-span-8 h-8 px-2.5 rounded bg-surface-container-lowest text-xs text-on-surface-variant focus:outline-none" placeholder="Technical mechanism" type="text" value="Integer-cent precision mathematics eliminating IEEE-754 floating-point drift during point computations."/>
+</div>
+<button class="text-outline hover:text-error p-1 transition-colors" onclick="this.closest('.group').remove()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Implementation Process Steps Timeline Builder -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-xs font-semibold text-on-surface uppercase tracking-wide">Implementation Sequence (4 Phases)</span>
+<span class="font-technical-micro text-technical-micro text-outline">Sequential Execution Timeline</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-technical-micro text-[10px] text-primary-container font-semibold uppercase">Phase 01 // Discovery</span>
+<p class="font-body-sm text-xs font-medium text-on-surface">Institutional Workflow Audit &amp; Stakeholder Mapping</p>
+<p class="font-technical-micro text-[11px] text-on-surface-variant">Standardized 34 manual civil service forms into discrete transition schemas.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-technical-micro text-[10px] text-primary-container font-semibold uppercase">Phase 02 // Core Protocol</span>
+<p class="font-body-sm text-xs font-medium text-on-surface">Canonical Data Schema Design &amp; Zod Contracts</p>
+<p class="font-technical-micro text-[11px] text-on-surface-variant">Strict bidirectional validation boundary guarding Firestore batch writes.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-technical-micro text-[10px] text-primary-container font-semibold uppercase">Phase 03 // Fault Tolerance</span>
+<p class="font-body-sm text-xs font-medium text-on-surface">Client-Side Offline Mutation Queue</p>
+<p class="font-technical-micro text-[11px] text-on-surface-variant">IndexedDB staging engine holding records until cryptographic handshake validates.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-technical-micro text-[10px] text-primary-container font-semibold uppercase">Phase 04 // Deployment</span>
+<p class="font-body-sm text-xs font-medium text-on-surface">Air-Gapped Stress Testing &amp; Docker Rollout</p>
+<p class="font-technical-micro text-[11px] text-on-surface-variant">Packaged high-availability image deployed across regional server blades.</p>
+</div>
+</div>
+</div>
+<!-- Technical Challenges & Outcomes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Technical Challenge Retrospective</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none" id="case-challenges" rows="3">Mitigating high concurrency stampedes during university promotion submission windows when thousands of educators submit simultaneously over erratic 3G links.</textarea>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Measurable Outcomes &amp; Impact</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body text-xs focus:outline-none focus:bg-surface-container-lowest shadow-xs resize-none" id="case-outcomes" rows="3">Zero dropped or corrupted promotion dossiers across 2 review cycles; reduced institutional audit turnaround time from 24 working days down to 3.2 days.</textarea>
+</div>
+</div>
+</section>
+<!-- SECTION C: Technology Stack Builder -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<div>
+<h2 class="font-h3 text-base font-bold text-on-surface">Technology Stack &amp; Infrastructure</h2>
+<p class="font-technical-micro text-technical-micro text-outline">Frameworks, cloud backends, and cryptographic primitives applied</p>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">7 Tags Assigned</span>
+</div>
+<!-- Active Tech Tag Chips Container -->
+<div class="flex flex-wrap items-center gap-2 p-3 rounded-lg bg-surface-container-low" id="tech-tags-container">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Next.js 14</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>TypeScript</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+<span>Cloud Firestore</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Tailwind CSS</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>shadcn/ui</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Docker</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>WebCrypto API</span>
+<button class="text-outline hover:text-error transition-colors" onclick="this.parentElement.remove()" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<div class="relative flex items-center ml-1">
+<input class="h-7 px-2.5 rounded bg-surface-container text-xs font-technical-tag text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-colors" id="new-tag-input" onkeydown="if(event.key === 'Enter'){ event.preventDefault(); addTechTag(this.value); this.value=''; }" placeholder="+ Add tech tag..." type="text"/>
+</div>
+</div>
+<!-- Quick-add Popular Stack Suggestions -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-technical-micro text-[11px] text-outline">Suggested primitives:</span>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="font-technical-micro text-[11px] px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="addTechTag('Zod')" type="button">+ Zod</button>
+<button class="font-technical-micro text-[11px] px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="addTechTag('IndexedDB')" type="button">+ IndexedDB</button>
+<button class="font-technical-micro text-[11px] px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="addTechTag('Redis')" type="button">+ Redis</button>
+<button class="font-technical-micro text-[11px] px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="addTechTag('PostgreSQL')" type="button">+ PostgreSQL</button>
+</div>
+</div>
+</section>
+<!-- SECTION D: Media & Asset Integration -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm p-6 flex flex-col gap-6">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">perm_media</span>
+</span>
+<div>
+<h2 class="font-h3 text-base font-bold text-on-surface">Media Assets &amp; Architecture Diagrams</h2>
+<p class="font-technical-micro text-technical-micro text-outline">High-fidelity system schematics and case study screenshots</p>
+</div>
+</div>
+<button class="font-technical-tag text-technical-tag text-on-surface-variant hover:text-on-surface flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">folder_open</span>
+<span>Media Library</span>
+</button>
+</div>
+<!-- Primary Hero Asset Card -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Primary Hero Asset (16:9 Architecture Blueprint)</span>
+<span class="font-technical-micro text-technical-micro text-outline">Optimal: 1920×1080px WebP / PNG</span>
+</div>
+<div class="rounded-xl bg-surface-container-low overflow-hidden shadow-xs">
+<div class="relative w-full h-64 bg-surface-dark flex items-center justify-center overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]" data-alt="Technical architectural system diagram for SIMPEG Core civil service dossier software. Showing high-precision blue data pipelines, WebCrypto cryptographic validation nodes, IndexedDB local synchronization layer, and Firestore canonical cloud database. Rendered in dark engineering blueprint style with clean typographic labels, crisp lines, and zero clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI0YuS4sBUTvGpOKOM8hSWvoh1aJYZdr9n7ZNUxvIsi2gP_-XInThb3Vh8AYdry6pFDQ1StyMUmp7NYxRvDYmtd5aaIuonHkoiIGqlvHEsmRRtsKd7V76Z1XhwsTdRNrLF3xojnTnubqjjiqmi5UzVDWt02Il9SluFdxmnXmtmg89tjjUEKc3cZFFiowXiDHoV_KMKu45sRYEAICqKPEE474f-b_L60I7YrqYecRy0pR1B92y7cTSzyw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end justify-between p-4">
+<div class="text-on-primary">
+<p class="font-technical-code text-xs font-medium tracking-tight">hero-architecture.webp</p>
+<p class="font-technical-micro text-[11px] text-outline-variant">1920 × 1080 px • 420 KB • WebP (Lossless Compression)</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded bg-surface-container-lowest/90 backdrop-blur-md text-on-surface font-body-sm text-xs font-semibold hover:bg-surface-container-lowest transition-all shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>Replace</span>
+</button>
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-error hover:bg-surface-container-lowest transition-all shadow-sm flex items-center" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Asset Metadata & Alt Text Field -->
+<div class="p-3.5 bg-surface-container-lowest flex flex-col gap-2.5">
+<div class="flex items-center justify-between font-technical-micro text-technical-micro text-outline">
+<span class="truncate font-technical-code">gs://rheva-platform.appspot.com/projects/simpeg/hero-architecture.webp</span>
+<span class="text-status-success font-semibold shrink-0">CDN Cached</span>
+</div>
+<div class="space-y-1">
+<label class="font-body-sm text-[11px] font-medium text-on-surface-variant" for="hero-alt">Accessibility Alt Text (Strict Editorial Guideline)</label>
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-low text-xs text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-colors" id="hero-alt" type="text" value="SIMPEG Core technical architecture topology and state-machine pipeline diagram"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Case Study Gallery Manager -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Gallery Artifacts (3 Uploaded)</span>
+<span class="font-technical-micro text-technical-micro text-outline">Drag handles to re-order sequence</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<!-- Gallery Item 1 -->
+<div class="rounded-lg bg-surface-container-low p-2.5 flex flex-col gap-2 shadow-xs group">
+<div class="relative w-full h-28 rounded bg-surface-dark overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Editorial interface screenshot of SIMPEG Core civil service promotion workflow dashboard. Crisp light-mode tabular UI showing candidate dossiers, status pills, and score breakdown cards. Clean typography and subtle hairline dividers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNkz_Lmk0WV1qPaSXkUkTpHHefm756bdlh4i_hvW-FXIlzw2BlgA9eGPamzdF1VdWgVSKy_sup6OYBIRdgFg0cFZMzN7C-ykiie0omqKnI-PojjD255D2FCWeDV5vV7zPFWOX2B0B8fnK4UpHEjtGt6RmJzgDlsxrCvV4k9gH0NqmLwNAJ6dK2ee9P3I-vu8121wiXNj_p_7Ns40zY00-iSFpFPNdVsIZ8PdL6v41ZbVgZ0YhQyvdEdw"/>
+<span class="absolute top-1.5 left-1.5 font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-black/60 text-white font-mono">01</span>
+<button class="absolute top-1.5 right-1.5 p-1 rounded bg-black/60 text-white hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<input class="h-7 px-2 rounded bg-surface-container-lowest text-[11px] font-medium text-on-surface focus:outline-none" type="text" value="Workflow Dossier Review UI"/>
+</div>
+<!-- Gallery Item 2 -->
+<div class="rounded-lg bg-surface-container-low p-2.5 flex flex-col gap-2 shadow-xs group">
+<div class="relative w-full h-28 rounded bg-surface-dark overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Biometric and cryptographic verification modal screen of SIMPEG system with digital hash signature, SHA-256 fingerprint verification card, and authorization seal in blue accent styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQx-k7og5yJp6ZeFXS3rph_W1MKtywpLgW8U8CGn1_vnkwIACpLnuj5tkbG0ungDoD5LDz5i593X8ScyNi2v3G22tyLX3h5l_PYLAlarGAnHLdvzgjHnBO1l87HQApXhtRRMk9R74jotEC740DIQwDNhM0BYmjRCQByFW4OoIK1wJeF5d9t7zlyaBX_73ORX8w27v9sQIvLhQzI7E48939xd38kLsuySwT_8s5dUq8YfjDecRBsYYDQ"/>
+<span class="absolute top-1.5 left-1.5 font-technical-micro text-[10px] px-1.5 py-0.5 rounded bg-black/60 text-white font-mono">02</span>
+<button class="absolute top-1.5 right-1.5 p-1 rounded bg-black/60 text-white hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<input class="h-7 px-2 rounded bg-surface-container-lowest text-[11px] font-medium text-on-surface focus:outline-none" type="text" value="Biometric Verification Gate"/>
+</div>
+<!-- Gallery Item 3: Add Dropzone -->
+<div class="rounded-lg bg-surface-container-lowest flex flex-col items-center justify-center p-4 gap-2 text-center cursor-pointer hover:bg-surface-container-low transition-colors min-h-[148px]">
+<span class="material-symbols-outlined text-outline text-[24px]">add_photo_alternate</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Add Gallery Asset</span>
+<span class="font-technical-micro text-[10px] text-outline">Drop WebP, PNG, or SVG</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION E: External References & Production Endpoints -->
+<section class="rounded-xl bg-surface-container-lowest shadow-sm p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2.5">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">link</span>
+</span>
+<div>
+<h2 class="font-h3 text-base font-bold text-on-surface">Deployment Endpoints &amp; References</h2>
+<p class="font-technical-micro text-technical-micro text-outline">External links shown on public case study footer and metadata ribbons</p>
+</div>
+</div>
+<button class="font-technical-tag text-technical-tag text-primary-container hover:underline flex items-center gap-1" onclick="addEndpointRow()" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add Endpoint</span>
+</button>
+</div>
+<div class="space-y-2.5" id="endpoints-container">
+<!-- Link Row 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+<div class="md:col-span-3">
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest font-technical-micro text-xs text-on-surface focus:outline-none">
+<option selected="">Production Intranet Demo</option>
+<option>Repository</option>
+<option>Technical Memo / RFC</option>
+<option>Documentation</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-medium text-on-surface focus:outline-none" placeholder="Label" type="text" value="Live Faculty Sandbox"/>
+</div>
+<div class="md:col-span-5">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest font-technical-code text-xs text-on-surface-variant focus:outline-none" placeholder="https://..." type="text" value="https://simpeg-demo.rheva.os"/>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="this.closest('.grid').remove()" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+<!-- Link Row 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+<div class="md:col-span-3">
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest font-technical-micro text-xs text-on-surface focus:outline-none">
+<option>Production Intranet Demo</option>
+<option selected="">Repository</option>
+<option>Technical Memo / RFC</option>
+<option>Documentation</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-medium text-on-surface focus:outline-none" placeholder="Label" type="text" value="Internal GitLab Monorepo"/>
+</div>
+<div class="md:col-span-5">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest font-technical-code text-xs text-on-surface-variant focus:outline-none" placeholder="https://..." type="text" value="https://gitlab.internal/civil/simpeg-core"/>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="this.closest('.grid').remove()" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+<!-- Link Row 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center">
+<div class="md:col-span-3">
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest font-technical-micro text-xs text-on-surface focus:outline-none">
+<option>Production Intranet Demo</option>
+<option>Repository</option>
+<option selected="">Technical Memo / RFC</option>
+<option>Documentation</option>
+</select>
+</div>
+<div class="md:col-span-3">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-medium text-on-surface focus:outline-none" placeholder="Label" type="text" value="Architecture RFC-8250"/>
+</div>
+<div class="md:col-span-5">
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest font-technical-code text-xs text-on-surface-variant focus:outline-none" placeholder="https://..." type="text" value="/articles/architecting-offline-tolerant-civil-service-dossier-verification"/>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<button class="text-outline hover:text-error transition-colors p-1" onclick="this.closest('.grid').remove()" type="button"><span class="material-symbols-outlined text-[16px]">close</span></button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- SIDEBAR COLUMN (4 of 12 cols = 33.3%) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- CARD 1: Publication & Visibility Engine -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-2">
+<span class="font-h3 text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary-container">sensors</span>
+<span>Publication Status</span>
+</span>
+<span class="font-technical-tag text-technical-tag px-2 py-0.5 rounded-full bg-status-success/10 text-status-success font-semibold flex items-center gap-1" id="sidebar-live-pill">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Live Published</span>
+</span>
+</div>
+<!-- Visibility Radio Options -->
+<div class="space-y-2">
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 text-primary-container focus:ring-0" name="visibility" type="radio" value="published"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Published</span>
+<span class="font-technical-micro text-[11px] text-outline">Publicly visible on /projects and search engines</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="mt-0.5 text-primary-container focus:ring-0" name="visibility" type="radio" value="draft"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Draft</span>
+<span class="font-technical-micro text-[11px] text-outline">Visible exclusively to Rheva Superadmin</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="mt-0.5 text-primary-container focus:ring-0" name="visibility" type="radio" value="archived"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Archived</span>
+<span class="font-technical-micro text-[11px] text-outline">Hidden from portfolio listings; URL redirects</span>
+</div>
+</label>
+</div>
+<div class="h-px bg-surface-container"></div>
+<!-- Schedule / Date Published -->
+<div class="space-y-2">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="publish-date">Publication Timestamp</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[16px] text-outline pointer-events-none">calendar_month</span>
+<input class="w-full h-9 pl-8 pr-3 rounded-lg bg-surface-container-low text-xs font-technical-code text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs transition-colors" id="publish-date" type="text" value="Sep 15, 2024 · 10:20 WIB"/>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-2.5 rounded-lg bg-surface-container-low font-technical-micro text-[11px] text-on-surface-variant">
+<div class="flex justify-between">
+<span class="text-outline">Last Saved:</span>
+<span class="font-semibold text-on-surface">Nov 12, 2024 · 14:32 WIB</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Editor:</span>
+<span>Rheva Iqbal Abdillah</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Project Classification & Lifecycle -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-5 flex flex-col gap-4">
+<span class="font-h3 text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">category</span>
+<span>Taxonomy &amp; Metadata</span>
+</span>
+<div class="space-y-3">
+<!-- Category Select -->
+<div class="space-y-1">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-category">Primary Category</label>
+<select class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-xs font-body text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs" id="project-category">
+<option selected="">Administrative System</option>
+<option>Web Application</option>
+<option>Education Technology</option>
+<option>Internal System</option>
+<option>Workflow Application</option>
+</select>
+</div>
+<!-- Lifecycle Status -->
+<div class="space-y-1">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-lifecycle">Lifecycle Phase</label>
+<select class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-xs font-body text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs" id="project-lifecycle">
+<option selected="">Completed (Stable)</option>
+<option>In Progress (Active Dev)</option>
+<option>Maintenance Mode</option>
+<option>Sunset / Archived</option>
+</select>
+</div>
+<!-- Development Year -->
+<div class="space-y-1">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="project-year">Release / Dev Year</label>
+<input class="w-full h-9 px-3 rounded-lg bg-surface-container-low text-xs font-technical-code text-on-surface focus:outline-none focus:bg-surface-container-lowest shadow-xs" id="project-year" type="text" value="2024"/>
+</div>
+<!-- Featured Project Toggle -->
+<div class="pt-2">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-low cursor-pointer">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-0" id="featured-toggle" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-sm text-xs font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Featured Project</span>
+</span>
+<span class="font-technical-micro text-[11px] text-on-surface-variant">Promote to curated hero showcase on Homepage and Projects index.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- CARD 3: Firestore Audit & Telemetry -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-5 flex flex-col gap-3">
+<span class="font-h3 text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline">database</span>
+<span>Firestore Document Telemetry</span>
+</span>
+<div class="space-y-2 font-technical-micro text-technical-micro">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<span class="text-outline">Collection Path:</span>
+<span class="font-technical-code font-medium text-on-surface">projects/</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<span class="text-outline">Document UID:</span>
+<span class="font-technical-code font-semibold text-primary-container" id="telemetry-uid">proj_simpeg_core</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<span class="text-outline">ISR Cache Status:</span>
+<span class="flex items-center gap-1 text-status-success font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Revalidated (tag: projects)</span>
+</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<span class="text-outline">Superadmin Author:</span>
+<span class="text-on-surface font-semibold">Rheva Iqbal Abdillah</span>
+</div>
+</div>
+</div>
+<!-- CARD 4: SEO & Social Graph (Accordion) -->
+<details class="rounded-xl bg-surface-container-lowest shadow-sm p-5 group [&amp;_summary::-webkit-details-marker]:hidden" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<span class="font-h3 text-sm font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-on-surface">search</span>
+<span>SEO &amp; Open Graph Preview</span>
+</span>
+<span class="material-symbols-outlined text-outline text-[18px] transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 flex flex-col gap-3">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-[11px] font-medium text-on-surface" for="seo-title">SEO Title Tag</label>
+<span class="font-technical-micro text-[10px] text-outline">56/60</span>
+</div>
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-low text-xs font-body text-on-surface focus:outline-none" id="seo-title" type="text" value="SIMPEG Core — Case Study | Rheva Developer Platform"/>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-[11px] font-medium text-on-surface" for="seo-desc">Meta Description</label>
+<span class="font-technical-micro text-[10px] text-outline">148/160</span>
+</div>
+<textarea class="w-full p-2.5 rounded bg-surface-container-low text-xs font-body text-on-surface focus:outline-none resize-none" id="seo-desc" rows="2">Detailed engineering retrospective on building offline-tolerant civil service dossier management using Next.js 14, TypeScript, and Firestore.</textarea>
+</div>
+<!-- Social OG Visual Snippet -->
+<div class="rounded-lg bg-surface-container-low p-2.5 flex flex-col gap-1.5">
+<span class="font-technical-micro text-[10px] text-outline uppercase">Twitter / LinkedIn Card Snippet</span>
+<div class="rounded bg-surface-dark p-3 text-on-primary">
+<p class="font-technical-micro text-[10px] text-accent-dark">rheva.os • Case Study</p>
+<p class="font-body-sm text-xs font-semibold line-clamp-1">SIMPEG Core — Civil Service Dossier System</p>
+<p class="font-technical-micro text-[11px] text-text-secondary-dark line-clamp-2">Offline-tolerant synchronized state machine with zero packet loss over regional campus Wi-Fi networks.</p>
+</div>
+</div>
+</div>
+</details>
+<!-- CARD 5: Danger Zone -->
+<div class="rounded-xl bg-error-container/20 shadow-sm p-5 flex flex-col gap-3">
+<div class="flex items-center gap-1.5 text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-h3 text-sm font-bold">Destructive Operations</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">
+          Permanent administrative operations. Deletion unlinks Firestore document records and purges CDN assets.
+        </p>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full h-8 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-xs font-medium hover:bg-surface-container-low transition-colors text-left flex items-center justify-between" type="button">
+<span>Archive Project</span>
+<span class="material-symbols-outlined text-[16px] text-outline">archive</span>
+</button>
+<button class="w-full h-8 px-3 rounded-lg bg-error text-on-error font-body-sm text-xs font-semibold hover:bg-error/90 transition-colors flex items-center justify-center gap-1.5" onclick="openModal('modal-delete')" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>Delete proj_simpeg_core</span>
+</button>
+</div>
+</div>
+</div>
+</form>
+<!-- ================= MODAL SIMULATION DIALOGS ================= -->
+<!-- MODAL 1: Unsaved Changes Dialog -->
+<div class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" id="modal-unsaved">
+<div class="w-full max-w-md rounded-xl bg-surface-container-lowest shadow-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-status-warning">
+<div class="w-10 h-10 rounded-full bg-status-warning/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">history</span>
+</div>
+<div>
+<h3 class="font-h3 text-base font-bold text-on-surface">Unsaved Mutations Detected</h3>
+<p class="font-technical-micro text-technical-micro text-outline">Document has 3 uncommitted local state delta(s)</p>
+</div>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+        You have modified the Case Study Architecture and Hero Image metadata. Leaving this screen without saving will revert the Firestore document to its previous deployment revision.
+      </p>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs font-semibold text-on-surface transition-colors" onclick="closeModal('modal-unsaved')" type="button">
+          Continue Editing
+        </button>
+<button class="h-9 px-4 rounded-lg bg-surface-dark text-on-primary font-body-sm text-xs font-semibold hover:bg-black transition-colors" onclick="closeModal('modal-unsaved')" type="button">
+          Discard Delta
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: Publish Confirmation Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4" id="modal-publish">
+<div class="w-full max-w-lg rounded-xl bg-surface-container-lowest shadow-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-primary-container">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h3 class="font-h3 text-base font-bold text-on-surface">Publish Project to Public Catalog?</h3>
+<p class="font-technical-micro text-technical-micro text-outline">Target: https://rheva.os/projects/simpeg-core</p>
+</div>
+</div>
+<div class="space-y-2 p-3.5 rounded-lg bg-surface-container-low font-technical-micro text-technical-micro">
+<div class="flex items-center justify-between">
+<span class="text-outline">Collection Write:</span>
+<span class="font-semibold text-on-surface">firestore.collection('projects').doc('proj_simpeg_core')</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Cache Invalidation:</span>
+<span class="font-semibold text-status-success">revalidateTag('projects'), revalidatePath('/')</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Sitemap Sync:</span>
+<span class="font-semibold text-on-surface">Priority 0.9 • Weekly</span>
+</div>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+        This action immediately exposes the project case study, screenshots, and metadata on the public portfolio. All institutional stakeholders can view and benchmark this deployment.
+      </p>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs font-semibold text-on-surface transition-colors" onclick="closeModal('modal-publish')" type="button">
+          Cancel
+        </button>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-body-sm text-xs font-semibold hover:bg-primary transition-all shadow-sm flex items-center gap-1.5" onclick="executePublish()" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+<span>Confirm &amp; Publish Live</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL 3: Delete Confirmation Modal -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4" id="modal-delete">
+<div class="w-full max-w-md rounded-xl bg-surface-container-lowest shadow-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center gap-3 text-error">
+<div class="w-10 h-10 rounded-full bg-error-container/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">delete_forever</span>
+</div>
+<div>
+<h3 class="font-h3 text-base font-bold text-on-surface">Delete Project Document?</h3>
+<p class="font-technical-micro text-technical-micro text-outline">Irreversible Firestore deletion</p>
+</div>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+        Are you strictly certain you want to delete <strong class="text-on-surface">"SIMPEG Core"</strong>? This will permanently remove document <code class="font-technical-code px-1.5 py-0.5 rounded bg-surface-container text-error">proj_simpeg_core</code> from Cloud Firestore and unpublish its URL.
+      </p>
+<div class="space-y-1.5">
+<label class="font-technical-micro text-[11px] text-outline block" for="delete-confirmation-input">Type <strong>proj_simpeg_core</strong> to confirm:</label>
+<input class="w-full h-9 px-3 rounded bg-surface-container-low font-technical-code text-xs text-on-surface focus:outline-none" id="delete-confirmation-input" placeholder="proj_simpeg_core" type="text"/>
+</div>
+<div class="flex items-center justify-end gap-2.5 pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container font-body-sm text-xs font-semibold text-on-surface transition-colors" onclick="closeModal('modal-delete')" type="button">
+          Cancel
+        </button>
+<button class="h-9 px-4 rounded-lg bg-error text-on-error font-body-sm text-xs font-semibold hover:bg-error/90 transition-all" onclick="executeDelete()" type="button">
+          Permanently Delete
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container -->
+<div class="hidden fixed bottom-6 right-6 z-50 px-4 py-3 rounded-lg bg-surface-dark text-on-primary shadow-2xl flex items-center gap-2.5 font-technical-code text-xs" id="toast">
+<span class="material-symbols-outlined text-status-success text-[18px]">check_circle</span>
+<span id="toast-message">Firestore synchronized successfully</span>
+</div>
+</div>
+<script>
+  // Simple client-side micro-interactions for Project Editor
+  function setEditorMode(mode) {
+    const editBtn = document.getElementById('btn-mode-edit');
+    const createBtn = document.getElementById('btn-mode-create');
+    const activeLabel = document.getElementById('activeModeLabel');
+    const headerTitle = document.getElementById('header-title');
+    const docBadge = document.getElementById('doc-badge');
+    const breadcrumbAction = document.getElementById('breadcrumb-action');
+    const breadcrumbId = document.getElementById('breadcrumb-id');
+    const primaryBtn = document.getElementById('btn-primary-action');
+    const telemetryUid = document.getElementById('telemetry-uid');
+    
+    // Inputs to toggle between SIMPEG populated & Clean blank
+    const nameInput = document.getElementById('project-name');
+    const slugInput = document.getElementById('project-slug');
+    const shortDesc = document.getElementById('project-short-desc');
+    const abstract = document.getElementById('project-abstract');
+    const overview = document.getElementById('case-overview');
+    const bottlenecks = document.getElementById('case-bottlenecks');
+    const solution = document.getElementById('case-solution');
+    const challenges = document.getElementById('case-challenges');
+    const outcomes = document.getElementById('case-outcomes');
+    const charCount = document.getElementById('title-char-count');
+
+    if (mode === 'create') {
+      editBtn.className = 'px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 flex items-center gap-1.5';
+      createBtn.className = 'px-2.5 py-1 rounded text-xs font-technical-tag font-semibold transition-all bg-surface-container-lowest text-on-surface shadow-xs flex items-center gap-1.5';
+      
+      activeLabel.innerText = 'Creating blank (/admin/projects/new)';
+      headerTitle.innerText = 'Create New Project';
+      docBadge.innerText = 'DOC_ID: [AUTO_GEN_FIRESTORE_UID]';
+      breadcrumbAction.innerText = 'new';
+      breadcrumbId.innerText = 'draft';
+      primaryBtn.innerText = 'Publish Live Document';
+      telemetryUid.innerText = '[Pending Generation]';
+
+      // Clear fields
+      nameInput.value = '';
+      slugInput.value = '';
+      shortDesc.value = '';
+      abstract.value = '';
+      overview.value = '';
+      bottlenecks.value = '';
+      solution.value = '';
+      challenges.value = '';
+      outcomes.value = '';
+      charCount.innerText = '0';
+      document.getElementById('canonical-url-preview').innerText = 'https://rheva.os/projects/...';
+      showToast('Switched to /admin/projects/new blank state');
+    } else {
+      createBtn.className = 'px-2.5 py-1 rounded text-xs font-technical-tag font-medium transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest/60 flex items-center gap-1.5';
+      editBtn.className = 'px-2.5 py-1 rounded text-xs font-technical-tag font-semibold transition-all bg-surface-container-lowest text-on-surface shadow-xs flex items-center gap-1.5';
+      
+      activeLabel.innerText = 'Editing proj_simpeg_core';
+      headerTitle.innerText = 'Edit Project \u2014 SIMPEG Core';
+      docBadge.innerText = 'DOC_ID: proj_simpeg_core';
+      breadcrumbAction.innerText = 'edit';
+      breadcrumbId.innerText = 'simpeg-core';
+      primaryBtn.innerText = 'Update & Publish';
+      telemetryUid.innerText = 'proj_simpeg_core';
+
+      // Restore populated values
+      nameInput.value = 'SIMPEG Core — Regional Personnel & Civil Service Dossier System';
+      slugInput.value = 'simpeg-core';
+      shortDesc.value = 'High-integrity employee dossier and civil service promotion management system built with offline-tolerant synchronization and verifiable audit trails.';
+      abstract.value = 'The SIMPEG platform re-engineers regional government civil-service workflows into a verifiable, deterministic software pipeline. By replacing legacy paper dossiers with client-side cryptographically attested records, the deployment mitigates document forgery across 8 institutional campuses.';
+      overview.value = 'Deployed across 8 regional faculties servicing over 3,400 active civil service personnel, academic professors, and administrative officers under strict state education regulations.';
+      bottlenecks.value = 'Paper-heavy bureaucracy, erratic remote campus Wi-Fi drops leading to corrupted submission state, and lack of reproducible point calculations (PAK) producing frequent litigation disputes.';
+      solution.value = 'Introduced deterministic state machine transition gates, client-side WebCrypto SHA-256 signatures stored in offline IndexedDB, and server-side atomic batch verification against canonical Firestore schemas.';
+      challenges.value = 'Mitigating high concurrency stampedes during university promotion submission windows when thousands of educators submit simultaneously over erratic 3G links.';
+      outcomes.value = 'Zero dropped or corrupted promotion dossiers across 2 review cycles; reduced institutional audit turnaround time from 24 working days down to 3.2 days.';
+      charCount.innerText = nameInput.value.length;
+      document.getElementById('canonical-url-preview').innerText = 'https://rheva.os/projects/simpeg-core';
+      showToast('Loaded proj_simpeg_core snapshot');
+    }
+  }
+
+  function updateSlugPreview(title) {
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    if (slug) {
+      document.getElementById('project-slug').value = slug;
+      document.getElementById('canonical-url-preview').innerText = 'https://rheva.os/projects/' + slug;
+    }
+  }
+
+  function toggleMenu(menuId) {
+    const el = document.getElementById(menuId);
+    el.classList.toggle('hidden');
+  }
+
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+  }
+
+  function simulateSaveDraft() {
+    const indicator = document.getElementById('save-status-indicator');
+    indicator.innerText = 'Saving local delta to Firestore...';
+    setTimeout(() => {
+      indicator.innerText = 'Draft saved at ' + new Date().toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+      showToast('Draft written to Firestore collection');
+    }, 450);
+  }
+
+  function executePublish() {
+    closeModal('modal-publish');
+    showToast('Published! Next.js On-Demand ISR triggered');
+  }
+
+  function executeDelete() {
+    closeModal('modal-delete');
+    showToast('Document purged from Firestore');
+  }
+
+  function addTechTag(name) {
+    if (!name.trim()) return;
+    const container = document.getElementById('tech-tags-container');
+    const chip = document.createElement('span');
+    chip.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-technical-tag text-technical-tag shadow-xs';
+    chip.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span><span>' + name.trim() + '</span><button type="button" onclick="this.parentElement.remove()" class="text-outline hover:text-error transition-colors"><span class="material-symbols-outlined text-[14px]">close</span></button>';
+    container.insertBefore(chip, container.lastElementChild);
+    showToast('Added technology tag: ' + name);
+  }
+
+  function addFeatureCard() {
+    const container = document.getElementById('features-container');
+    const item = document.createElement('div');
+    item.className = 'p-3.5 rounded-lg bg-surface-container-low flex items-start gap-3 group';
+    item.innerHTML = '<span class="material-symbols-outlined text-outline text-[18px] mt-0.5 cursor-grab">drag_indicator</span><div class="grid grid-cols-1 md:grid-cols-12 gap-2.5 flex-1"><input type="text" placeholder="Pillar Title..." class="md:col-span-4 h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-semibold text-on-surface focus:outline-none" /><input type="text" placeholder="Technical mechanism & description..." class="md:col-span-8 h-8 px-2.5 rounded bg-surface-container-lowest text-xs text-on-surface-variant focus:outline-none" /></div><button type="button" onclick="this.closest(\'.group\').remove()" class="text-outline hover:text-error p-1 transition-colors"><span class="material-symbols-outlined text-[16px]">close</span></button>';
+    container.appendChild(item);
+  }
+
+  function addEndpointRow() {
+    const container = document.getElementById('endpoints-container');
+    const row = document.createElement('div');
+    row.className = 'p-3 rounded-lg bg-surface-container-low grid grid-cols-1 md:grid-cols-12 gap-2.5 items-center';
+    row.innerHTML = '<div class="md:col-span-3"><select class="w-full h-8 px-2 rounded bg-surface-container-lowest font-technical-micro text-xs text-on-surface focus:outline-none"><option>Documentation</option><option>API Endpoint</option><option>Repository</option></select></div><div class="md:col-span-3"><input type="text" placeholder="Label..." class="w-full h-8 px-2.5 rounded bg-surface-container-lowest text-xs font-medium text-on-surface focus:outline-none" /></div><div class="md:col-span-5"><input type="text" placeholder="https://..." class="w-full h-8 px-2.5 rounded bg-surface-container-lowest font-technical-code text-xs text-on-surface-variant focus:outline-none" /></div><div class="md:col-span-1 flex justify-end"><button type="button" onclick="this.closest(\'.grid\').remove()" class="text-outline hover:text-error transition-colors p-1"><span class="material-symbols-outlined text-[16px]">close</span></button></div>';
+    container.appendChild(row);
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    document.getElementById('toast-message').innerText = msg;
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 2800);
+  }
+</script></div></main></div></body></html>

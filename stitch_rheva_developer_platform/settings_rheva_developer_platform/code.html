@@ -1,0 +1,871 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="">Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="">Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span class="">Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="">Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="inquiries" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span class="">Inquiries &amp; Inbound</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="media-library" href="#"><span class="material-symbols-outlined text-[18px]">perm_media</span><span class="">Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="configuration-settings" href="#" aria-current="page"><span class="material-symbols-outlined text-[18px]">settings</span><span class="">Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span class="">View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-1.5 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline-variant">/</span><span class="text-on-surface font-medium">settings</span></div></div><div class="flex items-center gap-4"><button class="h-9 px-3.5 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1.5" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full">
+<!-- Top State Simulator Harness Bar -->
+
+<!-- Dynamic Feedback Banner (Hidden by default) -->
+
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-border-light mb-8">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-3">
+<h1 class="font-h2 text-h2 font-semibold text-on-surface tracking-tight">Settings</h1>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low border border-border-light text-on-surface-variant font-medium">DOC_ID: settings/site</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage platform identity, public profile, SEO defaults, contact routing, and operational CMS preferences.</p>
+</div>
+<div class="flex items-center gap-3 self-start md:self-auto">
+<div class="hidden sm:flex items-center gap-1.5 font-technical-micro text-technical-micro text-outline mr-2">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span class="">Saved 2m ago</span>
+</div>
+<button class="h-9 px-3.5 rounded-lg border border-border-light bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-body-sm text-xs font-medium transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">history</span>
+<span class="">Reset to Stored</span>
+</button>
+<button class="save-trigger-btn h-9 px-4 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-body-sm text-xs font-medium transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span class="">Save Changes</span>
+</button>
+</div>
+</div>
+<!-- Layout: Two Column Settings Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Sticky Sub-Navigation -->
+<nav aria-label="Settings navigation" class="lg:col-span-3 lg:sticky lg:top-24 space-y-1 bg-surface-container-lowest border border-border-light rounded-lg p-2 shadow-sm">
+<div class="px-3 py-2 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-semibold">Settings Architecture</div>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface bg-surface-container-low border-l-2 border-primary-container transition-all" href="#section-general">
+<span class="material-symbols-outlined text-[18px] text-primary-container">dns</span>
+<span class="">1. General</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-profile">
+<span class="material-symbols-outlined text-[18px] text-outline">badge</span>
+<span class="">2. Profile &amp; Identity</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-contact">
+<span class="material-symbols-outlined text-[18px] text-outline">alternate_email</span>
+<span class="">3. Contact &amp; Inbound</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-seo">
+<span class="material-symbols-outlined text-[18px] text-outline">search_check</span>
+<span class="">4. SEO &amp; Social Meta</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-public-site">
+<span class="material-symbols-outlined text-[18px] text-outline">toggle_on</span>
+<span class="">5. Public Site Controls</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-content-defaults">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span class="">6. Content Defaults</span>
+</a>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-all" href="#section-security">
+<span class="material-symbols-outlined text-[18px] text-outline">verified_user</span>
+<span class="">7. Security &amp; Session</span>
+</a>
+<div class="h-px bg-border-light my-1"></div>
+<a class="nav-section-link flex items-center gap-2.5 px-3 py-2 rounded-md font-body-sm text-xs font-medium text-error hover:bg-error-container/20 transition-all" href="#section-danger">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="">8. Danger Zone</span>
+</a>
+</nav>
+<!-- Right Configuration Content Area -->
+<div class="lg:col-span-9 space-y-8">
+<!-- 1. GENERAL SETTINGS -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-general">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">General Platform Settings</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Core Identifiers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Core platform identifiers and global localization preferences stored in <code class="font-technical-code text-technical-code text-outline">settings/site</code>.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">dns</span>
+</div>
+<div class="space-y-5 pt-6">
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="site-name-input">Site Name</label>
+<span class="font-technical-micro text-technical-micro text-outline">Max 60 chars</span>
+</div>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container transition-colors shadow-sm" id="site-name-input" type="text" value="Rheva Developer Platform">
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="site-desc-input">Site Description</label>
+<textarea class="w-full p-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container transition-colors shadow-sm resize-y" id="site-desc-input" rows="3">Software engineer focused on building practical digital solutions across education, administration, data, and modern web applications.</textarea>
+<p class="font-technical-micro text-technical-micro text-outline">Reflected as standard fallback description across client manifest and feeds.</p>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="canonical-url-input">Canonical Site URL</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-outline">lock</span>
+<input class="w-full h-10 pl-9 pr-28 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-technical-code text-technical-code focus:outline-none focus:border-primary-container transition-colors shadow-sm" id="canonical-url-input" type="url" value="https://rheva.dev">
+<span class="absolute right-2.5 font-technical-micro text-technical-micro px-2 py-0.5 rounded-full bg-surface-container text-status-success flex items-center gap-1 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                Valid FQDN
+              </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="select-default-lang">Default Language</label>
+<select class="w-full h-10 px-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs focus:outline-none focus:border-primary-container transition-colors shadow-sm" id="select-default-lang">
+<option selected="">Indonesian (id-ID)</option>
+<option>English (en-US)</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="select-timezone">Timezone</label>
+<select class="w-full h-10 px-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs focus:outline-none focus:border-primary-container transition-colors shadow-sm" id="select-timezone">
+<option selected="">Asia/Jakarta (WIB, UTC+7)</option>
+<option>Asia/Makassar (WITA, UTC+8)</option>
+<option>Asia/Jayapura (WIT, UTC+9)</option>
+<option>UTC (Coordinated Universal Time)</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="select-date-format">Date Format</label>
+<select class="w-full h-10 px-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs focus:outline-none focus:border-primary-container transition-colors shadow-sm" id="select-date-format">
+<option selected="">DD/MM/YYYY (e.g. 18/11/2024)</option>
+<option>YYYY-MM-DD (ISO 8601)</option>
+<option>MMMM D, YYYY</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. PROFILE & IDENTITY -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-profile">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">Professional Identity &amp; Positioning</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Public Persona</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Public biographical and credential information reflected on <code class="font-technical-code text-technical-code text-outline">/about</code> and platform meta.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">badge</span>
+</div>
+<div class="space-y-6 pt-6">
+<!-- Profile Photo Component -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-border-light flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<div class="relative shrink-0">
+<img alt="Rheva Iqbal Abdillah" class="w-20 h-24 object-cover rounded-lg border border-border-light shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoScDeZd6fr-3ugVfLU-7vM7dC_YjpWP-bLB7durBvmwPpH-_CkEi2nlB_xTAgZlISrymDNvvXDtZ03RTz-tpMP-lVfaM3UeOmA1l5mZfZ_jrhBOD9YeuJrZFYeKKDgj-zYiKZNkmGsoKLQMZJT5ApwsSCEAlABrim9vo1rxc_EYKucT0gdHWkIXbxyXCOwk4F5_g2RhxZH4EeESRa64K1-AsZCf-8XZsr_cgCAWjE_zs-78j4-KVK5ju1FS3he9U9DBk">
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-status-success text-on-primary flex items-center justify-center text-[12px] border-2 border-surface-container-lowest" title="Published Asset">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+<div class="flex-1 min-w-0 space-y-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-body-sm text-xs font-semibold text-on-surface">Primary Profile Asset</span>
+<span class="font-technical-micro text-technical-micro text-outline">media_rheva_profile_original.jpeg · 240 KB</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="h-8 px-3 rounded border border-border-light bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-xs font-medium transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">perm_media</span>
+<span class="">Select from Media Library</span>
+</button>
+<button class="h-8 px-3 rounded border border-border-light bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-xs font-medium transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">upload</span>
+<span class="">Upload New</span>
+</button>
+<button class="h-8 px-2.5 rounded text-error hover:bg-error-container/20 font-body-sm text-xs font-medium transition-colors" type="button">
+                  Remove
+                </button>
+</div>
+<div class="pt-1">
+<label class="sr-only" for="profile-alt-text">Accessible Alt Text</label>
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs focus:outline-none focus:border-primary-container" id="profile-alt-text" placeholder="Accessible Alt Text" type="text" value="Rheva Iqbal Abdillah — Portrait in studio natural light">
+</div>
+</div>
+</div>
+<!-- Profile Input Fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-fullname">Full Legal / Professional Name</label>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-fullname" type="text" value="Rheva Iqbal Abdillah">
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-pro-title">Professional Title</label>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-pro-title" type="text" value="Principal Software Engineer &amp; Systems Architect">
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-location">Location / Base</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-outline">location_on</span>
+<input class="w-full h-10 pl-9 pr-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-location" type="text" value="Malang, Jawa Timur, Indonesia (Remote / On-Premise available)">
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="textarea-shortbio">Short Bio (Editorial Summary)</label>
+<span class="font-technical-micro text-technical-micro text-outline">187 chars</span>
+</div>
+<textarea class="w-full p-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm resize-y" id="textarea-shortbio" rows="3">Bridging the gap between software engineering, system architecture, and organizational operational reality. Specialized in Next.js, Cloud Firestore, and high-reliability civil service web systems.</textarea>
+</div>
+<!-- Repeatable Token Input -->
+<div class="space-y-2">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Professional Focus Chips (Rendered in Hero &amp; Credentials)</label>
+<div class="flex flex-wrap items-center gap-2 p-3 rounded-lg border border-border-light bg-surface-container-low">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                Fullstack Web Applications
+                <button aria-label="Remove focus chip Fullstack Web Applications" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                Civil Service Systems
+                <button aria-label="Remove focus chip Civil Service Systems" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                Data Density &amp; UI Systems
+                <button aria-label="Remove focus chip Data Density &amp; UI Systems" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                Offline-First Protocols
+                <button aria-label="Remove focus chip Offline-First Protocols" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                PostgreSQL &amp; Firestore
+                <button aria-label="Remove focus chip PostgreSQL &amp; Firestore" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest border border-border-light text-on-surface font-technical-tag text-technical-tag">
+                Cloud Architecture
+                <button aria-label="Remove focus chip Cloud Architecture" class="hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</span>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full border border-dashed border-outline/50 text-outline hover:text-on-surface hover:border-outline font-technical-tag text-technical-tag transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span class="">Add Focus Token</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. CONTACT & INBOUND ROUTING -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-contact">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">Contact Channels &amp; Inbound Configuration</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Inbound Pipeline</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Configure direct communication endpoints displayed across <code class="font-technical-code text-technical-code text-outline">/contact</code> and project case studies.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">alternate_email</span>
+</div>
+<div class="space-y-6 pt-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-primary-email">Primary Public Email</label>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-primary-email" type="email" value="rheva.abdillah@gmail.com">
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-inst-email">Secondary / Institutional Email</label>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-inst-email" type="email" value="admin@rheva.dev">
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-whatsapp">WhatsApp Business Number</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-technical-tag text-technical-tag text-outline">🇮🇩 +62</span>
+<input class="w-full h-10 pl-16 pr-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-technical-code text-technical-code focus:outline-none focus:border-primary-container shadow-sm" id="input-whatsapp" type="text" value="812-3344-9821">
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="select-pref-contact">Preferred Contact Method</label>
+<select class="w-full h-10 px-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="select-pref-contact">
+<option selected="">Contact Form + WhatsApp</option>
+<option>Email Direct Only</option>
+<option>WhatsApp Business Only</option>
+</select>
+</div>
+</div>
+<!-- Contact Form Module Switcher Card -->
+<div class="p-5 rounded-lg border border-border-light bg-surface-container-low/50 space-y-4">
+<div class="flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-sm font-semibold text-on-surface">Enable Public Contact Form (/contact)</span>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-status-success font-medium">ACTIVE</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant">When enabled, visitors can submit structured inquiries directly into the Firestore <code class="font-technical-code text-technical-code text-outline">inquiries</code> collection.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="select-default-inquiry">Default Inquiry Status</label>
+<select class="w-full h-9 px-3 rounded bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs" id="select-default-inquiry">
+<option selected="">New / Unreviewed</option>
+<option>Triage Queued</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-1.5">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="textarea-ack-msg">Success Acknowledgement Message</label>
+<textarea class="w-full p-2.5 rounded bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-xs" id="textarea-ack-msg" rows="2">Terima kasih atas pesan dan spesifikasi kebutuhan Anda. Kami akan meninjau dokumen atau detail sistem ini dan merespons via email/WhatsApp dalam 1×24 jam kerja.</textarea>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SEO & SOCIAL META -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-seo">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">SEO &amp; Social Sharing Defaults</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Meta &amp; OpenGraph</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Default Open Graph tags, canonical crawler fallback, and social profile links.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">search_check</span>
+</div>
+<div class="space-y-6 pt-6">
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="input-meta-title">Default Meta Title</label>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium">68 / 70 characters</span>
+</div>
+<input class="w-full h-10 px-3.5 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm" id="input-meta-title" type="text" value="Rheva Developer Platform — Practical Digital Systems &amp; Architecture">
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface" for="textarea-meta-desc">Default Meta Description</label>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium">148 / 160 characters</span>
+</div>
+<textarea class="w-full p-3 rounded-md bg-surface-container-lowest border border-border-light text-on-surface font-body-sm text-sm focus:outline-none focus:border-primary-container shadow-sm resize-y" id="textarea-meta-desc" rows="2">Personal developer platform, case studies, and digital products built by Rheva Iqbal Abdillah. Next.js, Firebase, and enterprise web solutions.</textarea>
+</div>
+<!-- Open Graph Image -->
+<div class="space-y-2">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Default Open Graph Image (1200×630)</label>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low flex flex-col md:flex-row items-center gap-4">
+<!-- Inline SVG Graphic Preview simulating the high-precision architectural flowchart / hero card -->
+<div class="w-full md:w-56 h-32 rounded bg-surface-dark p-3 text-on-primary flex flex-col justify-between shrink-0 overflow-hidden relative border border-border-dark">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-[10px] text-accent-dark tracking-wider">RHEVA // DEV PLATFORM</span>
+<span class="font-technical-micro text-[9px] px-1 rounded bg-surface-container-high/20 text-on-primary">1200×630</span>
+</div>
+<div class="space-y-1 my-auto">
+<div class="font-h3 text-xs font-bold leading-tight">Engineering Solutions &amp; System Architecture</div>
+<div class="font-technical-micro text-[9px] text-text-secondary-dark flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span class="">PROD DEPLOYMENTS</span>
+</div>
+</div>
+<div class="h-1 w-full bg-surface-container-high/20 rounded overflow-hidden">
+<div class="h-full bg-primary-container w-2/3"></div>
+</div>
+</div>
+<div class="flex-1 space-y-2 text-left w-full">
+<p class="font-technical-code text-technical-code text-on-surface font-medium break-all">gs://rheva-platform.appspot.com/assets/og-main.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">Lossless WebP · 1200×630 · Optimized for Twitter Summary Large Image and Facebook Graph Crawler</p>
+<div class="flex items-center gap-2 pt-1">
+<button class="h-8 px-3 rounded border border-border-light bg-surface-container-lowest hover:bg-surface-container text-on-surface font-body-sm text-xs font-medium transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[14px]">perm_media</span>
+<span class="">Change via Media Library</span>
+</button>
+<button class="h-8 px-2.5 rounded text-error hover:bg-error-container/20 font-body-sm text-xs font-medium transition-colors" type="button">
+                    Remove
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Profiles Table -->
+<div class="space-y-2">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Connected Social Profiles</label>
+<div class="border border-border-light rounded-lg overflow-hidden bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-border-light font-technical-micro text-technical-micro uppercase text-outline">
+<th class="py-2.5 px-4">Network / Service</th>
+<th class="py-2.5 px-4">Target URL</th>
+<th class="py-2.5 px-4 text-center">Footer &amp; Meta</th>
+<th class="py-2.5 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light font-body-sm text-xs">
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">terminal</span>
+                      GitHub
+                    </td>
+<td class="py-3 px-4 font-technical-code text-technical-code text-on-surface-variant">https://github.com/rhevaiqbal</td>
+<td class="py-3 px-4 text-center">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-status-success font-medium">ON</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 text-outline hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">work</span>
+                      LinkedIn
+                    </td>
+<td class="py-3 px-4 font-technical-code text-technical-code text-on-surface-variant">https://linkedin.com/in/rheva-iqbal</td>
+<td class="py-3 px-4 text-center">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-status-success font-medium">ON</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 text-outline hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">tag</span>
+                      X (Twitter)
+                    </td>
+<td class="py-3 px-4 font-technical-code text-technical-code text-on-surface-variant">https://x.com/rheva_dev</td>
+<td class="py-3 px-4 text-center">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-status-success font-medium">ON</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 text-outline hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50">
+<td class="py-3 px-4 font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">smart_display</span>
+                      YouTube
+                    </td>
+<td class="py-3 px-4 font-technical-code text-technical-code text-on-surface-variant">https://youtube.com/@rheva-engineering</td>
+<td class="py-3 px-4 text-center">
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container text-outline font-medium">OFF</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 text-outline hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Live Social Card Preview -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="font-body-sm text-xs font-semibold text-on-surface">Live Social Crawler Preview</label>
+<span class="font-technical-micro text-technical-micro text-outline">Twitter / Discord / WhatsApp Card</span>
+</div>
+<div class="max-w-md mx-auto border border-border-light rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm">
+<div class="w-full h-36 bg-surface-dark p-4 flex flex-col justify-between text-on-primary">
+<span class="font-technical-micro text-[10px] text-accent-dark tracking-wider">RHEVA // DEV PLATFORM</span>
+<p class="font-h3 text-sm font-bold">Rheva Developer Platform — Practical Digital Systems &amp; Architecture</p>
+<span class="font-technical-micro text-[9px] text-outline">rheva.dev</span>
+</div>
+<div class="p-3 space-y-1">
+<p class="font-technical-micro text-technical-micro text-outline uppercase tracking-wider">rheva.dev</p>
+<p class="font-body-sm text-xs font-semibold text-on-surface line-clamp-1">Rheva Developer Platform — Practical Digital Systems &amp; Architecture</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant line-clamp-2">Personal developer platform, case studies, and digital products built by Rheva Iqbal Abdillah. Next.js, Firebase, and enterprise web solutions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. PUBLIC SITE & NAVIGATION CONTROLS -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-public-site">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">Public Feature Toggles &amp; Navigation Visibility</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Route Control</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Directly controls conditional rendering of public pages and homepage section blocks without code changes.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">toggle_on</span>
+</div>
+<div class="space-y-6 pt-6">
+<div>
+<h3 class="font-body-sm text-xs font-semibold uppercase tracking-wider text-outline mb-3">Navigation Links Visibility</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">Projects (/projects)</div>
+<div class="font-technical-micro text-technical-micro text-outline">Primary showcase</div>
+</div>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">LOCKED</span>
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">Apps &amp; Store (/apps)</div>
+<div class="font-technical-micro text-technical-micro text-outline">Software catalog</div>
+</div>
+<input aria-label="Toggle Apps &amp; Store visibility" checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">Articles (/articles)</div>
+<div class="font-technical-micro text-technical-micro text-outline">Technical editorial</div>
+</div>
+<input aria-label="Toggle Articles visibility" checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">Services (/services)</div>
+<div class="font-technical-micro text-technical-micro text-outline">Architecture &amp; consult</div>
+</div>
+<input aria-label="Toggle Services visibility" checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">About (/about)</div>
+<div class="font-technical-micro text-technical-micro text-outline">CV &amp; career dossier</div>
+</div>
+<input aria-label="Toggle About visibility" checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-low/50 flex items-center justify-between">
+<div>
+<div class="font-body-sm text-xs font-semibold text-on-surface">Contact (/contact)</div>
+<div class="font-technical-micro text-technical-micro text-outline">Inbound form</div>
+</div>
+<input aria-label="Toggle Contact visibility" checked="" class="w-4 h-4 rounded text-primary-container focus:ring-0 cursor-pointer" type="checkbox">
+</div>
+</div>
+</div>
+<div class="space-y-3 pt-2">
+<h3 class="font-body-sm text-xs font-semibold uppercase tracking-wider text-outline">Homepage Section Rendering</h3>
+<div class="space-y-2">
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-low/30 transition-colors">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Featured Projects Strip</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Displays pinned project case studies directly under the hero</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-low/30 transition-colors">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Apps &amp; Digital Products Catalog</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Showcases commercial software licenses on the homepage</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-low/30 transition-colors">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Services Overview</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Displays the 4 primary digital consulting and system engineering cards</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-low/30 transition-colors">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Latest Technical Articles</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Pulls the top 3 published articles with ISR caching</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+<div class="p-3 rounded-lg border border-border-light bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-low/30 transition-colors">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Public Trust / Technology Strip</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Displays Next.js 14, Firebase, TypeScript, and Docker badges</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-9 h-5 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary-container after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. CONTENT DEFAULTS (CMS PRODUCTIVITY) -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-content-defaults">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">Content Defaults &amp; Automation</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">Composer Defaults</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Default attributes assigned when composing new entries in the respective CMS editors.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">tune</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6">
+<!-- Projects Defaults -->
+<div class="p-4 rounded-lg border border-border-light bg-surface-container-low space-y-3">
+<div class="flex items-center gap-2 pb-2 border-b border-border-light">
+<span class="material-symbols-outlined text-[18px] text-on-surface">terminal</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Projects Defaults</span>
+</div>
+<div class="space-y-2">
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="p-def-status">Default Status</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="p-def-status">
+<option selected="">Completed</option>
+<option>In Progress</option>
+<option>Maintenance</option>
+</select>
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="p-def-vis">Default Visibility</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="p-def-vis">
+<option selected="">Draft</option>
+<option>Published</option>
+</select>
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="p-def-cat">Default Category</label>
+<input class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="p-def-cat" type="text" value="Information Systems">
+</div>
+</div>
+</div>
+<!-- Apps & Products Defaults -->
+<div class="p-4 rounded-lg border border-border-light bg-surface-container-low space-y-3">
+<div class="flex items-center gap-2 pb-2 border-b border-border-light">
+<span class="material-symbols-outlined text-[18px] text-on-surface">widgets</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Apps &amp; Products Defaults</span>
+</div>
+<div class="space-y-2">
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="a-def-avail">Default Availability</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="a-def-avail">
+<option selected="">Available (Production)</option>
+<option>Private Beta</option>
+<option>Archived</option>
+</select>
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="a-def-vis">Default Visibility</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="a-def-vis">
+<option selected="">Draft</option>
+<option>Published</option>
+</select>
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="a-def-pricing">Default Pricing Model</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="a-def-pricing">
+<option selected="">Request Pricing</option>
+<option>Fixed Commercial License</option>
+<option>Open Source (MIT)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Articles Defaults -->
+<div class="p-4 rounded-lg border border-border-light bg-surface-container-low space-y-3">
+<div class="flex items-center gap-2 pb-2 border-b border-border-light">
+<span class="material-symbols-outlined text-[18px] text-on-surface">edit_note</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Articles Defaults</span>
+</div>
+<div class="space-y-2">
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="art-def-stat">Default Status</label>
+<select class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="art-def-stat">
+<option selected="">Draft</option>
+<option>Published</option>
+</select>
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="art-def-cat">Default Category</label>
+<input class="w-full h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-body-sm text-xs text-on-surface" id="art-def-cat" type="text" value="Software Architecture">
+</div>
+<div>
+<label class="font-technical-micro text-technical-micro text-outline" for="art-calc-read">Calculated Reading Time</label>
+<div class="h-8 px-2 rounded bg-surface-container-lowest border border-border-light font-technical-code text-[11px] text-on-surface-variant flex items-center">
+                  Auto (Words / 220 WPM)
+                </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SECURITY & SUPERADMIN SESSION -->
+<section class="scroll-mt-24 bg-surface-container-lowest border border-border-light rounded-xl p-6 shadow-sm" id="section-security">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-border-light">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-on-surface">Authentication &amp; Superadmin Security</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">RBAC Lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Information regarding the active Firebase Authentication session. Platform is strictly single-superadmin architecture.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-outline">verified_user</span>
+</div>
+<div class="space-y-5 pt-6">
+<!-- Identity Card -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-border-light flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3 min-w-0">
+<img alt="Rheva Iqbal Abdillah" class="w-12 h-12 rounded-full object-cover border border-border-light shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjG_xEikIqyIpbRP6kycX9pmE7XY3dTvIaVKIyT7_9UuueccJjrmAFa68X10fjxsMb6d_-uCnlPz_B-B9w-I8xi-DiTPLHzKe_PI7N1hTtLz9mfoVxvnefumRUMMB34hpkNC4DIQ5zWY-ST2W9VgWrU2x-WwmzXxwZKpS5sR5mddmiJ03WSJnRl3ZQQWQ5svGYaojYaDiv4EK-Y_azZk6wyRPF17Mbth9K67BcpECTHkJ5_1G1dpTKFWer0kDU_WP8M6U">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-sm font-semibold text-on-surface truncate">Rheva Iqbal Abdillah</span>
+<span class="font-technical-micro text-[10px] px-1.5 py-0.2 rounded bg-primary-container text-on-primary font-medium">SUPERADMIN</span>
+</div>
+<div class="font-technical-code text-technical-code text-on-surface-variant truncate">rheva.superadmin@rheva.dev</div>
+</div>
+</div>
+<span class="font-technical-micro text-technical-micro px-2.5 py-1 rounded-full bg-surface-container text-status-success flex items-center gap-1.5 font-medium border border-border-light shrink-0">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Verified Google Account
+            </span>
+</div>
+<!-- Session Metadata Table -->
+<div class="border border-border-light rounded-lg overflow-hidden font-technical-micro text-technical-micro">
+<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border-light bg-surface-container-low/50">
+<div class="p-3 space-y-1">
+<div class="text-outline uppercase">Auth Provider</div>
+<div class="font-technical-code text-on-surface font-medium">Google Sign-In (OAuth 2.0)</div>
+</div>
+<div class="p-3 space-y-1">
+<div class="text-outline uppercase">Current Session Token</div>
+<div class="font-technical-code text-on-surface font-medium">exp: 2025-01-14 · Refresh: Persistent (Firebase LocalPersistence)</div>
+</div>
+<div class="p-3 space-y-1 border-t border-border-light">
+<div class="text-outline uppercase">Last Sign-In Event</div>
+<div class="font-technical-code text-on-surface font-medium">Today at 08:14 WIB from IP: 182.253.xxx.xxx (Surabaya, ID)</div>
+</div>
+<div class="p-3 space-y-1 border-t border-border-light">
+<div class="text-outline uppercase">Firestore Rules Enforcement</div>
+<div class="font-technical-code text-status-success font-medium">request.auth.uid == 'rheva_master_id'</div>
+</div>
+</div>
+</div>
+<!-- Single-Superadmin Invariant Notice -->
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-border-light flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary-container shrink-0 mt-0.5">lock</span>
+<div class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">Single Superadmin Protected Area:</strong> Role-management, guest accounts, and multi-tenant access are disabled by architectural design. Only the verified owner Google account can sign Firestore mutations.
+            </div>
+</div>
+</div>
+</section>
+<!-- 8. DANGER ZONE -->
+<section class="scroll-mt-24 border border-error/30 bg-error-container/10 rounded-xl p-6 shadow-sm" id="section-danger">
+<div class="flex items-start justify-between gap-4 pb-5 border-b border-error/20">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-h3 text-h3 font-semibold text-error">Danger Zone</h2>
+<span class="font-technical-micro text-technical-micro px-2 py-0.5 rounded bg-error-container/30 text-error uppercase font-medium">High Impact</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Actions with platform-wide side effects or credential revocation.</p>
+</div>
+<span class="material-symbols-outlined text-[20px] text-error">warning</span>
+</div>
+<div class="space-y-4 pt-6">
+<div class="p-4 rounded-lg bg-surface-container-lowest border border-error/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Sign Out of Superadmin Session</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Terminates current session token across this browser. You will need to re-authenticate with your verified Google account.</div>
+</div>
+<button class="h-8 px-3.5 rounded border border-error/40 text-error hover:bg-error-container/20 font-body-sm text-xs font-medium transition-colors shrink-0 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">logout</span>
+<span class="">Sign Out</span>
+</button>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest border border-error/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<div class="space-y-0.5">
+<div class="font-body-sm text-xs font-semibold text-on-surface">Reset Public Configuration</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">Restores public visibility toggles and content defaults to factory repository defaults. Existing published articles, apps, and media files will <strong class="text-on-surface font-semibold">NOT</strong> be deleted.</div>
+</div>
+<button class="h-8 px-3.5 rounded bg-error text-on-error hover:opacity-90 font-body-sm text-xs font-medium transition-opacity shrink-0 flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="">Reset Defaults...</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Bottom Sticky Save Bar -->
+<div class="sticky bottom-4 mt-12 z-30 w-full max-w-2xl mx-auto bg-surface-dark text-on-primary rounded-xl p-3 px-5 flex items-center justify-between shadow-xl border border-border-dark">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-status-warning animate-pulse"></span>
+<span class="font-body-sm text-xs font-medium text-text-primary-dark">Unsaved changes in General &amp; Profile</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded text-text-secondary-dark hover:text-text-primary-dark font-body-sm text-xs font-medium transition-colors" type="button">
+        Discard
+      </button>
+<button class="save-trigger-btn h-8 px-3.5 rounded bg-primary-container text-on-primary hover:bg-primary font-body-sm text-xs font-medium transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="">Save Changes</span>
+<kbd class="font-technical-micro text-[10px] bg-black/30 px-1.5 py-0.5 rounded text-text-secondary-dark">⌘S</kbd>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Harness Tab Simulation & Smooth Navigation
+  const harnessBtns = document.querySelectorAll('.harness-btn');
+  const banner = document.getElementById('status-banner');
+  const bannerText = document.getElementById('banner-text');
+  const bannerIcon = document.getElementById('banner-icon');
+
+  function showBanner(type, message) {
+    banner.classList.remove('hidden', 'bg-status-success/15', 'text-status-success', 'border-status-success/30', 'bg-error-container', 'text-on-error-container', 'border-error/30', 'bg-primary-container/10', 'text-primary-container', 'border-primary-container/20');
+    
+    if (type === 'success') {
+      banner.classList.add('bg-status-success/15', 'text-status-success', 'border', 'border-status-success/30');
+      bannerIcon.textContent = 'check_circle';
+    } else if (type === 'error') {
+      banner.classList.add('bg-error-container', 'text-on-error-container', 'border', 'border-error/30');
+      bannerIcon.textContent = 'error';
+    } else {
+      banner.classList.add('bg-primary-container/10', 'text-primary-container', 'border', 'border-primary-container/20');
+      bannerIcon.textContent = 'info';
+    }
+    bannerText.textContent = message;
+  }
+
+  harnessBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      harnessBtns.forEach(b => {
+        b.className = 'harness-btn px-2.5 py-1 rounded font-technical-tag text-technical-tag bg-surface-container-lowest text-on-surface-variant hover:text-on-surface border border-border-light transition-colors';
+      });
+      btn.className = 'harness-btn px-2.5 py-1 rounded font-technical-tag text-technical-tag bg-surface-dark text-on-primary font-medium transition-colors';
+
+      const tab = btn.getAttribute('data-tab');
+      let targetId = 'section-general';
+      if (tab === 'seo') targetId = 'section-seo';
+      else if (tab === 'public-site') targetId = 'section-public-site';
+      else if (tab === 'content-defaults') targetId = 'section-content-defaults';
+      else if (tab === 'security') targetId = 'section-security';
+
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Save Simulation Actions
+  const saveTriggers = document.querySelectorAll('.save-trigger-btn, #sim-save-btn');
+  saveTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      showBanner('info', 'Committing payload to Firestore `settings/site` via security rules...');
+      setTimeout(() => {
+        showBanner('success', 'Platform settings saved successfully. Production edge cache purged.');
+      }, 700);
+    });
+  });
+
+  const errBtn = document.getElementById('sim-err-btn');
+  if (errBtn) {
+    errBtn.addEventListener('click', () => {
+      showBanner('error', '500 Server Error: Firebase PermissionDenied (Firestore Rules violation). Ensure master UID is assigned.');
+    });
+  }
+
+  // Keyboard shortcut cmd+s
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+      e.preventDefault();
+      showBanner('info', 'Keyboard shortcut triggered: Saving configuration...');
+      setTimeout(() => {
+        showBanner('success', 'Changes synced to Cloud Firestore settings collection.');
+      }, 600);
+    }
+  });
+</script></div></main></div>
+
+</body></html>

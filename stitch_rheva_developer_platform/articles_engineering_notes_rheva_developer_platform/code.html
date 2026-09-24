@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "text-primary-dark": "#F5F5F5",
+          "border-dark": "#27272A",
+          "secondary-fixed-dim": "#c8c6c5",
+          "surface-tint": "#0053db",
+          "on-primary": "#ffffff",
+          "inverse-on-surface": "#f0f1f2",
+          "surface-light": "#FFFFFF",
+          "surface-dark": "#111111",
+          "secondary-container": "#e5e2e1",
+          "on-tertiary-fixed": "#151c27",
+          "surface-dim": "#d9dadb",
+          "on-error": "#ffffff",
+          "outline-variant": "#c3c6d7",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#c0c7d6",
+          "status-success": "#10B981",
+          "on-secondary-fixed-variant": "#474646",
+          "on-surface": "#191c1d",
+          "surface-bright": "#f8f9fa",
+          "on-tertiary-fixed-variant": "#404754",
+          "on-primary-container": "#eeefff",
+          "inverse-primary": "#b4c5ff",
+          "surface-container-high": "#e7e8e9",
+          "secondary": "#5f5e5e",
+          "text-secondary-dark": "#A1A1AA",
+          "on-secondary-container": "#656464",
+          "surface-container-highest": "#e1e3e4",
+          "bg-dark": "#0A0A0A",
+          "background": "#f8f9fa",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#00174b",
+          "error-container": "#ffdad6",
+          "accent-dark": "#3B82F6",
+          "tertiary-fixed": "#dce2f3",
+          "surface-container-low": "#f3f4f5",
+          "secondary-fixed": "#e5e2e1",
+          "surface-container": "#edeeef",
+          "border-light": "#E5E7EB",
+          "surface-variant": "#e1e3e4",
+          "on-tertiary-container": "#eaf0ff",
+          "on-tertiary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#1c1b1b",
+          "on-surface-variant": "#434655",
+          "on-background": "#191c1d",
+          "primary-container": "#2563eb",
+          "error": "#ba1a1a",
+          "on-primary-fixed-variant": "#003ea8",
+          "status-error": "#EF4444",
+          "primary": "#004ac6",
+          "primary-fixed-dim": "#b4c5ff",
+          "status-warning": "#F59E0B",
+          "tertiary-container": "#666d7b",
+          "inverse-surface": "#2e3132",
+          "primary-fixed": "#dbe1ff",
+          "outline": "#737686",
+          "tertiary": "#4e5562",
+          "surface": "#f8f9fa"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xl": "2rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem"
+        },
+        "fontFamily": {
+          "technical-micro": [
+            "JetBrains Mono"
+          ],
+          "h3": [
+            "Geist"
+          ],
+          "display": [
+            "Geist"
+          ],
+          "body-large": [
+            "Inter"
+          ],
+          "display-mobile": [
+            "Geist"
+          ],
+          "body": [
+            "Inter"
+          ],
+          "h2-mobile": [
+            "Geist"
+          ],
+          "h1-mobile": [
+            "Geist"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "technical-code": [
+            "JetBrains Mono"
+          ],
+          "h1": [
+            "Geist"
+          ],
+          "h2": [
+            "Geist"
+          ],
+          "technical-tag": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "technical-micro": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "400"
+            }
+          ],
+          "h3": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display": [
+            "72px",
+            {
+              "lineHeight": "80px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-large": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "44px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "body": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "h2-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "h1-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "technical-code": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "h1": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "h2": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "technical-tag": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-light border-b border-border-light"><div class="h-14 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><span class="font-h3 text-h3 tracking-tight font-semibold text-on-surface">RHEVA</span><div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded border border-border-light bg-surface-container-low font-technical-tag text-technical-tag text-on-surface-variant"><span class="inline-block w-1.5 h-1.5 rounded-full bg-status-success"></span><span>v1.0.0 / System Spec</span></div></div><nav class="hidden md:flex items-center gap-6 h-full" data-active-classes="text-on-surface font-semibold border-b-2 border-primary"><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="tokens-foundations" href="#">Tokens &amp; Foundations</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="primitive-controls" href="#">Primitive Controls</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="containers-layout" href="#">Containers &amp; Layout</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="feedback-states" href="#">Feedback &amp; States</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="patterns-data" href="#">Patterns &amp; Data</a></nav><div class="flex items-center gap-3 shrink-0"><button aria-label="Theme Indicator" class="p-1.5 rounded border border-border-light bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[18px] block">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. Top Telemetry & Operational Breadcrumb -->
+<section class="w-full bg-surface-container-low py-3">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-technical-micro text-technical-micro text-on-surface-variant">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="text-on-surface font-semibold">rheva.os</span>
+<span>/</span>
+<span class="text-primary font-medium">articles</span>
+<span class="text-outline-variant font-normal">|</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface">PLATFORM_PUBLICATION // FIRESTORE: articles // STATUS: ACTIVE_INDEX</span>
+</div>
+<div class="flex items-center gap-4 flex-wrap">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+          TOTAL_ARTICLES: 08 PUBLISHED
+        </span>
+<span class="text-outline-variant">|</span>
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#feed">
+<span class="material-symbols-outlined text-[14px]">rss_feed</span>
+          RSS: /feed.xml
+        </a>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface">AUTHOR: Rheva Iqbal Abdillah</span>
+</div>
+</div>
+</section>
+<!-- 2. Articles Hero & Discovery Header -->
+<section class="w-full bg-surface-light py-16">
+<div class="max-w-7xl mx-auto px-6 flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<div class="font-technical-tag text-technical-tag text-primary uppercase tracking-wider flex items-center gap-2">
+<span>01 // Engineering Notes &amp; Architecture Essays</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight max-w-4xl">
+          Technical Writing, Architecture Notes &amp; Operational Lessons.
+        </h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-3xl">
+          Essays, architectural breakdowns, and concrete lessons from engineering digital products, institutional personnel platforms, and resilient administrative workflows.
+        </p>
+</div>
+<!-- Integrated Search & Filter Controls -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 shadow-sm">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-10 pl-11 pr-4 bg-surface-light rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-xs" id="article-search-input" placeholder="Filter articles by keyword, architecture concept, or tag... (e.g. Next.js, Firestore, RBAC)" type="text"/>
+</div>
+<div class="flex items-center gap-3 shrink-0 flex-wrap sm:flex-nowrap">
+<div class="px-3 py-2 bg-surface-light rounded-lg font-technical-tag text-technical-tag text-on-surface shadow-xs" id="articles-count-pill">
+            Showing <span class="font-semibold text-primary" id="visible-count">8</span> of 8 entries
+          </div>
+<div class="relative">
+<select class="h-10 px-3 pr-8 bg-surface-light rounded-lg font-body-sm text-body-sm text-on-surface appearance-none focus:outline-none focus:ring-2 focus:ring-primary shadow-xs cursor-pointer" id="sort-select">
+<option value="newest">Sort: Newest First</option>
+<option value="oldest">Sort: Oldest First</option>
+<option value="readtime">Sort: Read Time (Longest)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<button class="h-10 px-3 bg-surface-light hover:bg-surface-container rounded-lg font-technical-tag text-technical-tag text-on-surface flex items-center gap-1.5 shadow-xs transition-colors" id="toggle-view-btn" title="Toggle compact list or card view" type="button">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+<span class="hidden sm:inline">Dense View</span>
+</button>
+</div>
+</div>
+<!-- 3. Category / Knowledge Domain Filter Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 -mb-2 no-scrollbar">
+<button class="filter-tab active-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-primary text-on-primary font-semibold shadow-xs transition-all" data-filter="all" type="button">
+          All Articles (8)
+        </button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all" data-filter="Software Architecture" type="button">
+          Software Architecture (2)
+        </button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all" data-filter="Next.js &amp; Full-Stack" type="button">
+          Next.js &amp; Full-Stack (2)
+        </button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all" data-filter="Firebase &amp; Cloud Data" type="button">
+          Firebase &amp; Cloud Data (2)
+        </button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all" data-filter="UI/UX &amp; Design Systems" type="button">
+          UI/UX &amp; Design Systems (1)
+        </button>
+<button class="filter-tab shrink-0 px-3.5 py-1.5 rounded-full font-technical-tag text-technical-tag bg-surface-container hover:bg-surface-container-high text-on-surface font-medium transition-all" data-filter="Digital Administration" type="button">
+          Digital Administration (1)
+        </button>
+</div>
+</div>
+</section>
+<!-- 4. Featured Technical Essay (Prominent Editorial Hero Card) -->
+<section class="w-full bg-surface-bright py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-light rounded-xl shadow-md p-6 lg:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 relative overflow-hidden">
+<!-- Accent Glow Backdrop element -->
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+<!-- Left Editorial Detail -->
+<div class="flex-1 flex flex-col justify-between gap-6 z-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3 flex-wrap">
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-technical-micro text-technical-micro font-semibold uppercase tracking-wider">
+                FEATURED ESSAY // ARCHITECTURE DEEP DIVE
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 12 min read
+              </span>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Production Case Study
+              </span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface tracking-tight leading-snug">
+              Architecting Offline-Tolerant Civil Service Dossier Verification with Next.js 14 &amp; Firestore
+            </h2>
+<p class="font-body text-body text-on-surface-variant">
+              A deep architectural retrospective on replacing paper-heavy bureaucratic sign-offs with deterministic state machines, cryptographic SHA-256 verification timestamps, and strict Zod runtime contracts in high-friction administrative environments.
+            </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant">#Next.js14</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant">#Firestore</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant">#RBAC</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant">#Zod</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant">#DigitalSignature</span>
+</div>
+</div>
+<div class="pt-6 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-surface-container-low p-4 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-technical-tag text-technical-tag font-bold">
+                RA
+              </div>
+<div class="flex flex-col font-technical-micro text-technical-micro">
+<span class="text-on-surface font-semibold">Rheva Iqbal Abdillah</span>
+<span class="text-on-surface-variant">Lead Systems Architect · Published Oct 14, 2024</span>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<a class="flex-1 sm:flex-initial h-10 px-5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-colors" href="#">
+<span>Read Architecture Essay</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<a class="h-10 px-4 rounded-lg bg-surface-light hover:bg-surface-container text-on-surface font-body-sm text-body-sm font-medium flex items-center justify-center shadow-xs transition-colors" href="#discussion">
+                Specs
+              </a>
+</div>
+</div>
+</div>
+<!-- Right Architectural Blueprint Diagram -->
+<div class="lg:w-5/12 flex flex-col justify-between bg-surface-dark text-text-primary-dark rounded-lg p-5 font-technical-code text-technical-code shadow-inner z-10">
+<div class="flex items-center justify-between pb-3 text-text-secondary-dark">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-status-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-warning"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-status-success"></span>
+<span class="ml-2 font-technical-micro text-technical-micro">system-topology.svg</span>
+</span>
+<span class="font-technical-micro text-technical-micro text-accent-dark">REHYDRATE_V2</span>
+</div>
+<!-- Technical Schematic Visualizer -->
+<div class="bg-bg-dark rounded p-4 my-2 flex flex-col gap-3">
+<div class="flex items-center justify-between text-[11px] text-text-secondary-dark">
+<span>PIPELINE FLOW</span>
+<span class="text-status-success">DETERMINISTIC // ATOMIC</span>
+</div>
+<svg class="w-full h-auto text-current" fill="none" viewbox="0 0 420 180" xmlns="http://www.w3.org/2000/svg">
+<!-- Flow Nodes -->
+<rect class="fill-surface-dark" height="42" rx="4" width="85" x="10" y="20"></rect>
+<text fill="#F5F5F5" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="52" y="38">CLIENT WORKER</text>
+<text fill="#A1A1AA" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="52" y="52">IndexedDB State</text>
+<path d="M95 41 H135" stroke="#3B82F6" stroke-dasharray="3 3" stroke-width="2"></path>
+<polygon fill="#3B82F6" points="135,38 141,41 135,44"></polygon>
+<rect class="fill-surface-dark" height="42" rx="4" width="105" x="145" y="20"></rect>
+<text fill="#F5F5F5" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="197" y="38">PAYLOAD INGESTION</text>
+<text fill="#3B82F6" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="197" y="52">SHA-256 Digest</text>
+<path d="M250 41 H290" stroke="#3B82F6" stroke-width="2"></path>
+<polygon fill="#3B82F6" points="290,38 296,41 290,44"></polygon>
+<rect class="fill-surface-dark" height="42" rx="4" width="110" x="300" y="20"></rect>
+<text fill="#F5F5F5" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="355" y="38">ZOD VALIDATION</text>
+<text fill="#10B981" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="355" y="52">Strict Schemas</text>
+<!-- Downward path to Ledger -->
+<path d="M355 62 V105" stroke="#3B82F6" stroke-width="2"></path>
+<polygon fill="#3B82F6" points="352,105 355,111 358,105"></polygon>
+<rect class="fill-surface-dark" height="48" rx="4" width="265" x="145" y="115"></rect>
+<text fill="#F5F5F5" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="277" y="134">FIRESTORE IMMUTABLE AUDIT LOG</text>
+<text fill="#A1A1AA" font-family="JetBrains Mono" font-size="8" text-anchor="middle" x="277" y="149">Multi-Tenant Document Transaction (Batch Commit)</text>
+<!-- Rebound flow -->
+<path d="M145 139 H52 V66" stroke="#10B981" stroke-dasharray="2 2" stroke-width="1.5"></path>
+<polygon fill="#10B981" points="49,66 52,60 55,66"></polygon>
+</svg>
+</div>
+<div class="pt-2 flex items-center justify-between text-text-secondary-dark font-technical-micro text-technical-micro">
+<span>MUTATION_ID: #d9b4001c</span>
+<span class="text-status-success">0 DRIFT / ZERO DATA LOSS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Main Technical Articles Listing -->
+<section class="w-full bg-surface-light py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between pb-8">
+<div class="flex flex-col gap-1">
+<span class="font-technical-tag text-technical-tag text-on-surface-variant uppercase">ARCHIVAL CATALOGUE</span>
+<h3 class="font-h3 text-h3 text-on-surface">Curated Technical Publications</h3>
+</div>
+<div class="hidden sm:flex items-center gap-2 font-technical-micro text-technical-micro text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>CHRONOLOGICAL ORDER</span>
+</div>
+</div>
+<!-- Articles Container (Grid/List with Filter Tags) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="articles-container">
+<!-- Article 01 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Digital Administration" data-date="2024-11-02" data-minutes="9">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Digital Administration
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Nov 02, 2024 · 9 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Deterministic Angka Kredit (PAK) Engines: Handling Edge Rules Without Floating-Point Drift
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Why institutional credit score calculators must use arbitrary-precision decimal mathematics and rigid rule tables instead of loose spreadsheet formulas.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#MathLogic</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#SIMPEG</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Governance</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Architectural Notes <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-08</span>
+</div>
+</div>
+</article>
+<!-- Article 02 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Firebase &amp; Cloud Data" data-date="2024-09-28" data-minutes="7">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Firebase &amp; Cloud Data
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Sep 28, 2024 · 7 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Reducing Firestore Read Cascades by 40% in High-Concurrency Campus Web Portals
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Practical caching techniques, denormalized composite read projections, and bundle size constraints engineered for flaky regional academic networks.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Firestore</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Performance</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Caching</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Edge</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Performance Spec <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-07</span>
+</div>
+</div>
+</article>
+<!-- Article 03 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="UI/UX &amp; Design Systems" data-date="2024-08-19" data-minutes="8">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                UI/UX &amp; Design Systems
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Aug 19, 2024 · 8 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Token-Driven UI Architecture: Bridging Figma Design Tokens to Strict Tailwind Utilities
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Constructing a zero-drift design system that synchronizes semantic color spaces, border radius constraints, and WCAG AA contrast states across multi-tenant applications.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#DesignTokens</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#TailwindCSS</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Accessibility</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#RadixUI</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Token Pipeline <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-06</span>
+</div>
+</div>
+</article>
+<!-- Article 04 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Software Architecture" data-date="2024-07-11" data-minutes="11">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Software Architecture
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Jul 11, 2024 · 11 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Building Unencumbered Single-Tenant Docker Deployments for Educational Intranets
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Packaging Next.js standalone outputs into lightweight, air-gapped Docker images that run seamlessly on low-cost institutional Debian bare-metal servers.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Docker</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#SelfHosted</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#DevOps</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Next.js</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Deployment Blueprint <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-05</span>
+</div>
+</div>
+</article>
+<!-- Article 05 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Next.js &amp; Full-Stack" data-date="2024-06-04" data-minutes="6">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Next.js &amp; Full-Stack
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Jun 04, 2024 · 6 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Geofencing Accuracy at Scale: Filtering Multi-Path GPS Noise in Campus Mobile Check-ins
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mitigating location spoofing and erratic mobile GPS drift using polygon ray-casting algorithms and client-side hardware telemetry validation.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Geolocation</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#MobileWeb</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Security</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Presensi</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Geofence Analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-04</span>
+</div>
+</div>
+</article>
+<!-- Article 06 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Next.js &amp; Full-Stack" data-date="2024-04-22" data-minutes="10">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Next.js &amp; Full-Stack
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Apr 22, 2024 · 10 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Strict Schema Boundaries: Why We Treat Every External Form Input as Adversarial
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Implementing end-to-end schema validation pipelines from multipart FormData uploads to database persistence using Zod discriminators.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Security</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Zod</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Next.js14</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Security Model <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-03</span>
+</div>
+</div>
+</article>
+<!-- Article 07 -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Firebase &amp; Cloud Data" data-date="2024-03-15" data-minutes="8">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Firebase &amp; Cloud Data
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Mar 15, 2024 · 8 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Server-Sent Events vs WebSockets for Operational Approval Notification Pipelines
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              A benchmark analysis of persistent connection overhead and firewall traversal in strict public sector network proxies.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#WebSockets</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#SSE</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#CloudFunctions</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Networking</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Protocol Benchmark <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-02</span>
+</div>
+</div>
+</article>
+<!-- Article 08 (Synthetic Archive entry for exact total of 8) -->
+<article class="article-item group bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-6" data-category="Software Architecture" data-date="2024-01-18" data-minutes="13">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between gap-2 flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high font-technical-tag text-technical-tag text-on-surface font-semibold">
+                Software Architecture
+              </span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">calendar_today</span> Jan 18, 2024 · 13 min read
+              </span>
+</div>
+<h4 class="font-h3 text-h3 text-on-surface group-hover:text-primary transition-colors leading-snug">
+              Designing Multi-Tenant Role Hierarchies with Granular Firebase Security Rules
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Constructing an airtight recursive security token validation architecture that prevents vertical and horizontal privilege escalations across public sector organizational trees.
+            </p>
+</div>
+<div class="flex flex-col gap-4 pt-4 bg-surface-container-low -mx-6 -mb-6 p-6 rounded-b-xl">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#SecurityRules</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#MultiTenant</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#IAM</span>
+<span class="px-2 py-0.5 rounded bg-surface-light font-technical-micro text-technical-micro text-on-surface-variant">#Governance</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm font-semibold text-primary">
+<span class="flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Rules Spec <span class="material-symbols-outlined text-[16px]">arrow_forward</span></span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant font-normal">DOC-ID: RHE-24-01</span>
+</div>
+</div>
+</article>
+</div>
+<!-- No Results State (Hidden by default) -->
+<div class="hidden py-16 text-center flex-col items-center justify-center gap-3 bg-surface-container-low rounded-xl" id="no-results">
+<span class="material-symbols-outlined text-outline text-[40px]">inventory_2</span>
+<h4 class="font-h3 text-h3 text-on-surface">No matching architecture essays</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          No articles match your active filter or search keywords. Try adjusting your query or resetting the category tabs.
+        </p>
+<button class="mt-2 px-4 py-2 bg-primary text-on-primary rounded-lg font-technical-tag text-technical-tag font-medium shadow-xs" id="reset-filter-btn" type="button">
+          Reset All Filters
+        </button>
+</div>
+</div>
+</section>
+<!-- 6. Interactive State Demonstrations (CMS Readiness & Telemetry Preview) -->
+<section class="w-full bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-light rounded-xl p-6 shadow-sm flex flex-col gap-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="p-2 rounded-lg bg-surface-container text-primary material-symbols-outlined">dataset</span>
+<div>
+<h4 class="font-h3 text-h3 text-on-surface">CMS &amp; Operational Pipeline Controls</h4>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">Interactive Firestore state simulation · Verifiable hydration specs</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-9 px-3 bg-surface-container hover:bg-surface-container-high rounded font-technical-tag text-technical-tag text-on-surface transition-colors" id="simulate-skeleton-btn" type="button">
+              Preview Skeleton Hydration
+            </button>
+<button class="h-9 px-3 bg-surface-container hover:bg-surface-container-high rounded font-technical-tag text-technical-tag text-on-surface transition-colors" id="simulate-empty-btn" type="button">
+              Preview Empty State
+            </button>
+</div>
+</div>
+<!-- Simulated Loading Container (Hidden initially) -->
+<div class="hidden grid-cols-1 md:grid-cols-2 gap-4" id="skeleton-box">
+<div class="p-6 bg-surface-container-lowest rounded-lg animate-pulse flex flex-col gap-4">
+<div class="h-4 bg-surface-container-high rounded w-1/4"></div>
+<div class="h-6 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-12 bg-surface-container-high rounded w-full"></div>
+<div class="h-4 bg-surface-container-high rounded w-1/2"></div>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg animate-pulse flex flex-col gap-4">
+<div class="h-4 bg-surface-container-high rounded w-1/4"></div>
+<div class="h-6 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-12 bg-surface-container-high rounded w-full"></div>
+<div class="h-4 bg-surface-container-high rounded w-1/2"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 bg-surface-container-low p-4 rounded-lg">
+<div class="font-technical-code text-technical-code text-on-surface-variant">
+<span>INDEX_POINTER: </span><span class="text-on-surface font-semibold">firestore.collection('articles').orderBy('date', 'desc')</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-technical-micro text-technical-micro text-status-success flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success"></span> CACHE: HIT (1.4ms)
+            </span>
+<span class="text-outline-variant">|</span>
+<span class="font-technical-micro text-technical-micro text-on-surface">PAGINATION: 8/8 LOADED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Editorial Interlude with high-contrast architectural imagery -->
+<section class="w-full bg-surface-light py-16">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5 flex flex-col gap-4">
+<span class="font-technical-tag text-technical-tag text-primary uppercase">FIELD ENGINEERING ARCHIVE</span>
+<h3 class="font-h2 text-h2 text-on-surface leading-tight">
+          Where Rigorous Theory Confronts Institutional Reality.
+        </h3>
+<p class="font-body text-body text-on-surface-variant">
+          In large-scale public sector and university systems, latency isn't just an inconvenience—it translates into bureaucratic gridlock. Every architectural recommendation published in these dispatches stems from active deployments serving tens of thousands of real personnel.
+        </p>
+<div class="p-4 bg-surface-container-low rounded-lg font-technical-code text-technical-code text-on-surface">
+<div class="text-secondary font-technical-micro text-technical-micro pb-1">// PLATFORM STABILITY METRICS</div>
+<div>UPTIME: 99.98% · P99 LATENCY: &lt;140ms · AUDIT PASS: 100%</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="relative rounded-xl overflow-hidden shadow-sm h-64">
+<img class="w-full h-full object-cover" data-alt="A minimalist architectural photograph of clean structural concrete, precision glass panels, and sharp geometric shadows representing modern system architecture in cool neutral grays and soft ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG74nw3ooKD35MzhG3D2idMVUmsV9_QD52ujcfaaz1vQN4TNVZKRbpQsuiQ-F2s3DuNP1bc_MRYTKm4_uIYS0SKiiRSmDfSRG6cBuq3XRLnURo3ByHSm6J8ECB2YoX0znGxy--dSzG-CReBsUEaIUxg4b0Rg3Zs4rOLEtrJWZFu7ftwq9VN9IZw6njaA6z4fNPqvp22vBH1GCFtfr1hNlrl-0d4tZlQprBvd2HP6f3jMUDVhPfAl4gIA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent flex items-end p-4">
+<span class="font-technical-micro text-technical-micro text-text-primary-dark">INFRASTRUCTURE CANVASES</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm h-64">
+<img class="w-full h-full object-cover" data-alt="Close up high-angle macro photograph of sleek industrial server hardware racks, subtle LED fiber indicators glowing soft blue, clean cable routing representing deterministic software engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOpy49gePOBdWAcUzvBPoXm_9f4lMDL6KjK-TBmPxmTc0927BFt330F2JCtFntDFfc2aUYtiH8KTkjUb9WT_Y67ytOnM9n66mxBHWZnGGj_YcBO2q4uQ-fRnx6jUxLPPO_jmbs-Q-6_MP3LGgrrVp0hC9DEP7wlNDfBEMA-z8t0O-zaiGbPaqu4skeqQ88ClPYwyFsctFQo8ErM_o6pyYLxzWAX1u3X-d3aVoR7-Mm2eietkxreJOqZQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-bg-dark/80 via-transparent to-transparent flex items-end p-4">
+<span class="font-technical-micro text-technical-micro text-text-primary-dark">HARDWARE TELEMETRY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Knowledge Core / Topics Compendium -->
+<section class="w-full bg-surface-container-low py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col gap-2 mb-10">
+<span class="font-technical-tag text-technical-tag text-primary uppercase">CURATED TOPICS &amp; DOMAINS</span>
+<h3 class="font-h2 text-h2 text-on-surface">Four Core Engineering Pillars</h3>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">
+          Structured thematic investigations documented across years of production enterprise and government engineering.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 01 -->
+<div class="bg-surface-light p-6 rounded-xl shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<span class="font-technical-code text-technical-code text-primary font-bold">01 // DOMAIN</span>
+<h4 class="font-h3 text-h3 text-on-surface">Building Resilient Systems</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Distributed transactions, offline synchronization, cryptographic tamper proofs, and deterministic state transitions under hostile conditions.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface font-medium flex items-center gap-1">
+<span>2 Published Studies</span> · <span class="text-primary">View Pillar →</span>
+</div>
+</div>
+<!-- Pillar 02 -->
+<div class="bg-surface-light p-6 rounded-xl shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<span class="font-technical-code text-technical-code text-primary font-bold">02 // DOMAIN</span>
+<h4 class="font-h3 text-h3 text-on-surface">Modern Web Engineering</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Next.js App Router, React Server Components, hybrid rendering boundaries, and high-performance client hydrations.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface font-medium flex items-center gap-1">
+<span>2 Published Studies</span> · <span class="text-primary">View Pillar →</span>
+</div>
+</div>
+<!-- Pillar 03 -->
+<div class="bg-surface-light p-6 rounded-xl shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<span class="font-technical-code text-technical-code text-primary font-bold">03 // DOMAIN</span>
+<h4 class="font-h3 text-h3 text-on-surface">Institutional Data &amp; Governance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Civil service administrative schemas, zero-drift decimal math engines, complex SIMPEG integrations, and regulatory compliance.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface font-medium flex items-center gap-1">
+<span>2 Published Studies</span> · <span class="text-primary">View Pillar →</span>
+</div>
+</div>
+<!-- Pillar 04 -->
+<div class="bg-surface-light p-6 rounded-xl shadow-sm flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-3">
+<span class="font-technical-code text-technical-code text-primary font-bold">04 // DOMAIN</span>
+<h4 class="font-h3 text-h3 text-on-surface">Ergonomic Interface Systems</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Design token synchronization pipelines, shadcn/ui architectures, high-density data tables, and rapid keyboard control layouts.
+            </p>
+</div>
+<div class="font-technical-micro text-technical-micro text-on-surface font-medium flex items-center gap-1">
+<span>2 Published Studies</span> · <span class="text-primary">View Pillar →</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Technical Dispatch / RSS & Subscription -->
+<section class="w-full bg-surface-light py-16" id="feed">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-dark text-text-primary-dark rounded-xl p-8 lg:p-12 shadow-lg flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
+<div class="flex flex-col gap-3 max-w-xl z-10">
+<div class="flex items-center gap-2 font-technical-micro text-technical-micro text-accent-dark">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>RESTFUL_DISPATCH // SUBSCRIPTION_CHANNEL</span>
+</div>
+<h3 class="font-h2 text-h2 text-text-primary-dark font-semibold tracking-tight">
+            Receive Technical Dispatches
+          </h3>
+<p class="font-body text-body text-text-secondary-dark">
+            New articles and system architecture notes published when substantial engineering problems are solved. No marketing fluff, no spam, no algorithmic noise.
+          </p>
+<div class="flex items-center gap-4 pt-2 font-technical-micro text-technical-micro text-text-secondary-dark">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-status-success">check_circle</span> Quarterly Cadence</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-status-success">check_circle</span> Markdown + Code Snippets</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-status-success">check_circle</span> Plaintext Available</span>
+</div>
+</div>
+<div class="w-full lg:w-auto flex flex-col gap-3 z-10">
+<form class="flex flex-col sm:flex-row items-center gap-2" id="subscribe-form">
+<input class="w-full sm:w-80 h-11 px-4 bg-bg-dark text-text-primary-dark rounded-lg font-technical-code text-technical-code placeholder:text-text-secondary-dark focus:outline-none focus:ring-2 focus:ring-accent-dark" placeholder="engineer@domain.com" required="" type="email"/>
+<button class="w-full sm:w-auto h-11 px-6 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-2" type="submit">
+<span>Subscribe</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</form>
+<div class="flex items-center justify-between text-text-secondary-dark font-technical-micro text-technical-micro px-1">
+<span>Direct RSS Feed: <a class="text-accent-dark hover:underline" href="#feed">/feed.xml</a></span>
+<span>Atom Feed: <a class="text-accent-dark hover:underline" href="#feed">/atom.xml</a></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Platform Connection & Final High-Impact CTA -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-6">
+<span class="px-3 py-1 rounded-full bg-surface-container font-technical-tag text-technical-tag text-on-surface-variant font-medium">
+        AVAILABLE FOR STRATEGIC ENGAGEMENTS
+      </span>
+<h2 class="font-h1 text-h1 text-on-surface tracking-tight">
+        Building a Complex Institutional System or Enterprise Workflow?
+      </h2>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl">
+        The architectural patterns discussed here are available as turnkey software products or custom engineering engagements for higher education, public administration, and scaling enterprises.
+      </p>
+<div class="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
+<a class="w-full sm:w-auto h-12 px-8 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition-colors" href="#">
+<span>Explore Case Studies</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+<a class="w-full sm:w-auto h-12 px-8 rounded-lg bg-surface-light hover:bg-surface-container text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center shadow-xs transition-colors" href="#">
+<span>Start a Technical Consultation</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 10. Inline Interactive Logic for High-Fidelity Experience -->
+<script>
+    (function() {
+      const searchInput = document.getElementById('article-search-input');
+      const sortSelect = document.getElementById('sort-select');
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const articles = document.querySelectorAll('.article-item');
+      const container = document.getElementById('articles-container');
+      const noResults = document.getElementById('no-results');
+      const visibleCountPill = document.getElementById('visible-count');
+      const resetFilterBtn = document.getElementById('reset-filter-btn');
+      const toggleViewBtn = document.getElementById('toggle-view-btn');
+      const skeletonBtn = document.getElementById('simulate-skeleton-btn');
+      const skeletonBox = document.getElementById('skeleton-box');
+      const emptyBtn = document.getElementById('simulate-empty-btn');
+
+      let currentFilter = 'all';
+      let currentQuery = '';
+      let isDense = false;
+
+      function updateArticles() {
+        let visibleCount = 0;
+
+        articles.forEach(article => {
+          const category = article.getAttribute('data-category') || '';
+          const text = article.innerText.toLowerCase();
+          const matchesCategory = (currentFilter === 'all') || (category.toLowerCase() === currentFilter.toLowerCase());
+          const matchesQuery = text.includes(currentQuery.toLowerCase());
+
+          if (matchesCategory && matchesQuery) {
+            article.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            article.classList.add('hidden');
+          }
+        });
+
+        if (visibleCountPill) {
+          visibleCountPill.textContent = visibleCount;
+        }
+
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+          noResults.classList.add('flex');
+        } else {
+          noResults.classList.add('hidden');
+          noResults.classList.remove('flex');
+        }
+      }
+
+      // Search event
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim();
+          updateArticles();
+        });
+      }
+
+      // Filter tabs event
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          filterTabs.forEach(t => {
+            t.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+            t.classList.add('bg-surface-container', 'text-on-surface', 'font-medium');
+          });
+
+          tab.classList.remove('bg-surface-container', 'text-on-surface', 'font-medium');
+          tab.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+
+          currentFilter = tab.getAttribute('data-filter') || 'all';
+          updateArticles();
+        });
+      });
+
+      // Sort event
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          const value = e.target.value;
+          const articleArray = Array.from(articles);
+
+          articleArray.sort((a, b) => {
+            if (value === 'newest') {
+              return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+            } else if (value === 'oldest') {
+              return new Date(a.getAttribute('data-date')) - new Date(b.getAttribute('data-date'));
+            } else if (value === 'readtime') {
+              return parseInt(b.getAttribute('data-minutes') || 0) - parseInt(a.getAttribute('data-minutes') || 0);
+            }
+            return 0;
+          });
+
+          articleArray.forEach(node => container.appendChild(node));
+        });
+      }
+
+      // Reset filters button
+      if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', () => {
+          if (searchInput) searchInput.value = '';
+          currentQuery = '';
+          currentFilter = 'all';
+          filterTabs[0].click();
+        });
+      }
+
+      // Toggle dense view layout
+      if (toggleViewBtn) {
+        toggleViewBtn.addEventListener('click', () => {
+          isDense = !isDense;
+          if (isDense) {
+            container.classList.remove('md:grid-cols-2');
+            container.classList.add('grid-cols-1');
+            toggleViewBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">grid_view</span><span class="hidden sm:inline">Grid View</span>';
+          } else {
+            container.classList.remove('grid-cols-1');
+            container.classList.add('md:grid-cols-2');
+            toggleViewBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">view_agenda</span><span class="hidden sm:inline">Dense View</span>';
+          }
+        });
+      }
+
+      // Skeleton simulation
+      if (skeletonBtn && skeletonBox) {
+        skeletonBtn.addEventListener('click', () => {
+          const isShown = !skeletonBox.classList.contains('hidden');
+          if (isShown) {
+            skeletonBox.classList.add('hidden');
+            skeletonBox.classList.remove('grid');
+            skeletonBtn.textContent = 'Preview Skeleton Hydration';
+          } else {
+            skeletonBox.classList.remove('hidden');
+            skeletonBox.classList.add('grid');
+            skeletonBtn.textContent = 'Hide Skeleton Preview';
+          }
+        });
+      }
+
+      // Empty state simulation
+      if (emptyBtn) {
+        emptyBtn.addEventListener('click', () => {
+          if (searchInput) {
+            searchInput.value = '##SIMULATED_EMPTY_QUERY##';
+            currentQuery = '##SIMULATED_EMPTY_QUERY##';
+            updateArticles();
+          }
+        });
+      }
+
+      // Newsletter interaction demo
+      const subForm = document.getElementById('subscribe-form');
+      if (subForm) {
+        subForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Subscribed to Rheva Technical Dispatch. Telemetry confirmation logged.');
+          subForm.reset();
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-light border-t border-border-light py-8"><div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-technical-code text-technical-code text-on-surface-variant"><div>Rheva Developer Platform · Foundation &amp; Design Architecture</div><div class="flex items-center gap-6 font-technical-micro text-technical-micro"><span>UTF-8 SPEC</span><span>COMPLIANT BUILD 24.12</span><span>STABLE RELEASE</span></div></div></footer></body></html>

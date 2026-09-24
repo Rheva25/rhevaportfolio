@@ -1,0 +1,754 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#e1e3e4","surface":"#f8f9fa","on-primary-fixed-variant":"#003ea8","on-primary":"#ffffff","on-tertiary-container":"#eaf0ff","on-tertiary":"#ffffff","on-error-container":"#93000a","on-background":"#191c1d","on-secondary-fixed":"#1c1b1b","inverse-on-surface":"#f0f1f2","primary-container":"#2563eb","secondary-fixed-dim":"#c8c6c5","secondary-fixed":"#e5e2e1","inverse-surface":"#2e3132","secondary":"#5f5e5e","surface-container-high":"#e7e8e9","surface-dark":"#111111","tertiary-fixed-dim":"#c0c7d6","surface-bright":"#f8f9fa","text-primary-dark":"#F5F5F5","surface-container":"#edeeef","on-secondary-container":"#656464","primary":"#004ac6","on-primary-container":"#eeefff","error-container":"#ffdad6","status-error":"#EF4444","status-success":"#10B981","surface-tint":"#0053db","surface-variant":"#e1e3e4","on-tertiary-fixed-variant":"#404754","secondary-container":"#e5e2e1","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-light":"#FFFFFF","outline":"#737686","primary-fixed-dim":"#b4c5ff","on-secondary":"#ffffff","tertiary":"#4e5562","background":"#f8f9fa","inverse-primary":"#b4c5ff","tertiary-container":"#666d7b","border-dark":"#27272A","on-surface":"#191c1d","surface-dim":"#d9dadb","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","error":"#ba1a1a","text-secondary-dark":"#A1A1AA","on-tertiary-fixed":"#151c27","on-error":"#ffffff","status-warning":"#F59E0B","surface-container-low":"#f3f4f5","on-secondary-fixed-variant":"#474646","border-light":"#E5E7EB","bg-dark":"#0A0A0A","tertiary-fixed":"#dce2f3","accent-dark":"#3B82F6","outline-variant":"#c3c6d7"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xs":"0.25rem","space-xl":"2rem","margin-mobile":"1rem","space-lg":"1.5rem",margin:"2rem","gutter-mobile":"1rem","space-md":"1rem",gutter:"1.5rem","space-sm":"0.5rem"},fontFamily:{"technical-micro":["JetBrains Mono"],"display-mobile":["Geist"],"h2-mobile":["Geist"],display:["Geist"],"body-large":["Inter"],"body-sm":["Inter"],"technical-tag":["JetBrains Mono"],"technical-code":["JetBrains Mono"],body:["Inter"],h2:["Geist"],h1:["Geist"],"h1-mobile":["Geist"],h3:["Geist"]},fontSize:{"technical-micro":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"400"}],"display-mobile":["44px",{lineHeight:"52px",letterSpacing:"-0.025em",fontWeight:"600"}],"h2-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"600"}],display:["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-large":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"technical-tag":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"technical-code":["13px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"500"}],body:["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],h2:["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h1:["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"600"}],"h1-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],h3:["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body text-body text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-surface-container-lowest border-r border-border-light z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-5 flex items-center justify-between border-b border-border-light"><div class="flex items-center gap-2.5"><span class="font-h3 text-base font-bold tracking-tight text-on-surface">RHEVA</span><span class="font-technical-micro text-technical-micro px-1.5 py-0.5 rounded bg-surface-container-low text-on-surface-variant uppercase font-medium">ADMIN // OS</span></div><span class="font-technical-micro text-technical-micro text-outline">v1.0.0</span></div><nav class="p-3 space-y-6" data-active-classes="bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container"><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Overview</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="dashboard" href="/admin/dashboard"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="">Dashboard</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Content</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="">Projects</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="apps-products" href="#"><span class="material-symbols-outlined text-[18px]">widgets</span><span class="">Apps &amp; Products</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="articles" href="#"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Articles</span></a><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="services" href="#"><span class="material-symbols-outlined text-[18px]">layers</span><span class="">Services</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Communication</div><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="inquiries" href="/admin/inquiries"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">mark_email_unread</span><span class="">Inquiries &amp; Inbound</span></div><span class="font-technical-micro text-technical-micro px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-medium">3</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">Assets</div><a aria-current="page" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded transition-colors bg-surface-container-low text-on-surface font-semibold border-l-2 border-primary-container" data-path="media-library" href="/admin/media"><span class="material-symbols-outlined text-[18px]">perm_media</span><span class="">Media Library</span></a></div><div class="space-y-1"><div class="px-2.5 pb-1 font-technical-micro text-technical-micro uppercase tracking-wider text-outline font-medium">System</div><a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-body-sm text-body-sm transition-colors" data-path="configuration-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="">Configuration &amp; Settings</span></a></div></nav></div><div class="p-3 border-t border-border-light bg-surface-container-lowest flex flex-col gap-2"><a class="flex items-center justify-between px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm transition-colors" href="/"><span class="">View Public Site</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><div class="flex items-center justify-between p-2 rounded bg-surface-container-low"><div class="flex items-center gap-2 min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><div class="min-w-0 flex-1"><p class="font-body-sm text-xs font-semibold text-on-surface truncate leading-tight">Rheva Iqbal Abdillah</p><p class="font-technical-micro text-[10px] text-outline truncate leading-tight">Superadmin</p></div></div><button class="text-outline hover:text-error transition-colors p-1 shrink-0" title="Sign Out" type="button"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-light z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-4 min-w-0"><div class="flex items-center gap-1.5 font-technical-code text-technical-code text-on-surface-variant"><span class="text-outline">admin</span><span class="text-outline-variant">/</span><span class="text-on-surface font-medium">media</span></div><div class="h-3.5 w-px bg-border-light"></div><div class="flex items-center gap-1.5 font-technical-micro text-technical-micro text-outline"><span class="w-1.5 h-1.5 rounded-full bg-status-success"></span><span class="">FIRESTORE: CONNECTED</span></div></div><div class="flex items-center gap-4"><button class="h-8 px-3 rounded bg-surface-dark text-on-primary font-body-sm text-xs font-medium hover:bg-black transition-colors flex items-center gap-1" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span class="">New Entry</span></button><div class="relative flex items-center"><button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative" title="Notifications" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div><div class="h-4 w-px bg-border-light"></div><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border-light" src="https://lh3.googleusercontent.com/aida/AEtjO1VD__m-VFmBQg3U_A9GZQtRCUBbIZ-ZWa01wxVFYdkniEwJrJROrYblXULcI3dfJb318FAGT-EUsDqeTEC12VNBsawuxglAOSr22E-ijGuSiuYpBUNA9p0Kr2AoQyhSVLOEODiK9OB_dfIVDPXK5CBxbON5SKCcZ3zezYfELLcfju8lwWEHg_rxHG1rhHpxxvZ7SZtZI7XHj6X58CaNES62X6KN8uaufvXkbYl_unbfHdRUaD1uLyXSKtq6fPpX6zMsS30cy1eRQ5o"><span class="font-body-sm text-xs font-medium text-on-surface hidden md:inline-block">Rheva</span><span class="material-symbols-outlined text-[16px] text-outline">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="max-w-7xl mx-auto px-8 py-8"><div class="flex flex-col w-full">
+<!-- Top State Simulator / Harness Bar -->
+
+<!-- Page Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<h1 class="font-h2 text-h2 text-on-surface">Media Library</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-technical-micro text-technical-micro uppercase font-medium">
+          STORAGE: SUPERADMIN R/W
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+        Manage visual assets and schematics referenced across projects, products, articles, and Open Graph metadata.
+      </p>
+</div>
+<div class="flex items-center gap-2.5 shrink-0">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-xs font-medium transition-colors flex items-center gap-1.5" onclick="refreshBucket()">
+<span class="material-symbols-outlined text-[18px]" id="sync-icon">sync</span>
+<span class="">Sync Bucket</span>
+</button>
+<button class="h-9 px-4 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-body-sm text-xs font-medium shadow-sm transition-colors flex items-center gap-1.5" onclick="toggleModal('upload-modal', true)">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span class="">+ Upload Media</span>
+</button>
+</div>
+</div>
+<!-- Controls & Filter Toolbar -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm mb-6 flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-3 flex-1">
+<div class="relative w-full max-w-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full h-8 pl-8 pr-3 rounded bg-surface-container-low text-on-surface font-body-sm text-xs placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" id="asset-search" placeholder="Search by filename, tag, alt text... (⌘K)" type="text">
+</div>
+<div class="h-4 w-px bg-surface-container"></div>
+<div class="flex items-center gap-2 overflow-x-auto py-1">
+<select class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none cursor-pointer">
+<option>All Formats</option>
+<option>WebP (.webp)</option>
+<option>PNG (.png)</option>
+<option>JPEG (.jpeg)</option>
+<option>SVG Vector (.svg)</option>
+</select>
+<select class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none cursor-pointer">
+<option>All Assets (12)</option>
+<option>Referenced (10)</option>
+<option>Orphaned / Unused (2)</option>
+</select>
+<select class="h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none cursor-pointer">
+<option>All Sections</option>
+<option>Projects</option>
+<option>Apps &amp; Products</option>
+<option>Articles</option>
+<option>Platform Core / Meta</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="flex items-center bg-surface-container-low p-0.5 rounded">
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface shadow-xs" title="Grid View">
+<span class="material-symbols-outlined text-[18px] block">grid_view</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="List View">
+<span class="material-symbols-outlined text-[18px] block">view_list</span>
+</button>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline bg-surface-container px-2 py-1 rounded">
+        1 SELECTED: <span class="text-on-surface font-medium">media_dossier_schematic_v2</span>
+</span>
+</div>
+</div>
+<!-- Workspace Grid / Inspector Split Layout -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- Left: Media Grid Canvas (Col 12 on mobile, Col 8 on desktop with drawer) -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-6" id="grid-container">
+<!-- Media Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4" id="media-card-mosaic">
+<!-- Asset 1: Selected & Highlighted -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all ring-2 ring-primary-container flex flex-col justify-between" onclick="selectCard(this, 'dossier')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-high mb-2.5 flex items-center justify-center">
+<svg class="w-full h-full bg-surface-dark p-4" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#2563eb" fill-opacity="0.2" height="40" rx="4" stroke="#2563eb" stroke-width="1.5" width="80" x="20" y="20"></rect>
+<text fill="#eeefff" font-family="monospace" font-size="10" text-anchor="middle" x="60" y="44">IndexedDB</text>
+<path d="M100 40 L160 40" stroke="#38bdf8" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<rect fill="#10B981" fill-opacity="0.2" height="40" rx="4" stroke="#10B981" stroke-width="1.5" width="80" x="160" y="20"></rect>
+<text fill="#d1fae5" font-family="monospace" font-size="10" text-anchor="middle" x="200" y="44">SHA-256 Worker</text>
+<path d="M240 40 L280 80" stroke="#38bdf8" stroke-width="1.5"></path>
+<rect fill="#6366f1" fill-opacity="0.2" height="40" rx="4" stroke="#6366f1" stroke-width="1.5" width="80" x="220" y="80"></rect>
+<text fill="#e0e7ff" font-family="monospace" font-size="10" text-anchor="middle" x="260" y="104">Firestore</text>
+</svg>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">WEBP</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 2 Ref
+              </span>
+</div>
+<div class="flex items-start justify-between gap-1">
+<div class="min-w-0">
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">dossier-offline-flowchart.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">380.4 KB • 1920×1080</p>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: media_dossier_v2</span>
+<span class="text-primary font-medium">Inspecting</span>
+</div>
+</div>
+<!-- Asset 2: Rheva Studio Portrait -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'rheva-studio')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-high mb-2.5">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" data-alt="Close up dramatic warm studio portrait of Rheva Iqbal Abdillah, technical lead and engineer, angled side lighting with deep shadows on a concrete architectural wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSOsV_NcPO2GVdNbit9RSYjrTIIYEDw974p_FCjEH4UGeCRKaI-p169fOssffhKiS3-KHYOEsmhxvtJ0pTDXXeDVH37kFWFjpEqw5rk74rdvh1R0_zii2PaWcBSM7lii9nF_vPoNUe-s2UZm3cf0UbCtjZazmP38UnBW2Hdm5UZraN5xC-n6dSI-XNvka03IIbuuDx4tzUB4gDM4uKEfImu73TsLQvpHdO9xkns84A6ItNyVbBiR9Klg">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">JPEG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 2 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">IMG_7034_Original.jpeg</p>
+<p class="font-technical-micro text-technical-micro text-outline">240 KB • 1440×1800</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: rheva_profile_hero</span>
+<span class="text-outline">About &amp; Shell</span>
+</div>
+</div>
+<!-- Asset 3: Rheva Outdoor Casual -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'rheva-outdoor')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-high mb-2.5">
+<img class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" data-alt="Full shot of Rheva Iqbal Abdillah outdoors on concrete garden steps wearing casual outfit and sunglasses, bright blue sky with wispy clouds and pine trees in daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4_Ea5eMTm_0jQjLsgg4LtIb8pYLU8zCBkWcCRoZIIyyIrYPI93j4QHA7TjbOAdjaXSaAGUroLserOKlzm0ILVHGQMdWaz8NVIHzrYvANWoFMtEgk_-gYVoBjpTyl9Gj6ILfcLOInDAo8SNh0PNgN2PBf0n03qNpzoAgdRqFKtIsJKYp3eTg4yEJpKpttbR4sUdpvQNjH3nvu0XsUq-9cJBSV5-UPI-edVVrnZiLxR0HaNn6z7OEI4aQ">
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">JPEG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">IMG_9031_Original.jpeg</p>
+<p class="font-technical-micro text-technical-micro text-outline">1.8 MB • 3024×4032</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: rheva_about_casual</span>
+<span class="text-outline">Gallery</span>
+</div>
+</div>
+<!-- Asset 4: SIMPEG Vector Symbol -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'simpeg-vector')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-low mb-2.5 flex items-center justify-center p-4">
+<svg class="w-14 h-14 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<polyline points="2 17 12 22 22 17"></polyline>
+<polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">SVG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 3 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">simpeg-symbol.svg</p>
+<p class="font-technical-micro text-technical-micro text-outline">4.2 KB • Vector</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: simpeg_mark_svg</span>
+<span class="text-outline">Product Emblem</span>
+</div>
+</div>
+<!-- Asset 5: SIMPEG Dashboard Hero -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'simpeg-hero')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-dark mb-2.5 p-3 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-status-error"></div>
+<div class="w-2 h-2 rounded-full bg-status-warning"></div>
+<div class="w-2 h-2 rounded-full bg-status-success"></div>
+</div>
+<span class="font-technical-micro text-[8px] text-text-secondary-dark">SIMPEG // V2.4</span>
+</div>
+<div class="grid grid-cols-3 gap-1 my-1">
+<div class="h-6 bg-surface-container-high/20 rounded"></div>
+<div class="h-6 bg-surface-container-high/20 rounded"></div>
+<div class="h-6 bg-surface-container-high/20 rounded"></div>
+</div>
+<div class="h-7 bg-surface-container-high/30 rounded flex items-center px-2">
+<span class="w-12 h-1 bg-primary-container rounded"></span>
+</div>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">WEBP</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">simpeg-dashboard-hero.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">420 KB • 1920×1080</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: simpeg_case_hero</span>
+<span class="text-outline">Case Study</span>
+</div>
+</div>
+<!-- Asset 6: Presensi Mobile PWA -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'presensi-pwa')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-high mb-2.5 flex items-center justify-center">
+<div class="w-16 h-28 bg-surface-dark rounded-md p-1.5 flex flex-col justify-between shadow-sm scale-90">
+<div class="w-4 h-1 bg-surface-container rounded-full mx-auto"></div>
+<div class="w-7 h-7 rounded-full border border-status-success border-dashed mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-status-success">fingerprint</span>
+</div>
+<div class="w-full h-2 bg-primary rounded"></div>
+</div>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">WEBP</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">presensi-mobile-pwa.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">210 KB • 1080×1920</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: presensi_pwa_mock</span>
+<span class="text-outline">Presensi App</span>
+</div>
+</div>
+<!-- Asset 7: Firestore Benchmark -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'firestore-benchmark')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-dark mb-2.5 p-3 flex items-end justify-between">
+<div class="w-3 bg-primary-container h-8 rounded-t"></div>
+<div class="w-3 bg-primary-container h-14 rounded-t"></div>
+<div class="w-3 bg-status-success h-4 rounded-t"></div>
+<div class="w-3 bg-status-success h-3 rounded-t"></div>
+<div class="w-3 bg-status-success h-5 rounded-t"></div>
+<div class="w-3 bg-primary-container h-16 rounded-t"></div>
+<div class="w-3 bg-status-success h-4 rounded-t"></div>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">PNG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">firestore-caching-benchmark.png</p>
+<p class="font-technical-micro text-technical-micro text-outline">185 KB • 1280×720</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: article_firestore_stats</span>
+<span class="text-outline">Article: Reads</span>
+</div>
+</div>
+<!-- Asset 8: Intranet Sync Topology -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'intranet-topology')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-low mb-2.5 flex items-center justify-center p-3">
+<svg class="w-full h-full text-secondary" viewBox="0 0 100 60">
+<circle cx="20" cy="30" fill="none" r="8" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="80" cy="18" fill="none" r="8" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="80" cy="42" fill="none" r="8" stroke="currentColor" stroke-width="1.5"></circle>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-width="1" x1="28" x2="72" y1="30" y2="18"></line>
+<line stroke="currentColor" stroke-dasharray="2 2" stroke-width="1" x1="28" x2="72" y1="30" y2="42"></line>
+</svg>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">SVG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">island-intranet-topology.svg</p>
+<p class="font-technical-micro text-technical-micro text-outline">32 KB • Vector</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: topology_dia_v1</span>
+<span class="text-outline">Article: Sync</span>
+</div>
+</div>
+<!-- Asset 9: High-Density Spec Sheet -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'density-spec')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-highest mb-2.5 flex flex-col justify-center p-3 gap-1">
+<div class="h-2 w-3/4 bg-outline/40 rounded"></div>
+<div class="h-2 w-1/2 bg-outline/30 rounded"></div>
+<div class="h-2 w-5/6 bg-outline/40 rounded"></div>
+<div class="h-2 w-2/3 bg-outline/20 rounded"></div>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">WEBP</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">high-density-spec-sheet.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">295 KB • 1920×1200</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: article_ui_spec</span>
+<span class="text-outline">Article: UI</span>
+</div>
+</div>
+<!-- Asset 10: Root OpenGraph Card -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" onclick="selectCard(this, 'og-card')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-dark mb-2.5 p-4 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-primary-fixed">RHEVA.DEV</span>
+<span class="font-technical-micro text-[9px] text-text-secondary-dark">ARCHITECTURAL PORTFOLIO</span>
+</div>
+<div>
+<p class="font-h3 text-xs text-text-primary-dark font-bold leading-tight">Rheva Iqbal Abdillah</p>
+<p class="font-technical-micro text-[9px] text-text-secondary-dark">Independent Software Architect</p>
+</div>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">WEBP</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-success/20 text-status-success font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> 1 Ref
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">rheva-platform-og-main.webp</p>
+<p class="font-technical-micro text-technical-micro text-outline">310 KB • 1200×630</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-on-surface-variant font-technical-micro text-[11px] bg-surface-container-low px-2 py-1 rounded">
+<span class="truncate">DOC_ID: platform_og_meta</span>
+<span class="text-outline">SEO / Meta</span>
+</div>
+</div>
+<!-- Asset 11: Orphaned Legacy Flow (Unused) -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between opacity-80 hover:opacity-100" onclick="selectCard(this, 'legacy-php')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-high mb-2.5 flex items-center justify-center p-3">
+<span class="material-symbols-outlined text-[36px] text-outline">schema</span>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">PNG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-warning/20 text-status-warning font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span> Orphaned
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">legacy-v1-php-flow.png</p>
+<p class="font-technical-micro text-technical-micro text-outline">520 KB • 1400×900</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-status-warning font-technical-micro text-[11px] bg-status-warning/10 px-2 py-1 rounded">
+<span class="truncate">DOC_ID: legacy_draft_01</span>
+<span class="font-medium">Unused (0)</span>
+</div>
+</div>
+<!-- Asset 12: Orphaned Logo Glyph (Unused) -->
+<div class="asset-card cursor-pointer group rounded-xl p-3 bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between opacity-80 hover:opacity-100" onclick="selectCard(this, 'glyph-alt')">
+<div>
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-container-low mb-2.5 flex items-center justify-center p-4">
+<svg class="w-10 h-10 text-outline" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 6v6l4 2"></path>
+</svg>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-dark/80 backdrop-blur-md text-on-primary font-technical-micro text-[10px]">SVG</span>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-status-warning/20 text-status-warning font-technical-micro text-[10px] font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span> Orphaned
+              </span>
+</div>
+<div>
+<p class="font-technical-tag text-technical-tag text-on-surface font-semibold truncate">rheva-glyph-alt2.svg</p>
+<p class="font-technical-micro text-technical-micro text-outline">8.4 KB • Vector</p>
+</div>
+</div>
+<div class="mt-3 pt-2 flex items-center justify-between text-status-warning font-technical-micro text-[11px] bg-status-warning/10 px-2 py-1 rounded">
+<span class="truncate">DOC_ID: glyph_candidate_b</span>
+<span class="font-medium">Unused (0)</span>
+</div>
+</div>
+</div>
+<!-- Pagination & Storage Metric footer -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 font-technical-micro text-technical-micro text-secondary">
+<div class="flex items-center gap-2"><span class="">Showing 1 to 12 of 12 media assets</span></div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1">
+<span class="">Per page:</span>
+<select class="bg-surface-container-low px-1.5 py-0.5 rounded text-on-surface text-xs focus:outline-none">
+<option>12</option>
+<option>24</option>
+<option>48</option>
+</select>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 rounded bg-surface-container-low flex items-center justify-center text-outline hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">1</span>
+<button class="w-7 h-7 rounded bg-surface-container-low flex items-center justify-center text-outline hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Container (Hidden by default, triggered by Harness) -->
+<div class="hidden col-span-12 py-16 flex flex-col items-center justify-center bg-surface-container-lowest rounded-xl shadow-sm text-center" id="empty-state-container">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center text-outline mb-4">
+<span class="material-symbols-outlined text-[32px]">folder_open</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-1">No Media Assets In Bucket</h3>
+<p class="font-body-sm text-body-sm text-secondary max-w-sm mb-6">
+        No objects were found under gs://rheva-platform.appspot.com. Upload your first architecture diagrams or profile photos.
+      </p>
+<button class="h-9 px-4 rounded bg-primary-container hover:bg-primary text-on-primary font-body-sm text-xs font-medium shadow-sm transition-colors flex items-center gap-2" onclick="toggleModal('upload-modal', true)">
+<span class="material-symbols-outlined text-[18px]">upload</span>
+<span class="">Upload First Asset</span>
+</button>
+</div>
+<!-- Right: Dedicated Media Inspector Slide-Over / Detail Panel (Col 4) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-4 flex flex-col gap-5 sticky top-20" id="inspector-panel">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="min-w-0">
+<span class="font-technical-micro text-technical-micro text-outline uppercase block">ASSET TELEMETRY</span>
+<h2 class="font-technical-tag text-xs font-semibold text-on-surface truncate">DOC_ID: media_dossier_schematic_v2</h2>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-success" title="Storage synced"></span>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="closeInspector()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Large Preview with Transparency Checkerboard -->
+<div class="relative w-full aspect-video rounded-lg overflow-hidden bg-surface-dark flex items-center justify-center shadow-inner">
+<!-- SVG schematic preview -->
+<svg class="w-full h-full p-6" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#2563eb" fill-opacity="0.3" height="40" rx="4" stroke="#2563eb" stroke-width="2" width="80" x="20" y="20"></rect>
+<text fill="#eeefff" font-family="monospace" font-size="11" text-anchor="middle" x="60" y="44">IndexedDB</text>
+<path d="M100 40 L160 40" stroke="#38bdf8" stroke-dasharray="4 4" stroke-width="2"></path>
+<rect fill="#10B981" fill-opacity="0.3" height="40" rx="4" stroke="#10B981" stroke-width="2" width="80" x="160" y="20"></rect>
+<text fill="#d1fae5" font-family="monospace" font-size="11" text-anchor="middle" x="200" y="44">SHA-256 Worker</text>
+<path d="M240 40 L280 80" stroke="#38bdf8" stroke-width="2"></path>
+<rect fill="#6366f1" fill-opacity="0.3" height="40" rx="4" stroke="#6366f1" stroke-width="2" width="80" x="220" y="80"></rect>
+<text fill="#e0e7ff" font-family="monospace" font-size="11" text-anchor="middle" x="260" y="104">Firestore</text>
+</svg>
+<span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-surface-dark/90 text-on-primary font-technical-micro text-[10px]">
+          1920 × 1080 (16:9)
+        </span>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-3 gap-2">
+<button class="py-1.5 px-2 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-micro text-technical-micro flex items-center justify-center gap-1 transition-colors" onclick="copyToClipboard('https://firebasestorage.googleapis.com/v0/b/rheva-platform.appspot.com/o/dossier.webp')">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="">Copy URL</span>
+</button>
+<button class="py-1.5 px-2 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-micro text-technical-micro flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span class="">Download</span>
+</button>
+<button class="py-1.5 px-2 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-technical-micro text-technical-micro flex items-center justify-center gap-1 transition-colors" onclick="toggleModal('upload-modal', true)">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span class="">Replace ↺</span>
+</button>
+</div>
+<!-- Section: Technical Specifications -->
+<div class="space-y-2 text-xs">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-technical-micro">Filename:</span>
+<span class="font-technical-tag text-on-surface font-medium">dossier-offline-flowchart.webp</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-technical-micro">MIME Type:</span>
+<span class="font-technical-tag text-on-surface">image/webp</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-technical-micro">File Size:</span>
+<span class="font-technical-tag text-on-surface">380.4 KB (389,529 bytes)</span>
+</div>
+<div class="flex items-center justify-between text-secondary">
+<span class="font-technical-micro">Uploaded:</span>
+<span class="font-technical-tag text-on-surface">Nov 18, 2024 · 14:22 WIB</span>
+</div>
+<div class="flex flex-col gap-1 pt-1">
+<span class="font-technical-micro text-outline">Bucket Storage URI:</span>
+<div class="flex items-center justify-between bg-surface-container-low p-1.5 rounded font-technical-micro text-[11px] text-on-surface-variant break-all">
+<span class="truncate">gs://rheva-platform.appspot.com/articles/dossier-offline-flowchart.webp</span>
+<button class="text-outline hover:text-on-surface shrink-0 ml-1" onclick="copyToClipboard('gs://rheva-platform.appspot.com/articles/dossier-offline-flowchart.webp')">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section: Editable Metadata Form -->
+<div class="pt-2 border-t border-surface-container space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-semibold">Metadata &amp; A11y</span>
+<span class="font-technical-micro text-[10px] text-status-success font-medium">Auto-indexed</span>
+</div>
+<div class="space-y-1">
+<label class="font-technical-micro text-[11px] text-secondary">Title / Reference Label</label>
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none focus:ring-1 focus:ring-primary-container" type="text" value="Civil Service Offline Dossier Cryptographic Handshake Pipeline">
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-technical-micro text-[11px] text-secondary">Alt Text (Screen Readers)</label>
+<span class="font-technical-micro text-[9px] px-1 bg-status-success/15 text-status-success rounded">Required</span>
+</div>
+<textarea class="w-full p-2 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none focus:ring-1 focus:ring-primary-container resize-none" rows="2">Architectural flowchart showing client IndexedDB queue syncing with Cloud Firestore worker via WebCrypto SHA-256</textarea>
+</div>
+<div class="space-y-1">
+<label class="font-technical-micro text-[11px] text-secondary">Caption (Editorial)</label>
+<input class="w-full h-8 px-2.5 rounded bg-surface-container-low text-on-surface font-body-sm text-xs focus:outline-none focus:ring-1 focus:ring-primary-container" type="text" value="Fig 1.1: Local mutation queue state transition pipeline and cryptographic handshake.">
+</div>
+<div class="space-y-1.5">
+<label class="font-technical-micro text-[11px] text-secondary">Technical Tags</label>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-technical-tag text-[11px]">Architecture</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-technical-tag text-[11px]">Firestore</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-technical-tag text-[11px]">IndexedDB</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-technical-tag text-[11px]">WebCrypto</span>
+<button class="px-2 py-0.5 rounded-full bg-surface-container-low hover:bg-surface-container text-outline hover:text-on-surface font-technical-micro text-[11px] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">add</span> Add
+            </button>
+</div>
+</div>
+<button class="w-full h-8 rounded bg-surface-dark hover:bg-black text-on-primary font-body-sm text-xs font-medium transition-colors" id="btn-save-meta" onclick="notifySave()">
+          Save Metadata
+        </button>
+</div>
+<!-- Section: Active Usage References (Live Database Graph) -->
+<div class="pt-2 border-t border-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-semibold">Usage References (2)</span>
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+</div>
+<div class="space-y-2">
+<!-- Ref 1: Article -->
+<div class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span class="font-technical-micro text-[10px] uppercase font-semibold">Article</span>
+</div>
+<p class="font-body-sm text-xs font-medium text-on-surface truncate">Architecting Offline-Tolerant Civil Service Dossier Verification</p>
+<p class="font-technical-micro text-[10px] text-outline truncate">Fields: coverImage, embeddedDiagram[0]</p>
+</div>
+<!-- Ref 2: Project Case Study -->
+<div class="p-2.5 rounded bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span class="font-technical-micro text-[10px] uppercase font-semibold">Project Case Study</span>
+</div>
+<p class="font-body-sm text-xs font-medium text-on-surface truncate">SIMPEG Core Enterprise</p>
+<p class="font-technical-micro text-[10px] text-outline truncate">Field: architectureGallery[0]</p>
+</div>
+</div>
+<div class="p-2 rounded bg-status-warning/10 text-on-surface font-technical-micro text-[11px] flex items-start gap-2">
+<span class="material-symbols-outlined text-status-warning text-[16px] shrink-0 mt-0.5">warning</span>
+<span class="">Referenced Asset: Modifying or deleting this asset will directly impact 2 live public endpoints.</span>
+</div>
+</div>
+<!-- Section: Danger Zone -->
+<div class="pt-2 border-t border-surface-container">
+<button class="w-full h-8 rounded bg-error/10 hover:bg-error/20 text-error font-body-sm text-xs font-medium transition-colors flex items-center justify-center gap-1.5" onclick="toggleModal('delete-modal', true)">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span class="">Delete Media Permanently</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Upload Modal Dialog -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="upload-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="h-14 px-5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_upload</span>
+<h3 class="font-h3 text-base text-on-surface font-semibold">Upload Media to Firestore Bucket</h3>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="toggleModal('upload-modal', false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-6 space-y-5">
+<!-- Dropzone Box -->
+<div class="border-2 border-dashed border-border-light rounded-xl p-8 flex flex-col items-center justify-center text-center hover:border-primary-container transition-colors bg-surface-container-low/50 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[28px]">file_upload</span>
+</div>
+<p class="font-body text-body text-on-surface font-medium mb-1">Drag &amp; drop image assets here, or browse</p>
+<p class="font-technical-micro text-technical-micro text-outline mb-2">Supported: WebP, PNG, JPEG, SVG up to 10MB per object</p>
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-technical-micro text-[11px] shadow-xs">
+            Target: gs://rheva-platform.appspot.com/uploads
+          </span>
+</div>
+<!-- Uploading Queue Simulation -->
+<div class="space-y-3">
+<span class="font-technical-micro text-technical-micro text-outline uppercase font-medium">Upload Queue (2 Items)</span>
+<div class="p-2.5 rounded bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between text-xs">
+<span class="font-technical-tag text-on-surface font-medium truncate">audit-trail-worker.webp</span>
+<span class="font-technical-micro text-status-success font-medium">100% · Complete</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="w-full h-full bg-status-success"></div>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between text-xs">
+<span class="font-technical-tag text-on-surface font-medium truncate">biometric-fingerprint-vector.svg</span>
+<span class="font-technical-micro text-primary font-medium">65% · 18 KB of 28 KB</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container animate-pulse"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-6 py-3.5 bg-surface-container-low flex items-center justify-end gap-2">
+<button class="h-8 px-3 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-xs font-medium" onclick="toggleModal('upload-modal', false)">
+          Cancel
+        </button>
+<button class="h-8 px-4 rounded bg-primary-container hover:bg-primary text-on-primary font-body-sm text-xs font-medium transition-colors" onclick="toggleModal('upload-modal', false)">
+          Commit Uploads
+        </button>
+</div>
+</div>
+</div>
+<!-- Delete Safety Warning Modal (Referenced asset safeguard) -->
+<div class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-center justify-center p-4 hidden" id="delete-modal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="p-6 space-y-4">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div>
+<h3 class="font-h3 text-base text-on-surface font-bold">Block Asset Deletion</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+<code class="font-technical-tag text-xs text-on-surface font-semibold">dossier-offline-flowchart.webp</code> is currently actively referenced in <strong class="text-on-surface">2 published documents</strong>.
+          </p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2 text-xs">
+<div class="flex items-center gap-2 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-error">link_off</span>
+<span class="">Active references requiring unlinking:</span>
+</div>
+<ul class="list-disc list-inside text-secondary space-y-1 font-technical-micro">
+<li class="">/articles/architecting-offline-tolerant-civil-service</li>
+<li class="">/projects/simpeg-core (architectureGallery[0])</li>
+</ul>
+</div>
+<p class="font-technical-micro text-technical-micro text-outline">
+          To remove this file permanently, first unlink it from the documents above, or check "Force Cascade Null" to clear references.
+        </p>
+</div>
+<div class="px-6 py-3.5 bg-surface-container-low flex items-center justify-end gap-2">
+<button class="h-8 px-3 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-xs font-medium" onclick="toggleModal('delete-modal', false)">
+          Cancel &amp; Keep Asset
+        </button>
+<button class="h-8 px-3 rounded bg-error text-on-error hover:bg-error/90 font-body-sm text-xs font-medium" onclick="toggleModal('delete-modal', false)">
+          Force Unlink &amp; Delete
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleModal(id, show) {
+    const el = document.getElementById(id);
+    if (el) {
+      if (show) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    }
+  }
+
+  function switchState(state) {
+    const gridContainer = document.getElementById('grid-container');
+    const emptyState = document.getElementById('empty-state-container');
+    const inspector = document.getElementById('inspector-panel');
+
+    // Reset button states
+    ['btn-state-grid', 'btn-state-inspect', 'btn-state-empty'].forEach(btnId => {
+      const b = document.getElementById(btnId);
+      if (b) {
+        b.className = "px-2.5 py-1 text-xs font-technical-tag rounded font-medium text-on-surface-variant hover:text-on-surface transition-colors";
+      }
+    });
+
+    if (state === 'grid') {
+      document.getElementById('btn-state-grid').className = "px-2.5 py-1 text-xs font-technical-tag rounded font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-colors";
+      gridContainer.classList.remove('hidden');
+      gridContainer.classList.remove('lg:col-span-8');
+      gridContainer.classList.add('lg:col-span-12');
+      inspector.classList.add('hidden');
+      emptyState.classList.add('hidden');
+    } else if (state === 'inspect') {
+      document.getElementById('btn-state-inspect').className = "px-2.5 py-1 text-xs font-technical-tag rounded font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-colors";
+      gridContainer.classList.remove('hidden');
+      gridContainer.classList.remove('lg:col-span-12');
+      gridContainer.classList.add('lg:col-span-8');
+      inspector.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+    } else if (state === 'empty') {
+      document.getElementById('btn-state-empty').className = "px-2.5 py-1 text-xs font-technical-tag rounded font-medium bg-surface-container-lowest text-on-surface shadow-xs transition-colors";
+      gridContainer.classList.add('hidden');
+      inspector.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+    }
+  }
+
+  function selectCard(element, id) {
+    document.querySelectorAll('.asset-card').forEach(card => {
+      card.classList.remove('ring-2', 'ring-primary-container');
+    });
+    element.classList.add('ring-2', 'ring-primary-container');
+    switchState('inspect');
+  }
+
+  function closeInspector() {
+    switchState('grid');
+  }
+
+  function refreshBucket() {
+    const icon = document.getElementById('sync-icon');
+    if (icon) {
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+      }, 800);
+    }
+  }
+
+  function copyToClipboard(text) {
+    navigator.clipboard?.writeText(text);
+  }
+
+  function notifySave() {
+    const btn = document.getElementById('btn-save-meta');
+    if (btn) {
+      const originalText = btn.innerText;
+      btn.innerText = "Saved to Firestore ✓";
+      btn.classList.add('bg-status-success');
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.classList.remove('bg-status-success');
+      }, 1500);
+    }
+  }
+</script></div></main></div>
+
+</body></html>

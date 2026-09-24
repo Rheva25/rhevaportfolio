@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "text-primary-dark": "#F5F5F5",
+          "border-dark": "#27272A",
+          "secondary-fixed-dim": "#c8c6c5",
+          "surface-tint": "#0053db",
+          "on-primary": "#ffffff",
+          "inverse-on-surface": "#f0f1f2",
+          "surface-light": "#FFFFFF",
+          "surface-dark": "#111111",
+          "secondary-container": "#e5e2e1",
+          "on-tertiary-fixed": "#151c27",
+          "surface-dim": "#d9dadb",
+          "on-error": "#ffffff",
+          "outline-variant": "#c3c6d7",
+          "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#c0c7d6",
+          "status-success": "#10B981",
+          "on-secondary-fixed-variant": "#474646",
+          "on-surface": "#191c1d",
+          "surface-bright": "#f8f9fa",
+          "on-tertiary-fixed-variant": "#404754",
+          "on-primary-container": "#eeefff",
+          "inverse-primary": "#b4c5ff",
+          "surface-container-high": "#e7e8e9",
+          "secondary": "#5f5e5e",
+          "text-secondary-dark": "#A1A1AA",
+          "on-secondary-container": "#656464",
+          "surface-container-highest": "#e1e3e4",
+          "bg-dark": "#0A0A0A",
+          "background": "#f8f9fa",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#00174b",
+          "error-container": "#ffdad6",
+          "accent-dark": "#3B82F6",
+          "tertiary-fixed": "#dce2f3",
+          "surface-container-low": "#f3f4f5",
+          "secondary-fixed": "#e5e2e1",
+          "surface-container": "#edeeef",
+          "border-light": "#E5E7EB",
+          "surface-variant": "#e1e3e4",
+          "on-tertiary-container": "#eaf0ff",
+          "on-tertiary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "on-secondary-fixed": "#1c1b1b",
+          "on-surface-variant": "#434655",
+          "on-background": "#191c1d",
+          "primary-container": "#2563eb",
+          "error": "#ba1a1a",
+          "on-primary-fixed-variant": "#003ea8",
+          "status-error": "#EF4444",
+          "primary": "#004ac6",
+          "primary-fixed-dim": "#b4c5ff",
+          "status-warning": "#F59E0B",
+          "tertiary-container": "#666d7b",
+          "inverse-surface": "#2e3132",
+          "primary-fixed": "#dbe1ff",
+          "outline": "#737686",
+          "tertiary": "#4e5562",
+          "surface": "#f8f9fa"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "space-xl": "2rem",
+          "space-xs": "0.25rem",
+          "gutter": "1.5rem",
+          "margin-mobile": "1rem",
+          "margin": "2rem"
+        },
+        "fontFamily": {
+          "technical-micro": [
+            "JetBrains Mono"
+          ],
+          "h3": [
+            "Geist"
+          ],
+          "display": [
+            "Geist"
+          ],
+          "body-large": [
+            "Inter"
+          ],
+          "display-mobile": [
+            "Geist"
+          ],
+          "body": [
+            "Inter"
+          ],
+          "h2-mobile": [
+            "Geist"
+          ],
+          "h1-mobile": [
+            "Geist"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "technical-code": [
+            "JetBrains Mono"
+          ],
+          "h1": [
+            "Geist"
+          ],
+          "h2": [
+            "Geist"
+          ],
+          "technical-tag": [
+            "JetBrains Mono"
+          ]
+        },
+        "fontSize": {
+          "technical-micro": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "400"
+            }
+          ],
+          "h3": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "display": [
+            "72px",
+            {
+              "lineHeight": "80px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-large": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "display-mobile": [
+            "44px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "body": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "h2-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "h1-mobile": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "technical-code": [
+            "13px",
+            {
+              "lineHeight": "20px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "h1": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "600"
+            }
+          ],
+          "h2": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "technical-tag": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-light border-b border-border-light"><div class="h-14 max-w-7xl mx-auto px-6 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><span class="font-h3 text-h3 tracking-tight font-semibold text-on-surface">RHEVA</span><div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded border border-border-light bg-surface-container-low font-technical-tag text-technical-tag text-on-surface-variant"><span class="inline-block w-1.5 h-1.5 rounded-full bg-status-success"></span><span>v1.0.0 / System Spec</span></div></div><nav class="hidden md:flex items-center gap-6 h-full" data-active-classes="text-on-surface font-semibold border-b-2 border-primary"><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="tokens-foundations" href="#">Tokens &amp; Foundations</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="primitive-controls" href="#">Primitive Controls</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="containers-layout" href="#">Containers &amp; Layout</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="feedback-states" href="#">Feedback &amp; States</a><a class="h-full inline-flex items-center font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors border-b-2 border-transparent" data-path="patterns-data" href="#">Patterns &amp; Data</a></nav><div class="flex items-center gap-3 shrink-0"><button aria-label="Theme Indicator" class="p-1.5 rounded border border-border-light bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[18px] block">light_mode</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- ARCHITECTURAL HERO & METADATA BAR -->
+<section class="w-full bg-surface-light border-b border-border-light pt-12 pb-14">
+<div class="max-w-[1280px] mx-auto px-6">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-8 border-b border-border-light">
+<div class="space-y-4 max-w-3xl">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+              SPEC-CORE // v1.0.0
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface-variant">Next.js 14 App Router</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface-variant">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface-variant">shadcn/ui Architecture</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface-variant">Geist UI Typography</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-surface tracking-tight leading-tight">
+            Rheva Developer Platform <span class="text-on-surface-variant font-normal">/ Design System &amp; Component Foundation</span>
+</h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl leading-relaxed">
+            Standardized design tokens, interface primitives, data-dense controls, and architectural layouts engineered for both high-impact public case studies and zero-distraction private CMS operations.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+<button class="h-10 px-4 rounded-lg bg-surface-light border border-border-light hover:bg-surface-container-low font-technical-code text-technical-code text-on-surface inline-flex items-center justify-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>npx rheva-ui init</span>
+</button>
+<a class="h-10 px-5 rounded-lg bg-surface-dark text-text-primary-dark hover:bg-neutral-800 font-body-sm text-body-sm font-medium inline-flex items-center justify-center gap-2 transition-colors" href="#primitive-controls">
+<span>Explore Controls</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 font-technical-code text-technical-code text-on-surface-variant">
+<div>
+<div class="text-on-surface font-semibold text-body">32 Tokens</div>
+<div class="text-technical-micro uppercase tracking-wider text-outline">Theme &amp; Surface System</div>
+</div>
+<div>
+<div class="text-on-surface font-semibold text-body">18 Primitives</div>
+<div class="text-technical-micro uppercase tracking-wider text-outline">Accessible Controls</div>
+</div>
+<div>
+<div class="text-on-surface font-semibold text-body">WCAG AAA</div>
+<div class="text-technical-micro uppercase tracking-wider text-outline">Contrast Compliance</div>
+</div>
+<div>
+<div class="text-on-surface font-semibold text-body">Dense CMS</div>
+<div class="text-technical-micro uppercase tracking-wider text-outline">40px Desktop Cadence</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN SYSTEM CANVAS (1280px Grid) -->
+<div class="max-w-[1280px] w-full mx-auto px-6 py-16 space-y-24">
+<!-- 01. COLOR SYSTEM & SEMANTIC ROLES -->
+<section class="space-y-8" id="tokens-foundations">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">01 // Foundation</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Color Tokens &amp; Semantic Roles</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">PARITY SPEC: LIGHT / DARK</span>
+</div>
+<!-- Light Theme Primary Swatches -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Light Mode (Primary Canvas)</span>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">Default UI environment for public engineering portfolios</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+<!-- Swatch 1 -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36">
+<div class="w-full h-14 rounded bg-[#F8F9FA] border border-border-light flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-on-surface">Canvas</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">background</div>
+<div class="font-technical-micro text-technical-micro text-outline">#F8F9FA</div>
+</div>
+</div>
+<!-- Swatch 2 -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36">
+<div class="w-full h-14 rounded bg-[#FFFFFF] border border-border-light flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-on-surface">Card / Panel</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">surface-light</div>
+<div class="font-technical-micro text-technical-micro text-outline">#FFFFFF</div>
+</div>
+</div>
+<!-- Swatch 3 -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36">
+<div class="w-full h-14 rounded bg-[#111111] flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-white">Primary Text</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">on-surface</div>
+<div class="font-technical-micro text-technical-micro text-outline">#111111</div>
+</div>
+</div>
+<!-- Swatch 4 -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36">
+<div class="w-full h-14 rounded bg-[#6B7280] flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-white">Secondary</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">on-surface-var</div>
+<div class="font-technical-micro text-technical-micro text-outline">#6B7280</div>
+</div>
+</div>
+<!-- Swatch 5 -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36">
+<div class="w-full h-14 rounded bg-[#E5E7EB] flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-on-surface">1px Hairline</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">border-light</div>
+<div class="font-technical-micro text-technical-micro text-outline">#E5E7EB</div>
+</div>
+</div>
+<!-- Swatch 6 Accent -->
+<div class="rounded-xl border border-border-light bg-surface-light p-3 flex flex-col justify-between h-36 ring-2 ring-primary-container/20">
+<div class="w-full h-14 rounded bg-[#2563EB] flex items-center justify-center">
+<span class="font-technical-micro text-technical-micro text-white font-medium">Interactive</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-primary-container">primary-container</div>
+<div class="font-technical-micro text-technical-micro text-outline">#2563EB (Accent)</div>
+</div>
+</div>
+</div>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant bg-surface-container-low p-3 rounded-lg border border-border-light">
+<strong class="text-on-surface font-semibold">Architectural Constraint:</strong> Blue (#2563EB) is never employed decoratively or as ambient card background. It signifies active interaction, confirmed deployments, and direct user intention.
+        </p>
+</div>
+<!-- Semantic Roles & Dark Theme Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Semantic States -->
+<div class="bg-surface-light border border-border-light rounded-xl p-5 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-border-light">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Semantic Feedback Palette</span>
+<span class="font-technical-micro text-technical-micro text-outline">PAIR TOKENS [SOLID / MIST]</span>
+</div>
+<div class="grid grid-cols-2 gap-3 font-technical-code text-technical-code">
+<div class="p-3 rounded-lg bg-[#DCFCE7] border border-[#BBF7D0] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#16A34A]"></span>
+<span class="text-[#14532D] font-medium">Success / Pass</span>
+</div>
+<span class="font-technical-micro text-[#15803D]">#16A34A</span>
+</div>
+<div class="p-3 rounded-lg bg-[#FEF3C7] border border-[#FDE68A] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#D97706]"></span>
+<span class="text-[#78350F] font-medium">Warning / Draft</span>
+</div>
+<span class="font-technical-micro text-[#B45309]">#D97706</span>
+</div>
+<div class="p-3 rounded-lg bg-[#FEE2E2] border border-[#FECACA] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#DC2626]"></span>
+<span class="text-[#7F1D1D] font-medium">Destructive / Fail</span>
+</div>
+<span class="font-technical-micro text-[#B91C1C]">#DC2626</span>
+</div>
+<div class="p-3 rounded-lg bg-[#EFF6FF] border border-[#DBEAFE] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2563EB]"></span>
+<span class="text-[#1E3A8A] font-medium">Info / Trace</span>
+</div>
+<span class="font-technical-micro text-[#1D4ED8]">#2563EB</span>
+</div>
+</div>
+</div>
+<!-- Dark Theme Reference Strip -->
+<div class="bg-surface-dark border border-border-dark rounded-xl p-5 space-y-4 text-text-primary-dark">
+<div class="flex items-center justify-between pb-3 border-b border-border-dark">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-accent-dark"></span>
+<span class="font-body-sm text-body-sm font-semibold text-text-primary-dark">Dark Theme Parity Preview</span>
+</div>
+<span class="font-technical-micro text-technical-micro text-text-secondary-dark">INTERNAL ADMIN WORKSPACE</span>
+</div>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+<div class="p-2 rounded bg-bg-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#0A0A0A] rounded border border-[#27272A]"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#0A0A0A</div>
+</div>
+<div class="p-2 rounded bg-surface-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#111111] rounded border border-[#27272A]"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#111111</div>
+</div>
+<div class="p-2 rounded bg-surface-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#F5F5F5] rounded"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#F5F5F5</div>
+</div>
+<div class="p-2 rounded bg-surface-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#A1A1AA] rounded"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#A1A1AA</div>
+</div>
+<div class="p-2 rounded bg-surface-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#27272A] rounded"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#27272A</div>
+</div>
+<div class="p-2 rounded bg-surface-dark border border-border-dark flex flex-col justify-between h-20">
+<div class="w-full h-4 bg-[#3B82F6] rounded"></div>
+<div class="font-technical-micro text-technical-micro truncate text-text-secondary-dark">#3B82F6</div>
+</div>
+</div>
+<p class="font-technical-micro text-technical-micro text-text-secondary-dark">
+            Tokens map directly via CSS custom variables (`--canvas`, `--surface`, `--border`, `--text-main`).
+          </p>
+</div>
+</div>
+</section>
+<!-- 02. TYPOGRAPHY & MONOSPACE SPECIMEN -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">02 // Hierarchy</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Typography &amp; Monospace Engineering</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">GEIST &amp; JETBRAINS MONO</span>
+</div>
+<div class="bg-surface-light border border-border-light rounded-xl divide-y divide-border-light overflow-hidden">
+<!-- Display -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>Display // 64px</div>
+<div class="font-technical-micro text-outline">Geist / -0.03em / 600</div>
+</div>
+<div class="font-display text-[64px] leading-[1.1] font-semibold text-on-surface tracking-tight truncate max-w-2xl">
+            SIMPEG Core 2.0
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Hero Product Headlines</div>
+</div>
+<!-- H1 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>H1 // 48px</div>
+<div class="font-technical-micro text-outline">Geist / -0.025em / 600</div>
+</div>
+<div class="font-h1 text-h1 text-on-surface truncate max-w-2xl">
+            Engineered for Scale and Velocity
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Primary Page Title</div>
+</div>
+<!-- H2 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>H2 // 36px</div>
+<div class="font-technical-micro text-outline">Geist / -0.02em / 600</div>
+</div>
+<div class="font-h2 text-h2 text-on-surface truncate max-w-2xl">
+            Full-Stack Systems Architecture
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Major Section Headers</div>
+</div>
+<!-- H3 -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>H3 // 24px</div>
+<div class="font-technical-micro text-outline">Geist / -0.015em / 600</div>
+</div>
+<div class="font-h3 text-h3 text-on-surface truncate max-w-2xl">
+            High-Throughput Firestore Batching Engine
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Card &amp; Module Titles</div>
+</div>
+<!-- Body -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>Body // 16px</div>
+<div class="font-technical-micro text-outline">Inter / -0.005em / 400</div>
+</div>
+<div class="font-body text-body text-on-surface max-w-2xl">
+            Production-grade state synchronization leveraging Next.js server actions, edge-cached query pipelines, and strict runtime type safety.
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Standard Prose &amp; Details</div>
+</div>
+<!-- Small / Caption -->
+<div class="p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="w-48 shrink-0 font-technical-code text-technical-code text-on-surface-variant">
+<div>Small // 14px</div>
+<div class="font-technical-micro text-outline">Inter / 0em / 400</div>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+            Compiled with target ECMAScript 2024. All builds signed with cryptographic SHA-256 integrity checksums.
+          </div>
+<div class="font-technical-micro text-outline shrink-0 text-right">Form Notes &amp; Secondary Meta</div>
+</div>
+<!-- Monospace Specimen -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-technical-code text-technical-code font-semibold text-on-surface">Monospace System (JetBrains Mono / Geist Mono)</span>
+<span class="font-technical-micro text-technical-micro text-outline">CODE IDENTIFIERS, PATHS, COMMITS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-technical-code text-technical-code">
+<div class="bg-surface-light p-3 rounded border border-border-light">
+<span class="text-outline text-technical-micro block mb-1">DYNAMIC ROUTE IDENTIFIER</span>
+<code class="text-primary-container font-medium">/api/v1/projects/[slug]/deploy</code>
+</div>
+<div class="bg-surface-light p-3 rounded border border-border-light">
+<span class="text-outline text-technical-micro block mb-1">GIT REVISION HASH</span>
+<code class="text-on-surface font-medium">commit 9c4b81a · main</code>
+</div>
+<div class="bg-surface-light p-3 rounded border border-border-light">
+<span class="text-outline text-technical-micro block mb-1">LATENCY RUNTIME</span>
+<code class="text-status-success font-medium">p99 = 42ms (Edge Sydney)</code>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03. SPACING SCALE & CORNER RADIUS -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">03 // Geometry</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Spacing Scale (4px Base) &amp; Radius Cadence</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">STRICT ARITHMETIC CADENCE</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Spacing Scale -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-border-light">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Base 4 Spacing Steps</span>
+<span class="font-technical-micro text-technical-micro text-outline">VALUE / REM / USAGE</span>
+</div>
+<div class="space-y-2.5 font-technical-code text-technical-code">
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">4px (0.25rem)</span>
+<div class="h-4 bg-primary-container/20 rounded-sm w-[4px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Micro gap, inline status dot offset</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">8px (0.5rem)</span>
+<div class="h-4 bg-primary-container/30 rounded-sm w-[8px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Tight button gap, pill padding</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">12px (0.75rem)</span>
+<div class="h-4 bg-primary-container/40 rounded-sm w-[12px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Input horizontal padding</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">16px (1.0rem)</span>
+<div class="h-4 bg-primary-container/50 rounded-sm w-[16px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Standard container inset, table cells</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">24px (1.5rem)</span>
+<div class="h-4 bg-primary-container/60 rounded-sm w-[24px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Public card padding, grid gutter</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">32px (2.0rem)</span>
+<div class="h-4 bg-primary-container/70 rounded-sm w-[32px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Section subgroup margin</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">48px (3.0rem)</span>
+<div class="h-4 bg-primary-container/80 rounded-sm w-[48px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Component block clearance</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">64px (4.0rem)</span>
+<div class="h-4 bg-primary-container/90 rounded-sm w-[64px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Mobile section padding</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-16 text-outline font-technical-micro">96px (6.0rem)</span>
+<div class="h-4 bg-primary-container rounded-sm w-[96px]"></div>
+<span class="text-on-surface-variant font-technical-micro truncate">Desktop editorial canvas padding</span>
+</div>
+</div>
+</div>
+<!-- Corner Radius Cadence -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-border-light">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Corner Radius Cadence</span>
+<span class="font-technical-micro text-technical-micro text-outline">ARCHITECTURAL DISCIPLINE</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="p-4 border border-border-light rounded-[6px] bg-surface-container-low flex flex-col justify-between h-28">
+<span class="font-technical-micro text-outline">ROUNDED-MD (6PX)</span>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">Inputs &amp; Dropdowns</div>
+<div class="font-technical-micro text-on-surface-variant">Compact form controls</div>
+</div>
+</div>
+<div class="p-4 border border-border-light rounded-[8px] bg-surface-container-low flex flex-col justify-between h-28">
+<span class="font-technical-micro text-outline">ROUNDED-LG (8PX)</span>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">Buttons &amp; Tooltips</div>
+<div class="font-technical-micro text-on-surface-variant">Interactive triggers</div>
+</div>
+</div>
+<div class="p-4 border border-border-light rounded-[12px] bg-surface-container-low flex flex-col justify-between h-28">
+<span class="font-technical-micro text-outline">ROUNDED-XL (12PX)</span>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">Cards &amp; Dialogs</div>
+<div class="font-technical-micro text-on-surface-variant">Structured surfaces</div>
+</div>
+</div>
+<div class="p-4 border border-border-light rounded-full bg-surface-container-low flex flex-col justify-between h-28">
+<span class="font-technical-micro text-outline">ROUNDED-FULL (9999PX)</span>
+<div>
+<div class="font-technical-code text-technical-code font-semibold text-on-surface">Badges &amp; Pills</div>
+<div class="font-technical-micro text-on-surface-variant">Tags &amp; status dots only</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg font-technical-micro text-on-surface-variant">
+<strong class="text-on-surface">Rule:</strong> Never use `rounded-full` for interactive primary buttons. Pill buttons are reserved strictly for taxonomy tags and telemetry statuses.
+          </div>
+</div>
+</div>
+</section>
+<!-- 04. BUTTONS & INTERACTIVE CONTROLS -->
+<section class="space-y-8" id="primitive-controls">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">04 // Primitives</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Button Variants &amp; Interactive States</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">ACCESSIBLE FOCUS RIGOR</span>
+</div>
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-6">
+<!-- Variant Showcase -->
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface mb-3">Variant Taxonomy</div>
+<div class="flex flex-wrap items-center gap-4">
+<!-- Primary Solid Blue -->
+<button class="h-10 px-5 rounded-lg bg-primary-container text-white font-body-sm text-body-sm font-medium hover:bg-blue-700 active:bg-blue-800 transition-colors inline-flex items-center gap-2">
+<span>Primary Action</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<!-- Neutral Dark (Standard Production) -->
+<button class="h-10 px-5 rounded-lg bg-surface-dark text-text-primary-dark font-body-sm text-body-sm font-medium hover:bg-neutral-800 active:bg-neutral-900 transition-colors inline-flex items-center gap-2">
+<span>Standard Default</span>
+</button>
+<!-- Secondary Neutral -->
+<button class="h-10 px-5 rounded-lg bg-surface-container-low border border-border-light text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-container hover:border-gray-300 transition-colors inline-flex items-center gap-2">
+<span>Secondary</span>
+</button>
+<!-- Outline -->
+<button class="h-10 px-5 rounded-lg bg-transparent border border-border-light text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-container-low transition-colors inline-flex items-center gap-2">
+<span>Outline</span>
+</button>
+<!-- Ghost -->
+<button class="h-10 px-4 rounded-lg bg-transparent text-on-surface-variant font-body-sm text-body-sm font-medium hover:text-on-surface hover:bg-surface-container-low transition-colors inline-flex items-center gap-2">
+<span>Ghost</span>
+</button>
+<!-- Destructive -->
+<button class="h-10 px-5 rounded-lg bg-[#DC2626] text-white font-body-sm text-body-sm font-medium hover:bg-red-700 active:bg-red-800 transition-colors inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Destructive</span>
+</button>
+</div>
+</div>
+<!-- Icons & Compact Variants -->
+<div class="pt-4 border-t border-border-light">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface mb-3">Icons &amp; Compact Densities (36px Admin)</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="h-9 px-3.5 rounded-lg bg-surface-dark text-text-primary-dark font-body-sm text-body-sm font-medium inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Entry</span>
+</button>
+<button class="h-9 px-3.5 rounded-lg bg-surface-light border border-border-light text-on-surface font-body-sm text-body-sm hover:bg-surface-container-low inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Filter View</span>
+</button>
+<button class="h-9 w-9 rounded-lg border border-border-light bg-surface-light text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low inline-flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<button class="h-9 w-9 rounded-lg border border-border-light bg-surface-light text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low inline-flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- State Matrix -->
+<div class="pt-4 border-t border-border-light">
+<div class="font-body-sm text-body-sm font-semibold text-on-surface mb-3">State Matrix Verification</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-technical-code text-technical-code">
+<!-- Focus State -->
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2">
+<span class="text-outline text-technical-micro">FOCUSED (TAB INDEX)</span>
+<div>
+<button class="h-9 px-4 rounded-lg bg-primary-container text-white font-body-sm text-body-sm font-medium ring-2 ring-blue-500/30 ring-offset-2 ring-offset-white">
+                  Focused Ring
+                </button>
+</div>
+</div>
+<!-- Disabled State -->
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2">
+<span class="text-outline text-technical-micro">DISABLED</span>
+<div>
+<button class="h-9 px-4 rounded-lg bg-surface-container border border-border-light text-on-surface-variant/50 font-body-sm text-body-sm font-medium opacity-60 cursor-not-allowed inline-flex items-center gap-1.5" disabled="">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Disabled</span>
+</button>
+</div>
+</div>
+<!-- Loading State -->
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2">
+<span class="text-outline text-technical-micro">LOADING / ASYNC</span>
+<div>
+<button class="h-9 px-4 rounded-lg bg-surface-dark text-white font-body-sm text-body-sm font-medium inline-flex items-center gap-2 cursor-wait">
+<svg class="animate-spin h-3.5 w-3.5 text-white" fill="none" viewbox="0 0 24 24">
+<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+<path class="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor"></path>
+</svg>
+<span>Deploying...</span>
+</button>
+</div>
+</div>
+<!-- Active Pill -->
+<div class="p-3 bg-surface-container-low rounded-lg space-y-2">
+<span class="text-outline text-technical-micro">CONFIRMATION ACTIVE</span>
+<div>
+<button class="h-9 px-4 rounded-lg bg-status-success text-white font-body-sm text-body-sm font-medium inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Live on Vercel</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05. FORM CONTROLS & VALIDATION STATES -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">05 // Inputs</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Form Controls &amp; Validation States</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">SHADCN / ARIA STANDARD</span>
+</div>
+<div class="bg-surface-light border border-border-light rounded-xl p-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Standard Text Input -->
+<div class="space-y-2">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">
+              Project Name <span class="text-primary-container">*</span>
+</label>
+<input class="w-full h-10 px-3 rounded-md bg-surface-light border border-border-light text-on-surface font-body text-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="e.g. SIMPEG Core" type="text" value="SIMPEG Core"/>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">System identifier for the internal build pipeline.</p>
+</div>
+<!-- Input with Prefix & Trailing -->
+<div class="space-y-2">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">
+              Canonical Slug URL
+            </label>
+<div class="relative flex items-center">
+<span class="absolute left-3 font-technical-code text-technical-micro text-on-surface-variant select-none">rheva.dev/p/</span>
+<input class="w-full h-10 pl-28 pr-16 rounded-md bg-surface-light border border-border-light text-on-surface font-technical-code text-technical-code focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" type="text" value="simpeg-core"/>
+<span class="absolute right-2 px-1.5 py-0.5 rounded bg-surface-container-low border border-border-light font-technical-micro text-[10px] text-on-surface-variant">AUTO</span>
+</div>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">Automatically generated from project title.</p>
+</div>
+<!-- Select Dropdown -->
+<div class="space-y-2">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">
+              Engineering Category
+            </label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-10 rounded-md bg-surface-light border border-border-light text-on-surface font-body-sm text-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container appearance-none transition-all cursor-pointer">
+<option selected="">Internal System / Management</option>
+<option>Enterprise SaaS</option>
+<option>API &amp; Edge Service</option>
+<option>Public Research Tool</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-[20px] text-on-surface-variant pointer-events-none">unfold_more</span>
+</div>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">Directs taxonomy and portfolio categorization.</p>
+</div>
+<!-- Error State -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">Database Collection ID</label>
+<span class="font-technical-micro text-technical-micro text-[#DC2626] font-medium">COLLISION ERROR</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-3 pr-10 rounded-md bg-surface-light border border-[#DC2626] text-on-surface font-technical-code text-technical-code focus:outline-none focus:ring-1 focus:ring-[#DC2626]" type="text" value="projects/simpeg_v1"/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-[#DC2626]">error</span>
+</div>
+<p class="font-technical-micro text-technical-micro text-[#DC2626] flex items-center gap-1">
+<span>Collection ID already registered in Firestore instance.</span>
+</p>
+</div>
+<!-- Success State -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">Deployment Webhook</label>
+<span class="font-technical-micro text-technical-micro text-status-success font-medium">VERIFIED 200 OK</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full h-10 pl-3 pr-10 rounded-md bg-surface-light border border-status-success text-on-surface font-technical-code text-technical-code focus:outline-none focus:ring-1 focus:ring-status-success" type="text" value="https://api.vercel.com/v1/integrations/deploy/..."/>
+<span class="material-symbols-outlined absolute right-3 text-[18px] text-status-success">check_circle</span>
+</div>
+<p class="font-technical-micro text-technical-micro text-status-success">Signed and pinged successfully (latency 38ms).</p>
+</div>
+<!-- Disabled State -->
+<div class="space-y-2">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface-variant">
+              Tenant License Key (Protected)
+            </label>
+<input class="w-full h-10 px-3 rounded-md bg-surface-container-low border border-border-light text-on-surface-variant font-technical-code text-technical-code cursor-not-allowed opacity-60" disabled="" type="text" value="RHV-ENT-9481-9924-X9"/>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">Contact administrator to elevate license tier.</p>
+</div>
+</div>
+<!-- Textarea Specimen -->
+<div class="mt-6 pt-6 border-t border-border-light space-y-2">
+<div class="flex items-center justify-between">
+<label class="block font-body-sm text-body-sm font-medium text-on-surface">
+              Architectural Executive Summary
+            </label>
+<span class="font-technical-code text-technical-micro text-on-surface-variant">142 / 300 characters</span>
+</div>
+<textarea class="w-full p-3 rounded-md bg-surface-light border border-border-light text-on-surface font-body text-body-sm focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container resize-none transition-all" rows="3">High-concurrency employee data pipeline replacing legacy spreadsheets with an ACID-compliant, role-based dashboard for 1,200+ active faculty members.</textarea>
+</div>
+</div>
+</section>
+<!-- 06. BADGES, TECH TAGS & TELEMETRY INDICATORS -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">06 // Taxonomy</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Badges, Tech Stack Pills &amp; Telemetry Dots</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">JETBRAINS MONO 12PX</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Status Pills -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-4">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface block">Operational &amp; Lifecycle Badges</span>
+<div class="flex flex-wrap items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7] border border-[#BBF7D0] font-technical-tag text-technical-tag text-[#15803D]">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Available for Work</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#DBEAFE] font-technical-tag text-technical-tag text-primary-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span>Published / Live</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEF3C7] border border-[#FDE68A] font-technical-tag text-technical-tag text-[#B45309]">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+<span>In Progress</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Draft Staging</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEE2E2] border border-[#FECACA] font-technical-tag text-technical-tag text-[#B91C1C]">
+<span class="w-1.5 h-1.5 rounded-full bg-status-error"></span>
+<span>Archived</span>
+</span>
+</div>
+</div>
+<!-- Tech Stack Tags -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-4">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface block">Technology Taxonomy Pills</span>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">Next.js 14</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">TypeScript 5.4</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">Firebase Firestore</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">Edge Runtime</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low border border-border-light font-technical-tag text-technical-tag text-on-surface">Zod Schema</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 07. CARD ARCHITECTURE & PRODUCT SPECIMENS -->
+<section class="space-y-8" id="containers-layout">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">07 // Surfaces</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Cards &amp; Showcase Containers</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">1PX BOUNDARIES · ZERO TILT</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Showcase Card 1: SIMPEG -->
+<div class="bg-surface-light border border-border-light rounded-xl overflow-hidden flex flex-col justify-between group hover:border-on-surface transition-colors">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag text-on-surface-variant uppercase">ENTERPRISE SYSTEM</span>
+<span class="inline-flex items-center gap-1 font-technical-micro text-technical-micro text-status-success">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+                PRODUCTION
+              </span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary-container transition-colors">SIMPEG Core</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Integrated faculty workforce management platform consolidating attendance, payroll calculations, and tenure tracks across 3 campuses.
+            </p>
+<div class="flex flex-wrap gap-1.5 pt-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Next.js 14</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Tailwind</span>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-border-light bg-surface-container-lowest flex items-center justify-between mt-4">
+<span class="font-technical-code text-technical-micro text-outline">v2.4.1 · Client Build</span>
+<a class="font-body-sm text-body-sm font-medium text-primary-container inline-flex items-center gap-1 hover:underline" href="#">
+<span>Case Study</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Showcase Card 2: Commercial Product Specimen -->
+<div class="bg-surface-light border border-border-light rounded-xl overflow-hidden flex flex-col justify-between group hover:border-on-surface transition-colors">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag text-on-surface-variant uppercase">CATALOG ITEM</span>
+<span class="px-2 py-0.5 rounded bg-[#EFF6FF] border border-[#DBEAFE] font-technical-micro text-technical-micro text-primary-container">PERPETUAL LICENSE</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface group-hover:text-primary-container transition-colors">Pulse CMS Engine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Headless content engine with instantaneous edge cache invalidation, custom field generators, and multi-tenant access control.
+            </p>
+<div class="p-3 rounded-lg bg-surface-container-low border border-border-light font-technical-code text-technical-micro space-y-1">
+<div class="flex justify-between"><span class="text-outline">License:</span> <span class="text-on-surface">Commercial Single / $249</span></div>
+<div class="flex justify-between"><span class="text-outline">Updates:</span> <span class="text-on-surface">12 Months Direct Edge</span></div>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-border-light bg-surface-container-lowest flex items-center justify-between mt-4">
+<span class="font-technical-micro text-status-success font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Available Now
+            </span>
+<button class="h-8 px-3 rounded bg-surface-dark text-text-primary-dark font-body-sm text-body-sm font-medium hover:bg-neutral-800 transition-colors">
+              Request License
+            </button>
+</div>
+</div>
+<!-- Showcase Card 3: Compact Admin CMS Metric Widget -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-technical-tag text-technical-tag text-outline uppercase">ADMIN METRICS</span>
+<span class="font-technical-micro text-technical-micro text-status-success">+14.2% MOM</span>
+</div>
+<div>
+<div class="font-technical-code text-technical-micro text-on-surface-variant">Global Edge Queries</div>
+<div class="font-h2 text-h2 text-on-surface font-semibold tracking-tight">1,842,910</div>
+</div>
+<!-- Lightweight SVG Sparkline Chart -->
+<div class="w-full pt-2">
+<svg class="w-full h-12 text-primary-container" fill="none" stroke="currentColor" viewbox="0 0 100 25">
+<polyline fill="none" points="0,20 15,18 30,12 45,15 60,8 75,10 90,3 100,6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></polyline>
+</svg>
+</div>
+</div>
+<div class="pt-4 border-t border-border-light flex items-center justify-between font-technical-micro text-technical-micro text-on-surface-variant">
+<span>Edge Nodes: 18 Active</span>
+<span class="text-on-surface font-medium">99.99% Uptime</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 08. NAVIGATION, CHROME, BREADCRUMBS & PAGINATION -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">08 // Chrome</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Navigation Chrome, Breadcrumbs &amp; Pagination</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">DESKTOP PLATFORM PATTERNS</span>
+</div>
+<div class="space-y-6">
+<!-- Breadcrumbs Specimen -->
+<div class="bg-surface-light border border-border-light rounded-xl p-4 flex items-center justify-between">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-technical-code text-technical-code text-on-surface-variant">
+<a class="hover:text-on-surface transition-colors" href="#">home</a>
+<span class="text-outline">/</span>
+<a class="hover:text-on-surface transition-colors" href="#">projects</a>
+<span class="text-outline">/</span>
+<a class="hover:text-on-surface transition-colors" href="#">simpeg-core</a>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-medium">architecture-spec</span>
+</nav>
+<span class="font-technical-micro text-technical-micro text-outline hidden sm:block">ARIA BREADCRUMB PATTERN</span>
+</div>
+<!-- Admin Workspace Dual-Panel Chrome Preview -->
+<div class="bg-surface-light border border-border-light rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Sidebar Specimen (Col 4) -->
+<div class="lg:col-span-3 border-r border-border-light bg-surface-container-lowest p-4 space-y-6">
+<div class="flex items-center gap-2 px-2">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-technical-code text-technical-code font-bold text-on-surface">RHEVA // CMS</span>
+</div>
+<!-- Sidebar Nav Group 1 -->
+<div class="space-y-1">
+<span class="px-2 font-technical-micro text-[11px] font-semibold text-outline uppercase tracking-wider block mb-1">Content</span>
+<a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md bg-surface-container font-body-sm text-body-sm font-medium text-on-surface" href="#">
+<span class="material-symbols-outlined text-[18px]">folder</span>
+<span>Projects</span>
+</a>
+<a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">apps</span>
+<span>Catalog Apps</span>
+</a>
+<a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">article</span>
+<span>Case Studies</span>
+</a>
+</div>
+<!-- Sidebar Nav Group 2 -->
+<div class="space-y-1">
+<span class="px-2 font-technical-micro text-[11px] font-semibold text-outline uppercase tracking-wider block mb-1">Operations</span>
+<a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+<span>License Orders</span>
+</a>
+<a class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Deployment Keys</span>
+</a>
+</div>
+</div>
+<!-- Main Content Chrome Workspace Preview (Col 9) -->
+<div class="lg:col-span-9 p-6 flex flex-col justify-between space-y-6">
+<!-- Header Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border-light">
+<div>
+<h3 class="font-h3 text-h3 text-on-surface">Active Projects</h3>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant">42 records indexed · Synchronized with Firestore Cloud Database</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-lg border border-border-light bg-surface-light hover:bg-surface-container-low font-body-sm text-body-sm text-on-surface inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export</span>
+</button>
+<button class="h-9 px-3.5 rounded-lg bg-primary-container text-white hover:bg-blue-700 font-body-sm text-body-sm font-medium inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Create Project</span>
+</button>
+</div>
+</div>
+<!-- Tab Segmented Control -->
+<div class="flex items-center gap-1 p-1 rounded-lg bg-surface-container-low border border-border-light w-fit">
+<button class="px-3 py-1 rounded bg-surface-light font-body-sm text-body-sm font-medium text-on-surface shadow-sm">All Entities (42)</button>
+<button class="px-3 py-1 rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Enterprise</button>
+<button class="px-3 py-1 rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Open Source</button>
+<button class="px-3 py-1 rounded font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface">Archived</button>
+</div>
+<!-- Pagination Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 border-t border-border-light font-technical-code text-technical-code">
+<span class="text-on-surface-variant text-technical-micro">Showing 1-10 of 42 records</span>
+<div class="flex items-center gap-1">
+<button class="h-8 px-2.5 rounded border border-border-light bg-surface-light text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low disabled:opacity-50" disabled="">Previous</button>
+<button class="h-8 w-8 rounded bg-primary-container text-white font-medium text-center">1</button>
+<button class="h-8 w-8 rounded border border-border-light bg-surface-light text-on-surface hover:bg-surface-container-low text-center">2</button>
+<button class="h-8 w-8 rounded border border-border-light bg-surface-light text-on-surface hover:bg-surface-container-low text-center">3</button>
+<span class="px-1 text-outline">…</span>
+<button class="h-8 w-8 rounded border border-border-light bg-surface-light text-on-surface hover:bg-surface-container-low text-center">8</button>
+<button class="h-8 px-2.5 rounded border border-border-light bg-surface-light text-on-surface hover:bg-surface-container-low">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 09. MODALS, TOOLTIPS & INLINE ALERTS -->
+<section class="space-y-8" id="feedback-states">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">09 // Feedback</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Modals, Tooltips &amp; System Alerts</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">DIAGNOSTIC SURFACES</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Inline Alert Trio -->
+<div class="space-y-4">
+<!-- Info Alert -->
+<div class="p-4 rounded-xl bg-[#EFF6FF] border border-[#DBEAFE] flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary-container shrink-0 mt-0.5">info</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-primary-container">Next.js App Router 14.2 Active</div>
+<p class="font-technical-micro text-technical-micro text-on-surface-variant mt-0.5 leading-relaxed">
+                Automatic partial pre-rendering (PPR) enabled on all public case study routes. Stale-while-revalidate policy set to 3600 seconds.
+              </p>
+</div>
+</div>
+<!-- Warning Alert -->
+<div class="p-4 rounded-xl bg-[#FEF3C7] border border-[#FDE68A] flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-status-warning shrink-0 mt-0.5">warning</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-[#92400E]">Unpublished Local Draft Detected</div>
+<p class="font-technical-micro text-technical-micro text-[#78350F] mt-0.5 leading-relaxed">
+                You have 3 uncommitted metadata changes in `SIMPEG Core`. Remote Vercel deployment will reflect the prior git commit until published.
+              </p>
+</div>
+</div>
+<!-- Error Alert -->
+<div class="p-4 rounded-xl bg-[#FEE2E2] border border-[#FECACA] flex items-start gap-3">
+<span class="material-symbols-outlined text-[20px] text-status-error shrink-0 mt-0.5">error</span>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-[#991B1B]">Firestore Auth Token Expired</div>
+<p class="font-technical-micro text-technical-micro text-[#7F1D1D] mt-0.5 leading-relaxed">
+                Security rules rejected payload write. Re-authenticate your private admin session to persist project document updates.
+              </p>
+</div>
+</div>
+</div>
+<!-- Interactive Specimen: Confirmation Modal Dialog -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 flex flex-col justify-between space-y-6 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-border-light">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Modal Dialog Specimen</span>
+<span class="font-technical-micro text-technical-micro text-outline">WAI-ARIA MODAL ROLE</span>
+</div>
+<div class="p-5 rounded-lg border border-border-light bg-surface-container-low space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#FEE2E2] text-status-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<h4 class="font-body-sm text-body-sm font-bold text-on-surface">Delete Project "SIMPEG Core"?</h4>
+<span class="font-technical-micro text-technical-micro text-on-surface-variant">UUID: 8a4c10ef-90d2</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              This action cannot be undone. All associated Firestore documents, edge cache logs, and CDN assets will be purged permanently.
+            </p>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-light border border-border-light font-body-sm text-body-sm text-on-surface hover:bg-surface-container transition-colors">
+                Cancel
+              </button>
+<button class="h-9 px-4 rounded-lg bg-status-error text-white font-body-sm text-body-sm font-medium hover:bg-red-700 transition-colors">
+                Delete Project
+              </button>
+</div>
+</div>
+<!-- Tooltip Specimen Reference -->
+<div class="flex items-center justify-between font-technical-micro text-technical-micro">
+<span class="text-on-surface-variant">Hover Tooltip Specimen:</span>
+<div class="relative group cursor-pointer inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container-low border border-border-light">
+<span class="material-symbols-outlined text-[14px]">commit</span>
+<code>sha:7b92f0a</code>
+<!-- Floating Tooltip Box -->
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-10 px-2.5 py-1 rounded bg-surface-dark text-text-primary-dark font-technical-micro whitespace-nowrap shadow-md">
+                Verified commit · Signed by Rheva
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. SYSTEM SKELETON LOADERS & EMPTY STATES -->
+<section class="space-y-8">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">10 // Async</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Skeleton Loaders &amp; Zero-Data Empty States</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">STABLE LAYOUT SHIFT (CLS = 0)</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Skeleton Loading Specimen -->
+<div class="bg-surface-light border border-border-light rounded-xl p-6 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-border-light">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Async Content Skeleton</span>
+<span class="font-technical-micro text-technical-micro text-outline animate-pulse">PULSE ANIMATION</span>
+</div>
+<div class="space-y-4 animate-pulse">
+<div class="flex items-center justify-between">
+<div class="h-4 bg-surface-container-high rounded w-28"></div>
+<div class="h-4 bg-surface-container-high rounded w-16"></div>
+</div>
+<div class="h-7 bg-surface-container-high rounded w-3/4"></div>
+<div class="space-y-2">
+<div class="h-3.5 bg-surface-container-high rounded w-full"></div>
+<div class="h-3.5 bg-surface-container-high rounded w-5/6"></div>
+</div>
+<div class="flex gap-2 pt-2">
+<div class="h-5 bg-surface-container-high rounded-full w-20"></div>
+<div class="h-5 bg-surface-container-high rounded-full w-24"></div>
+<div class="h-5 bg-surface-container-high rounded-full w-16"></div>
+</div>
+<div class="pt-4 border-t border-border-light flex justify-between items-center">
+<div class="h-4 bg-surface-container-high rounded w-32"></div>
+<div class="h-8 bg-surface-container-high rounded w-24"></div>
+</div>
+</div>
+</div>
+<!-- Zero-Data Empty State -->
+<div class="bg-surface-light border border-border-light rounded-xl p-8 flex flex-col items-center justify-center text-center space-y-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-low border border-border-light flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">folder_off</span>
+</div>
+<div class="max-w-md space-y-1">
+<h3 class="font-h3 text-h3 text-on-surface">No Projects Registered</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The project collection for this environment is currently unpopulated. Initialize your first project to activate case study indexing.
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-9 px-4 rounded-lg bg-surface-dark text-text-primary-dark font-body-sm text-body-sm font-medium hover:bg-neutral-800 transition-colors inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Create First Project</span>
+</button>
+<a class="font-technical-code text-technical-micro text-primary-container hover:underline" href="#">
+              Read Docs →
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. DENSE DATA TABLE (ADMIN CMS SPECIMEN) -->
+<section class="space-y-8" id="patterns-data">
+<div class="flex items-baseline justify-between border-b border-border-light pb-4">
+<div>
+<span class="font-technical-tag text-technical-tag text-primary-container tracking-wider uppercase">11 // Enterprise Data</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-1">Admin CMS Production Data Table</h2>
+</div>
+<span class="font-technical-micro text-technical-micro text-outline">LINEAR &amp; SHADCN RIGOR</span>
+</div>
+<div class="bg-surface-light border border-border-light rounded-xl overflow-hidden shadow-sm">
+<!-- Table Control Toolbar -->
+<div class="p-4 border-b border-border-light flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container-lowest">
+<div class="flex items-center gap-3 flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-on-surface-variant">search</span>
+<input class="w-full h-9 pl-9 pr-4 rounded-md bg-surface-light border border-border-light font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container" placeholder="Filter project title, stack, or slug..." type="text"/>
+</div>
+<button class="h-9 px-3 rounded-md border border-border-light bg-surface-light text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filter</span>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-technical-micro text-technical-micro text-outline">4 SELECTED</span>
+<button class="h-8 px-3 rounded bg-surface-container-low border border-border-light font-technical-micro text-technical-micro text-on-surface hover:bg-surface-container">Bulk Publish</button>
+<button class="h-8 px-3 rounded bg-surface-container-low border border-border-light font-technical-micro text-technical-micro text-status-error hover:bg-red-50">Bulk Delete</button>
+</div>
+</div>
+<!-- The Table -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-border-light bg-surface-container-low font-technical-micro text-technical-micro text-on-surface-variant uppercase">
+<th class="py-3 px-4 w-10">
+<input class="rounded border-border-light text-primary-container focus:ring-primary-container" type="checkbox"/>
+</th>
+<th class="py-3 px-4 font-medium">Project Name</th>
+<th class="py-3 px-4 font-medium">Category</th>
+<th class="py-3 px-4 font-medium">Technology Stack</th>
+<th class="py-3 px-4 font-medium">Deployment Status</th>
+<th class="py-3 px-4 font-medium">Last Synced</th>
+<th class="py-3 px-4 text-right font-medium">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<input class="rounded border-border-light text-primary-container focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-3 px-4 font-semibold">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span>SIMPEG Core</span>
+</div>
+<span class="font-technical-code text-technical-micro text-outline block">/projects/simpeg-core</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-technical-micro uppercase">Enterprise System</td>
+<td class="py-3 px-4">
+<div class="flex gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Next.js</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">PostgreSQL</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#DCFCE7] text-[#15803D] font-technical-micro text-technical-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span>
+<span>Production</span>
+</span>
+</td>
+<td class="py-3 px-4 font-technical-code text-technical-micro text-on-surface-variant">2 mins ago</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px] block">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<input class="rounded border-border-light text-primary-container focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-3 px-4 font-semibold">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-warning"></span>
+<span>Pulse CMS Engine</span>
+</div>
+<span class="font-technical-code text-technical-micro text-outline block">/apps/pulse-cms</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-technical-micro uppercase">Commercial Product</td>
+<td class="py-3 px-4">
+<div class="flex gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">TypeScript</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Tailwind</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#FEF3C7] text-[#B45309] font-technical-micro text-technical-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-status-warning"></span>
+<span>Staging Build</span>
+</span>
+</td>
+<td class="py-3 px-4 font-technical-code text-technical-micro text-on-surface-variant">42 mins ago</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px] block">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<input class="rounded border-border-light text-primary-container focus:ring-primary-container" type="checkbox"/>
+</td>
+<td class="py-3 px-4 font-semibold">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Veritas Identity Broker</span>
+</div>
+<span class="font-technical-code text-technical-micro text-outline block">/services/veritas-auth</span>
+</td>
+<td class="py-3 px-4 text-on-surface-variant font-technical-micro uppercase">Security / OAuth</td>
+<td class="py-3 px-4">
+<div class="flex gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Rust</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-low font-technical-micro text-technical-micro text-on-surface">Edge</span>
+</div>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-technical-micro text-technical-micro">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Draft</span>
+</span>
+</td>
+<td class="py-3 px-4 font-technical-code text-technical-micro text-on-surface-variant">1 day ago</td>
+<td class="py-3 px-4 text-right">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px] block">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination -->
+<div class="p-4 border-t border-border-light flex items-center justify-between font-technical-micro text-technical-micro text-on-surface-variant bg-surface-container-lowest">
+<span>Row limit: 10 per view</span>
+<span>Page 1 of 5</span>
+</div>
+</div>
+</section>
+<!-- FLOATING TOAST NOTIFICATION PREVIEW -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-auto max-w-sm w-full">
+<!-- Success Toast -->
+<div class="p-4 rounded-lg bg-surface-dark text-text-primary-dark border border-border-dark shadow-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-[18px] text-status-success shrink-0 mt-0.5">check_circle</span>
+<div class="flex-1">
+<div class="font-body-sm text-body-sm font-semibold text-text-primary-dark">Deployment Sync Complete</div>
+<div class="font-technical-micro text-technical-micro text-text-secondary-dark mt-0.5">All 32 tokens compiled to /dist/tokens.json.</div>
+</div>
+<button class="text-text-secondary-dark hover:text-text-primary-dark">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-light border-t border-border-light py-8"><div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-technical-code text-technical-code text-on-surface-variant"><div>Rheva Developer Platform · Foundation &amp; Design Architecture</div><div class="flex items-center gap-6 font-technical-micro text-technical-micro"><span>UTF-8 SPEC</span><span>COMPLIANT BUILD 24.12</span><span>STABLE RELEASE</span></div></div></footer></body></html>
