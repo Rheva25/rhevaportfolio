@@ -19,7 +19,7 @@ export function normalizeLocalizedArray(fields: unknown): LocalizedString[] {
   return fields.map(normalizeLocalized);
 }
 
-export function getLocalizedText(field: { id: string; en?: string } | string | undefined | null, locale: "id" | "en" | string): string {
+export function getLocalizedText(field: { id?: string; en?: string } | string | undefined | null, locale: "id" | "en" | string): string {
   if (!field) return "";
   if (typeof field === "string") return field;
   

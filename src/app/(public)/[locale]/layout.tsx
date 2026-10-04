@@ -17,14 +17,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: {
       template: `%s | ${settings?.siteName || "Rheva Developer Platform"}`,
-      default: settings?.seo.defaultTitle ? getLocalizedText(settings.seo.defaultTitle, locale) : settings?.siteName || "Rheva Developer Platform",
+      default: settings?.seo?.defaultTitle ? getLocalizedText(settings.seo.defaultTitle, locale) : settings?.siteName || "Rheva Developer Platform",
     },
-    description: settings?.seo.defaultDescription ? getLocalizedText(settings.seo.defaultDescription, locale) : (settings?.siteDescription ? getLocalizedText(settings.siteDescription, locale) : "Software Engineer who builds practical digital products and systems."),
-    keywords: settings?.seo.keywords || [],
-    openGraph: settings?.seo.ogImage?.url ? {
+    description: settings?.seo?.defaultDescription ? getLocalizedText(settings.seo.defaultDescription, locale) : (settings?.siteDescription ? getLocalizedText(settings.siteDescription, locale) : "Software Engineer who builds practical digital products and systems."),
+    keywords: settings?.seo?.keywords || [],
+    openGraph: settings?.seo?.ogImage?.url ? {
       images: [{ url: settings.seo.ogImage.url, alt: settings.seo.ogImage.alt }],
     } : undefined,
-    icons: settings?.seo.favicon?.url ? {
+    icons: settings?.seo?.favicon?.url ? {
       icon: settings.seo.favicon.url,
     } : undefined,
   };

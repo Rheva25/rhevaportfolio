@@ -1,6 +1,7 @@
 import { getAdminDb, serializeFirestoreData } from "@/lib/firebase/admin";
 import { SiteSettings, SiteSettingsFormData, SiteSettingsSchema } from "@/lib/validations/settings";
 import { mapSettings } from "./mappers";
+import { DEFAULT_ABOUT_PAGE, DEFAULT_CAREER_TIMELINE, DEFAULT_LONG_BIO } from "@/lib/constants/aboutDefaults";
 import { FieldValue } from "firebase-admin/firestore";
 
 const SETTINGS_COLLECTION = "settings";
@@ -34,7 +35,13 @@ export const settingsAdminRepository = {
             location: "Indonesia",
             email: "hello@rheva.id",
             phone: "",
-            professionalFocus: { id: "Pengembangan Web", en: "Web Development" }
+            professionalFocus: { id: "Pengembangan Web", en: "Web Development" },
+            longBio: DEFAULT_LONG_BIO,
+            coreCompetencies: ["Systems Architecture", "Fullstack TypeScript", "UI Design Systems"],
+            technicalGuarantees: [
+              { title: { id: "Tanpa Bloatware", en: "Zero Bloat Architecture" }, description: { id: "Sistem ringan tanpa dependensi berlebih.", en: "Lightweight systems with minimal dependencies." } }
+            ],
+            careerTimeline: DEFAULT_CAREER_TIMELINE
           },
           contact: {
             primaryEmail: "hello@rheva.id",
@@ -43,7 +50,8 @@ export const settingsAdminRepository = {
             serviceArea: "Global",
             preferredContactMethod: "Email",
             contactFormEnabled: true,
-            successMessage: { id: "Pesan terkirim", en: "Message sent" }
+            successMessage: { id: "Pesan terkirim", en: "Message sent" },
+            availabilityStatus: { id: "Tersedia untuk proyek baru", en: "Open for new projects" }
           },
           seo: {
             defaultTitle: { id: "Rheva | Developer Platform", en: "Rheva | Developer Platform" },
@@ -57,6 +65,7 @@ export const settingsAdminRepository = {
             navigation: [],
             homepageSections: []
           },
+          aboutPage: DEFAULT_ABOUT_PAGE,
           contentDefaults: {
             project: { category: "Web Development", status: "In Progress" },
             app: { category: "SaaS", status: "In Development", pricingModel: "Fixed Price" },

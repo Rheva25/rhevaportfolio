@@ -1,5 +1,44 @@
 import { Project, AppModel, Article, SiteSettings, MediaAsset } from "../models";
 import { normalizeLocalized, normalizeLocalizedArray } from "../utils/localization";
+import { DEFAULT_ABOUT_PAGE, DEFAULT_CAREER_TIMELINE, DEFAULT_LONG_BIO } from "../constants/aboutDefaults";
+
+const toStringArray = (value: unknown): string[] =>
+  Array.isArray(value) ? value.filter((v): v is string => typeof v === "string") : [];
+
+function mapAboutPage(raw: unknown): NonNullable<SiteSettings["aboutPage"]> {
+  if (!raw || typeof raw !== "object") return DEFAULT_ABOUT_PAGE;
+  const a = raw as Record<string, unknown>;
+  const loc = (key: keyof typeof DEFAULT_ABOUT_PAGE) =>
+    a[key] === undefined ? (DEFAULT_ABOUT_PAGE[key] as { id: string; en: string }) : normalizeLocalized(a[key]);
+
+  return {
+    profileEyebrow: loc("profileEyebrow"),
+    architecturePrinciple: typeof a.architecturePrinciple === "string" ? a.architecturePrinciple : DEFAULT_ABOUT_PAGE.architecturePrinciple,
+    capabilitiesEyebrow: loc("capabilitiesEyebrow"),
+    capabilitiesTitle: loc("capabilitiesTitle"),
+    capabilitiesSubtitle: loc("capabilitiesSubtitle"),
+    capabilities: Array.isArray(a.capabilities)
+      ? a.capabilities.map((c: unknown) => {
+          const cap = c as Record<string, unknown>;
+          return {
+            icon: typeof cap.icon === "string" ? cap.icon : "Terminal",
+            title: normalizeLocalized(cap.title),
+            description: normalizeLocalized(cap.description),
+            tags: toStringArray(cap.tags),
+          };
+        })
+      : DEFAULT_ABOUT_PAGE.capabilities,
+    timelineEyebrow: loc("timelineEyebrow"),
+    timelineTitle: loc("timelineTitle"),
+    timelineStackLabel: loc("timelineStackLabel"),
+    timelineCurrentLabel: loc("timelineCurrentLabel"),
+    ctaEyebrow: loc("ctaEyebrow"),
+    ctaTitle: loc("ctaTitle"),
+    ctaDescription: loc("ctaDescription"),
+    ctaButtonLabel: loc("ctaButtonLabel"),
+    ctaButtonHref: typeof a.ctaButtonHref === "string" && a.ctaButtonHref ? a.ctaButtonHref : DEFAULT_ABOUT_PAGE.ctaButtonHref,
+  };
+}
 
 export type FirestoreData = {
   id?: string;
@@ -75,10 +114,29 @@ export function mapSettings(data: FirestoreData): SiteSettings {
       professionalTitle: normalizeLocalized(profile.professionalTitle),
       shortBio: normalizeLocalized(profile.shortBio),
       professionalFocus: normalizeLocalized(profile.professionalFocus),
+      longBio: profile.longBio === undefined ? DEFAULT_LONG_BIO : normalizeLocalized(profile.longBio),
+      technicalGuarantees: Array.isArray(profile.technicalGuarantees) ? profile.technicalGuarantees.map((g: unknown) => ({
+        ...(g as Record<string, unknown>),
+        title: normalizeLocalized((g as Record<string, unknown>).title),
+        description: normalizeLocalized((g as Record<string, unknown>).description)
+      })) : [],
+      careerTimeline: Array.isArray(profile.careerTimeline) ? profile.careerTimeline.map((t: unknown) => {
+        const item = t as Record<string, unknown>;
+        return {
+          period: typeof item.period === "string" ? item.period : "",
+          role: normalizeLocalized(item.role),
+          organization: normalizeLocalized(item.organization),
+          label: typeof item.label === "string" ? item.label : "",
+          isCurrent: item.isCurrent === true,
+          description: normalizeLocalized(item.description),
+          stack: toStringArray(item.stack),
+        };
+      }) : DEFAULT_CAREER_TIMELINE,
     } : undefined,
     contact: contact ? {
       ...contact,
       successMessage: normalizeLocalized(contact.successMessage),
+      availabilityStatus: normalizeLocalized(contact.availabilityStatus),
     } : undefined,
     seo: seo ? {
       ...seo,
@@ -96,6 +154,7 @@ export function mapSettings(data: FirestoreData): SiteSettings {
         label: normalizeLocalized((s as Record<string, unknown>).label)
       })) : [],
     } : undefined,
+    aboutPage: mapAboutPage(data.aboutPage),
   } as SiteSettings;
 }
 
@@ -108,4 +167,15 @@ export function mapMedia(data: FirestoreData): MediaAsset {
     caption: normalizeLocalized(data.caption),
     description: normalizeLocalized(data.description),
   } as MediaAsset;
+}
+
+export function mapTemplate(data: FirestoreData): any {
+  return {
+    ...(data as unknown as any),
+    id: data.id || "",
+    name: normalizeLocalized(data.name),
+    shortDescription: normalizeLocalized(data.shortDescription),
+    description: normalizeLocalized(data.description),
+    features: normalizeLocalizedArray(data.features),
+  };
 }

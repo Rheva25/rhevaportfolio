@@ -12,11 +12,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { updateSiteSettingsAction } from "@/app/actions/settings";
 import { useRouter } from "next/navigation";
-import { Loader2, Settings, User, Mail, Search, Globe, Layout, ShieldAlert, Plus, Trash2, GripVertical, AlertTriangle } from "lucide-react";
+import { Loader2, Settings, User, Mail, Search, Globe, Layout, ShieldAlert, Plus, Trash2, GripVertical, AlertTriangle, FileText } from "lucide-react";
 import { UnsavedChangesWarning } from "@/app/(admin)/admin/(protected)/projects/_components/UnsavedChangesWarning";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Controller } from "react-hook-form";
+import { AboutPageTab, LocalizedField, CommaListInput } from "./AboutPageTab";
+import { DEFAULT_ABOUT_PAGE } from "@/lib/constants/aboutDefaults";
 
-type TabId = 'general' | 'profile' | 'contact' | 'seo' | 'publicSite' | 'defaults' | 'security' | 'danger';
+type TabId = 'general' | 'profile' | 'about' | 'contact' | 'seo' | 'publicSite' | 'defaults' | 'security' | 'danger';
 
 interface SettingsFormProps {
   initialData: SiteSettings;
@@ -46,10 +49,27 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
         professionalTitle: normalizeLocalized(initialData.profile?.professionalTitle),
         shortBio: normalizeLocalized(initialData.profile?.shortBio),
         professionalFocus: normalizeLocalized(initialData.profile?.professionalFocus),
+        longBio: initialData.profile?.longBio ? normalizeLocalized(initialData.profile.longBio) : { id: "", en: "" },
+        coreCompetencies: initialData.profile?.coreCompetencies || [],
+        technicalGuarantees: (initialData.profile?.technicalGuarantees || []).map(g => ({
+          title: normalizeLocalized(g.title),
+          description: normalizeLocalized(g.description)
+        })),
+        careerTimeline: (initialData.profile?.careerTimeline || []).map(t => ({
+          ...t,
+          role: normalizeLocalized(t.role),
+          organization: normalizeLocalized(t.organization),
+          label: t.label || "",
+          isCurrent: !!t.isCurrent,
+          description: normalizeLocalized(t.description),
+          stack: t.stack || [],
+        }))
       },
+      aboutPage: initialData.aboutPage ?? DEFAULT_ABOUT_PAGE,
       contact: {
         ...initialData.contact,
         successMessage: normalizeLocalized(initialData.contact?.successMessage),
+        availabilityStatus: initialData.contact?.availabilityStatus ? normalizeLocalized(initialData.contact.availabilityStatus) : { id: "", en: "" },
       },
       seo: {
         ...initialData.seo,
@@ -67,6 +87,21 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
   const { fields: socialFields, append: appendSocial, remove: removeSocial } = useFieldArray({
     control,
     name: "socialLinks"
+  });
+
+  const { fields: compFields, append: appendComp, remove: removeComp } = useFieldArray({
+    control,
+    name: "profile.coreCompetencies" as never // cast since it's array of string
+  });
+
+  const { fields: techFields, append: appendTech, remove: removeTech } = useFieldArray({
+    control,
+    name: "profile.technicalGuarantees"
+  });
+
+  const { fields: careerFields, append: appendCareer, remove: removeCareer } = useFieldArray({
+    control,
+    name: "profile.careerTimeline"
   });
 
   const { fields: navFields, append: appendNav, remove: removeNav, move: moveNav } = useFieldArray({
@@ -90,10 +125,12 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
   };
 
   const loading = isPending || isSubmitting;
+  console.log('--- FORM ERRORS ---', errors);
 
   const tabs: { id: TabId; label: string; icon: React.ReactNode }[] = [
     { id: 'general', label: 'General', icon: <Settings className="h-4 w-4" /> },
     { id: 'profile', label: 'Profile', icon: <User className="h-4 w-4" /> },
+    { id: 'about', label: 'About Page', icon: <FileText className="h-4 w-4" /> },
     { id: 'contact', label: 'Contact', icon: <Mail className="h-4 w-4" /> },
     { id: 'seo', label: 'SEO & Social', icon: <Search className="h-4 w-4" /> },
     { id: 'publicSite', label: 'Public Site', icon: <Globe className="h-4 w-4" /> },
@@ -232,9 +269,8 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                   <Input id="profile.fullName" {...register("profile.fullName")} className="bg-zinc-900/50" />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="profile.professionalTitle">Professional Title</Label>
-                  <Input id="profile.professionalTitle" {...register("profile.professionalTitle.id")} className="bg-zinc-900/50" />
+                <div className="space-y-2 md:col-span-2">
+                  <LocalizedField register={register} path="profile.professionalTitle" label="Professional Title" />
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
@@ -245,6 +281,106 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="profile.professionalFocus">Professional Focus</Label>
                   <Input id="profile.professionalFocus" {...register("profile.professionalFocus.id")} className="bg-zinc-900/50" placeholder="e.g. Full-stack engineering, Systems architecture" />
+                </div>
+
+                <div className="space-y-2 md:col-span-2">
+                  <LocalizedField register={register} path="profile.longBio" label="Long Editorial Bio (blank line = new paragraph)" multiline rows="h-48" placeholder="Detailed professional background..." />
+                </div>
+
+                <div className="space-y-4 md:col-span-2 pt-6 border-t border-zinc-800">
+                  <div className="flex items-center justify-between">
+                    <Label className="text-base">Core Competencies</Label>
+                    <Button type="button" variant="outline" size="sm" onClick={() => appendComp("New Skill")}>
+                      <Plus className="h-4 w-4 mr-2" /> Add Skill
+                    </Button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {compFields.map((field, index) => (
+                      <div key={field.id} className="flex items-center gap-2 bg-zinc-900/50 border border-zinc-800 rounded-md pl-3 pr-1 py-1">
+                        <Input {...register(`profile.coreCompetencies.${index}`)} className="h-6 w-32 bg-transparent border-0 p-0 text-sm focus-visible:ring-0" />
+                        <Button type="button" variant="ghost" size="icon" className="h-5 w-5 text-zinc-500 hover:text-red-400" onClick={() => removeComp(index)}>
+                          &times;
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 md:col-span-2 pt-6 border-t border-zinc-800">
+                  <div className="flex items-center justify-between">
+                    <Label className="text-base">Technical Guarantees</Label>
+                    <Button type="button" variant="outline" size="sm" onClick={() => appendTech({ title: { id: "New Guarantee" }, description: { id: "" } })}>
+                      <Plus className="h-4 w-4 mr-2" /> Add Guarantee
+                    </Button>
+                  </div>
+                  <div className="space-y-4">
+                    {techFields.map((field, index) => (
+                      <div key={field.id} className="space-y-3 bg-zinc-900/30 p-4 rounded-md border border-zinc-800 relative">
+                        <Button type="button" variant="ghost" size="icon" className="absolute top-2 right-2 h-6 w-6 text-red-400 hover:bg-red-950/30" onClick={() => removeTech(index)}>
+                          <Trash2 className="h-3 w-3" />
+                        </Button>
+                        <div className="space-y-1 pr-8">
+                          <Label className="text-xs text-muted-foreground">Title</Label>
+                          <Input {...register(`profile.technicalGuarantees.${index}.title.id`)} className="bg-zinc-900/50 h-8" />
+                        </div>
+                        <div className="space-y-1">
+                          <Label className="text-xs text-muted-foreground">Description</Label>
+                          <Textarea {...register(`profile.technicalGuarantees.${index}.description.id`)} className="bg-zinc-900/50 h-16 resize-none text-sm" />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 md:col-span-2 pt-6 border-t border-zinc-800">
+                  <div className="flex items-center justify-between">
+                    <Label className="text-base">Career Timeline</Label>
+                    <Button type="button" variant="outline" size="sm" onClick={() => appendCareer({ period: "2024 - Present", role: { id: "", en: "" }, organization: { id: "", en: "" }, label: "", isCurrent: false, description: { id: "", en: "" }, stack: [] })}>
+                      <Plus className="h-4 w-4 mr-2" /> Add Timeline Entry
+                    </Button>
+                  </div>
+                  <div className="space-y-4">
+                    {careerFields.map((field, index) => (
+                      <div key={field.id} className="space-y-4 bg-zinc-900/30 p-4 rounded-md border border-zinc-800 relative">
+                        <Button type="button" variant="ghost" size="icon" className="absolute top-2 right-2 h-6 w-6 text-red-400 hover:bg-red-950/30" onClick={() => removeCareer(index)}>
+                          <Trash2 className="h-3 w-3" />
+                        </Button>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pr-8">
+                          <div className="space-y-1">
+                            <Label className="text-xs text-muted-foreground">Period</Label>
+                            <Input {...register(`profile.careerTimeline.${index}.period`)} className="bg-zinc-900/50 h-8 font-mono text-sm" placeholder="e.g. 2023 - PRESENT" />
+                          </div>
+                          <div className="space-y-1">
+                            <Label className="text-xs text-muted-foreground">Badge (if not current)</Label>
+                            <Input {...register(`profile.careerTimeline.${index}.label`)} className="bg-zinc-900/50 h-8 font-mono text-sm" placeholder="e.g. Enterprise Services" />
+                          </div>
+                          <div className="flex items-center gap-3 pt-5">
+                            <Controller
+                              control={control}
+                              name={`profile.careerTimeline.${index}.isCurrent`}
+                              render={({ field: f }) => (
+                                <Switch checked={!!f.value} onCheckedChange={(c: boolean) => f.onChange(c)} />
+                              )}
+                            />
+                            <Label className="text-xs text-muted-foreground">Current role</Label>
+                          </div>
+                        </div>
+                        <LocalizedField register={register} path={`profile.careerTimeline.${index}.role`} label="Role Title" />
+                        <LocalizedField register={register} path={`profile.careerTimeline.${index}.organization`} label="Organization / Subtitle" />
+                        <LocalizedField register={register} path={`profile.careerTimeline.${index}.description`} label="Description" multiline />
+                        <div className="space-y-1">
+                          <Label className="text-xs text-muted-foreground">Key Stack (comma separated)</Label>
+                          <Controller
+                            control={control}
+                            name={`profile.careerTimeline.${index}.stack`}
+                            render={({ field: f }) => (
+                              <CommaListInput value={f.value} onChange={f.onChange} placeholder="Next.js, Firestore, Docker" />
+                            )}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="space-y-2 md:col-span-2 pt-4 border-t border-zinc-800">
@@ -258,6 +394,22 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                     </div>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">Paste a URL from the Media Library here.</p>
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="profile.location">Location</Label>
+                  <Input id="profile.location" {...register("profile.location")} className="bg-zinc-900/50" />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="profile.email">Public Email</Label>
+                  <Input id="profile.email" type="email" {...register("profile.email")} className="bg-zinc-900/50" />
+                  {errors.profile?.email && <p className="text-sm text-red-500">{errors.profile.email.message}</p>}
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="profile.phone">Public Phone</Label>
+                  <Input id="profile.phone" {...register("profile.phone")} className="bg-zinc-900/50" />
                 </div>
               </div>
             </section>
@@ -323,9 +475,18 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                     <Label htmlFor="contact.successMessage">Contact Form Success Message</Label>
                     <Textarea id="contact.successMessage" {...register("contact.successMessage.id")} className="bg-zinc-900/50 resize-none" />
                   </div>
+
+                  <div className="space-y-2">
+                    <LocalizedField register={register} path="contact.availabilityStatus" label="Availability Status" placeholder="e.g. Open for new projects" />
+                  </div>
                 </div>
               </div>
             </section>
+          </div>
+
+          {/* ABOUT PAGE TAB */}
+          <div className={activeTab === 'about' ? 'block' : 'hidden'}>
+            <AboutPageTab register={register} control={control} />
           </div>
 
           {/* SEO TAB */}
@@ -353,8 +514,18 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 </div>
                 
                 <div className="space-y-2">
+                  <Label>Open Graph Image Alt Text</Label>
+                  <Input {...register("seo.ogImage.alt")} className="bg-zinc-900/50" placeholder="Alt text" />
+                </div>
+                
+                <div className="space-y-2">
                   <Label>Favicon URL</Label>
                   <Input {...register("seo.favicon.url")} className="bg-zinc-900/50" placeholder="https://..." />
+                </div>
+
+                <div className="space-y-2">
+                  <Label>Favicon Alt Text</Label>
+                  <Input {...register("seo.favicon.alt")} className="bg-zinc-900/50" placeholder="Alt text" />
                 </div>
 
                 <div className="space-y-4 pt-6 border-t border-zinc-800">

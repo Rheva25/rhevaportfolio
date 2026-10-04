@@ -1,7 +1,16 @@
-import * as z from "zod";
-import { LocalizedStringSchema, RequiredLocalizedStringSchema } from "./common";
+const { z } = require('zod');
 
-export const SiteSettingsSchema = z.object({
+const LocalizedStringSchema = z.object({
+  id: z.string().default(""),
+  en: z.string().default(""),
+});
+
+const RequiredLocalizedStringSchema = z.object({
+  id: z.string().min(1, "Indonesian text is required"),
+  en: z.string().default(""),
+});
+
+const SiteSettingsSchema = z.object({
   siteName: z.string().min(1, "Site name is required"),
   siteDescription: RequiredLocalizedStringSchema,
   siteUrl: z.string().url("Must be a valid URL"),
@@ -21,25 +30,6 @@ export const SiteSettingsSchema = z.object({
     email: z.string().email("Must be a valid email"),
     phone: z.string().default(""),
     professionalFocus: RequiredLocalizedStringSchema,
-    longBio: LocalizedStringSchema.optional(),
-    coreCompetencies: z.array(z.string()).default([]),
-    technicalGuarantees: z.array(
-      z.object({
-        title: LocalizedStringSchema,
-        description: LocalizedStringSchema,
-      })
-    ).default([]),
-    careerTimeline: z.array(
-      z.object({
-        period: z.string().min(1, "Period is required"),
-        role: LocalizedStringSchema,
-        organization: LocalizedStringSchema.optional(),
-        label: z.string().default(""),
-        isCurrent: z.boolean().default(false),
-        description: LocalizedStringSchema,
-        stack: z.array(z.string()).default([]),
-      })
-    ).default([]),
   }),
 
   contact: z.object({
@@ -50,7 +40,6 @@ export const SiteSettingsSchema = z.object({
     preferredContactMethod: z.string().default(""),
     contactFormEnabled: z.boolean().default(true),
     successMessage: LocalizedStringSchema,
-    availabilityStatus: LocalizedStringSchema.optional(),
   }),
 
   seo: z.object({
@@ -94,31 +83,6 @@ export const SiteSettingsSchema = z.object({
     ).default([]),
   }),
 
-  aboutPage: z.object({
-    profileEyebrow: LocalizedStringSchema,
-    architecturePrinciple: z.string().default(""),
-    capabilitiesEyebrow: LocalizedStringSchema,
-    capabilitiesTitle: LocalizedStringSchema,
-    capabilitiesSubtitle: LocalizedStringSchema,
-    capabilities: z.array(
-      z.object({
-        icon: z.string().default("Terminal"),
-        title: LocalizedStringSchema,
-        description: LocalizedStringSchema,
-        tags: z.array(z.string()).default([]),
-      })
-    ).default([]),
-    timelineEyebrow: LocalizedStringSchema,
-    timelineTitle: LocalizedStringSchema,
-    timelineStackLabel: LocalizedStringSchema,
-    timelineCurrentLabel: LocalizedStringSchema,
-    ctaEyebrow: LocalizedStringSchema,
-    ctaTitle: LocalizedStringSchema,
-    ctaDescription: LocalizedStringSchema,
-    ctaButtonLabel: LocalizedStringSchema,
-    ctaButtonHref: z.string().default("/contact"),
-  }).optional(),
-
   contentDefaults: z.object({
     project: z.object({
       category: z.string().default("Web Development"),
@@ -137,9 +101,51 @@ export const SiteSettingsSchema = z.object({
   }),
 });
 
-export type SiteSettingsFormData = z.input<typeof SiteSettingsSchema>;
+const defaultData = {
+  siteName: "Rheva Developer Platform",
+  siteDescription: { id: "Platform developer modern", en: "Modern developer platform" },
+  siteUrl: "https://rheva.id",
+  language: "en",
+  timezone: "UTC",
+  dateFormat: "MMM dd, yyyy",
+  profile: {
+    fullName: "Rheva",
+    professionalTitle: { id: "Software Engineer", en: "Software Engineer" },
+    shortBio: { id: "Saya membangun produk digital", en: "I build digital products" },
+    profilePhoto: null,
+    location: "Indonesia",
+    email: "hello@rheva.id",
+    phone: "",
+    professionalFocus: { id: "Pengembangan Web", en: "Web Development" }
+  },
+  contact: {
+    primaryEmail: "hello@rheva.id",
+    whatsapp: "",
+    secondaryEmail: "",
+    serviceArea: "Global",
+    preferredContactMethod: "Email",
+    contactFormEnabled: true,
+    successMessage: { id: "Pesan terkirim", en: "Message sent" }
+  },
+  seo: {
+    defaultTitle: { id: "Rheva | Developer Platform", en: "Rheva | Developer Platform" },
+    defaultDescription: { id: "Platform pengembang modern", en: "Modern developer platform" },
+    keywords: [],
+    ogImage: null,
+    favicon: null
+  },
+  socialLinks: [],
+  publicSite: {
+    navigation: [],
+    homepageSections: []
+  },
+  contentDefaults: {
+    project: { category: "Web Development", status: "In Progress" },
+    app: { category: "SaaS", status: "In Development", pricingModel: "Fixed Price" },
+    article: { category: "Technology", status: "Draft", author: "Rheva" }
+  }
+};
 
-export interface SiteSettings extends SiteSettingsFormData {
-  updatedAt: unknown;
-  updatedBy: string;
-}
+const res = SiteSettingsSchema.safeParse(defaultData);
+console.log(res.success ? "SUCCESS" : JSON.stringify(res.error.format(), null, 2));
+

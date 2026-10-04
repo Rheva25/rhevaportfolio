@@ -2,9 +2,18 @@ import Link from "next/link";
 import { getDictionary } from "@/i18n/getDictionary";
 import { Locale } from "@/i18n/config";
 import { Mail, Key } from "lucide-react";
+import { getPublicSiteSettings } from "@/lib/repositories/settingsPublic";
+
+import { getLocalizedText } from "@/lib/utils/localization";
 
 export async function Contact({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
+  const settings = await getPublicSiteSettings();
+  const primaryEmail = settings?.contact?.primaryEmail || "rheva@example.com";
+  const availabilityStatus = settings?.contact?.availabilityStatus?.id 
+    ? getLocalizedText(settings.contact.availabilityStatus as { id: string; en?: string }, locale)
+    : "Open for Q2 2025 projects";
+
   return (
     <section className="w-full bg-card py-24 border-t border-border" id="contact">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -13,7 +22,7 @@ export async function Contact({ locale }: { locale: Locale }) {
             {/* Status tag */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background border border-border text-foreground mb-8 font-mono text-[11px] font-medium shadow-sm">
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
-              Current Availability: Open for Q2 2025 projects
+              Current Availability: {availabilityStatus}
             </div>
             
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight mb-5">
@@ -39,7 +48,7 @@ export async function Contact({ locale }: { locale: Locale }) {
             {/* Direct Inquiries & SLA Footer */}
             <div className="pt-8 border-t border-border/50 font-mono text-xs text-muted-foreground flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
               <div>
-                Direct contact: <a className="text-primary hover:underline font-semibold ml-1" href="mailto:rheva@example.com">rheva@example.com</a>
+                Direct contact: <a className="text-primary hover:underline font-semibold ml-1" href={`mailto:${primaryEmail}`}>{primaryEmail}</a>
               </div>
               <span className="hidden sm:inline text-muted-foreground/50">&bull;</span>
               <div className="text-foreground font-medium">Response guaranteed within 24 hours</div>

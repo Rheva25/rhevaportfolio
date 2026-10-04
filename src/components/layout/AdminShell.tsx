@@ -30,6 +30,7 @@ export function AdminSidebar({
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Projects", href: "/admin/projects", icon: FolderKanban },
     { name: "Apps", href: "/admin/apps", icon: AppWindow },
+    { name: "Templates", href: "/admin/templates", icon: AppWindow },
     { name: "Articles", href: "/admin/articles", icon: FileText },
     { name: "Inquiries", href: "/admin/inquiries", icon: MessageSquare },
     { name: "Media", href: "/admin/media", icon: ImageIcon },

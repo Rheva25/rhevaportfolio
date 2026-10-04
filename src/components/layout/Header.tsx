@@ -8,18 +8,29 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { getDictionary } from "@/i18n/getDictionary";
 import { Locale } from "@/i18n/config";
 
+import { getLocalizedText } from "@/lib/utils/localization";
+
 export async function Header({ locale }: { locale: Locale }) {
   const settings = await getPublicSiteSettings();
   const siteName = settings?.siteName || "RHEVA";
   const t = await getDictionary(locale);
 
-  const links = [
-    { name: t.navigation.projects, href: `/${locale}/projects` },
-    { name: t.navigation.apps, href: `/${locale}/apps` },
-    { name: t.navigation.services, href: `/${locale}/services` },
-    { name: t.navigation.articles, href: `/${locale}/articles` },
-    { name: t.navigation.about, href: `/${locale}/about` },
-  ];
+  // Use dynamic navigation from CMS, fallback to dictionary if CMS is empty
+  const navItems = settings?.publicSite?.navigation?.filter(item => item.visible)?.sort((a, b) => Number(a.order || 0) - Number(b.order || 0)) || [];
+  
+  const links = navItems.length > 0 
+    ? navItems.map(item => ({
+        name: getLocalizedText(item.label as { id: string, en?: string }, locale),
+        href: item.href.startsWith('http') ? item.href : `/${locale}${item.href.startsWith('/') ? item.href : `/${item.href}`}`
+      }))
+    : [
+        { name: t.navigation.projects, href: `/${locale}/projects` },
+        { name: t.navigation.apps, href: `/${locale}/apps` },
+        { name: "Templates", href: `/${locale}/templates` },
+        { name: t.navigation.services, href: `/${locale}/services` },
+        { name: t.navigation.articles, href: `/${locale}/articles` },
+        { name: t.navigation.about, href: `/${locale}/about` },
+      ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md">

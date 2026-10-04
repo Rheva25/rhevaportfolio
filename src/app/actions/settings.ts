@@ -17,6 +17,7 @@ async function requireAuth() {
 }
 
 export async function updateSiteSettingsAction(data: SiteSettingsFormData) {
+  console.log('updateSiteSettingsAction CALLED WITH:', data);
   const session = await requireAuth();
   
   const parsed = SiteSettingsSchema.safeParse(data);

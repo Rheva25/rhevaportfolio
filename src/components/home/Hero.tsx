@@ -2,9 +2,16 @@ import Link from "next/link";
 import { ArrowRight, Terminal } from "lucide-react";
 import { getDictionary } from "@/i18n/getDictionary";
 import { Locale } from "@/i18n/config";
+import { getPublicSiteSettings } from "@/lib/repositories/settingsPublic";
+import { getLocalizedText } from "@/lib/utils/localization";
 
 export async function Hero({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
+  const settings = await getPublicSiteSettings();
+  
+  const title = settings?.profile?.professionalTitle ? getLocalizedText(settings.profile.professionalTitle, locale) : dict.home.hero.title;
+  const subtitle = settings?.profile?.shortBio ? getLocalizedText(settings.profile.shortBio, locale) : dict.home.hero.subtitle;
+
   return (
     <section className="w-full bg-background pt-12 pb-24 md:pt-16 md:pb-28">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -14,16 +21,18 @@ export async function Hero({ locale }: { locale: Locale }) {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card border border-border shadow-sm mb-6">
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
               <span className="font-mono text-xs text-foreground font-medium">
-                {dict.home.hero.availability}
+                {settings?.contact?.availabilityStatus?.id
+                  ? getLocalizedText(settings.contact.availabilityStatus as { id: string; en?: string }, locale) 
+                  : dict.home.hero.availability}
               </span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl text-foreground tracking-tight font-semibold mb-6 max-w-2xl leading-[1.08]">
-              {dict.home.hero.title}
+              {title}
             </h1>
             
             <p className="text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
-              {dict.home.hero.subtitle}
+              {subtitle}
             </p>
             
             <div className="flex flex-wrap items-center gap-3.5 mb-8">

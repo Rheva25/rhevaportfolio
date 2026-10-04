@@ -216,6 +216,21 @@ export interface SiteSettings {
     email: string;
     phone: string;
     professionalFocus: LocalizedString;
+    longBio?: LocalizedString;
+    coreCompetencies?: string[];
+    technicalGuarantees?: {
+      title: LocalizedString;
+      description: LocalizedString;
+    }[];
+    careerTimeline?: {
+      period: string;
+      role: LocalizedString;
+      organization?: LocalizedString;
+      label?: string;
+      isCurrent?: boolean;
+      description: LocalizedString;
+      stack?: string[];
+    }[];
   };
 
   contact: {
@@ -226,6 +241,7 @@ export interface SiteSettings {
     preferredContactMethod: string;
     contactFormEnabled: boolean;
     successMessage: LocalizedString;
+    availabilityStatus?: LocalizedString;
   };
 
   seo: {
@@ -261,6 +277,29 @@ export interface SiteSettings {
       visible: boolean;
       order: number;
     }[];
+  };
+
+  aboutPage?: {
+    profileEyebrow: LocalizedString;
+    architecturePrinciple: string;
+    capabilitiesEyebrow: LocalizedString;
+    capabilitiesTitle: LocalizedString;
+    capabilitiesSubtitle: LocalizedString;
+    capabilities: {
+      icon: string;
+      title: LocalizedString;
+      description: LocalizedString;
+      tags: string[];
+    }[];
+    timelineEyebrow: LocalizedString;
+    timelineTitle: LocalizedString;
+    timelineStackLabel: LocalizedString;
+    timelineCurrentLabel: LocalizedString;
+    ctaEyebrow: LocalizedString;
+    ctaTitle: LocalizedString;
+    ctaDescription: LocalizedString;
+    ctaButtonLabel: LocalizedString;
+    ctaButtonHref: string;
   };
 
   contentDefaults: {

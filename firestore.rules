@@ -19,6 +19,12 @@ service cloud.firestore {
       allow write: if isAdmin();
     }
 
+    // Templates / UI Kits
+    match /templates/{document=**} {
+      allow read: if resource.data.visibility == 'Published' || isAdmin();
+      allow write: if isAdmin();
+    }
+
     // Articles
     match /articles/{document=**} {
       allow read: if resource.data.status == 'Published' || isAdmin();
