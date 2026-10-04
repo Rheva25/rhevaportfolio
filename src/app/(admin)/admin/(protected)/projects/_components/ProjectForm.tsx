@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { normalizeLocalized, normalizeLocalizedArray } from "@/lib/utils/localization";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ProjectSchema, ProjectFormData, Project } from "@/lib/validations/project";
@@ -43,11 +44,26 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
     formState: { errors, isDirty, isSubmitting }
   } = useForm<ProjectFormData>({
     resolver: zodResolver(ProjectSchema),
-    defaultValues: initialData || {
-      title: "",
+    defaultValues: initialData ? {
+      ...initialData,
+      title: normalizeLocalized(initialData.title),
+      shortDescription: normalizeLocalized(initialData.shortDescription),
+      description: normalizeLocalized(initialData.description),
+      overview: normalizeLocalized(initialData.overview),
+      problem: normalizeLocalized(initialData.problem),
+      solution: normalizeLocalized(initialData.solution),
+      challenges: normalizeLocalized(initialData.challenges),
+      outcome: normalizeLocalized(initialData.outcome),
+      seoTitle: normalizeLocalized(initialData.seoTitle),
+      seoDescription: normalizeLocalized(initialData.seoDescription),
+      features: normalizeLocalizedArray(initialData.features),
+      process: normalizeLocalizedArray(initialData.process),
+      links: (initialData.links || []).map(l => ({ ...l, label: normalizeLocalized(l.label) })),
+    } : {
+      title: { id: "", en: "" },
       slug: "",
-      shortDescription: "",
-      description: "",
+      shortDescription: { id: "", en: "" },
+      description: { id: "", en: "" },
       category: "",
       status: "Draft", // Default to Draft conceptually, but schema requires strict enums
       visibility: "Draft",
@@ -56,16 +72,16 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
       technologies: [],
       heroImage: null,
       gallery: [],
-      overview: "",
-      problem: "",
-      solution: "",
+      overview: { id: "", en: "" },
+      problem: { id: "", en: "" },
+      solution: { id: "", en: "" },
       features: [],
       process: [],
-      challenges: "",
-      outcome: "",
+      challenges: { id: "", en: "" },
+      outcome: { id: "", en: "" },
       links: [],
-      seoTitle: "",
-      seoDescription: "",
+      seoTitle: { id: "", en: "" },
+      seoDescription: { id: "", en: "" },
     } as unknown as ProjectFormData
   });
 
@@ -184,7 +200,7 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="title">Project Title</Label>
-              <Input id="title" {...register("title")} placeholder="e.g. Rheva Developer Platform" />
+              <Input id="title" {...register("title.id")} placeholder="e.g. Rheva Developer Platform" />
               {errors.title && <p className="text-sm text-red-500">{errors.title.message}</p>}
             </div>
 
@@ -201,13 +217,13 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="shortDescription">Short Description (Summary)</Label>
-              <Textarea id="shortDescription" {...register("shortDescription")} rows={2} />
+              <Textarea id="shortDescription" {...register("shortDescription.id")} rows={2} />
               {errors.shortDescription && <p className="text-sm text-red-500">{errors.shortDescription.message}</p>}
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="description">Full Description</Label>
-              <Textarea id="description" {...register("description")} rows={5} />
+              <Textarea id="description" {...register("description.id")} rows={5} />
               {errors.description && <p className="text-sm text-red-500">{errors.description.message}</p>}
             </div>
           </section>
@@ -217,17 +233,17 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="overview">Overview</Label>
-              <Textarea id="overview" {...register("overview")} rows={3} />
+              <Textarea id="overview" {...register("overview.id")} rows={3} />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="problem">Problem</Label>
-                <Textarea id="problem" {...register("problem")} rows={4} />
+                <Textarea id="problem" {...register("problem.id")} rows={4} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="solution">Solution</Label>
-                <Textarea id="solution" {...register("solution")} rows={4} />
+                <Textarea id="solution" {...register("solution.id")} rows={4} />
               </div>
             </div>
 
@@ -278,11 +294,11 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="challenges">Challenges</Label>
-                <Textarea id="challenges" {...register("challenges")} rows={4} />
+                <Textarea id="challenges" {...register("challenges.id")} rows={4} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="outcome">Outcome</Label>
-                <Textarea id="outcome" {...register("outcome")} rows={4} />
+                <Textarea id="outcome" {...register("outcome.id")} rows={4} />
               </div>
             </div>
           </section>
@@ -437,7 +453,7 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
                     <Trash2 className="h-3 w-3" />
                   </Button>
                   <div className="pr-8 space-y-2">
-                    <Input {...register(`links.${index}.label` as const)} placeholder="Label (e.g. Live Demo)" className="h-8 text-sm" />
+                    <Input {...register(`links.${index}.label.id` as const)} placeholder="Label (e.g. Live Demo)" className="h-8 text-sm" />
                     {errors.links?.[index]?.label && <p className="text-xs text-red-500">{errors.links[index]?.label?.message}</p>}
                     <Input {...register(`links.${index}.url` as const)} placeholder="https://" className="h-8 text-sm" />
                     {errors.links?.[index]?.url && <p className="text-xs text-red-500">{errors.links[index]?.url?.message}</p>}
@@ -477,7 +493,7 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="seoTitle">Meta Title</Label>
-              <Input id="seoTitle" {...register("seoTitle")} placeholder="Default: Project Title" />
+              <Input id="seoTitle" {...register("seoTitle.id")} placeholder="Default: Project Title" />
               <div className="flex justify-between">
                 {errors.seoTitle ? (
                   <span className="text-xs text-red-500">{errors.seoTitle.message}</span>
@@ -490,7 +506,7 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="seoDescription">Meta Description</Label>
-              <Textarea id="seoDescription" {...register("seoDescription")} rows={3} placeholder="Default: Short Description" />
+              <Textarea id="seoDescription" {...register("seoDescription.id")} rows={3} placeholder="Default: Short Description" />
               <div className="flex justify-between">
                 {errors.seoDescription ? (
                   <span className="text-xs text-red-500">{errors.seoDescription.message}</span>

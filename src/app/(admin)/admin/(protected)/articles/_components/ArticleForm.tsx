@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { normalizeLocalized } from "@/lib/utils/localization";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArticleSchema, ArticleFormData, Article } from "@/lib/validations/article";
@@ -43,20 +44,27 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
     formState: { errors, isDirty, isSubmitting }
   } = useForm<ArticleFormData>({
     resolver: zodResolver(ArticleSchema),
-    defaultValues: initialData || {
-      title: "",
+    defaultValues: initialData ? {
+      ...initialData,
+      title: normalizeLocalized(initialData.title),
+      excerpt: normalizeLocalized(initialData.excerpt),
+      content: normalizeLocalized(initialData.content),
+      seoTitle: normalizeLocalized(initialData.seoTitle),
+      seoDescription: normalizeLocalized(initialData.seoDescription),
+    } : {
+      title: { id: "", en: "" },
       slug: "",
-      excerpt: "",
-      content: "",
+      excerpt: { id: "", en: "" },
+      content: { id: "", en: "" },
       coverImage: null,
       category: "",
       tags: [],
-      author: "Rheva", // Default author based on single-author assumption
+      author: "Rheva",
       status: "Draft",
       featured: false,
       readingTime: 5,
-      seoTitle: "",
-      seoDescription: "",
+      seoTitle: { id: "", en: "" },
+      seoDescription: { id: "", en: "" },
     } as unknown as ArticleFormData
   });
 
@@ -155,7 +163,7 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="title">Article Title</Label>
-              <Input id="title" {...register("title")} placeholder="e.g. Understanding Next.js Server Actions" />
+              <Input id="title" {...register("title.id")} placeholder="e.g. Understanding Next.js Server Actions" />
               {errors.title && <p className="text-sm text-red-500">{errors.title.message}</p>}
             </div>
 
@@ -172,7 +180,7 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="excerpt">Excerpt / Summary</Label>
-              <Textarea id="excerpt" {...register("excerpt")} rows={3} placeholder="A short summary for lists and cards..." />
+              <Textarea id="excerpt" {...register("excerpt.id")} rows={3} placeholder="A short summary for lists and cards..." />
               {errors.excerpt && <p className="text-sm text-red-500">{errors.excerpt.message}</p>}
             </div>
 
@@ -183,7 +191,7 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
               </div>
               <Textarea 
                 id="content" 
-                {...register("content")} 
+                {...register("content.id")} 
                 className="min-h-[500px] font-mono text-sm leading-relaxed" 
                 placeholder="Write your technical article here..." 
               />
@@ -324,7 +332,7 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="seoTitle">Meta Title</Label>
-              <Input id="seoTitle" {...register("seoTitle")} placeholder="Default: Article Title" />
+              <Input id="seoTitle" {...register("seoTitle.id")} placeholder="Default: Article Title" />
               <div className="flex justify-between">
                 {errors.seoTitle ? (
                   <span className="text-xs text-red-500">{errors.seoTitle.message}</span>
@@ -337,7 +345,7 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="seoDescription">Meta Description</Label>
-              <Textarea id="seoDescription" {...register("seoDescription")} rows={3} placeholder="Default: Excerpt" />
+              <Textarea id="seoDescription" {...register("seoDescription.id")} rows={3} placeholder="Default: Excerpt" />
               <div className="flex justify-between">
                 {errors.seoDescription ? (
                   <span className="text-xs text-red-500">{errors.seoDescription.message}</span>

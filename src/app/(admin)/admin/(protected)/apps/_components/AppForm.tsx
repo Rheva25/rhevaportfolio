@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { normalizeLocalized, normalizeLocalizedArray } from "@/lib/utils/localization";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ProductSchema, ProductFormData, Product } from "@/lib/validations/product";
@@ -43,11 +44,23 @@ export function AppForm({ initialData }: AppFormProps) {
     formState: { errors, isDirty, isSubmitting }
   } = useForm<ProductFormData>({
     resolver: zodResolver(ProductSchema),
-    defaultValues: initialData || {
-      name: "",
+    defaultValues: initialData ? {
+      ...initialData,
+      name: normalizeLocalized(initialData.name),
+      shortDescription: normalizeLocalized(initialData.shortDescription),
+      description: normalizeLocalized(initialData.description),
+      deployment: normalizeLocalized(initialData.deployment),
+      seoTitle: normalizeLocalized(initialData.seoTitle),
+      seoDescription: normalizeLocalized(initialData.seoDescription),
+      benefits: normalizeLocalizedArray(initialData.benefits),
+      features: normalizeLocalizedArray(initialData.features),
+      requirements: normalizeLocalizedArray(initialData.requirements),
+      links: (initialData.links || []).map(l => ({ ...l, label: normalizeLocalized(l.label) })),
+    } : {
+      name: { id: "", en: "" },
       slug: "",
-      shortDescription: "",
-      description: "",
+      shortDescription: { id: "", en: "" },
+      description: { id: "", en: "" },
       category: "",
       status: "In Development",
       visibility: "Draft",
@@ -61,10 +74,10 @@ export function AppForm({ initialData }: AppFormProps) {
       benefits: [],
       features: [],
       requirements: [],
-      deployment: "",
+      deployment: { id: "", en: "" },
       links: [],
-      seoTitle: "",
-      seoDescription: "",
+      seoTitle: { id: "", en: "" },
+      seoDescription: { id: "", en: "" },
       ogImage: null,
     } as unknown as ProductFormData
   });
@@ -172,7 +185,7 @@ export function AppForm({ initialData }: AppFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="name">Product Name</Label>
-              <Input id="name" {...register("name")} placeholder="e.g. Rheva CMS" />
+              <Input id="name" {...register("name.id")} placeholder="e.g. Rheva CMS" />
               {errors.name && <p className="text-sm text-red-500">{errors.name.message}</p>}
             </div>
 
@@ -189,13 +202,13 @@ export function AppForm({ initialData }: AppFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="shortDescription">Short Description</Label>
-              <Textarea id="shortDescription" {...register("shortDescription")} rows={2} />
+              <Textarea id="shortDescription" {...register("shortDescription.id")} rows={2} />
               {errors.shortDescription && <p className="text-sm text-red-500">{errors.shortDescription.message}</p>}
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="description">Full Description</Label>
-              <Textarea id="description" {...register("description")} rows={5} />
+              <Textarea id="description" {...register("description.id")} rows={5} />
               {errors.description && <p className="text-sm text-red-500">{errors.description.message}</p>}
             </div>
           </section>
@@ -271,7 +284,7 @@ export function AppForm({ initialData }: AppFormProps) {
 
             <div className="space-y-2 mt-4">
               <Label htmlFor="deployment">Deployment Options</Label>
-              <Textarea id="deployment" {...register("deployment")} rows={3} placeholder="e.g. Vercel, Custom Server, On-premise" />
+              <Textarea id="deployment" {...register("deployment.id")} rows={3} placeholder="e.g. Vercel, Custom Server, On-premise" />
             </div>
           </section>
 
@@ -464,7 +477,7 @@ export function AppForm({ initialData }: AppFormProps) {
                     <Trash2 className="h-3 w-3" />
                   </Button>
                   <div className="pr-8 space-y-2">
-                    <Input {...register(`links.${index}.label` as const)} placeholder="Label (e.g. Live Demo)" className="h-8 text-sm" />
+                    <Input {...register(`links.${index}.label.id` as const)} placeholder="Label (e.g. Live Demo)" className="h-8 text-sm" />
                     {errors.links?.[index]?.label && <p className="text-xs text-red-500">{errors.links[index]?.label?.message}</p>}
                     <Input {...register(`links.${index}.url` as const)} placeholder="https://" className="h-8 text-sm" />
                     {errors.links?.[index]?.url && <p className="text-xs text-red-500">{errors.links[index]?.url?.message}</p>}
@@ -504,7 +517,7 @@ export function AppForm({ initialData }: AppFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="seoTitle">Meta Title</Label>
-              <Input id="seoTitle" {...register("seoTitle")} placeholder="Default: Product Name" />
+              <Input id="seoTitle" {...register("seoTitle.id")} placeholder="Default: Product Name" />
               <div className="flex justify-between">
                 {errors.seoTitle ? (
                   <span className="text-xs text-red-500">{errors.seoTitle.message}</span>
@@ -517,7 +530,7 @@ export function AppForm({ initialData }: AppFormProps) {
 
             <div className="space-y-2">
               <Label htmlFor="seoDescription">Meta Description</Label>
-              <Textarea id="seoDescription" {...register("seoDescription")} rows={3} placeholder="Default: Short Description" />
+              <Textarea id="seoDescription" {...register("seoDescription.id")} rows={3} placeholder="Default: Short Description" />
               <div className="flex justify-between">
                 {errors.seoDescription ? (
                   <span className="text-xs text-red-500">{errors.seoDescription.message}</span>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { normalizeLocalized } from "@/lib/utils/localization";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SiteSettingsSchema, SiteSettingsFormData, SiteSettings } from "@/lib/validations/settings";
@@ -37,7 +38,30 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
     formState: { errors, isDirty, isSubmitting }
   } = useForm<SiteSettingsFormData>({
     resolver: zodResolver(SiteSettingsSchema),
-    defaultValues: initialData
+    defaultValues: {
+      ...initialData,
+      siteDescription: normalizeLocalized(initialData.siteDescription),
+      profile: {
+        ...initialData.profile,
+        professionalTitle: normalizeLocalized(initialData.profile?.professionalTitle),
+        shortBio: normalizeLocalized(initialData.profile?.shortBio),
+        professionalFocus: normalizeLocalized(initialData.profile?.professionalFocus),
+      },
+      contact: {
+        ...initialData.contact,
+        successMessage: normalizeLocalized(initialData.contact?.successMessage),
+      },
+      seo: {
+        ...initialData.seo,
+        defaultTitle: normalizeLocalized(initialData.seo?.defaultTitle),
+        defaultDescription: normalizeLocalized(initialData.seo?.defaultDescription),
+      },
+      publicSite: {
+        ...initialData.publicSite,
+        navigation: (initialData.publicSite?.navigation || []).map(l => ({ ...l, label: normalizeLocalized(l.label) })),
+        homepageSections: (initialData.publicSite?.homepageSections || []).map(s => ({ ...s, label: normalizeLocalized(s.label) })),
+      }
+    }
   });
 
   const { fields: socialFields, append: appendSocial, remove: removeSocial } = useFieldArray({
@@ -167,7 +191,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 
                 <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="siteDescription">Site Description</Label>
-                  <Textarea id="siteDescription" {...register("siteDescription")} className="bg-zinc-900/50 resize-none h-20" />
+                  <Textarea id="siteDescription" {...register("siteDescription.id")} className="bg-zinc-900/50 resize-none h-20" />
                 </div>
 
                 <div className="space-y-2">
@@ -210,17 +234,17 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
 
                 <div className="space-y-2">
                   <Label htmlFor="profile.professionalTitle">Professional Title</Label>
-                  <Input id="profile.professionalTitle" {...register("profile.professionalTitle")} className="bg-zinc-900/50" />
+                  <Input id="profile.professionalTitle" {...register("profile.professionalTitle.id")} className="bg-zinc-900/50" />
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="profile.shortBio">Short Bio</Label>
-                  <Textarea id="profile.shortBio" {...register("profile.shortBio")} className="bg-zinc-900/50 resize-none h-24" />
+                  <Textarea id="profile.shortBio" {...register("profile.shortBio.id")} className="bg-zinc-900/50 resize-none h-24" />
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
                   <Label htmlFor="profile.professionalFocus">Professional Focus</Label>
-                  <Input id="profile.professionalFocus" {...register("profile.professionalFocus")} className="bg-zinc-900/50" placeholder="e.g. Full-stack engineering, Systems architecture" />
+                  <Input id="profile.professionalFocus" {...register("profile.professionalFocus.id")} className="bg-zinc-900/50" placeholder="e.g. Full-stack engineering, Systems architecture" />
                 </div>
 
                 <div className="space-y-2 md:col-span-2 pt-4 border-t border-zinc-800">
@@ -297,7 +321,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
 
                   <div className="space-y-2">
                     <Label htmlFor="contact.successMessage">Contact Form Success Message</Label>
-                    <Textarea id="contact.successMessage" {...register("contact.successMessage")} className="bg-zinc-900/50 resize-none" />
+                    <Textarea id="contact.successMessage" {...register("contact.successMessage.id")} className="bg-zinc-900/50 resize-none" />
                   </div>
                 </div>
               </div>
@@ -315,12 +339,12 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
               <div className="grid grid-cols-1 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="seo.defaultTitle">Default SEO Title</Label>
-                  <Input id="seo.defaultTitle" {...register("seo.defaultTitle")} className="bg-zinc-900/50" />
+                  <Input id="seo.defaultTitle" {...register("seo.defaultTitle.id")} className="bg-zinc-900/50" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="seo.defaultDescription">Default SEO Description</Label>
-                  <Textarea id="seo.defaultDescription" {...register("seo.defaultDescription")} className="bg-zinc-900/50 h-20 resize-none" />
+                  <Textarea id="seo.defaultDescription" {...register("seo.defaultDescription.id")} className="bg-zinc-900/50 h-20 resize-none" />
                 </div>
 
                 <div className="space-y-2">
@@ -398,7 +422,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                       </div>
                       
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 flex-1 items-center">
-                        <Input {...register(`publicSite.navigation.${index}.label`)} placeholder="Label" className="bg-zinc-900/50 h-8 text-sm" />
+                        <Input {...register(`publicSite.navigation.${index}.label.id`)} placeholder="Label" className="bg-zinc-900/50 h-8 text-sm" />
                         <Input {...register(`publicSite.navigation.${index}.href`)} placeholder="/path" className="bg-zinc-900/50 h-8 text-sm sm:col-span-2" />
                         <div className="flex items-center justify-end gap-2">
                           <Label className="text-xs text-muted-foreground">Visible</Label>
