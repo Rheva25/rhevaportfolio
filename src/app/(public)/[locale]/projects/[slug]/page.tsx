@@ -4,8 +4,43 @@ import { projectRepository } from "@/lib/repositories/projects";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ locale: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const project = await projectRepository.getPublicProjectBySlug(slug);
+  
+  if (!project) {
+    return {
+      title: "Project Not Found | Rheva"
+    };
+  }
+
+  const title = `${getLocalizedText(project.title, locale)} - Case Study by Rheva`;
+  const description = getLocalizedText(project.shortDescription, locale);
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: project.heroImage?.url ? [{ url: project.heroImage.url }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: project.heroImage?.url ? [project.heroImage.url] : [],
+    }
+  };
+}
 
 export default async function ProjectDetail({ params }: { params: Promise<{ locale: Locale; slug: string }> }) {
   const { locale, slug } = await params;

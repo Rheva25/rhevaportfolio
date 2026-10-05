@@ -4,8 +4,43 @@ import { productRepository } from "@/lib/repositories/products";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ locale: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const product = await productRepository.getPublicProductBySlug(slug);
+  
+  if (!product) {
+    return {
+      title: "Product Not Found | Rheva"
+    };
+  }
+
+  const title = `${getLocalizedText(product.name, locale)} - Software by Rheva`;
+  const description = getLocalizedText(product.shortDescription, locale);
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: product.heroImage?.url ? [{ url: product.heroImage.url }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: product.heroImage?.url ? [product.heroImage.url] : [],
+    }
+  };
+}
 
 export default async function ProductDetail({ params }: { params: Promise<{ locale: Locale; slug: string }> }) {
   const { locale, slug } = await params;

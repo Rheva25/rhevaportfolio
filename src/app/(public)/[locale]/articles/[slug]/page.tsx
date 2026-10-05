@@ -5,8 +5,43 @@ import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
 import ReactMarkdown from 'react-markdown';
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ locale: Locale; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const article = await articleRepository.getPublicArticleBySlug(slug);
+  
+  if (!article) {
+    return {
+      title: "Article Not Found | Rheva"
+    };
+  }
+
+  const title = `${getLocalizedText(article.title, locale)} - Article by Rheva`;
+  const description = getLocalizedText(article.excerpt, locale);
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: article.coverImage?.url ? [{ url: article.coverImage.url }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: article.coverImage?.url ? [article.coverImage.url] : [],
+    }
+  };
+}
 
 export default async function ArticleDetail({ params }: { params: Promise<{ locale: Locale; slug: string }> }) {
   const { locale, slug } = await params;
