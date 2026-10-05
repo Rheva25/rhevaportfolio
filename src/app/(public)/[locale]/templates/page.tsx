@@ -44,7 +44,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
         <section className="w-full bg-card py-16 md:py-24 border-b border-border">
           <div className="max-w-7xl mx-auto px-4 md:px-6 space-y-12">
             {featuredTemplates.map((template) => (
-              <div key={template.id} className="bg-background border border-border rounded-xl shadow-sm overflow-hidden flex flex-col lg:flex-row group hover:shadow-md transition-all">
+              <div key={template.id} id={template.slug} className="bg-background border border-border rounded-xl shadow-sm overflow-hidden flex flex-col lg:flex-row group hover:shadow-md transition-all">
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-3 mb-6">
@@ -90,6 +90,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                       <ShareButton 
                         title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
                         text={getLocalizedText(template.shortDescription, locale)} 
+                        url={`#${template.slug}`}
                         iconOnly 
                         variant="outline"
                         className="px-4 py-2.5 rounded"
@@ -149,7 +150,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularTemplates.map((template) => (
-                <article key={template.id} className="flex flex-col justify-between bg-card rounded-xl border border-border overflow-hidden hover:shadow-md transition-shadow group">
+                <article key={template.id} id={template.slug} className="flex flex-col justify-between bg-card rounded-xl border border-border overflow-hidden hover:shadow-md transition-shadow group">
                   <div className="relative aspect-[16/9] w-full bg-muted/50 overflow-hidden border-b border-border">
                     {template.thumbnail?.url ? (
                       <img 
@@ -215,6 +216,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                       <ShareButton 
                         title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
                         text={getLocalizedText(template.shortDescription, locale)}
+                        url={`#${template.slug}`}
                         iconOnly 
                         variant="outline"
                         className="px-3 py-2"

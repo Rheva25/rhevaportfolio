@@ -27,7 +27,16 @@ export function ShareButton({
 
   const handleShare = async () => {
     // Determine the URL to share, default to current location if not provided
-    const shareUrl = url || (typeof window !== "undefined" ? window.location.href : "");
+    let shareUrl = url || (typeof window !== "undefined" ? window.location.href : "");
+    
+    if (url && typeof window !== "undefined") {
+      try {
+        // Resolve relative urls or hashes to absolute URLs
+        shareUrl = new URL(url, window.location.href).toString();
+      } catch (e) {
+        shareUrl = url;
+      }
+    }
     
     const shareData = {
       title: title || (typeof document !== "undefined" ? document.title : "Check this out!"),
