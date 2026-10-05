@@ -3,6 +3,7 @@ import { ArrowRight, Terminal, Calendar, MapPin, Bell, Key, Server, Package } fr
 import { productRepository } from "@/lib/repositories/products";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { ShareButton } from "@/components/ui/share-button";
 
 export const dynamic = "force-dynamic";
 
@@ -71,10 +72,20 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
                       <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider">Access Model</span>
                       <span className="text-xl font-bold text-foreground">{product.pricingModel}</span>
                     </div>
-                    <Link href={`/${locale}/apps/${product.slug}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-foreground text-background font-mono text-sm font-semibold hover:bg-foreground/90 transition-colors">
-                      <span>View Details</span>
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      <ShareButton 
+                        title={getLocalizedText(product.name, locale)} 
+                        text={getLocalizedText(product.shortDescription, locale)}
+                        url={`/${locale}/apps/${product.slug}`}
+                        iconOnly 
+                        variant="outline"
+                        className="px-4 py-2.5 rounded"
+                      />
+                      <Link href={`/${locale}/apps/${product.slug}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-foreground text-background font-mono text-sm font-semibold hover:bg-foreground/90 transition-colors">
+                        <span>View Details</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
                 
@@ -168,9 +179,20 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
                       <div className="font-mono text-[10px] text-muted-foreground">Access Model</div>
                       <span className="font-semibold text-foreground text-sm">{product.pricingModel}</span>
                     </div>
-                    <Link href={`/${locale}/apps/${product.slug}`} className="px-3 py-2 rounded bg-foreground text-background font-mono text-xs font-semibold hover:bg-foreground/90 transition-colors">
-                      Details
-                    </Link>
+                    <div className="flex items-center gap-3">
+                      <ShareButton 
+                        title={getLocalizedText(product.name, locale)} 
+                        text={getLocalizedText(product.shortDescription, locale)}
+                        url={`/${locale}/apps/${product.slug}`}
+                        iconOnly 
+                        variant="ghost"
+                        size="sm"
+                        className="h-8 w-8 p-0 text-muted-foreground hover:text-foreground"
+                      />
+                      <Link href={`/${locale}/apps/${product.slug}`} className="px-3 py-2 rounded bg-foreground text-background font-mono text-xs font-semibold hover:bg-foreground/90 transition-colors">
+                        Details
+                      </Link>
+                    </div>
                   </div>
                 </article>
               ))}

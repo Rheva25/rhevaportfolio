@@ -3,6 +3,7 @@ import { ArrowRight, MapPin, CheckCircle2, ShieldCheck, Database, Layers, Check 
 import { projectRepository } from "@/lib/repositories/projects";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { ShareButton } from "@/components/ui/share-button";
 
 // Force dynamic since we don't know when the admin creates new projects
 export const dynamic = "force-dynamic";
@@ -68,6 +69,14 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                       </div>
                       
                       <div className="flex items-center gap-4 pt-6 mt-6 border-t border-border">
+                        <ShareButton 
+                          title={getLocalizedText(project.title, locale)} 
+                          text={getLocalizedText(project.shortDescription, locale)}
+                          url={`/${locale}/projects/${project.slug}`}
+                          iconOnly 
+                          variant="outline"
+                          className="px-4 py-2.5 rounded"
+                        />
                         <Link href={`/${locale}/projects/${project.slug}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-foreground text-background font-mono text-sm font-semibold hover:bg-foreground/90 transition-colors">
                           <span>View Case Study</span>
                           <ArrowRight className="h-4 w-4" />
@@ -124,17 +133,19 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {regularProjects.map((project) => (
-                <Link key={project.id} href={`/${locale}/projects/${project.slug}`} className="group flex flex-col bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all overflow-hidden h-full hover:border-primary/50">
+                <div key={project.id} className="group flex flex-col bg-card rounded-xl border border-border shadow-sm hover:shadow-md transition-all overflow-hidden h-full hover:border-primary/50">
                   <div className="h-48 bg-muted relative overflow-hidden border-b border-border">
                     {project.heroImage?.url ? (
-                      <img src={project.heroImage.url} alt={project.heroImage.alt || getLocalizedText(project.title, locale)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <Link href={`/${locale}/projects/${project.slug}`} className="block w-full h-full">
+                        <img src={project.heroImage.url} alt={project.heroImage.alt || getLocalizedText(project.title, locale)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      </Link>
                     ) : (
-                      <div className="w-full h-full flex flex-col items-center justify-center text-muted-foreground">
+                      <Link href={`/${locale}/projects/${project.slug}`} className="w-full h-full flex flex-col items-center justify-center text-muted-foreground hover:bg-muted/80 transition-colors">
                         <Layers className="h-8 w-8 mb-2 opacity-50" />
                         <span className="font-mono text-[10px] uppercase">NO_PREVIEW</span>
-                      </div>
+                      </Link>
                     )}
-                    <div className="absolute top-3 right-3">
+                    <div className="absolute top-3 right-3 pointer-events-none">
                       <span className="font-mono text-[9px] px-2 py-1 rounded bg-background/90 backdrop-blur-sm text-foreground uppercase border border-border">
                         {project.year}
                       </span>
@@ -146,16 +157,27 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                       {project.category}
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-1">
-                      {getLocalizedText(project.title, locale)}
+                      <Link href={`/${locale}/projects/${project.slug}`}>{getLocalizedText(project.title, locale)}</Link>
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-6 line-clamp-3">
                       {getLocalizedText(project.shortDescription, locale)}
                     </p>
                     
                     <div className="mt-auto flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
-                        <span>Details</span>
-                        <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                      <div className="flex items-center gap-3">
+                        <ShareButton 
+                          title={getLocalizedText(project.title, locale)} 
+                          text={getLocalizedText(project.shortDescription, locale)}
+                          url={`/${locale}/projects/${project.slug}`}
+                          iconOnly 
+                          variant="ghost"
+                          size="sm"
+                          className="h-8 w-8 p-0 text-muted-foreground hover:text-foreground"
+                        />
+                        <Link href={`/${locale}/projects/${project.slug}`} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary font-medium transition-colors">
+                          <span>Details</span>
+                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                        </Link>
                       </div>
                       <span className={`inline-flex items-center gap-1 font-mono text-[9px] px-2 py-0.5 rounded-sm uppercase tracking-wider ${
                         project.status === 'Completed' ? 'bg-green-500/10 text-green-600 dark:text-green-400' : 
@@ -165,7 +187,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
                       </span>
                     </div>
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           )}

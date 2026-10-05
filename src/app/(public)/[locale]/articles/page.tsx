@@ -4,6 +4,7 @@ import { articleRepository } from "@/lib/repositories/articles";
 import { Article } from "@/lib/models";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { ShareButton } from "@/components/ui/share-button";
 
 export const dynamic = "force-dynamic";
 
@@ -92,10 +93,20 @@ export default async function ArticlesPage({ params }: { params: Promise<{ local
                       </span>
                     </div>
                   </div>
-                  <Link href={`/${locale}/articles/${featuredArticle.slug}`} className="h-10 px-5 rounded-lg bg-foreground text-background font-mono text-xs font-semibold flex items-center justify-center gap-2 hover:bg-foreground/90 transition-colors w-full sm:w-auto">
-                    <span>Read Essay</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <ShareButton 
+                      title={getLocalizedText(featuredArticle.title, locale)} 
+                      text={getLocalizedText(featuredArticle.excerpt, locale)}
+                      url={`/${locale}/articles/${featuredArticle.slug}`}
+                      iconOnly 
+                      variant="outline"
+                      className="h-10 px-3 rounded-lg"
+                    />
+                    <Link href={`/${locale}/articles/${featuredArticle.slug}`} className="h-10 px-5 rounded-lg bg-foreground text-background font-mono text-xs font-semibold flex items-center justify-center gap-2 hover:bg-foreground/90 transition-colors flex-1 sm:flex-none">
+                      <span>Read Essay</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
 
@@ -167,9 +178,20 @@ export default async function ArticlesPage({ params }: { params: Promise<{ local
                         </span>
                       ))}
                     </div>
-                    <Link href={`/${locale}/articles/${article.slug}`} className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-mono text-xs font-semibold uppercase tracking-wider transition-colors">
-                      Read Article <ArrowRight className="h-3 w-3" />
-                    </Link>
+                    <div className="flex items-center gap-4">
+                      <ShareButton 
+                        title={getLocalizedText(article.title, locale)} 
+                        text={getLocalizedText(article.excerpt, locale)}
+                        url={`/${locale}/articles/${article.slug}`}
+                        iconOnly 
+                        variant="ghost"
+                        size="sm"
+                        className="h-6 w-6 p-0 text-muted-foreground hover:text-foreground"
+                      />
+                      <Link href={`/${locale}/articles/${article.slug}`} className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-mono text-xs font-semibold uppercase tracking-wider transition-colors">
+                        Read Article <ArrowRight className="h-3 w-3" />
+                      </Link>
+                    </div>
                   </div>
                 </article>
               ))}
