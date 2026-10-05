@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 import { getPublicSiteSettings } from "@/lib/repositories/settingsPublic";
 import { Locale } from "@/i18n/config";
 import { getLocalizedText } from "@/lib/utils/localization";
+import { getOptimizedOgImageUrl } from "@/lib/utils/ogImage";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: settings?.seo?.defaultDescription ? getLocalizedText(settings.seo.defaultDescription, locale) : (settings?.siteDescription ? getLocalizedText(settings.siteDescription, locale) : "Software Engineer who builds practical digital products and systems."),
     keywords: settings?.seo?.keywords || [],
     openGraph: settings?.seo?.ogImage?.url ? {
-      images: [{ url: settings.seo.ogImage.url, alt: settings.seo.ogImage.alt }],
+      images: [{ url: getOptimizedOgImageUrl(settings.seo.ogImage.url) || settings.seo.ogImage.url, alt: settings.seo.ogImage.alt }],
     } : undefined,
     icons: settings?.seo?.favicon?.url ? {
       icon: settings.seo.favicon.url,

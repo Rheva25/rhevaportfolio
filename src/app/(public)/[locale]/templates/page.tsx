@@ -3,6 +3,7 @@ import { ArrowRight, LayoutTemplate, Code2, ExternalLink, Package } from "lucide
 import { templateRepository } from "@/lib/repositories/templates";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { getOptimizedOgImageUrl } from "@/lib/utils/ogImage";
 import { ShareButton } from "@/components/ui/share-button";
 import { Metadata } from "next";
 
@@ -37,8 +38,9 @@ export async function generateMetadata({
   const title = `${getLocalizedText(template.name, locale as Locale)} - Template`;
   const description = getLocalizedText(template.shortDescription, locale as Locale);
   
-  const ogImages = template.thumbnail?.url ? [{ url: template.thumbnail.url }] : undefined;
-  const twitterImages = template.thumbnail?.url ? [template.thumbnail.url] : undefined;
+  const optimizedUrl = getOptimizedOgImageUrl(template.thumbnail?.url);
+  const ogImages = optimizedUrl ? [{ url: optimizedUrl }] : undefined;
+  const twitterImages = optimizedUrl ? [optimizedUrl] : undefined;
   
   return {
     title,

@@ -4,6 +4,7 @@ import { productRepository } from "@/lib/repositories/products";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { getOptimizedOgImageUrl } from "@/lib/utils/ogImage";
 import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -25,8 +26,9 @@ export async function generateMetadata({
   const title = `${getLocalizedText(product.name, locale)} - Software by Rheva`;
   const description = getLocalizedText(product.shortDescription, locale);
   
-  const ogImages = product.heroImage?.url ? [{ url: product.heroImage.url }] : undefined;
-  const twitterImages = product.heroImage?.url ? [product.heroImage.url] : undefined;
+  const optimizedUrl = getOptimizedOgImageUrl(product.heroImage?.url);
+  const ogImages = optimizedUrl ? [{ url: optimizedUrl }] : undefined;
+  const twitterImages = optimizedUrl ? [optimizedUrl] : undefined;
   
   return {
     title,

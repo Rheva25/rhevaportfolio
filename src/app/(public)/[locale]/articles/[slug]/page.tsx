@@ -4,6 +4,7 @@ import { articleRepository } from "@/lib/repositories/articles";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { getOptimizedOgImageUrl } from "@/lib/utils/ogImage";
 import ReactMarkdown from 'react-markdown';
 import { Metadata } from "next";
 
@@ -26,8 +27,9 @@ export async function generateMetadata({
   const title = `${getLocalizedText(article.title, locale)} - Article by Rheva`;
   const description = getLocalizedText(article.excerpt, locale);
   
-  const ogImages = article.coverImage?.url ? [{ url: article.coverImage.url }] : undefined;
-  const twitterImages = article.coverImage?.url ? [article.coverImage.url] : undefined;
+  const optimizedUrl = getOptimizedOgImageUrl(article.coverImage?.url);
+  const ogImages = optimizedUrl ? [{ url: optimizedUrl }] : undefined;
+  const twitterImages = optimizedUrl ? [optimizedUrl] : undefined;
   
   return {
     title,

@@ -4,6 +4,7 @@ import { projectRepository } from "@/lib/repositories/projects";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { getOptimizedOgImageUrl } from "@/lib/utils/ogImage";
 import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -25,8 +26,9 @@ export async function generateMetadata({
   const title = `${getLocalizedText(project.title, locale)} - Case Study by Rheva`;
   const description = getLocalizedText(project.shortDescription, locale);
   
-  const ogImages = project.heroImage?.url ? [{ url: project.heroImage.url }] : undefined;
-  const twitterImages = project.heroImage?.url ? [project.heroImage.url] : undefined;
+  const optimizedUrl = getOptimizedOgImageUrl(project.heroImage?.url);
+  const ogImages = optimizedUrl ? [{ url: optimizedUrl }] : undefined;
+  const twitterImages = optimizedUrl ? [optimizedUrl] : undefined;
   
   return {
     title,
