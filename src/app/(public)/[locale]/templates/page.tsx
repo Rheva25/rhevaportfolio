@@ -3,6 +3,7 @@ import { ArrowRight, LayoutTemplate, Code2, ExternalLink, Package } from "lucide
 import { templateRepository } from "@/lib/repositories/templates";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { ShareButton } from "@/components/ui/share-button";
 
 export const dynamic = "force-dynamic";
 
@@ -25,9 +26,15 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
             <h1 className="text-4xl sm:text-5xl md:text-6xl text-foreground tracking-tight font-semibold mb-6">
               UI Kits & Templates
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Production-ready frontend boilerplate, UI kits, and completely designed templates to accelerate your web development projects.
             </p>
+            <ShareButton 
+              title="UI Kits & Templates by Rheva" 
+              text="Check out these production-ready frontend templates and UI kits!"
+              variant="default"
+              className="font-mono text-sm font-semibold"
+            />
           </div>
         </div>
       </section>
@@ -80,6 +87,13 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                           <span>Get Source</span>
                         </a>
                       )}
+                      <ShareButton 
+                        title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
+                        text={getLocalizedText(template.shortDescription, locale)} 
+                        iconOnly 
+                        variant="outline"
+                        className="px-4 py-2.5 rounded"
+                      />
                     </div>
                   </div>
                 </div>
@@ -198,6 +212,13 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                           Get Source
                         </a>
                       )}
+                      <ShareButton 
+                        title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
+                        text={getLocalizedText(template.shortDescription, locale)}
+                        iconOnly 
+                        variant="outline"
+                        className="px-3 py-2"
+                      />
                     </div>
                   </div>
                 </article>

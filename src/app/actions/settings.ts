@@ -4,6 +4,7 @@ import { settingsAdminRepository } from "@/lib/repositories/settingsAdmin";
 import { SiteSettingsSchema, SiteSettingsFormData } from "@/lib/validations/settings";
 import { verifySuperadmin } from "@/lib/auth/admin";
 import { revalidatePath } from "next/cache";
+import { autoTranslateSettings } from "@/lib/utils/translateSettings";
 
 /**
  * Checks authorization. Throws if not authorized.
@@ -20,7 +21,10 @@ export async function updateSiteSettingsAction(data: SiteSettingsFormData) {
   console.log('updateSiteSettingsAction CALLED WITH:', data);
   const session = await requireAuth();
   
-  const parsed = SiteSettingsSchema.safeParse(data);
+  const currentSettings = await settingsAdminRepository.getSiteSettings();
+  const translatedData = await autoTranslateSettings(data, currentSettings);
+  
+  const parsed = SiteSettingsSchema.safeParse(translatedData);
   if (!parsed.success) {
     throw new Error("Invalid settings data");
   }
