@@ -37,19 +37,22 @@ export async function generateMetadata({
   const title = `${getLocalizedText(template.name, locale as Locale)} - Template`;
   const description = getLocalizedText(template.shortDescription, locale as Locale);
   
+  const ogImages = template.thumbnail?.url ? [{ url: template.thumbnail.url }] : undefined;
+  const twitterImages = template.thumbnail?.url ? [template.thumbnail.url] : undefined;
+  
   return {
     title,
     description,
     openGraph: {
       title,
       description,
-      images: template.thumbnail?.url ? [{ url: template.thumbnail.url }] : [],
+      ...(ogImages && { images: ogImages }),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: template.thumbnail?.url ? [template.thumbnail.url] : [],
+      ...(twitterImages && { images: twitterImages }),
     }
   };
 }

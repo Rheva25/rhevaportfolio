@@ -25,19 +25,22 @@ export async function generateMetadata({
   const title = `${getLocalizedText(product.name, locale)} - Software by Rheva`;
   const description = getLocalizedText(product.shortDescription, locale);
   
+  const ogImages = product.heroImage?.url ? [{ url: product.heroImage.url }] : undefined;
+  const twitterImages = product.heroImage?.url ? [product.heroImage.url] : undefined;
+  
   return {
     title,
     description,
     openGraph: {
       title,
       description,
-      images: product.heroImage?.url ? [{ url: product.heroImage.url }] : [],
+      ...(ogImages && { images: ogImages }),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: product.heroImage?.url ? [product.heroImage.url] : [],
+      ...(twitterImages && { images: twitterImages }),
     }
   };
 }

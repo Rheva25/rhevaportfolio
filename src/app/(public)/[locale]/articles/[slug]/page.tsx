@@ -26,19 +26,22 @@ export async function generateMetadata({
   const title = `${getLocalizedText(article.title, locale)} - Article by Rheva`;
   const description = getLocalizedText(article.excerpt, locale);
   
+  const ogImages = article.coverImage?.url ? [{ url: article.coverImage.url }] : undefined;
+  const twitterImages = article.coverImage?.url ? [article.coverImage.url] : undefined;
+  
   return {
     title,
     description,
     openGraph: {
       title,
       description,
-      images: article.coverImage?.url ? [{ url: article.coverImage.url }] : [],
+      ...(ogImages && { images: ogImages }),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: article.coverImage?.url ? [article.coverImage.url] : [],
+      ...(twitterImages && { images: twitterImages }),
     }
   };
 }

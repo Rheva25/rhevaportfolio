@@ -25,19 +25,22 @@ export async function generateMetadata({
   const title = `${getLocalizedText(project.title, locale)} - Case Study by Rheva`;
   const description = getLocalizedText(project.shortDescription, locale);
   
+  const ogImages = project.heroImage?.url ? [{ url: project.heroImage.url }] : undefined;
+  const twitterImages = project.heroImage?.url ? [project.heroImage.url] : undefined;
+  
   return {
     title,
     description,
     openGraph: {
       title,
       description,
-      images: project.heroImage?.url ? [{ url: project.heroImage.url }] : [],
+      ...(ogImages && { images: ogImages }),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: project.heroImage?.url ? [project.heroImage.url] : [],
+      ...(twitterImages && { images: twitterImages }),
     }
   };
 }
