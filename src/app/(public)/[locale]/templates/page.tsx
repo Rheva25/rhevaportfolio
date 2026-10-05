@@ -4,8 +4,55 @@ import { templateRepository } from "@/lib/repositories/templates";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
 import { ShareButton } from "@/components/ui/share-button";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ 
+  params,
+  searchParams 
+}: { 
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const { template: slug } = await searchParams;
+  
+  if (!slug || typeof slug !== 'string') {
+    return {
+      title: "UI Kits & Templates | Rheva",
+      description: "Production-ready frontend boilerplate, UI kits, and completely designed templates."
+    };
+  }
+
+  const allTemplates = await templateRepository.getPublicTemplates();
+  const template = allTemplates.find(t => t.slug === slug);
+  
+  if (!template) {
+    return {
+      title: "UI Kits & Templates | Rheva"
+    };
+  }
+
+  const title = `${getLocalizedText(template.name, locale as Locale)} - Template`;
+  const description = getLocalizedText(template.shortDescription, locale as Locale);
+  
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: template.thumbnail?.url ? [{ url: template.thumbnail.url }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: template.thumbnail?.url ? [template.thumbnail.url] : [],
+    }
+  };
+}
 
 export default async function TemplatesPage({ params }: { params: Promise<{ locale: string }> }) {
   const localeStr = (await params).locale;
@@ -90,7 +137,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                       <ShareButton 
                         title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
                         text={getLocalizedText(template.shortDescription, locale)} 
-                        url={`#${template.slug}`}
+                        url={`?template=${template.slug}#${template.slug}`}
                         iconOnly 
                         variant="outline"
                         className="px-4 py-2.5 rounded"
@@ -216,7 +263,7 @@ export default async function TemplatesPage({ params }: { params: Promise<{ loca
                       <ShareButton 
                         title={`${getLocalizedText(template.name, locale)} - Template by Rheva`} 
                         text={getLocalizedText(template.shortDescription, locale)}
-                        url={`#${template.slug}`}
+                        url={`?template=${template.slug}#${template.slug}`}
                         iconOnly 
                         variant="outline"
                         className="px-3 py-2"
