@@ -4,6 +4,7 @@ import { articleRepository } from "@/lib/repositories/articles";
 import { notFound } from "next/navigation";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import ReactMarkdown from 'react-markdown';
 
 export const dynamic = "force-dynamic";
 
@@ -83,19 +84,10 @@ export default async function ArticleDetail({ params }: { params: Promise<{ loca
       {/* 3. Article Content */}
       <section className="w-full bg-background py-16">
         <div className="max-w-3xl mx-auto px-4 md:px-6">
-          <article className="prose prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-pre:bg-zinc-950 prose-pre:border prose-pre:border-zinc-800 prose-img:rounded-xl prose-img:border prose-img:border-border">
-            {getLocalizedText(article.content, locale).split('\n').map((para: string, i: number) => {
-              if (para.startsWith('## ')) {
-                return <h2 key={i}>{para.replace('## ', '')}</h2>;
-              } else if (para.startsWith('### ')) {
-                return <h3 key={i}>{para.replace('### ', '')}</h3>;
-              } else if (para.startsWith('- ')) {
-                return <li key={i}>{para.replace('- ', '')}</li>;
-              } else if (para.trim() === '') {
-                return null;
-              }
-              return <p key={i}>{para}</p>;
-            })}
+          <article className="prose dark:prose-invert prose-lg max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-pre:bg-zinc-950 prose-pre:border prose-pre:border-zinc-800 prose-img:rounded-xl prose-img:border prose-img:border-border">
+            <ReactMarkdown>
+              {getLocalizedText(article.content, locale)}
+            </ReactMarkdown>
           </article>
           
           {/* Article Footer Tags */}
