@@ -65,6 +65,7 @@ export async function updateInquiryStatusAction(id: string, status: InquiryFormD
 }
 
 export async function submitPublicInquiryAction(data: Partial<InquiryFormData>) {
+  try {
   // Public submission, no auth required, but strict validation.
   // Force secure defaults for public submissions
   const safeData: InquiryFormData = {
@@ -75,16 +76,20 @@ export async function submitPublicInquiryAction(data: Partial<InquiryFormData>) 
 
   const parsed = InquirySchema.safeParse(safeData);
   if (!parsed.success) {
-    throw new Error("Invalid inquiry data");
+    return { success: false, error: "Invalid inquiry data" };
   }
 
   // AI Content Moderation for spam and explicit content
   const isExplicit = await checkExplicitContent(parsed.data.description, parsed.data.name);
   if (isExplicit) {
     console.warn(`Blocked explicit inquiry from ${parsed.data.name} (${parsed.data.email})`);
-    throw new Error("Your message contains inappropriate content and has been blocked by our moderation system.");
+    return { success: false, error: "Your message contains inappropriate content and has been blocked by our moderation system." };
   }
 
   const inquiry = await inquiriesAdminRepository.createInquiry(parsed.data);
-  return inquiry.id;
+  return { success: true, id: inquiry.id };
+  } catch (err: any) {
+    console.error("Inquiry submission failed:", err);
+    return { success: false, error: err.message || "An unexpected error occurred" };
+  }
 }

@@ -49,14 +49,18 @@ export function ContactView({ primaryEmail, location }: { primaryEmail: string, 
     setIsSubmitting(true);
     setError(null);
     try {
-      await submitPublicInquiryAction({
+      const result = await submitPublicInquiryAction({
         ...data,
         source: "Website Contact Form",
       });
-      setIsSuccess(true);
+      if (result && !result.success) {
+        setError(result.error || "Failed to submit inquiry.");
+      } else {
+        setIsSuccess(true);
+      }
     } catch (e: unknown) {
       console.error(e);
-      setError((e as Error).message || "An unexpected error occurred. Please try again later.");
+      setError("An unexpected error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
