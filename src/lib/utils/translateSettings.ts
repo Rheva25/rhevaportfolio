@@ -79,7 +79,7 @@ ${JSON.stringify(inputObj, null, 2)}`;
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.8-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
@@ -100,7 +100,7 @@ ${JSON.stringify(inputObj, null, 2)}`;
     }
   } catch (error) {
     console.error("Auto-translation failed:", error);
-    // If it fails, we still return the original (untranslated) data so the save doesn't fail completely.
+    throw new Error("AI Translation failed (Google AI might be busy or unavailable). Please try again, or manually fill in the English fields to bypass auto-translation.");
   }
 
   return resultData;
