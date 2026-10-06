@@ -4,6 +4,7 @@ import { inquiriesAdminRepository } from "@/lib/repositories/inquiriesAdmin";
 import { InquirySchema, InquiryFormData } from "@/lib/validations/inquiry";
 import { verifySuperadmin } from "@/lib/auth/admin";
 import { revalidatePath } from "next/cache";
+import { checkExplicitContent } from "@/lib/utils/moderation";
 
 /**
  * Checks authorization. Throws if not authorized.
@@ -75,6 +76,13 @@ export async function submitPublicInquiryAction(data: Partial<InquiryFormData>) 
   const parsed = InquirySchema.safeParse(safeData);
   if (!parsed.success) {
     throw new Error("Invalid inquiry data");
+  }
+
+  // AI Content Moderation for spam and explicit content
+  const isExplicit = await checkExplicitContent(parsed.data.description, parsed.data.name);
+  if (isExplicit) {
+    console.warn(`Blocked explicit inquiry from ${parsed.data.name} (${parsed.data.email})`);
+    throw new Error("Your message contains inappropriate content and has been blocked by our moderation system.");
   }
 
   const inquiry = await inquiriesAdminRepository.createInquiry(parsed.data);
