@@ -270,25 +270,23 @@ export function ArticleForm({ initialData }: ArticleFormProps) {
             
             <div className="space-y-2">
               <Label htmlFor="category">Category</Label>
-              <Select 
-                value={watch("category")} 
-                onValueChange={(val: string | null) => val && setValue("category", val, { shouldDirty: true })}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="Web Development">Web Development</SelectItem>
-                  <SelectItem value="Next.js">Next.js</SelectItem>
-                  <SelectItem value="Firebase">Firebase</SelectItem>
-                  <SelectItem value="UI/UX">UI/UX</SelectItem>
-                  <SelectItem value="Software Architecture">Software Architecture</SelectItem>
-                  <SelectItem value="Data & Information Systems">Data & Information Systems</SelectItem>
-                  <SelectItem value="Digital Administration">Digital Administration</SelectItem>
-                  <SelectItem value="Productivity">Productivity</SelectItem>
-                  <SelectItem value="Development Notes">Development Notes</SelectItem>
-                </SelectContent>
-              </Select>
+              <Input 
+                id="category" 
+                list="category-suggestions" 
+                {...register("category")} 
+                placeholder="e.g. Web Development"
+              />
+              <datalist id="category-suggestions">
+                <option value="Web Development" />
+                <option value="Next.js" />
+                <option value="Firebase" />
+                <option value="UI/UX" />
+                <option value="Software Architecture" />
+                <option value="Data & Information Systems" />
+                <option value="Digital Administration" />
+                <option value="Productivity" />
+                <option value="Development Notes" />
+              </datalist>
               {errors.category && <p className="text-sm text-red-500">{errors.category.message}</p>}
             </div>
 
