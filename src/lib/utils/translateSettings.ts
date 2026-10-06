@@ -79,7 +79,7 @@ ${JSON.stringify(inputObj, null, 2)}`;
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     const response = await ai.models.generateContent({
-      model: "gemini-3.8-flash",
+      model: "gemini-3.5-flash-lite",
       contents: prompt,
       config: {
         responseMimeType: "application/json",
