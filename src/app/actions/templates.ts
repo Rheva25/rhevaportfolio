@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { templatesAdminRepository } from "@/lib/repositories/templatesAdmin";
 import { TemplateFormData, TemplateSchema } from "@/lib/validations/template";
 import { verifySuperadmin } from "@/lib/auth/admin";
+import { autoTranslateSettings } from "@/lib/utils/translateSettings";
 
 export async function createTemplateAction(data: TemplateFormData) {
   const { isAuthorized } = await verifySuperadmin();
@@ -14,7 +15,8 @@ export async function createTemplateAction(data: TemplateFormData) {
     throw new Error("Invalid template data");
   }
 
-  const result = await templatesAdminRepository.createTemplate(parsed.data);
+  const translatedData = await autoTranslateSettings(parsed.data, {});
+  const result = await templatesAdminRepository.createTemplate(translatedData);
   
   revalidatePath("/admin/templates");
   revalidatePath("/");
@@ -26,7 +28,9 @@ export async function updateTemplateAction(id: string, data: Partial<TemplateFor
   const { isAuthorized } = await verifySuperadmin();
   if (!isAuthorized) throw new Error("Unauthorized");
   
-  await templatesAdminRepository.updateTemplate(id, data);
+  const current = await templatesAdminRepository.getTemplate(id);
+  const translatedData = await autoTranslateSettings(data, current || {});
+  await templatesAdminRepository.updateTemplate(id, translatedData);
   
   revalidatePath("/admin/templates");
   revalidatePath("/");

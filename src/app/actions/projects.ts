@@ -4,6 +4,7 @@ import { projectsAdminRepository } from "@/lib/repositories/projectsAdmin";
 import { ProjectSchema, ProjectFormData } from "@/lib/validations/project";
 import { verifySuperadmin } from "@/lib/auth/admin";
 import { revalidatePath } from "next/cache";
+import { autoTranslateSettings } from "@/lib/utils/translateSettings";
 
 /**
  * Checks authorization. Throws if not authorized.
@@ -30,7 +31,8 @@ export async function createProjectAction(data: ProjectFormData) {
     throw new Error("Slug already in use");
   }
 
-  const project = await projectsAdminRepository.createProject(parsed.data);
+  const translatedData = await autoTranslateSettings(parsed.data, {});
+  const project = await projectsAdminRepository.createProject(translatedData);
   
   revalidatePath("/admin/projects");
   revalidatePath("/projects");
@@ -52,7 +54,9 @@ export async function updateProjectAction(id: string, data: ProjectFormData) {
     throw new Error("Slug already in use by another project");
   }
 
-  await projectsAdminRepository.updateProject(id, parsed.data);
+  const current = await projectsAdminRepository.getProject(id);
+  const translatedData = await autoTranslateSettings(parsed.data, current || {});
+  await projectsAdminRepository.updateProject(id, translatedData);
   
   revalidatePath("/admin/projects");
   revalidatePath(`/admin/projects/${id}`);

@@ -4,6 +4,7 @@ import { productsAdminRepository } from "@/lib/repositories/productsAdmin";
 import { ProductSchema, ProductFormData } from "@/lib/validations/product";
 import { verifySuperadmin } from "@/lib/auth/admin";
 import { revalidatePath } from "next/cache";
+import { autoTranslateSettings } from "@/lib/utils/translateSettings";
 
 /**
  * Checks authorization. Throws if not authorized.
@@ -30,7 +31,8 @@ export async function createProductAction(data: ProductFormData) {
     throw new Error("Slug already in use");
   }
 
-  const product = await productsAdminRepository.createProduct(parsed.data);
+  const translatedData = await autoTranslateSettings(parsed.data, {});
+  const product = await productsAdminRepository.createProduct(translatedData);
   
   revalidatePath("/admin/apps");
   revalidatePath("/apps");
@@ -52,7 +54,9 @@ export async function updateProductAction(id: string, data: ProductFormData) {
     throw new Error("Slug already in use by another product");
   }
 
-  await productsAdminRepository.updateProduct(id, parsed.data);
+  const current = await productsAdminRepository.getProduct(id);
+  const translatedData = await autoTranslateSettings(parsed.data, current || {});
+  await productsAdminRepository.updateProduct(id, translatedData);
   
   revalidatePath("/admin/apps");
   revalidatePath(`/admin/apps/${id}`);

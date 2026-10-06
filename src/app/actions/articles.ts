@@ -4,6 +4,7 @@ import { articlesAdminRepository } from "@/lib/repositories/articlesAdmin";
 import { ArticleSchema, ArticleFormData } from "@/lib/validations/article";
 import { verifySuperadmin } from "@/lib/auth/admin";
 import { revalidatePath } from "next/cache";
+import { autoTranslateSettings } from "@/lib/utils/translateSettings";
 
 /**
  * Checks authorization. Throws if not authorized.
@@ -30,7 +31,8 @@ export async function createArticleAction(data: ArticleFormData) {
     throw new Error("Slug already in use");
   }
 
-  const article = await articlesAdminRepository.createArticle(parsed.data);
+  const translatedData = await autoTranslateSettings(parsed.data, {});
+  const article = await articlesAdminRepository.createArticle(translatedData);
   
   revalidatePath("/admin/articles");
   revalidatePath("/articles");
@@ -52,7 +54,9 @@ export async function updateArticleAction(id: string, data: ArticleFormData) {
     throw new Error("Slug already in use by another article");
   }
 
-  await articlesAdminRepository.updateArticle(id, parsed.data);
+  const current = await articlesAdminRepository.getArticle(id);
+  const translatedData = await autoTranslateSettings(parsed.data, current || {});
+  await articlesAdminRepository.updateArticle(id, translatedData);
   
   revalidatePath("/admin/articles");
   revalidatePath(`/admin/articles/${id}`);
