@@ -37,8 +37,8 @@ export async function updatePortfolioAction(id: string, data: PortfolioFormData)
   const current = await portfoliosAdminRepository.getPortfolio(id);
   const translatedData = await autoTranslateSettings(parsed.data, current || {});
 
-  // Re-scrape if URL changed and thumbnail is empty
-  if (!translatedData.thumbnailUrl && translatedData.url !== current?.url) {
+  // Re-scrape if thumbnail is empty
+  if (!translatedData.thumbnailUrl) {
     translatedData.thumbnailUrl = await scrapeOgImage(translatedData.url);
   }
 
