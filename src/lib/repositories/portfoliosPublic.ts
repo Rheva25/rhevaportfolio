@@ -9,11 +9,11 @@ export const portfoliosPublicRepository = {
     try {
       const q = query(
         collection(db, COLLECTION_NAME),
-        where("status", "==", "Published"),
-        orderBy("order", "asc")
+        where("status", "==", "Published")
       );
       const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Portfolio));
+      const portfolios = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Portfolio));
+      return portfolios.sort((a, b) => (a.order || 0) - (b.order || 0));
     } catch (error) {
       console.error("Failed to fetch public portfolios", error);
       return [];

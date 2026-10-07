@@ -16,17 +16,10 @@ export async function scrapeOgImage(url: string): Promise<string> {
       ogImage = $('meta[name="twitter:image"]').attr("content");
     }
     
-    // Fallback to first image if no OG image
+    // Fallback to screenshot if no OG image found
     if (!ogImage) {
-      const firstImg = $('img').first().attr("src");
-      if (firstImg) {
-        if (firstImg.startsWith("http")) {
-          ogImage = firstImg;
-        } else if (firstImg.startsWith("/")) {
-          const urlObj = new URL(url);
-          ogImage = `${urlObj.origin}${firstImg}`;
-        }
-      }
+      // Use a free screenshot service API
+      return `https://image.thum.io/get/width/1200/crop/630/noanimate/${url}`;
     }
     
     return ogImage || "";
