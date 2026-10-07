@@ -13,7 +13,8 @@ import {
   MessageSquare, 
   Image as ImageIcon, 
   Settings,
-  LogOut
+  LogOut,
+  Globe
 } from "lucide-react";
 import { useState } from "react";
 import { logOut } from "@/lib/firebase/auth";
@@ -29,6 +30,7 @@ export function AdminSidebar({
   const adminLinks = [
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Projects", href: "/admin/projects", icon: FolderKanban },
+    { name: "Portfolios", href: "/admin/portfolios", icon: Globe },
     { name: "Apps", href: "/admin/apps", icon: AppWindow },
     { name: "Templates", href: "/admin/templates", icon: AppWindow },
     { name: "Articles", href: "/admin/articles", icon: FileText },
