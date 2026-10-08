@@ -16,12 +16,6 @@ export async function scrapeOgImage(url: string): Promise<string> {
       ogImage = $('meta[name="twitter:image"]').attr("content");
     }
     
-    // Fallback to screenshot if no OG image found
-    if (!ogImage) {
-      // Use a free screenshot service API
-      return `https://image.thum.io/get/width/1200/crop/630/noanimate/${url}`;
-    }
-    
     return ogImage || "";
   } catch (error) {
     console.error(`Failed to scrape OG image for ${url}:`, error);
