@@ -5,17 +5,17 @@ export function Thoughts({ locale }: { locale: Locale }) {
   const content = {
     id: {
       title: "Di Balik Layar Editor",
-      subtitle: "Programmer juga manusia, punya hati dan kadang galau.",
-      text1: "Orang melihat kode yang berjalan mulus, tapi mereka jarang melihat kopi yang dingin, malam yang panjang, dan ribuan baris error merah yang bikin overthinking sebelum tidur.",
-      text2: "Terkadang kita ngerasa stuck, ngerasa kode yang kita tulis itu jelek, atau ngerasa tertinggal sama teknologi yang larinya secepat kilat. Ada kalanya ngerasa bangga banget cuma karena berhasil benerin bug sepele, ada kalanya pengen banting keyboard karena typo satu titik koma.",
-      text3: "Tapi di ujung hari, saat layarnya nampilin 'Compiled successfully', ada perasaan lega yang nggak bisa dijelasin. It's a love-hate relationship, but mostly love. We don't just write code, we pour our hearts into it.",
+      subtitle: "Karena kadang, bug yang paling susah di-debug ada di hati sendiri.",
+      text1: "Gua bisa nulis ribuan baris kode buat ngebangun sistem yang rumit, tapi gua tetep gagal nulis satu baris kode yang bisa bikin lu ngerti perasaan gua.",
+      text2: "Logika pemrograman itu selalu jelas: if this, then that. Tapi urusan hati nggak pernah se-binary itu. Kadang gua berharap manusia punya dokumentasi API, biar gua tau persis gimana caranya nyampe ke hati lu tanpa dapet balasan '403 Forbidden'.",
+      text3: "Pada akhirnya, gua cuma bisa nyimpen rindu ini layaknya environment variable rahasia yang nggak akan pernah di-commit ke public repo. Biar localhost dan Tuhan aja yang tau.",
     },
     en: {
       title: "Behind the Editor",
-      subtitle: "Programmers are human too, we have hearts and sometimes we struggle.",
-      text1: "People see the smooth running code, but they rarely see the cold coffee, the long nights, and the thousands of red error lines that cause overthinking before bed.",
-      text2: "Sometimes we feel stuck, feeling like the code we write is bad, or feeling left behind by technology that moves at lightning speed. There are times when we feel incredibly proud just because we fixed a trivial bug, and times we want to smash the keyboard over a single missing semicolon.",
-      text3: "But at the end of the day, when the screen shows 'Compiled successfully', there's an indescribable sense of relief. It's a love-hate relationship, but mostly love. We don't just write code, we pour our hearts into it.",
+      subtitle: "Because sometimes, the hardest bug to fix is the one in your own heart.",
+      text1: "I can write thousands of lines of code to build complex systems, yet I completely fail to write a single function that makes you understand my feelings.",
+      text2: "Programming logic is always clear: if this, then that. But matters of the heart are never that binary. Sometimes I wish people came with API documentation, so I'd know exactly how to reach your heart without getting a '403 Forbidden'.",
+      text3: "In the end, I can only keep this longing like a secret environment variable—never to be committed to a public repo. Let only localhost and God know it exists.",
     }
   };
 
