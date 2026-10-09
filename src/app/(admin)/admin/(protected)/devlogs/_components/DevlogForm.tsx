@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { createDevlogAction, updateDevlogAction } from "@/app/actions/devlogs";
+import { createDevlogAction, updateDevlogAction, deleteDevlogAction } from "@/app/actions/devlogs";
 import { useRouter } from "next/navigation";
 import { Loader2, Plus, Trash2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
@@ -68,6 +68,22 @@ export function DevlogForm({ initialData }: DevlogFormProps) {
     });
   };
 
+  const [isDeleting, setIsDeleting] = useState(false);
+  const handleDelete = () => {
+    if (!initialData || !confirm("Are you sure you want to delete this devlog entry? This action cannot be undone.")) return;
+    setIsDeleting(true);
+    startTransition(async () => {
+      try {
+        await deleteDevlogAction(initialData.id);
+        router.push("/admin/devlogs");
+        router.refresh();
+      } catch (err: unknown) {
+        setServerError((err as Error).message || "Failed to delete devlog entry");
+        setIsDeleting(false);
+      }
+    });
+  };
+
   const generateSlug = () => {
     const title = watch("title");
     if (title && (!initialData || confirm("Changing a published slug can break links. Continue?"))) {
@@ -121,8 +137,20 @@ export function DevlogForm({ initialData }: DevlogFormProps) {
                 View Live
               </a>
             )}
+            {isEdit && (
+              <Button 
+                type="button" 
+                variant="outline" 
+                className="text-red-500 hover:text-red-600 hover:bg-red-500/10 border-red-500/20"
+                onClick={handleDelete}
+                disabled={isDeleting || loading}
+              >
+                {isDeleting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Trash2 className="mr-2 h-4 w-4" />}
+                Delete
+              </Button>
+            )}
             
-            <Button type="submit" disabled={loading || !isDirty}>
+            <Button type="submit" disabled={loading || !isDirty || isDeleting}>
               {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               {isEdit ? "Save Changes" : "Save Draft"}
             </Button>

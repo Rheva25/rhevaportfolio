@@ -4,15 +4,36 @@ import { useState } from "react";
 import { DevlogEntry } from "@/lib/validations/devlog";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useTransition } from "react";
 import { format } from "date-fns";
-import { Edit, Image as ImageIcon } from "lucide-react";
+import { Edit, Image as ImageIcon, Trash2, Loader2 } from "lucide-react";
+import { deleteDevlogAction } from "@/app/actions/devlogs";
 
 interface DevlogListProps {
   initialData: DevlogEntry[];
 }
 
 export function DevlogList({ initialData }: DevlogListProps) {
-  const [devlogs] = useState<DevlogEntry[]>(initialData);
+  const [devlogs, setDevlogs] = useState<DevlogEntry[]>(initialData);
+  const [isPending, startTransition] = useTransition();
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  const handleDelete = (id: string) => {
+    if (!confirm("Are you sure you want to delete this devlog entry? This action cannot be undone.")) return;
+    
+    setDeletingId(id);
+    startTransition(async () => {
+      try {
+        await deleteDevlogAction(id);
+        setDevlogs(prev => prev.filter(d => d.id !== id));
+      } catch (error) {
+        console.error("Failed to delete devlog:", error);
+        alert("Failed to delete devlog. Please try again.");
+      } finally {
+        setDeletingId(null);
+      }
+    });
+  };
 
   if (devlogs.length === 0) {
     return (
@@ -72,11 +93,26 @@ export function DevlogList({ initialData }: DevlogListProps) {
                   {devlog.createdAt ? format(new Date((devlog.createdAt as any)?._seconds ? (devlog.createdAt as any)._seconds * 1000 : (devlog.createdAt as any)?.seconds * 1000 || 0), "MMM d, yyyy") : "-"}
                 </td>
                 <td className="px-6 py-4 text-right">
-                  <Link href={`/admin/devlogs/${devlog.id}`}>
-                    <Button variant="ghost" size="sm">
-                      <Edit className="h-4 w-4 mr-2" /> Edit
+                  <div className="flex items-center justify-end gap-2">
+                    <Link href={`/admin/devlogs/${devlog.id}`}>
+                      <Button variant="ghost" size="sm">
+                        <Edit className="h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="text-red-500 hover:text-red-600 hover:bg-red-500/10"
+                      onClick={() => handleDelete(devlog.id)}
+                      disabled={isPending && deletingId === devlog.id}
+                    >
+                      {isPending && deletingId === devlog.id ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      ) : (
+                        <Trash2 className="h-4 w-4" />
+                      )}
                     </Button>
-                  </Link>
+                  </div>
                 </td>
               </tr>
             ))}
