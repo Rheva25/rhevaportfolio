@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { ShareButton } from "@/components/ui/share-button";
 import { devlogsPublicRepository } from "@/lib/repositories/devlogsPublic";
 import { notFound } from "next/navigation";
 import { Locale } from "@/i18n/config";
@@ -62,10 +63,19 @@ export default async function DevlogDetail({ params }: { params: Promise<{ local
       {/* 1. Header Navigation */}
       <section className="w-full pt-12 pb-6">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <Link href={`/${locale}/devlog-unspoken`} className="inline-flex items-center gap-1.5 font-sans text-sm text-[#918779] hover:text-[#24221F] transition-colors mb-8">
-            <ArrowLeft className="h-4 w-4" />
-            <span>Return to Devlog</span>
-          </Link>
+          <div className="flex items-center justify-between mb-8">
+            <Link href={`/${locale}/devlog-unspoken`} className="inline-flex items-center gap-1.5 font-sans text-sm text-[#918779] hover:text-[#24221F] transition-colors">
+              <ArrowLeft className="h-4 w-4" />
+              <span>Return to Devlog</span>
+            </Link>
+            <ShareButton 
+              title={`${devlog.title} - Devlog: Unspoken | Rheva`}
+              text={`"${devlog.featuredQuote}" - Read the full reflection.`}
+              variant="outline"
+              size="sm"
+              className="border-[#DCD5C9] text-[#918779] hover:text-[#24221F] hover:bg-[#EBE5DA] font-sans"
+            />
+          </div>
           
           <div className="flex items-center gap-4 text-xs font-mono text-[#918779] uppercase tracking-wider mb-6">
             <time dateTime={publishedDate}>{publishedDate}</time>

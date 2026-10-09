@@ -2,6 +2,7 @@ import Link from "next/link";
 import { format } from "date-fns";
 import { DevlogEntry } from "@/lib/validations/devlog";
 import { ArrowRight } from "lucide-react";
+import { ShareButton } from "@/components/ui/share-button";
 
 export function DevlogCard({ devlog, locale }: { devlog: DevlogEntry, locale: string }) {
   const getSeconds = (obj: any) => obj?._seconds || obj?.seconds || 0;
@@ -48,8 +49,21 @@ export function DevlogCard({ devlog, locale }: { devlog: DevlogEntry, locale: st
         )}
       </div>
 
-      <div className="mt-6 flex items-center text-sm font-medium text-primary">
-        Read Story <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      <div className="mt-6 flex flex-row items-center justify-between w-full">
+        <span className="flex items-center text-sm font-medium text-primary">
+          Read Story <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </span>
+        <div onClick={(e) => e.preventDefault()}>
+          <ShareButton 
+            title={`${devlog.title} - Devlog: Unspoken | Rheva`}
+            text={`"${devlog.featuredQuote}" - Read the full reflection.`}
+            url={`/${locale}/devlog-unspoken/${devlog.slug}`}
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8 text-muted-foreground hover:text-foreground"
+            iconOnly={true}
+          />
+        </div>
       </div>
     </article>
   );
