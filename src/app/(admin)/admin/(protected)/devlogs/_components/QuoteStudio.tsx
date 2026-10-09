@@ -4,9 +4,7 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, UploadCloud, RefreshCw, Loader2, Maximize2 } from "lucide-react";
 import { toPng } from "html-to-image";
-import { ref, uploadString, getDownloadURL } from "firebase/storage";
-import { app } from "@/lib/firebase/config";
-import { getStorage } from "firebase/storage";
+import { uploadDevlogThumbnailAction } from "@/app/actions/devlogs";
 
 interface QuoteStudioProps {
   quote: string;
@@ -60,16 +58,11 @@ export function QuoteStudio({ quote, attribution, entryId, onUploadSuccess, curr
     const dataUrl = await generateImage();
     if (dataUrl) {
       try {
-        const storage = getStorage(app);
-        const storagePath = `devlog-unspoken/${entryId}/thumbnail.png`;
-        const storageRef = ref(storage, storagePath);
-        
-        await uploadString(storageRef, dataUrl, 'data_url');
-        const url = await getDownloadURL(storageRef);
-        onUploadSuccess(url, storagePath);
+        const result = await uploadDevlogThumbnailAction(dataUrl, entryId);
+        onUploadSuccess(result.url, result.path);
       } catch (err) {
         console.error(err);
-        setError("Failed to upload image to Firebase Storage.");
+        setError("Failed to upload image to Cloudinary.");
       }
     }
     setIsUploading(false);
