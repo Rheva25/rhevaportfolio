@@ -1,4 +1,4 @@
-import { getAdminDb } from "@/lib/firebase/admin";
+import { getAdminDb, serializeFirestoreData } from "@/lib/firebase/admin";
 import { DevlogEntry, DevlogEntryFormData } from "@/lib/validations/devlog";
 import { FieldValue } from "firebase-admin/firestore";
 
@@ -9,7 +9,7 @@ export const devlogsAdminRepository = {
     const db = getAdminDb();
     const snapshot = await db.collection(COLLECTION_NAME).orderBy("createdAt", "desc").get();
     
-    return snapshot.docs.map(doc => ({
+    return snapshot.docs.map(doc => serializeFirestoreData({
       id: doc.id,
       ...doc.data()
     })) as DevlogEntry[];
@@ -19,7 +19,7 @@ export const devlogsAdminRepository = {
     const db = getAdminDb();
     const doc = await db.collection(COLLECTION_NAME).doc(id).get();
     if (!doc.exists) return null;
-    return { id: doc.id, ...doc.data() } as DevlogEntry;
+    return serializeFirestoreData({ id: doc.id, ...doc.data() }) as DevlogEntry;
   },
 
   async createDevlog(data: DevlogEntryFormData): Promise<string> {
