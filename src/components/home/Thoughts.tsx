@@ -1,8 +1,13 @@
 import { Terminal, Heart, Coffee, Code2, Sparkles } from "lucide-react";
 import { Locale } from "@/i18n/config";
+import { getPublicSiteSettings } from "@/lib/repositories/settingsPublic";
+import { getLocalizedText } from "@/lib/utils/localization";
 
-export function Thoughts({ locale }: { locale: Locale }) {
-  const content = {
+export async function Thoughts({ locale }: { locale: Locale }) {
+  const settings = await getPublicSiteSettings();
+  const cmsThoughts = settings?.publicSite?.thoughtsSection;
+
+  const defaultContent = {
     id: {
       title: "Di Balik Layar Editor",
       subtitle: "Karena kadang, bug yang paling susah di-debug ada di hati sendiri.",
@@ -19,7 +24,13 @@ export function Thoughts({ locale }: { locale: Locale }) {
     }
   };
 
-  const t = content[locale] || content.en;
+  const t = defaultContent[locale] || defaultContent.en;
+
+  const title = cmsThoughts?.title ? getLocalizedText(cmsThoughts.title as { id: string, en?: string }, locale) : t.title;
+  const subtitle = cmsThoughts?.subtitle ? getLocalizedText(cmsThoughts.subtitle as { id: string, en?: string }, locale) : t.subtitle;
+  const text1 = cmsThoughts?.text1 ? getLocalizedText(cmsThoughts.text1 as { id: string, en?: string }, locale) : t.text1;
+  const text2 = cmsThoughts?.text2 ? getLocalizedText(cmsThoughts.text2 as { id: string, en?: string }, locale) : t.text2;
+  const text3 = cmsThoughts?.text3 ? getLocalizedText(cmsThoughts.text3 as { id: string, en?: string }, locale) : t.text3;
 
   return (
     <section className="w-full bg-zinc-950 py-24 md:py-32 relative overflow-hidden border-y border-zinc-900">
@@ -35,10 +46,10 @@ export function Thoughts({ locale }: { locale: Locale }) {
             <Heart className="w-6 h-6 text-red-500/80" fill="currentColor" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-zinc-100 tracking-tight">
-            {t.title}
+            {title}
           </h2>
           <p className="text-zinc-400 max-w-2xl text-lg">
-            {t.subtitle}
+            {subtitle}
           </p>
         </div>
 
@@ -48,7 +59,7 @@ export function Thoughts({ locale }: { locale: Locale }) {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <Coffee className="w-8 h-8 text-zinc-500 mb-4" />
               <p className="text-zinc-300 leading-relaxed font-medium">
-                {t.text1}
+                {text1}
               </p>
             </div>
           </div>
@@ -58,14 +69,14 @@ export function Thoughts({ locale }: { locale: Locale }) {
               <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <Terminal className="w-6 h-6 text-zinc-500 mb-4" />
               <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                {t.text2}
+                {text2}
               </p>
             </div>
             
             <div className="bg-primary/10 border border-primary/20 rounded-2xl p-6 relative overflow-hidden group">
               <Sparkles className="w-6 h-6 text-primary mb-4" />
               <p className="text-zinc-200 leading-relaxed italic text-sm md:text-base font-medium">
-                "{t.text3}"
+                "{text3}"
               </p>
             </div>
           </div>

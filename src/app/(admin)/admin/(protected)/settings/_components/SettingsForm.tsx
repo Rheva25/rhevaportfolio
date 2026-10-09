@@ -80,6 +80,13 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
         ...initialData.publicSite,
         navigation: (initialData.publicSite?.navigation || []).map(l => ({ ...l, label: normalizeLocalized(l.label) })),
         homepageSections: (initialData.publicSite?.homepageSections || []).map(s => ({ ...s, label: normalizeLocalized(s.label) })),
+        thoughtsSection: {
+          title: normalizeLocalized(initialData.publicSite?.thoughtsSection?.title),
+          subtitle: normalizeLocalized(initialData.publicSite?.thoughtsSection?.subtitle),
+          text1: normalizeLocalized(initialData.publicSite?.thoughtsSection?.text1),
+          text2: normalizeLocalized(initialData.publicSite?.thoughtsSection?.text2),
+          text3: normalizeLocalized(initialData.publicSite?.thoughtsSection?.text3),
+        }
       }
     }
   });
@@ -609,6 +616,31 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                       </Button>
                     </div>
                   ))}
+                </div>
+              </div>
+              
+              <div className="space-y-4 pt-8 border-t border-zinc-800">
+                <div className="flex items-center justify-between">
+                  <Label className="text-base">"Behind the Editor" (Thoughts Section)</Label>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4">Edit the romantic/melancholic programmer text shown on the home page.</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2 md:col-span-2">
+                    <LocalizedField register={register} path="publicSite.thoughtsSection.title" label="Section Title" placeholder="e.g. Di Balik Layar Editor" />
+                  </div>
+                  <div className="space-y-2 md:col-span-2">
+                    <LocalizedField register={register} path="publicSite.thoughtsSection.subtitle" label="Subtitle" placeholder="e.g. Karena kadang, bug yang paling susah di-debug..." />
+                  </div>
+                  <div className="space-y-2 md:col-span-2">
+                    <LocalizedField register={register} path="publicSite.thoughtsSection.text1" label="Paragraph 1 (Coffee/Code)" multiline rows="h-24" />
+                  </div>
+                  <div className="space-y-2 md:col-span-2">
+                    <LocalizedField register={register} path="publicSite.thoughtsSection.text2" label="Paragraph 2 (Logic vs Heart)" multiline rows="h-24" />
+                  </div>
+                  <div className="space-y-2 md:col-span-2">
+                    <LocalizedField register={register} path="publicSite.thoughtsSection.text3" label="Paragraph 3 (Environment Variable)" multiline rows="h-24" />
+                  </div>
                 </div>
               </div>
 

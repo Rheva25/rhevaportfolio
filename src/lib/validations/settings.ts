@@ -92,6 +92,14 @@ export const SiteSettingsSchema = z.object({
         order: z.coerce.number().default(0)
       })
     ).default([]),
+
+    thoughtsSection: z.object({
+      title: LocalizedStringSchema.optional(),
+      subtitle: LocalizedStringSchema.optional(),
+      text1: LocalizedStringSchema.optional(),
+      text2: LocalizedStringSchema.optional(),
+      text3: LocalizedStringSchema.optional(),
+    }).optional(),
   }),
 
   aboutPage: z.object({
