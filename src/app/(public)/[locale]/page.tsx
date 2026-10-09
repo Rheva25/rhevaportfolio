@@ -10,6 +10,7 @@ import { About } from "@/components/home/About";
 import { Articles } from "@/components/home/Articles";
 import { Contact } from "@/components/home/Contact";
 import { Templates } from "@/components/home/Templates";
+import { Thoughts } from "@/components/home/Thoughts";
 
 import { Locale } from "@/i18n/config";
 
@@ -33,6 +34,7 @@ export default async function Home({
     { key: "services", component: <Services locale={locale} /> },
     { key: "about", component: <About locale={locale} /> },
     { key: "articles", component: <Articles locale={locale} /> },
+    { key: "thoughts", component: <Thoughts locale={locale} /> },
     { key: "contact", component: <Contact locale={locale} /> }
   ];
 
@@ -49,6 +51,20 @@ export default async function Home({
       const match = defaultSections.find(ds => ds.key === cmsSec.key);
       return match ? { key: cmsSec.key, component: match.component } : null;
     }).filter(Boolean) as typeof defaultSections;
+    
+    // Always include thoughts section if it's not in CMS yet
+    if (!visibleSections.find(s => s.key === "thoughts")) {
+      const thoughtsSection = defaultSections.find(ds => ds.key === "thoughts");
+      const contactIndex = renderedSections.findIndex(s => s.key === "contact");
+      
+      if (thoughtsSection) {
+        if (contactIndex !== -1) {
+          renderedSections.splice(contactIndex, 0, thoughtsSection);
+        } else {
+          renderedSections.push(thoughtsSection);
+        }
+      }
+    }
   }
 
   return (
