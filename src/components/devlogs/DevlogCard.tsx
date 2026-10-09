@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { format } from "date-fns";
 import { DevlogEntry } from "@/lib/validations/devlog";
@@ -53,7 +55,7 @@ export function DevlogCard({ devlog, locale }: { devlog: DevlogEntry, locale: st
         <span className="flex items-center text-sm font-medium text-primary">
           Read Story <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
-        <div onClick={(e) => e.preventDefault()}>
+        <div className="relative z-30" onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}>
           <ShareButton 
             title={`${devlog.title} - Devlog: Unspoken | Rheva`}
             text={`"${devlog.featuredQuote}" - Read the full reflection.`}
