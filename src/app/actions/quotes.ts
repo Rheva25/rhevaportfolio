@@ -3,10 +3,11 @@
 import { revalidatePath } from "next/cache";
 import { QuoteFormData } from "@/lib/validations/quotes";
 import { quotesAdminRepository } from "@/lib/repositories/quotesAdmin";
-import { requireSuperAdminServer } from "@/lib/auth/server";
+import { verifySuperadmin } from "@/lib/auth/admin";
 
 export async function createQuoteAction(data: QuoteFormData) {
-  await requireSuperAdminServer();
+  const { isAuthorized } = await verifySuperadmin();
+  if (!isAuthorized) throw new Error("Unauthorized");
   const id = await quotesAdminRepository.create(data);
   revalidatePath("/admin/quotes");
   revalidatePath("/quotes");
@@ -14,14 +15,16 @@ export async function createQuoteAction(data: QuoteFormData) {
 }
 
 export async function updateQuoteAction(id: string, data: Partial<QuoteFormData>) {
-  await requireSuperAdminServer();
+  const { isAuthorized } = await verifySuperadmin();
+  if (!isAuthorized) throw new Error("Unauthorized");
   await quotesAdminRepository.update(id, data);
   revalidatePath("/admin/quotes");
   revalidatePath("/quotes");
 }
 
 export async function deleteQuoteAction(id: string) {
-  await requireSuperAdminServer();
+  const { isAuthorized } = await verifySuperadmin();
+  if (!isAuthorized) throw new Error("Unauthorized");
   await quotesAdminRepository.delete(id);
   revalidatePath("/admin/quotes");
   revalidatePath("/quotes");

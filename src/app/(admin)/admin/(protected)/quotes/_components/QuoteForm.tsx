@@ -14,7 +14,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2, Trash2 } from "lucide-react";
 import { UnsavedChangesWarning } from "@/app/(admin)/admin/(protected)/projects/_components/UnsavedChangesWarning";
-import { RichTextEditor } from "@/components/ui/rich-text-editor";
 
 interface QuoteFormProps {
   initialData?: Quote;
@@ -32,7 +31,7 @@ export function QuoteForm({ initialData }: QuoteFormProps) {
     setValue,
     formState: { errors, isDirty, isSubmitting }
   } = useForm<QuoteFormData>({
-    resolver: zodResolver(QuoteSchema),
+    resolver: zodResolver(QuoteSchema) as any,
     defaultValues: initialData || {
       slug: "",
       quote: "",
@@ -116,10 +115,11 @@ export function QuoteForm({ initialData }: QuoteFormProps) {
           <div className="space-y-2">
             <Label>Full Rant / Content</Label>
             <div className="min-h-[400px]">
-              <RichTextEditor 
-                value={watch("content")} 
-                onChange={(html) => setValue("content", html, { shouldValidate: true, shouldDirty: true })}
-                placeholder="Write your developer rants here..."
+              <Textarea 
+                id="content"
+                {...register("content")} 
+                className="min-h-[400px] bg-zinc-900/50 font-mono text-sm leading-relaxed"
+                placeholder="Write your developer rants here (Markdown supported)..."
               />
             </div>
             {errors.content && <p className="text-sm text-red-500">{errors.content.message}</p>}
@@ -131,7 +131,7 @@ export function QuoteForm({ initialData }: QuoteFormProps) {
           <div className="bg-zinc-900/30 p-5 rounded-lg border border-zinc-800 space-y-4">
             <div className="space-y-2">
               <Label>Status</Label>
-              <Select value={watch("status")} onValueChange={(v: "Draft" | "Published") => setValue("status", v, { shouldDirty: true })}>
+              <Select value={watch("status")} onValueChange={(v: "Draft" | "Published" | null) => v && setValue("status", v, { shouldDirty: true })}>
                 <SelectTrigger className="bg-zinc-900/50">
                   <SelectValue />
                 </SelectTrigger>

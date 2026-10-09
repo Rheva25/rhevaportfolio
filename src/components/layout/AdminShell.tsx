@@ -15,7 +15,7 @@ import {
   Settings,
   LogOut,
   Globe,
-  MessageSquareQuote
+  BookOpen
 } from "lucide-react";
 import { useState } from "react";
 import { logOut } from "@/lib/firebase/auth";
@@ -35,7 +35,7 @@ export function AdminSidebar({
     { name: "Apps", href: "/admin/apps", icon: AppWindow },
     { name: "Templates", href: "/admin/templates", icon: AppWindow },
     { name: "Articles", href: "/admin/articles", icon: FileText },
-    { name: "Quotes", href: "/admin/quotes", icon: MessageSquareQuote },
+    { name: "Devlog: Unspoken", href: "/admin/devlogs", icon: BookOpen },
     { name: "Inquiries", href: "/admin/inquiries", icon: MessageSquare },
     { name: "Media", href: "/admin/media", icon: ImageIcon },
     { name: "Settings", href: "/admin/settings", icon: Settings },

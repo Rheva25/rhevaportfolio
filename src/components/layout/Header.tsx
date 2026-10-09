@@ -28,6 +28,7 @@ export async function Header({ locale }: { locale: Locale }) {
         { name: t.navigation.apps, href: `/${locale}/apps` },
         { name: "Templates", href: `/${locale}/templates` },
         { name: t.navigation.services, href: `/${locale}/services` },
+        { name: "Devlog: Unspoken", href: `/${locale}/devlog-unspoken` },
         { name: t.navigation.articles, href: `/${locale}/articles` },
         { name: t.navigation.about, href: `/${locale}/about` },
       ];
