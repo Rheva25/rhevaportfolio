@@ -93,15 +93,9 @@ export default async function DevlogDetail({ params }: { params: Promise<{ local
       <section className="w-full py-8 mb-8 border-y border-[#DCD5C9] bg-[#EBE5DA]/50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
           
-          {devlog.thumbnailUrl && (
-            <div className="w-full md:w-1/2 flex justify-center">
-              <div className="shadow-xl rounded-sm overflow-hidden border border-[#DCD5C9] bg-white">
-                <img src={devlog.thumbnailUrl} alt={`Quote from ${devlog.title}`} className="w-full h-auto max-w-[360px] object-cover" />
-              </div>
-            </div>
-          )}
 
-          <div className={`w-full ${devlog.thumbnailUrl ? 'md:w-1/2' : 'max-w-3xl mx-auto text-center'}`}>
+
+          <div className="w-full max-w-3xl mx-auto text-center">
             <blockquote className="text-3xl md:text-4xl font-serif text-[#24221F] leading-[1.3] tracking-tight">
               "{devlog.featuredQuote}"
             </blockquote>
