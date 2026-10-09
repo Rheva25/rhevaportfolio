@@ -69,7 +69,7 @@ export function DevlogList({ initialData }: DevlogListProps) {
                   )}
                 </td>
                 <td className="px-6 py-4 text-muted-foreground text-xs whitespace-nowrap">
-                  {devlog.createdAt ? format(new Date(devlog.createdAt.seconds * 1000), "MMM d, yyyy") : "-"}
+                  {devlog.createdAt ? format(new Date((devlog.createdAt as any)?._seconds ? (devlog.createdAt as any)._seconds * 1000 : (devlog.createdAt as any)?.seconds * 1000 || 0), "MMM d, yyyy") : "-"}
                 </td>
                 <td className="px-6 py-4 text-right">
                   <Link href={`/admin/devlogs/${devlog.id}`}>

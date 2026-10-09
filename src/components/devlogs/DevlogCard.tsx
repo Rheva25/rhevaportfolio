@@ -4,9 +4,10 @@ import { DevlogEntry } from "@/lib/validations/devlog";
 import { ArrowRight } from "lucide-react";
 
 export function DevlogCard({ devlog, locale }: { devlog: DevlogEntry, locale: string }) {
-  const publishedDate = devlog.publishedAt?.seconds 
-    ? format(new Date(devlog.publishedAt.seconds * 1000), "MMMM d, yyyy")
-    : format(new Date(devlog.createdAt.seconds * 1000), "MMMM d, yyyy");
+  const getSeconds = (obj: any) => obj?._seconds || obj?.seconds || 0;
+  const publishedDate = devlog.publishedAt 
+    ? format(new Date(getSeconds(devlog.publishedAt) * 1000), "MMMM d, yyyy")
+    : format(new Date(getSeconds(devlog.createdAt) * 1000), "MMMM d, yyyy");
 
   return (
     <article className="group relative flex flex-col items-start justify-between bg-card hover:bg-card/80 transition-colors rounded-xl border border-border p-6 shadow-sm overflow-hidden">

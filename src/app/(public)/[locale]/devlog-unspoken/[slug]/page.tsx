@@ -51,9 +51,10 @@ export default async function DevlogDetail({ params }: { params: Promise<{ local
     notFound();
   }
 
-  const publishedDate = devlog.publishedAt?.seconds 
-    ? format(new Date(devlog.publishedAt.seconds * 1000), "MMMM d, yyyy")
-    : format(new Date(devlog.createdAt.seconds * 1000), "MMMM d, yyyy");
+  const getSeconds = (obj: any) => obj?._seconds || obj?.seconds || 0;
+  const publishedDate = devlog.publishedAt 
+    ? format(new Date(getSeconds(devlog.publishedAt) * 1000), "MMMM d, yyyy")
+    : format(new Date(getSeconds(devlog.createdAt) * 1000), "MMMM d, yyyy");
 
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#F5F1E8] pb-24">
