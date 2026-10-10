@@ -46,10 +46,18 @@ export default async function Home({
       .sort((a, b) => Number(a.order || 0) - Number(b.order || 0));
     
     // Map the visible CMS sections to their respective components
-    renderedSections = visibleSections.map(cmsSec => {
+    const mappedSections = visibleSections.map(cmsSec => {
       const match = defaultSections.find(ds => ds.key === cmsSec.key);
       return match ? { key: cmsSec.key, component: match.component } : null;
     }).filter(Boolean) as typeof defaultSections;
+
+    // Find sections that exist in the codebase but are missing from the CMS DB
+    // This ensures newly added sections (like Portfolios) render even if the user hasn't updated their DB.
+    const missingSections = defaultSections.filter(ds => 
+      !cmsSections.find(cmsSec => cmsSec.key === ds.key)
+    );
+
+    renderedSections = [...mappedSections, ...missingSections];
   }
 
   return (
