@@ -43,9 +43,20 @@ export async function Hero({ locale }: { locale: Locale }) {
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mt-20 md:mt-32">
             <FadeUp delay={0.4} className="md:col-span-7">
-              <p className="text-xl md:text-3xl text-muted-foreground leading-snug font-light text-balance">
+              <p className="text-xl md:text-3xl text-muted-foreground leading-snug font-light text-balance mb-8">
                 {subtitle}
               </p>
+              
+              {settings?.profile?.coreCompetencies && settings.profile.coreCompetencies.length > 0 && (
+                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                  {settings.profile.coreCompetencies.map((skill, index) => (
+                    <div key={index} className="flex items-center gap-2 font-mono text-[11px] text-muted-foreground uppercase tracking-widest">
+                      <span className="w-1 h-1 rounded-full bg-foreground/30"></span>
+                      <span>{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </FadeUp>
             
             <FadeUp delay={0.5} className="md:col-span-5 flex flex-col items-start md:items-end gap-6 justify-center h-full pt-4 md:pt-0">
@@ -58,6 +69,17 @@ export async function Hero({ locale }: { locale: Locale }) {
                 <span>About {name}</span>
                 <ArrowRight className="h-4 w-4 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-out" />
               </Link>
+              
+              {/* Social Links from Settings */}
+              {settings?.socialLinks && settings.socialLinks.length > 0 && (
+                <div className="flex items-center gap-4 mt-4 md:mt-2">
+                  {settings.socialLinks.map((social, index) => (
+                    <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors">
+                      {social.platform}
+                    </a>
+                  ))}
+                </div>
+              )}
             </FadeUp>
           </div>
         </div>
