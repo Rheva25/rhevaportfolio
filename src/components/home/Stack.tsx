@@ -13,7 +13,7 @@ export async function Stack({ locale }: { locale: Locale }) {
             <span className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest block mb-6">
               {dict.home.stack.tag}
             </span>
-            <p className="text-3xl md:text-5xl font-light text-foreground tracking-tight leading-[1.2] text-balance">
+            <p className="text-3xl md:text-5xl font-serif italic text-foreground tracking-tight leading-[1.2] text-balance">
               &ldquo;{dict.home.stack.quote}&rdquo;
             </p>
           </div>
