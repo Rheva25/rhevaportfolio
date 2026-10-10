@@ -3,26 +3,26 @@ import { Locale } from "@/i18n/config";
 export async function Stack({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
   return (
-    <section className="w-full bg-card py-16 border-t border-border" id="specs">
+    <section className="w-full bg-background py-24 md:py-32 border-b border-border/40" id="specs">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Editorial Banner */}
-        <div className="mb-14 pb-12 border-b border-border">
-          <div className="max-w-3xl">
-            <span className="font-mono text-xs uppercase text-muted-foreground tracking-wider font-semibold block mb-3">
+        <div className="mb-20">
+          <div className="max-w-4xl">
+            <span className="font-mono text-[10px] uppercase text-muted-foreground tracking-widest block mb-6">
               {dict.home.stack.tag}
             </span>
-            <p className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight leading-snug">
+            <p className="text-3xl md:text-5xl font-light text-foreground tracking-tight leading-[1.2] text-balance">
               &ldquo;{dict.home.stack.quote}&rdquo;
             </p>
           </div>
         </div>
 
-        {/* Core Stack Matrix Pills */}
-        <div className="space-y-4 mb-14">
-          <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground block font-medium">
+        {/* Core Stack Matrix */}
+        <div className="space-y-8 mb-24">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground block">
             {dict.home.stack.verified}
           </span>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+          <div className="flex flex-wrap gap-x-12 gap-y-6">
             {[
               "Next.js 14",
               "TypeScript",
@@ -33,82 +33,55 @@ export async function Stack({ locale }: { locale: Locale }) {
               "Cloud Storage",
               "Vercel Edge",
             ].map((tech) => (
-              <div key={tech} className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 text-foreground hover:bg-muted transition-colors border border-transparent hover:border-border">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                <span className="font-mono text-xs font-medium">{tech}</span>
+              <div key={tech} className="flex items-center gap-3 text-foreground transition-colors group">
+                <span className="w-4 h-[1px] bg-muted-foreground/30 group-hover:bg-foreground transition-colors"></span>
+                <span className="font-mono text-sm tracking-wide">{tech}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Three Pillars of Capability Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 pt-16 border-t border-border/40">
           {/* Pillar 1 */}
-          <div className="p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow transition-shadow">
-            <div className="font-mono text-xs text-primary font-medium mb-3">LEVEL 01</div>
-            <h3 className="text-2xl font-semibold text-foreground mb-2 tracking-tight">{dict.home.stack.level1}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <div className="flex flex-col">
+            <span className="font-mono text-[10px] text-muted-foreground font-medium tracking-widest mb-6 block uppercase">01 — Foundation</span>
+            <h3 className="text-xl font-medium text-foreground mb-4 tracking-tight">{dict.home.stack.level1}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed font-light mb-8 flex-1">
               {dict.home.stack.level1Desc}
             </p>
-            <ul className="space-y-2 text-foreground font-mono text-[11px]">
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Type-safe Server Actions & Route Handlers
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Optimized Firestore index structures
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Zero-drift shadcn/ui component integration
-              </li>
+            <ul className="space-y-3 font-mono text-[11px] text-muted-foreground/80">
+              <li>&rarr; Type-safe Server Actions</li>
+              <li>&rarr; Optimized Firestore indexes</li>
+              <li>&rarr; Zero-drift integration</li>
             </ul>
           </div>
 
           {/* Pillar 2 */}
-          <div className="p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow transition-shadow">
-            <div className="font-mono text-xs text-primary font-medium mb-3">LEVEL 02</div>
-            <h3 className="text-2xl font-semibold text-foreground mb-2 tracking-tight">{dict.home.stack.level2}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <div className="flex flex-col">
+            <span className="font-mono text-[10px] text-muted-foreground font-medium tracking-widest mb-6 block uppercase">02 — Scale</span>
+            <h3 className="text-xl font-medium text-foreground mb-4 tracking-tight">{dict.home.stack.level2}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed font-light mb-8 flex-1">
               {dict.home.stack.level2Desc}
             </p>
-            <ul className="space-y-2 text-foreground font-mono text-[11px]">
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Modular single-tenant deployment scripts
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Offline-ready PWA & geofencing capabilities
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Granular tenant validation
-              </li>
+            <ul className="space-y-3 font-mono text-[11px] text-muted-foreground/80">
+              <li>&rarr; Modular single-tenant scripts</li>
+              <li>&rarr; Offline-ready capabilities</li>
+              <li>&rarr; Granular tenant validation</li>
             </ul>
           </div>
 
           {/* Pillar 3 */}
-          <div className="p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow transition-shadow">
-            <div className="font-mono text-xs text-primary font-medium mb-3">LEVEL 03</div>
-            <h3 className="text-2xl font-semibold text-foreground mb-2 tracking-tight">{dict.home.stack.level3}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <div className="flex flex-col">
+            <span className="font-mono text-[10px] text-muted-foreground font-medium tracking-widest mb-6 block uppercase">03 — Security</span>
+            <h3 className="text-xl font-medium text-foreground mb-4 tracking-tight">{dict.home.stack.level3}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed font-light mb-8 flex-1">
               {dict.home.stack.level3Desc}
             </p>
-            <ul className="space-y-2 text-foreground font-mono text-[11px]">
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Role-Based Access Control (RBAC) schemas
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Automated institutional compliance digests
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-primary"></span>
-                Audit trails with cryptographic tamper prevention
-              </li>
+            <ul className="space-y-3 font-mono text-[11px] text-muted-foreground/80">
+              <li>&rarr; RBAC security schemas</li>
+              <li>&rarr; Automated compliance digests</li>
+              <li>&rarr; Cryptographic audit trails</li>
             </ul>
           </div>
         </div>
