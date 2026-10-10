@@ -10,8 +10,13 @@ export async function Hero({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
   const settings = await getPublicSiteSettings();
   
-  const title = settings?.profile?.professionalTitle ? getLocalizedText(settings.profile.professionalTitle, locale) : dict.home.hero.title;
-  const subtitle = settings?.profile?.shortBio ? getLocalizedText(settings.profile.shortBio, locale) : dict.home.hero.subtitle;
+  const profTitle = settings?.profile?.professionalTitle;
+  const titleText = profTitle ? getLocalizedText(profTitle, locale) : "";
+  const title = titleText.trim() ? titleText : dict.home.hero.title;
+  
+  const bio = settings?.profile?.shortBio;
+  const subtitleText = bio ? getLocalizedText(bio, locale) : "";
+  const subtitle = subtitleText.trim() ? subtitleText : dict.home.hero.subtitle;
   const name = settings?.profile?.fullName || "Rheva";
 
   return (
@@ -36,7 +41,6 @@ export async function Hero({ locale }: { locale: Locale }) {
           
           <MaskReveal delay={0.2}>
             <h1 className="text-6xl sm:text-7xl md:text-[6rem] lg:text-[8rem] text-foreground tracking-tighter font-medium mb-8 leading-[1.05] text-balance">
-              <span className="font-serif italic font-light pr-4">Crafting</span><br className="hidden md:block"/>
               {title}
             </h1>
           </MaskReveal>
