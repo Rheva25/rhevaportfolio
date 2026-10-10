@@ -9,7 +9,8 @@ import { Services } from "@/components/home/Services";
 import { About } from "@/components/home/About";
 import { Articles } from "@/components/home/Articles";
 import { Contact } from "@/components/home/Contact";
-import { Templates } from "@/components/home/Templates";
+import { Portfolios } from "@/components/home/Portfolios";
+
 
 import { Locale } from "@/i18n/config";
 
@@ -27,7 +28,7 @@ export default async function Home({
   const defaultSections = [
     { key: "hero", component: <Hero locale={locale} /> },
     { key: "stack", component: <Stack locale={locale} /> },
-    { key: "templates", component: <Templates locale={locale} /> },
+    { key: "portfolios", component: <Portfolios locale={locale} /> },
     { key: "projects", component: <Projects locale={locale} /> },
     { key: "apps", component: <Apps locale={locale} /> },
     { key: "services", component: <Services locale={locale} /> },
