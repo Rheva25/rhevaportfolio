@@ -2,7 +2,9 @@
 
 import { Portfolio } from "@/lib/validations/portfolio";
 import Link from "next/link";
-import { ExternalLink, Edit, Globe, FileText, Image as ImageIcon } from "lucide-react";
+import { ExternalLink, Edit, Globe, FileText, Image as ImageIcon, Trash2 } from "lucide-react";
+import { deletePortfolioAction } from "../actions";
+import { useTransition } from "react";
 
 export function PortfolioList({ initialPortfolios }: { initialPortfolios: Portfolio[] }) {
   if (initialPortfolios.length === 0) {
@@ -19,6 +21,21 @@ export function PortfolioList({ initialPortfolios }: { initialPortfolios: Portfo
       </div>
     );
   }
+
+  const [isPending, startTransition] = useTransition();
+
+  const handleDelete = (id: string, title: string) => {
+    if (confirm(`Are you sure you want to delete "${title}"?`)) {
+      startTransition(async () => {
+        try {
+          await deletePortfolioAction(id);
+        } catch (error) {
+          console.error("Failed to delete portfolio", error);
+          alert("Failed to delete portfolio. Please try again.");
+        }
+      });
+    }
+  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -59,6 +76,13 @@ export function PortfolioList({ initialPortfolios }: { initialPortfolios: Portfo
             </p>
             
             <div className="flex items-center justify-end gap-2 pt-4 mt-2 border-t border-border">
+              <button 
+                onClick={() => handleDelete(portfolio.id!, portfolio.title.id)}
+                disabled={isPending}
+                className="flex items-center gap-1.5 text-xs font-medium bg-destructive/10 text-destructive hover:bg-destructive/20 px-3 py-1.5 rounded-md transition-colors disabled:opacity-50"
+              >
+                <Trash2 className="h-3.5 w-3.5" /> Delete
+              </button>
               <Link href={`/admin/portfolios/${portfolio.id}`}>
                 <button className="flex items-center gap-1.5 text-xs font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 px-3 py-1.5 rounded-md transition-colors">
                   <Edit className="h-3.5 w-3.5" /> Edit
