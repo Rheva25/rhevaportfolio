@@ -10,7 +10,7 @@ export async function Services({ locale }: { locale: Locale }) {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* Editorial Header */}
         <FadeUp className="mb-20 md:mb-32 max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-light text-foreground tracking-tight mb-6">
+          <h2 className="text-4xl md:text-6xl font-serif italic text-foreground tracking-tight mb-6">
             Capabilities & Services
           </h2>
           <p className="text-lg text-muted-foreground font-light leading-relaxed">

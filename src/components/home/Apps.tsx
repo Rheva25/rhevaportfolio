@@ -16,7 +16,7 @@ export async function Apps({ locale }: { locale: Locale }) {
         {/* Editorial Header */}
         <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-light text-foreground tracking-tight mb-4">
+            <h2 className="text-4xl md:text-6xl font-serif italic text-foreground tracking-tight mb-4">
               Apps & Digital Products
             </h2>
             <p className="text-lg text-muted-foreground font-light leading-relaxed">

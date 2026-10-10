@@ -3,7 +3,7 @@ import { ArrowRight, ExternalLink, FolderKanban } from "lucide-react";
 import { projectRepository } from "@/lib/repositories/projects";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
-import { FadeUp } from "@/components/ui/motion";
+import { FadeUp, MaskReveal, ScaleImageReveal } from "@/components/ui/motion";
 
 export async function Projects({ locale }: { locale: Locale }) {
   const allProjects = await projectRepository.getPublicProjects();
@@ -16,7 +16,7 @@ export async function Projects({ locale }: { locale: Locale }) {
         {/* Editorial Header */}
         <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-24 md:mb-32 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-light text-foreground tracking-tight mb-4">
+            <h2 className="text-4xl md:text-6xl font-serif italic text-foreground tracking-tight mb-4">
               Selected Work
             </h2>
             <p className="text-lg text-muted-foreground font-light leading-relaxed">
@@ -43,22 +43,24 @@ export async function Projects({ locale }: { locale: Locale }) {
                 <div key={project.id} className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 lg:gap-24 group`}>
                   
                   {/* Image Column */}
-                  <FadeUp delay={0.1} className="w-full md:w-1/2">
-                    <Link href={`/projects/${project.slug}`} className="block relative aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/3] w-full bg-muted/20 overflow-hidden">
-                      {project.heroImage?.url ? (
-                        <img 
-                          src={project.heroImage.url} 
-                          alt={project.heroImage.alt || getLocalizedText(project.title, locale)} 
-                          className="object-cover w-full h-full filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" 
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <FolderKanban className="h-8 w-8 text-muted-foreground/20" strokeWidth={1} />
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500"></div>
-                    </Link>
-                  </FadeUp>
+                  <div className="w-full md:w-1/2">
+                    <ScaleImageReveal delay={0.1} className="block relative aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/3] w-full bg-muted/20">
+                      <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-10 block">
+                        {project.heroImage?.url ? (
+                          <img 
+                            src={project.heroImage.url} 
+                            alt={project.heroImage.alt || getLocalizedText(project.title, locale)} 
+                            className="object-cover w-full h-full filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" 
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center">
+                            <FolderKanban className="h-8 w-8 text-muted-foreground/20" strokeWidth={1} />
+                          </div>
+                        )}
+                        <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500"></div>
+                      </Link>
+                    </ScaleImageReveal>
+                  </div>
                   
                   {/* Text Column */}
                   <div className="w-full md:w-1/2 flex flex-col justify-center">
@@ -73,11 +75,15 @@ export async function Projects({ locale }: { locale: Locale }) {
                           </span>
                         )}
                       </div>
-                      
-                      <h3 className="text-3xl md:text-5xl font-medium text-foreground tracking-tight mb-6 leading-tight">
+                    </FadeUp>
+                    
+                    <MaskReveal delay={0.3}>
+                      <h3 className="text-4xl md:text-5xl lg:text-6xl font-medium text-foreground tracking-tight mb-8 leading-[1.1]">
                         {getLocalizedText(project.title, locale)}
                       </h3>
-                      
+                    </MaskReveal>
+                    
+                    <FadeUp delay={0.4}>
                       <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-10 max-w-lg">
                         {getLocalizedText(project.shortDescription, locale)}
                       </p>
