@@ -3,94 +3,78 @@ import { ArrowRight, Code2, FolderKanban } from "lucide-react";
 import { portfoliosPublicRepository } from "@/lib/repositories/portfoliosPublic";
 import { getLocalizedText } from "@/lib/utils/localization";
 import { Locale } from "@/i18n/config";
+import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/motion";
 
 export async function Portfolios({ locale }: { locale: Locale }) {
   const allPortfolios = await portfoliosPublicRepository.getPublishedPortfolios();
   const portfolios = allPortfolios.slice(0, 4); // Max 4 on homepage
 
   return (
-    <section className="w-full bg-background py-24" id="portfolios">
+    <section className="w-full bg-background py-24 md:py-32 border-b border-border/40" id="portfolios">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span className="font-mono text-xs uppercase text-primary tracking-wider font-semibold block mb-2">
-              03 // PROGRAMMER GALLERY
-            </span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight">
+        
+        {/* Editorial Header */}
+        <FadeUp className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-5xl font-light text-foreground tracking-tight mb-4">
               Backend & Architecture
             </h2>
-            <p className="text-sm text-muted-foreground mt-2 max-w-xl">
+            <p className="text-lg text-muted-foreground font-light leading-relaxed">
               Systems, APIs, and infrastructure engineered for scale and reliability.
             </p>
           </div>
-          <Link href="/portfolios" className="inline-flex items-center gap-2 font-mono text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+          <Link href="/portfolios" className="group flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-foreground hover:opacity-70 transition-opacity whitespace-nowrap pb-2">
             <span>View All Works ({allPortfolios.length})</span>
-            <ArrowRight className="h-4 w-4" />
+            <span className="w-8 h-[1px] bg-foreground group-hover:w-12 transition-all duration-300"></span>
           </Link>
-        </div>
+        </FadeUp>
 
-        {/* Dynamic Portfolios Grid */}
-        <div className="space-y-8">
+        {/* Minimalist Image-Centric Grid */}
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24">
           {portfolios.length === 0 ? (
-            <div className="py-20 text-center bg-muted/30 border border-border border-dashed rounded-xl flex flex-col items-center">
-              <FolderKanban className="h-10 w-10 text-muted-foreground mb-4" />
-              <p className="text-muted-foreground font-mono text-sm">No public portfolios available yet.</p>
+            <div className="col-span-full py-32 text-center flex flex-col items-center">
+              <Code2 className="h-8 w-8 text-muted-foreground/30 mb-6" strokeWidth={1} />
+              <p className="text-muted-foreground font-mono text-xs tracking-widest uppercase">No public works available</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {portfolios.map((portfolio) => (
-                <div key={portfolio.id} className="group rounded-xl overflow-hidden bg-card border border-border shadow-sm hover:shadow-md transition-all flex flex-col">
-                  {/* Thumbnail */}
-                  <div className="relative aspect-[16/9] w-full bg-muted/50 overflow-hidden border-b border-border">
-                    {portfolio.thumbnailUrl ? (
-                      <img 
-                        src={portfolio.thumbnailUrl} 
-                        alt={getLocalizedText(portfolio.title, locale)} 
-                        className="object-cover w-full h-full opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Code2 className="h-12 w-12 text-muted-foreground/30" />
-                      </div>
-                    )}
-                    
-                    {/* Floating Badges */}
-                    <div className="absolute top-4 left-4 flex gap-2">
-                      <span className="font-mono text-[10px] px-2.5 py-1 rounded bg-background/90 backdrop-blur-md text-foreground font-medium uppercase tracking-wider shadow-sm border border-border/50">
-                        {portfolio.role}
-                      </span>
+            portfolios.map((portfolio, index) => (
+              <StaggerItem key={portfolio.id} className={`group flex flex-col ${index % 2 !== 0 ? 'md:mt-24' : ''}`}>
+                {/* Massive Borderless Image */}
+                <a href={portfolio.url} target="_blank" rel="noopener noreferrer" className="block relative aspect-[4/3] w-full bg-muted/20 overflow-hidden mb-6">
+                  {portfolio.thumbnailUrl ? (
+                    <img 
+                      src={portfolio.thumbnailUrl} 
+                      alt={getLocalizedText(portfolio.title, locale)} 
+                      className="object-cover w-full h-full filter grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out" 
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Code2 className="h-8 w-8 text-muted-foreground/20" strokeWidth={1} />
                     </div>
+                  )}
+                  {/* Subtle hover overlay */}
+                  <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500"></div>
+                </a>
+                
+                {/* Elegant Caption */}
+                <div className="flex flex-col flex-1">
+                  <div className="flex items-center justify-between mb-3">
+                    <a href={portfolio.url} target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl font-medium text-foreground tracking-tight hover:opacity-70 transition-opacity">
+                      {getLocalizedText(portfolio.title, locale)}
+                    </a>
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                      {portfolio.role}
+                    </span>
                   </div>
                   
-                  {/* Content */}
-                  <div className="p-6 md:p-8 flex flex-col flex-1">
-                    <h3 className="text-2xl font-semibold text-foreground mb-2">
-                      {getLocalizedText(portfolio.title, locale)}
-                    </h3>
-                    
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
-                      {getLocalizedText(portfolio.description, locale)}
-                    </p>
-                    
-                    {/* Action Link */}
-                    <div className="flex flex-col sm:flex-row items-center gap-3 pt-4 border-t border-border/50 mt-auto">
-                      <a 
-                        href={portfolio.url} 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-foreground text-background hover:bg-foreground/90 font-mono text-sm font-semibold transition-colors"
-                      >
-                        <span>Visit Site</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </a>
-                    </div>
-                  </div>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed line-clamp-2">
+                    {getLocalizedText(portfolio.description, locale)}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </StaggerItem>
+            ))
           )}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
