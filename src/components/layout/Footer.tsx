@@ -13,25 +13,25 @@ export async function Footer({ locale }: { locale: Locale }) {
   const year = new Date().getFullYear();
   const fullName = settings?.profile?.fullName || "Rheva Iqbal Abdillah";
   const t = await getDictionary(locale);
-  
+
   const defaultSocials = [
-    { platform: "GitHub", url: "https://github.com/rheva" },
-    { platform: "LinkedIn", url: "https://linkedin.com/in/rheva" }
+    { platform: "GitHub", url: "https://github.com/rheva25" },
+    { platform: "LinkedIn", url: "https://linkedin.com/in/raden-rheva25" }
   ];
   const socials = settings?.socialLinks?.length ? settings.socialLinks : defaultSocials;
 
   const navItems = settings?.publicSite?.navigation?.filter(item => item.visible)?.sort((a, b) => Number(a.order || 0) - Number(b.order || 0)) || [];
-  const links = navItems.length > 0 
+  const links = navItems.length > 0
     ? navItems.map(item => ({
-        name: getLocalizedText(item.label as { id: string, en?: string }, locale),
-        href: item.href.startsWith('http') ? item.href : `/${locale}${item.href.startsWith('/') ? item.href : `/${item.href}`}`
-      }))
+      name: getLocalizedText(item.label as { id: string, en?: string }, locale),
+      href: item.href.startsWith('http') ? item.href : `/${locale}${item.href.startsWith('/') ? item.href : `/${item.href}`}`
+    }))
     : [
-        { name: t.navigation.projects, href: `/${locale}/projects` },
-        { name: t.navigation.apps, href: `/${locale}/apps` },
-        { name: "Templates", href: `/${locale}/templates` },
-        { name: t.navigation.articles, href: `/${locale}/articles` },
-      ];
+      { name: t.navigation.projects, href: `/${locale}/projects` },
+      { name: t.navigation.apps, href: `/${locale}/apps` },
+      { name: "Templates", href: `/${locale}/templates` },
+      { name: t.navigation.articles, href: `/${locale}/articles` },
+    ];
 
   return (
     <footer className="w-full border-t border-border bg-background py-8 md:py-12 mt-auto">
