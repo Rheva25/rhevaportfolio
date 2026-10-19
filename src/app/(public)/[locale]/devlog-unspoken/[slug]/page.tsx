@@ -44,6 +44,66 @@ export async function generateMetadata({
   };
 }
 
+import { DevlogSoundtrack } from "@/components/devlogs/DevlogSoundtrack";
+
+function getNodeText(node: any): string {
+  if (!node) return "";
+  if (typeof node.value === "string") return node.value;
+  if (Array.isArray(node.children)) {
+    return node.children.map(getNodeText).join("");
+  }
+  return "";
+}
+
+function extractText(node: any): string {
+  if (!node) return "";
+  if (typeof node === "string") return node;
+  if (typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (node.props?.children) return extractText(node.props.children);
+  return "";
+}
+
+function cleanQuote(str: string): string {
+  return str
+    .trim()
+    .replace(/^["'“”″„«‹‘\s]+/, "")
+    .replace(/["'“”″»›’\s]+[.!?]?$/, "")
+    .trim();
+}
+
+function isQuoteText(str: string): boolean {
+  const t = str.trim();
+  if (t.length < 10 || t.length > 500) return false;
+
+  // Check if starts with any quotation mark: ", “, ”, ', ‘, `, etc.
+  const startsWithQuote = /^["'“”″„«‹‘]/.test(t);
+  // Check if ends with any quotation mark: ", ”, “, ', ’, etc. (or followed by period/comma)
+  const endsWithQuote = /["'“”″»›’][.!?,\s]*$/.test(t);
+
+  return startsWithQuote && endsWithQuote;
+}
+
+function DramaticQuote({ text, children }: { text?: string; children?: React.ReactNode }) {
+  const quoteContent = text ? cleanQuote(text) : undefined;
+
+  return (
+    <figure className="my-8 md:my-12 pl-5 sm:pl-7 border-l-2 border-[#918779]/80 py-2 not-prose">
+      <blockquote className="font-serif italic text-xl sm:text-2xl text-[#24221F] leading-[1.65] tracking-tight m-0 p-0">
+        <span className="font-serif font-bold text-3xl sm:text-4xl text-[#918779] mr-1.5 select-none inline-block align-top -mt-0.5 leading-none">
+          “
+        </span>
+        <span className="align-middle">
+          {quoteContent || children}
+        </span>
+        <span className="font-serif font-bold text-3xl sm:text-4xl text-[#918779] ml-1.5 select-none inline-block align-bottom -mb-0.5 leading-none">
+          ”
+        </span>
+      </blockquote>
+    </figure>
+  );
+}
+
 export default async function DevlogDetail({ params }: { params: Promise<{ locale: Locale; slug: string }> }) {
   const { locale, slug } = await params;
   const devlog = await devlogsPublicRepository.getPublishedDevlogBySlug(slug);
@@ -90,17 +150,14 @@ export default async function DevlogDetail({ params }: { params: Promise<{ local
       </section>
 
       {/* 2. Featured Quote & Thumbnail */}
-      <section className="w-full py-8 mb-8 border-y border-[#DCD5C9] bg-[#EBE5DA]/50">
+      <section className="w-full py-8 mb-4 border-y border-[#DCD5C9] bg-[#EBE5DA]/50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-          
-
-
           <div className="w-full max-w-3xl mx-auto text-center">
             <blockquote className="text-3xl md:text-4xl font-serif text-[#24221F] leading-[1.3] tracking-tight">
               "{devlog.featuredQuote}"
             </blockquote>
             {devlog.quoteAttribution && (
-              <div className="mt-6 flex items-center gap-4">
+              <div className="mt-6 flex items-center gap-4 justify-center">
                 <div className="w-12 h-[1px] bg-[#918779]"></div>
                 <cite className="text-[#918779] font-sans italic not-italic">
                   {devlog.quoteAttribution}
@@ -111,11 +168,35 @@ export default async function DevlogDetail({ params }: { params: Promise<{ local
         </div>
       </section>
 
+      {/* Ambient Soundtrack Player (if configured) */}
+      {devlog.soundtrackUrl && (
+        <section className="w-full px-6 lg:px-8">
+          <DevlogSoundtrack
+            soundtrackUrl={devlog.soundtrackUrl}
+            soundtrackTitle={devlog.soundtrackTitle}
+          />
+        </section>
+      )}
+
       {/* 3. Article Content */}
-      <section className="w-full py-8">
+      <section className="w-full py-6">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
-          <article className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-normal prose-headings:text-[#24221F] prose-p:text-[#24221F]/90 prose-p:leading-relaxed prose-a:text-[#24221F] prose-a:underline hover:prose-a:no-underline prose-strong:text-[#24221F] prose-blockquote:border-l-[#DCD5C9] prose-blockquote:text-[#918779] prose-blockquote:font-serif prose-blockquote:italic">
-            <ReactMarkdown>
+          <article className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:font-normal prose-headings:text-[#24221F] prose-p:text-[#24221F]/90 prose-p:leading-relaxed prose-a:text-[#24221F] prose-a:underline hover:prose-a:no-underline prose-strong:text-[#24221F]">
+            <ReactMarkdown
+              components={{
+                p: ({ node, children }: any) => {
+                  const rawText = getNodeText(node) || extractText(children);
+                  if (isQuoteText(rawText)) {
+                    return <DramaticQuote text={rawText} />;
+                  }
+                  return <p className="text-[#24221F]/90 leading-relaxed font-sans">{children}</p>;
+                },
+                blockquote: ({ node, children }: any) => {
+                  const rawText = getNodeText(node) || extractText(children);
+                  return <DramaticQuote text={rawText || undefined}>{children}</DramaticQuote>;
+                },
+              }}
+            >
               {devlog.contentMarkdown}
             </ReactMarkdown>
           </article>

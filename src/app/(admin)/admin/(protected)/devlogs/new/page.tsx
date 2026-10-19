@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function NewDevlogPage() {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="w-full">
       <DevlogForm />
     </div>
   );

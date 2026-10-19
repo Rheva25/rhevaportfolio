@@ -21,6 +21,9 @@ export const DevlogEntrySchema = z.object({
   thumbnailPath: z.string().optional(),
   thumbnailUrl: z.string().optional(),
   thumbnailPreset: z.enum(["literary-minimalist"]).default("literary-minimalist"),
+
+  soundtrackUrl: z.string().optional(),
+  soundtrackTitle: z.string().optional(),
 });
 
 export type DevlogEntryFormData = z.infer<typeof DevlogEntrySchema>;

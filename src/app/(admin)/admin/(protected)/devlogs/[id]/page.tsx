@@ -15,7 +15,7 @@ export default async function EditDevlogPage({ params }: { params: Promise<{ id:
   }
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="w-full">
       <DevlogForm initialData={devlog} />
     </div>
   );
