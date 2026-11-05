@@ -27,9 +27,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: settings?.seo?.ogImage?.url ? {
       images: [{ url: getOptimizedOgImageUrl(settings.seo.ogImage.url) || settings.seo.ogImage.url, alt: settings.seo.ogImage.alt }],
     } : undefined,
-    icons: settings?.seo?.favicon?.url ? {
-      icon: settings.seo.favicon.url,
-    } : undefined,
+    icons: {
+      icon: [
+        { url: settings?.seo?.favicon?.url || "/favicon.ico" },
+        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      ],
+      apple: [
+        { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      ],
+      shortcut: "/favicon.ico",
+    },
   };
 }
 
