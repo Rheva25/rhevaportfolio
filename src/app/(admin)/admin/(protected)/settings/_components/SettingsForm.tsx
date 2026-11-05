@@ -227,8 +227,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 </div>
                 
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="siteDescription">Site Description</Label>
-                  <Textarea id="siteDescription" {...register("siteDescription.id")} className="bg-zinc-900/50 resize-none h-20" />
+                  <LocalizedField register={register} path="siteDescription" label="Site Description" multiline rows="h-20" placeholder="Brief platform summary..." />
                 </div>
 
                 <div className="space-y-2">
@@ -274,13 +273,11 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="profile.shortBio">Short Bio</Label>
-                  <Textarea id="profile.shortBio" {...register("profile.shortBio.id")} className="bg-zinc-900/50 resize-none h-24" />
+                  <LocalizedField register={register} path="profile.shortBio" label="Short Bio" multiline rows="h-24" placeholder="Brief elevator pitch..." />
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
-                  <Label htmlFor="profile.professionalFocus">Professional Focus</Label>
-                  <Input id="profile.professionalFocus" {...register("profile.professionalFocus.id")} className="bg-zinc-900/50" placeholder="e.g. Full-stack engineering, Systems architecture" />
+                  <LocalizedField register={register} path="profile.professionalFocus" label="Professional Focus" placeholder="e.g. Full-stack engineering, Systems architecture" />
                 </div>
 
                 <div className="space-y-2 md:col-span-2">
@@ -309,7 +306,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                 <div className="space-y-4 md:col-span-2 pt-6 border-t border-zinc-800">
                   <div className="flex items-center justify-between">
                     <Label className="text-base">Technical Guarantees</Label>
-                    <Button type="button" variant="outline" size="sm" onClick={() => appendTech({ title: { id: "New Guarantee" }, description: { id: "" } })}>
+                    <Button type="button" variant="outline" size="sm" onClick={() => appendTech({ title: { id: "New Guarantee", en: "New Guarantee" }, description: { id: "", en: "" } })}>
                       <Plus className="h-4 w-4 mr-2" /> Add Guarantee
                     </Button>
                   </div>
@@ -319,13 +316,11 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                         <Button type="button" variant="ghost" size="icon" className="absolute top-2 right-2 h-6 w-6 text-red-400 hover:bg-red-950/30" onClick={() => removeTech(index)}>
                           <Trash2 className="h-3 w-3" />
                         </Button>
-                        <div className="space-y-1 pr-8">
-                          <Label className="text-xs text-muted-foreground">Title</Label>
-                          <Input {...register(`profile.technicalGuarantees.${index}.title.id`)} className="bg-zinc-900/50 h-8" />
+                        <div className="space-y-2 pr-8">
+                          <LocalizedField register={register} path={`profile.technicalGuarantees.${index}.title`} label="Title" />
                         </div>
-                        <div className="space-y-1">
-                          <Label className="text-xs text-muted-foreground">Description</Label>
-                          <Textarea {...register(`profile.technicalGuarantees.${index}.description.id`)} className="bg-zinc-900/50 h-16 resize-none text-sm" />
+                        <div className="space-y-2">
+                          <LocalizedField register={register} path={`profile.technicalGuarantees.${index}.description`} label="Description" multiline rows="h-16" />
                         </div>
                       </div>
                     ))}
@@ -472,8 +467,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="contact.successMessage">Contact Form Success Message</Label>
-                    <Textarea id="contact.successMessage" {...register("contact.successMessage.id")} className="bg-zinc-900/50 resize-none" />
+                    <LocalizedField register={register} path="contact.successMessage" label="Contact Form Success Message" multiline rows="h-16" placeholder="Message sent successfully..." />
                   </div>
 
                   <div className="space-y-2">
@@ -499,13 +493,11 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
 
               <div className="grid grid-cols-1 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="seo.defaultTitle">Default SEO Title</Label>
-                  <Input id="seo.defaultTitle" {...register("seo.defaultTitle.id")} className="bg-zinc-900/50" />
+                  <LocalizedField register={register} path="seo.defaultTitle" label="Default SEO Title" />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="seo.defaultDescription">Default SEO Description</Label>
-                  <Textarea id="seo.defaultDescription" {...register("seo.defaultDescription.id")} className="bg-zinc-900/50 h-20 resize-none" />
+                  <LocalizedField register={register} path="seo.defaultDescription" label="Default SEO Description" multiline rows="h-20" />
                 </div>
 
                 <div className="space-y-2">
@@ -572,7 +564,7 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
               <div className="space-y-4 pt-2">
                 <div className="flex items-center justify-between">
                   <Label className="text-base">Main Navigation</Label>
-                  <Button type="button" variant="outline" size="sm" onClick={() => appendNav({ label: {id: "New Link", en: ""}, href: "/", visible: true, order: navFields.length })}>
+                  <Button type="button" variant="outline" size="sm" onClick={() => appendNav({ label: { id: "New Link", en: "New Link" }, href: "/", visible: true, order: navFields.length })}>
                     <Plus className="h-4 w-4 mr-2" /> Add Link
                   </Button>
                 </div>
@@ -592,8 +584,11 @@ export function SettingsForm({ initialData }: SettingsFormProps) {
                         </Button>
                       </div>
                       
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 flex-1 items-center">
-                        <Input {...register(`publicSite.navigation.${index}.label.id`)} placeholder="Label" className="bg-zinc-900/50 h-8 text-sm" />
+                      <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 flex-1 items-center">
+                        <div className="flex gap-1.5 sm:col-span-2">
+                          <Input {...register(`publicSite.navigation.${index}.label.id`)} placeholder="Label (ID)" className="bg-zinc-900/50 h-8 text-sm flex-1" />
+                          <Input {...register(`publicSite.navigation.${index}.label.en`)} placeholder="Label (EN)" className="bg-zinc-900/50 h-8 text-sm flex-1" />
+                        </div>
                         <Input {...register(`publicSite.navigation.${index}.href`)} placeholder="/path" className="bg-zinc-900/50 h-8 text-sm sm:col-span-2" />
                         <div className="flex items-center justify-end gap-2">
                           <Label className="text-xs text-muted-foreground">Visible</Label>

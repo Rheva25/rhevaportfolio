@@ -34,10 +34,11 @@ export async function autoTranslateSettings(newData: any, currentData: any): Pro
   function traverse(newObj: any, currentObj: any, path: string[]) {
     if (isLocalizedString(newObj)) {
       const currentStr = isLocalizedString(currentObj) ? currentObj : null;
-      // We translate if 'en' is empty, OR if 'id' changed from what it was previously
-      const idText = newObj.id.trim();
-      const needsTranslation =
-        idText && (!newObj.en || (currentStr && idText !== currentStr.id?.trim()));
+      // We translate if 'en' is empty and 'id' has content.
+      // If user already typed an English translation, we respect it and never overwrite it.
+      const idText = newObj.id ? newObj.id.trim() : "";
+      const enText = newObj.en ? newObj.en.trim() : "";
+      const needsTranslation = idText && !enText;
 
       if (needsTranslation) {
         jobs.push({ path: [...path, "en"], textToTranslate: idText });
@@ -78,15 +79,29 @@ ${JSON.stringify(inputObj, null, 2)}`;
 
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-    const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash-lite",
-      contents: prompt,
-      config: {
-        responseMimeType: "application/json",
-      },
-    });
+    let responseText: string | undefined;
 
-    const responseText = response.text;
+    try {
+      const response = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: prompt,
+        config: {
+          responseMimeType: "application/json",
+        },
+      });
+      responseText = response.text;
+    } catch (modelErr) {
+      console.warn("Primary translation model gemini-2.5-flash failed, trying fallback gemini-1.5-flash...", modelErr);
+      const fallbackResponse = await ai.models.generateContent({
+        model: "gemini-1.5-flash",
+        contents: prompt,
+        config: {
+          responseMimeType: "application/json",
+        },
+      });
+      responseText = fallbackResponse.text;
+    }
+
     if (responseText) {
       const jsonStr = responseText.replace(/```json/g, '').replace(/```/g, '').trim();
       const translations = JSON.parse(jsonStr);
@@ -99,8 +114,8 @@ ${JSON.stringify(inputObj, null, 2)}`;
       console.log("Auto-translation complete!");
     }
   } catch (error) {
-    console.error("Auto-translation failed:", error);
-    throw new Error("AI Translation failed (Google AI might be busy or unavailable). Please try again, or manually fill in the English fields to bypass auto-translation.");
+    console.warn("Auto-translation warning: AI Translation could not complete, preserving provided settings data.", error);
+    // Do not throw so the user settings form save always succeeds smoothly
   }
 
   return resultData;
